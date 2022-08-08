@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Bacterial filamentation: a bet for survival in stressful environments - References</title>
+<title>Bacterial filamentation: a bet for survival in stressful environments - Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -44,7 +44,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./04-discussion.html" rel="prev">
+<link href="./01-image-processing.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -83,7 +84,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">References</h1>
+      <h1 class="quarto-secondary-nav-title">Introduction</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -113,7 +114,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-introduction.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="./00-introduction.html" class="sidebar-item-text sidebar-link active">Introduction</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -138,7 +139,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
     </ul>
@@ -153,7 +154,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">References</h1>
+<h1 class="title"><span id="introduction" class="quarto-section-identifier d-none d-lg-block">Introduction</span></h1>
 </div>
 
 
@@ -167,137 +168,36 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<p>Antimicrobial resistance (AMR) can be considered one of the most critical health problems of the century. That is, microorganisms’ ability to grow despite exposure to substances designed to inhibit their growth or kill them. In April 2014, the World Health Organization (WHO) published its first global report on AMR surveillance <span class="citation" data-cites="EditorialBoard2014">(<a href="references.html#ref-EditorialBoard2014" role="doc-biblioref"><span>“Editorial <span>Board</span>”</span> 2014</a>)</span>. Taking out of the darkness a common fear, a possible post-antibiotic future in which common infections or minor injuries can kill. Therefore, understanding the mechanisms of avoiding antibiotic action is essential for producing knowledge and developing strategies that reduce the generation of resistant bacteria.</p>
+<p>Bacterial adaptability to hostile environmental conditions can be explained by different elements, not necessarily exclusive. For instance, mutational phenomena that allow bacteria to evade the mechanisms of action of certain antibiotics have been one of the most studied <span class="citation" data-cites="dever1991 andersson2005">(<a href="references.html#ref-dever1991" role="doc-biblioref">Dever and Dermody 1991</a>; <a href="references.html#ref-andersson2005" role="doc-biblioref">Andersson 2005</a>)</span>. However, the continuous technological development has allowed us to explore hypotheses where phenotypic heterogeneity is considered in detail, allowing us to study emergent behaviors in isogenic populations <span class="citation" data-cites="ackermann2015">(<a href="references.html#ref-ackermann2015" role="doc-biblioref">Ackermann 2015</a>)</span>. Thus, we have gone from studying bacterial communities as a whole to studying them from each of the cells that compose them and their emergent properties.</p>
+<p>Single-cell microfluidics is one of the technologies that has made it possible to create and maintain the microenvironments necessary for studying bacteria <span class="citation" data-cites="yin2012">(<a href="references.html#ref-yin2012" role="doc-biblioref">Yin and Marshall 2012</a>)</span>. Among the most outstanding utilities of microfluidics, we can find the engineering of bacterial systems, microbial ecology, bacterial cell cycle, homeostasis, even cell shape, and geometry. The latter is one of the characteristics that allow the study of bacterial filamentation, a phenomenon that occurs when the cell stops dividing but continues to grow, thus producing elongated cells in the form of filaments.</p>
+<p>Mathematical modeling is among the most common strategies to address the AMR problem. Mathematical modeling allows to pose real-life problems in a space filled with mathematical language, solve them, and test their solutions in a real-life living system <span class="citation" data-cites="verschaffel2002">(<a href="references.html#ref-verschaffel2002" role="doc-biblioref">Verschaffel, Greer, and Corte 2002</a>)</span>. Therefore, this approach can also be used to analyze in detail why a particular biological phenomenon is occurring, how its behavior can be modified, and, finally, to design specific experiments to determine their accuracy and usefulness.</p>
+<p>This thesis describes and discusses how and why bacterial filamentation may be a general mechanism for cell survival upon exposure to toxic agents, such as antibiotics, based on experimental analyses and mathematical modeling. We divided this thesis into three chapters that explain the methodologies used and take us one step closer to understanding filamentation with each chapter.</p>
+<p>Chapter @ref(image-processing) describes the fundamental process to identify and quantify the properties of each cell over time, for example, its length, the amount of internal toxin, and the amount of resistance to the toxin.</p>
+<p>Chapter @ref(experiment-analysis) used the data processed in the previous chapter to explore bacterial filamentation at the population and single-cell level. Data exploration allowed us to simultaneously observe the behavior of filamentation and its properties in heterogeneous populations. For reference, one population with an antibiotic resistance gene located on the chromosome and another on multicopy plasmids.</p>
+<p>Finally, in chapter @ref(model-analysis), we postulated a mathematical model that considers the relationship of cell surface area and volume to the uptake of a toxic agent diffusing into the medium. This model allowed us to specifically evaluate the effect of filamentation in an environment similar to that observed experimentally. Thus, experiments and models work together to learn more about a biological phenomenon to help understand and combat the AMR problem.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-ackermann2015" class="csl-entry" role="doc-biblioentry">
-Ackermann, Martin. 2015. <span>“A Functional Perspective on Phenotypic
-Heterogeneity in Microorganisms.”</span> <em>Nature Reviews
-Microbiology</em> 13 (8): 497–508. <a href="https://doi.org/10.1038/nrmicro3491">https://doi.org/10.1038/nrmicro3491</a>.
-</div>
-<div id="ref-altman1992" class="csl-entry" role="doc-biblioentry">
-Altman, N. S. 1992. <span>“An Introduction to Kernel and
-Nearest-Neighbor Nonparametric Regression.”</span> <em>The American
-Statistician</em> 46 (3): 175–85. <a href="https://doi.org/10.1080/00031305.1992.10475879">https://doi.org/10.1080/00031305.1992.10475879</a>.
+Ackermann, Martin. 2015. <span>“A Functional Perspective on Phenotypic Heterogeneity in Microorganisms.”</span> <em>Nature Reviews Microbiology</em> 13 (8): 497–508. <a href="https://doi.org/10.1038/nrmicro3491">https://doi.org/10.1038/nrmicro3491</a>.
 </div>
 <div id="ref-andersson2005" class="csl-entry" role="doc-biblioentry">
-Andersson, Dan I. 2005. <span>“The Ways in Which Bacteria Resist
-Antibiotics.”</span> <em>International Journal of Risk and Safety in
-Medicine</em> 17 (3-4): 111–16.
-</div>
-<div id="ref-balaban2004a" class="csl-entry" role="doc-biblioentry">
-Balaban, Nathalie Q., Jack Merrin, Remy Chait, Lukasz Kowalik, and
-Stanislas Leibler. 2004. <span>“Bacterial Persistence as a Phenotypic
-Switch.”</span> <em>Science</em> 305 (5690): 1622–25. <a href="https://doi.org/10.1126/science.1099390">https://doi.org/10.1126/science.1099390</a>.
-</div>
-<div id="ref-10.5555/1386553" class="csl-entry" role="doc-biblioentry">
-Brinkmann, Ron. 2008. <em>The Art and Science of Digital Compositing,
-Second Edition: Techniques for Visual Effects, Animation and Motion
-Graphics (the Morgan Kaufmann Series in ... Morgan Kaufmann Series in
-Computer Graphics)</em>. 2nd ed. San Francisco, CA, USA: Morgan Kaufmann
-Publishers Inc.
-</div>
-<div id="ref-Caicedo2017" class="csl-entry" role="doc-biblioentry">
-Caicedo, Juan C, Sam Cooper, Florian Heigwer, Scott Warchal, Peng Qiu,
-Csaba Molnar, Aliaksei S Vasilevich, et al. 2017. <span>“Data-Analysis
-Strategies for Image-Based Cell Profiling.”</span> <em>Nature
-Methods</em> 14 (9): 849–63. <a href="https://doi.org/10.1038/nmeth.4397">https://doi.org/10.1038/nmeth.4397</a>.
-</div>
-<div id="ref-cayron2020" class="csl-entry" role="doc-biblioentry">
-Cayron, Julien, Annick Dedieu, and Christian Lesterlin. 2020.
-<span>“Bacterial Filament Division Dynamics Allows Rapid Post-Stress
-Cell Proliferation.”</span> <a href="http://dx.doi.org/10.1101/2020.03.16.993345">http://dx.doi.org/10.1101/2020.03.16.993345</a>.
-</div>
-<div id="ref-convery2019" class="csl-entry" role="doc-biblioentry">
-Convery, Neil, and Nikolaj Gadegaard. 2019. <span>“30 Years of
-Microfluidics.”</span> <em>Micro and Nano Engineering</em> 2 (March):
-76–91. <a href="https://doi.org/10.1016/j.mne.2019.01.003">https://doi.org/10.1016/j.mne.2019.01.003</a>.
+Andersson, Dan I. 2005. <span>“The Ways in Which Bacteria Resist Antibiotics.”</span> <em>International Journal of Risk and Safety in Medicine</em> 17 (3-4): 111–16.
 </div>
 <div id="ref-dever1991" class="csl-entry" role="doc-biblioentry">
-Dever, L. A., and T. S. Dermody. 1991. <span>“Mechanisms of bacterial
-resistance to antibiotics.”</span> <em>Archives of Internal
-Medicine</em> 151 (5): 886–95.
+Dever, L. A., and T. S. Dermody. 1991. <span>“Mechanisms of bacterial resistance to antibiotics.”</span> <em>Archives of Internal Medicine</em> 151 (5): 886–95.
 </div>
 <div id="ref-EditorialBoard2014" class="csl-entry" role="doc-biblioentry">
-<span>“Editorial <span>Board</span>.”</span> 2014. <em>Journal of Global
-Antimicrobial Resistance</em> 2 (2): ii. <a href="https://doi.org/10.1016/S2213-7165(14)00044-7">https://doi.org/10.1016/S2213-7165(14)00044-7</a>.
-</div>
-<div id="ref-elowitz2002" class="csl-entry" role="doc-biblioentry">
-Elowitz, Michael B., Arnold J. Levine, Eric D. Siggia, and Peter S.
-Swain. 2002. <span>“Stochastic Gene Expression in a Single Cell.”</span>
-<em>Science</em> 297 (5584): 1183–86. <a href="https://doi.org/10.1126/science.1070919">https://doi.org/10.1126/science.1070919</a>.
-</div>
-<div id="ref-jaimes-lizcano2014" class="csl-entry" role="doc-biblioentry">
-Jaimes-Lizcano, Yuly A., Dayton D. Hunn, and Kyriakos D. Papadopoulos.
-2014. <span>“Filamentous Escherichia Coli Cells Swimming in Tapered
-Microcapillaries.”</span> <em>Research in Microbiology</em> 165 (3):
-166–74. <a href="https://doi.org/10.1016/j.resmic.2014.01.007">https://doi.org/10.1016/j.resmic.2014.01.007</a>.
-</div>
-<div id="ref-justiceFilamentationEscherichiaColi2006" class="csl-entry" role="doc-biblioentry">
-Justice, S. S., D. A. Hunstad, P. C. Seed, and S. J. Hultgren. 2006.
-<span>“Filamentation by <span>Escherichia</span> Coli Subverts Innate
-Defenses During Urinary Tract Infection.”</span> <em>Proceedings of the
-National Academy of Sciences</em> 103 (52): 19884–89. <a href="https://doi.org/10.1073/pnas.0606329104">https://doi.org/10.1073/pnas.0606329104</a>.
-</div>
-<div id="ref-justiceMorphologicalPlasticityBacterial2008" class="csl-entry" role="doc-biblioentry">
-Justice, Sheryl S., David A. Hunstad, Lynette Cegelski, and Scott J.
-Hultgren. 2008. <span>“Morphological Plasticity as a Bacterial Survival
-Strategy.”</span> <em>Nature Reviews Microbiology</em> 6 (2): 162–68. <a href="https://doi.org/10.1038/nrmicro1820">https://doi.org/10.1038/nrmicro1820</a>.
-</div>
-<div id="ref-schermelleh2019" class="csl-entry" role="doc-biblioentry">
-Schermelleh, Lothar, Alexia Ferrand, Thomas Huser, Christian Eggeling,
-Markus Sauer, Oliver Biehlmaier, and Gregor P. C. Drummen. 2019.
-<span>“Super-Resolution Microscopy Demystified.”</span> <em>Nature Cell
-Biology</em> 21 (1): 72–84. <a href="https://doi.org/10.1038/s41556-018-0251-8">https://doi.org/10.1038/s41556-018-0251-8</a>.
-</div>
-<div id="ref-schneider2012" class="csl-entry" role="doc-biblioentry">
-Schneider, Caroline A, Wayne S Rasband, and Kevin W Eliceiri. 2012.
-<span>“NIH Image to ImageJ: 25 Years of Image Analysis.”</span>
-<em>Nature Methods</em> 9 (7): 671–75. <a href="https://doi.org/10.1038/nmeth.2089">https://doi.org/10.1038/nmeth.2089</a>.
-</div>
-<div id="ref-Smith2018" class="csl-entry" role="doc-biblioentry">
-Smith, Kevin, Filippo Piccinini, Tamas Balassa, Krisztian Koos, Tivadar
-Danka, Hossein Azizpour, and Peter Horvath. 2018. <span>“Phenotypic
-Image Analysis Software Tools for Exploring and Understanding Big Image
-Data from Cell-Based Assays.”</span> <em>Cell Systems</em> 6 (6):
-636–53. <a href="https://doi.org/10.1016/j.cels.2018.06.001">https://doi.org/10.1016/j.cels.2018.06.001</a>.
-</div>
-<div id="ref-Specht2017" class="csl-entry" role="doc-biblioentry">
-Specht, Elizabeth A., Esther Braselmann, and Amy E. Palmer. 2017.
-<span>“A Critical and Comparative Review of Fluorescent Tools for
-Live-Cell Imaging.”</span> <em>Annual Review of Physiology</em> 79 (1):
-93–117. <a href="https://doi.org/10.1146/annurev-physiol-022516-034055">https://doi.org/10.1146/annurev-physiol-022516-034055</a>.
-</div>
-<div id="ref-vanvalen2016" class="csl-entry" role="doc-biblioentry">
-Van Valen, David A., Takamasa Kudo, Keara M. Lane, Derek N. Macklin,
-Nicolas T. Quach, Mialy M. DeFelice, Inbal Maayan, Yu Tanouchi, Euan A.
-Ashley, and Markus W. Covert. 2016. <span>“Deep Learning Automates the
-Quantitative Analysis of Individual Cells in Live-Cell Imaging
-Experiments.”</span> Edited by Martin Meier-Schellersheim. <em>PLOS
-Computational Biology</em> 12 (11): e1005177. <a href="https://doi.org/10.1371/journal.pcbi.1005177">https://doi.org/10.1371/journal.pcbi.1005177</a>.
+<span>“Editorial <span>Board</span>.”</span> 2014. <em>Journal of Global Antimicrobial Resistance</em> 2 (2): ii. <a href="https://doi.org/10.1016/S2213-7165(14)00044-7">https://doi.org/10.1016/S2213-7165(14)00044-7</a>.
 </div>
 <div id="ref-verschaffel2002" class="csl-entry" role="doc-biblioentry">
-Verschaffel, Lieven, Brian Greer, and Erik de Corte. 2002.
-<span>“Everyday Knowledge and Mathematical Modeling of School Word
-Problems.”</span> In, 257–76. Springer Netherlands. <a href="https://doi.org/10.1007/978-94-017-3194-2_16">https://doi.org/10.1007/978-94-017-3194-2_16</a>.
-</div>
-<div id="ref-Wang2014" class="csl-entry" role="doc-biblioentry">
-Wang, Ying, Hong Wu, Xiaoran Jiang, and Guo-Qiang Chen. 2014.
-<span>“Engineering Escherichia Coli for Enhanced Production of
-Poly(3-Hydroxybutyrate-Co-4-Hydroxybutyrate) in Larger Cellular
-Space.”</span> <em>Metabolic Engineering</em> 25 (September): 183–93. <a href="https://doi.org/10.1016/j.ymben.2014.07.010">https://doi.org/10.1016/j.ymben.2014.07.010</a>.
-</div>
-<div id="ref-Wang2014a" class="csl-entry" role="doc-biblioentry">
-Wang, Ying, Jin Yin, and Guo-Qiang Chen. 2014.
-<span>“Polyhydroxyalkanoates, Challenges and Opportunities.”</span>
-<em>Current Opinion in Biotechnology</em> 30 (December): 59–65. <a href="https://doi.org/10.1016/j.copbio.2014.06.001">https://doi.org/10.1016/j.copbio.2014.06.001</a>.
+Verschaffel, Lieven, Brian Greer, and Erik de Corte. 2002. <span>“Everyday Knowledge and Mathematical Modeling of School Word Problems.”</span> In, 257–76. Springer Netherlands. <a href="https://doi.org/10.1007/978-94-017-3194-2_16">https://doi.org/10.1007/978-94-017-3194-2_16</a>.
 </div>
 <div id="ref-yin2012" class="csl-entry" role="doc-biblioentry">
-Yin, Huabing, and Damian Marshall. 2012. <span>“Microfluidics for Single
-Cell Analysis.”</span> <em>Current Opinion in Biotechnology</em> 23 (1):
-110–19. <a href="https://doi.org/10.1016/j.copbio.2011.11.002">https://doi.org/10.1016/j.copbio.2011.11.002</a>.
+Yin, Huabing, and Damian Marshall. 2012. <span>“Microfluidics for Single Cell Analysis.”</span> <em>Current Opinion in Biotechnology</em> 23 (1): 110–19. <a href="https://doi.org/10.1016/j.copbio.2011.11.002">https://doi.org/10.1016/j.copbio.2011.11.002</a>.
 </div>
 </div>
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -399,11 +299,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./04-discussion.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></span>
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./01-image-processing.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Image processing</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jesús Vélez Santiago">
-<meta name="dcterms.date" content="2022-08-08">
 
-<title>Bacterial filamentation: a bet for survival in stressful environments</title>
+<title>Bacterial filamentation: a bet for survival in stressful environments - 3&nbsp; Models to the rescue; filamentation abstraction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,25 +15,6 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -46,7 +25,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./00-introduction.html" rel="next">
+<link href="./04-discussion.html" rel="next">
+<link href="./02-experiment-analysis.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +65,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Bacterial filamentation: a bet for survival in stressful environments</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Models to the rescue; filamentation abstraction</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -110,7 +90,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Welcome</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -130,7 +110,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-model-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Models to the rescue; filamentation abstraction</span></a>
+  <a href="./03-model-analysis.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Models to the rescue; filamentation abstraction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -148,82 +128,29 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Bacterial filamentation: a bet for survival in stressful environments</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Models to the rescue; filamentation abstraction</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Jesús Vélez Santiago </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 8, 2022</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<section id="welcome" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="welcome">Welcome</h2>
-<p>Etiam venenatis purus eu felis viverra sodales. Sed et varius ex. Nullam sit amet aliquet purus. Fusce elementum vitae est eget vulputate. Aliquam erat volutpat. Donec ac suscipit leo, sed euismod nisi. Duis malesuada elementum pulvinar. Ut et vulputate augue. In dignissim ligula at nulla feugiat cursus. Suspendisse sed diam ut ligula sollicitudin pellentesque. Etiam ut gravida velit, vitae lobortis mi. Nam congue laoreet mauris sit amet iaculis.</p>
-</section>
-<section id="abstract" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Scientists have extensively studied the mechanisms that orchestrate the growth and division of bacterial cells. Cells adapt their shape and dimensions in response to variations in the intracellular and extracellular environments by integrating information about the presence of nutrients or harmful agents in the decision to grow or divide. Filamentation is a process that occurs when rod-shaped cells stop dividing but continue to grow, thus producing elongated cells <span class="citation" data-cites="Wang2014 Wang2014a jaimes-lizcano2014 justiceMorphologicalPlasticityBacterial2008">(<a href="references.html#ref-Wang2014" role="doc-biblioref">Wang et al. 2014</a>; <a href="references.html#ref-Wang2014a" role="doc-biblioref">Wang, Yin, and Chen 2014</a>; <a href="references.html#ref-jaimes-lizcano2014" role="doc-biblioref">Jaimes-Lizcano, Hunn, and Papadopoulos 2014</a>; <a href="references.html#ref-justiceMorphologicalPlasticityBacterial2008" role="doc-biblioref">Sheryl S. Justice et al. 2008</a>)</span>. Some cells can naturally grow as filamentous, while others only do so under stressful conditions <span class="citation" data-cites="cayron2020 justiceFilamentationEscherichiaColi2006">(<a href="references.html#ref-cayron2020" role="doc-biblioref">Cayron, Dedieu, and Lesterlin 2020</a>; <a href="references.html#ref-justiceFilamentationEscherichiaColi2006" role="doc-biblioref">S. S. Justice et al. 2006</a>)</span>. Here, we use mathematical modeling and computational simulations to evaluate a toxic agent’s intracellular concentration as a function of cell length. We show that filamentation can act as a strategy that promotes the resilience of a bacterial population under stressful environmental conditions.</p>
-</section>
-<section id="acknowledgements" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique, sem egestas aliquam varius, arcu nisi ullamcorper lacus, quis convallis enim velit et arcu. Vestibulum lacus arcu, tempor non dapibus vitae, malesuada ut ipsum. Phasellus condimentum diam ex. Sed maximus a mauris vel aliquet.</p>
-<p>Integer neque sapien, cursus eu viverra consequat, cursus congue dui. Maecenas est dui, rutrum vitae enim vel, varius scelerisque tortor. In vel dignissim orci. Integer varius neque mauris, mollis commodo libero fringilla sed. Nunc accumsan, libero id interdum dignissim, nulla nibh consectetur lorem, vel dignissim erat magna vitae ante. Aliquam at est lectus. Suspendisse nec sem euismod, condimentum neque sit amet, malesuada nibh. Aenean condimentum pharetra quam, id venenatis mauris tempor a.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-cayron2020" class="csl-entry" role="doc-biblioentry">
-Cayron, Julien, Annick Dedieu, and Christian Lesterlin. 2020. <span>“Bacterial Filament Division Dynamics Allows Rapid Post-Stress Cell Proliferation.”</span> <a href="http://dx.doi.org/10.1101/2020.03.16.993345">http://dx.doi.org/10.1101/2020.03.16.993345</a>.
-</div>
-<div id="ref-jaimes-lizcano2014" class="csl-entry" role="doc-biblioentry">
-Jaimes-Lizcano, Yuly A., Dayton D. Hunn, and Kyriakos D. Papadopoulos. 2014. <span>“Filamentous Escherichia Coli Cells Swimming in Tapered Microcapillaries.”</span> <em>Research in Microbiology</em> 165 (3): 166–74. <a href="https://doi.org/10.1016/j.resmic.2014.01.007">https://doi.org/10.1016/j.resmic.2014.01.007</a>.
-</div>
-<div id="ref-justiceFilamentationEscherichiaColi2006" class="csl-entry" role="doc-biblioentry">
-Justice, S. S., D. A. Hunstad, P. C. Seed, and S. J. Hultgren. 2006. <span>“Filamentation by <span>Escherichia</span> Coli Subverts Innate Defenses During Urinary Tract Infection.”</span> <em>Proceedings of the National Academy of Sciences</em> 103 (52): 19884–89. <a href="https://doi.org/10.1073/pnas.0606329104">https://doi.org/10.1073/pnas.0606329104</a>.
-</div>
-<div id="ref-justiceMorphologicalPlasticityBacterial2008" class="csl-entry" role="doc-biblioentry">
-Justice, Sheryl S., David A. Hunstad, Lynette Cegelski, and Scott J. Hultgren. 2008. <span>“Morphological Plasticity as a Bacterial Survival Strategy.”</span> <em>Nature Reviews Microbiology</em> 6 (2): 162–68. <a href="https://doi.org/10.1038/nrmicro1820">https://doi.org/10.1038/nrmicro1820</a>.
-</div>
-<div id="ref-Wang2014" class="csl-entry" role="doc-biblioentry">
-Wang, Ying, Hong Wu, Xiaoran Jiang, and Guo-Qiang Chen. 2014. <span>“Engineering Escherichia Coli for Enhanced Production of Poly(3-Hydroxybutyrate-Co-4-Hydroxybutyrate) in Larger Cellular Space.”</span> <em>Metabolic Engineering</em> 25 (September): 183–93. <a href="https://doi.org/10.1016/j.ymben.2014.07.010">https://doi.org/10.1016/j.ymben.2014.07.010</a>.
-</div>
-<div id="ref-Wang2014a" class="csl-entry" role="doc-biblioentry">
-Wang, Ying, Jin Yin, and Guo-Qiang Chen. 2014. <span>“Polyhydroxyalkanoates, Challenges and Opportunities.”</span> <em>Current Opinion in Biotechnology</em> 30 (December): 59–65. <a href="https://doi.org/10.1016/j.copbio.2014.06.001">https://doi.org/10.1016/j.copbio.2014.06.001</a>.
-</div>
-</div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -325,10 +252,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./02-experiment-analysis.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Experiment analysis</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./00-introduction.html" class="pagination-link">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04-discussion.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
