@@ -7,8 +7,11 @@ book:
   date: "8/8/2022"
   chapters:
     - index.qmd
-    - 01_introduction.qmd
-    - summary.qmd
+    - 00-introduction.qmd
+    - 01-image-processing.qmd
+    - 02-experiment-analysis.qmd
+    - 03-model-analysis.qmd
+    - 04-discussion.qmd
     - references.qmd
 
 bibliography: references.bib
