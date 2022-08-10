@@ -1,4 +1,4 @@
-# Discussion {#general-discussion}
+# Discussion {#sec-general-discussion}
 
 Bacterial cell survival is part of a complex biological system, which is
 one of the fundamental problems of the health sector in this century. In

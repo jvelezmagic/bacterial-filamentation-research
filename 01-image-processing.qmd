@@ -1,4 +1,4 @@
-# Image processing {#image-processing}
+# Image processing {#sec-image-processing}
 
 ## Introduction
 
@@ -25,12 +25,13 @@ advance for the scientific community, after acquiring fluorescence
 images, the extraction of quantitative properties from these images is
 crucial, but unfortunately, a difficult step for analyzing experiments.
 Not so long ago, image analysis in biology relied on manual
-quantification. However, manual analysis suffers from two main problems:
-1) accuracy and 2) scalability (that is, analyzing miles or more
-images). Fortunately, improvements in image accuracy and computational
-image analysis capabilities are revolutionizing the quantification of
-biological processes through [@Caicedo2017; @Smith2018]. Therefore, the
-manual correction required to analyze the experiments is minimal.
+quantification. However, manual analysis suffers from two main
+problems: 1) accuracy and 2) scalability (that is, analyzing miles or
+more images). Fortunately, improvements in image accuracy and
+computational image analysis capabilities are revolutionizing the
+quantification of biological processes through [@Caicedo2017;
+@Smith2018]. Therefore, the manual correction required to analyze the
+experiments is minimal.
 
 Here, we used a series of programs in $\mu \mathrm{J}$
 (<https://github.com/ccg-esb-lab/uJ>), which consists of an
@@ -109,55 +110,27 @@ duplication rate), and time-resolved population-level statistics
 We construct a file in columnar format through image processing that
 contains the information necessary to analyze each experiment (*i.e.*,
 chromosomal and plasmids) in its different traps (*i.e.*, XY
-identifier). See @tbl-data-columns-specifications for a full
-description of the output data. Subsequently, the table was analyzed in
-R for statistical computation and plotting (see Chapter
+identifier). See @tbl-data-columns-specifications for a full description
+of the output data. Subsequently, the table was analyzed in R for
+statistical computation and plotting (see Chapter
 \@ref(experiment-analysis)) [@R-base].
-  
 
-+------------------------------------+------------------------------------------------------------------+
-| Column                             | Description                                                      |
-+====================================+==================================================================+
-| experimentID                       | Unique identifier of the experiment.                             |
-+------------------------------------+------------------------------------------------------------------+
-| trapID                             | Unique identifier of the trap used.                              |
-+------------------------------------+------------------------------------------------------------------+
-| lineageID                          | Unique integer of the stem cell and its ancestry.                |
-+------------------------------------+------------------------------------------------------------------+
-| cellID                             | Unique identification number for each cell existing since the    |
-|                                    | beginning of the experiment or generated later.                  |
-+------------------------------------+------------------------------------------------------------------+
-| motherID                           | Represents the identification number of the stem cell that gave  |
-|                                    | rise to the progeny.                                             |
-+------------------------------------+------------------------------------------------------------------+
-| trackID                            | Indicates the x-y coordinates where the cell being tracked       |
-|                                    | starts.                                                          |
-+------------------------------------+------------------------------------------------------------------+
-| roiID                              | Indicates the x-y position in which the cell is located,         |
-|                                    | followed after each photograph.                                  |
-+------------------------------------+------------------------------------------------------------------+
-| frame                              | Number of the photograph in the sequence of photographs taken,   |
-|                                    | indicating the elapsed time (10 minutes per frame).              |
-+------------------------------------+------------------------------------------------------------------+
-| length                             | Cell length.                                                     |
-+------------------------------------+------------------------------------------------------------------+
-| division                           | Indicates cell division events, represented by the value 1 when  |
-|                                    | they occur and 0 otherwise.                                      |
-+------------------------------------+------------------------------------------------------------------+
-| GFP                                | Represents the relative fluorescence intensity in each cell by   |
-|                                    | green fluorescent protein (*i.e.*, GFP).                         |
-+------------------------------------+------------------------------------------------------------------+
-| DsRed                              | Represents the relative fluorescence intensity for cells         |
-|                                    | generated by rhodamine's internalization (*i.e.*, DsRed); an     |
-|                                    | indicator of cell death events.                                  |
-+------------------------------------+------------------------------------------------------------------+
-| tracking_score                     | Determine how good or bad the tracking of a cell was.            |
-+------------------------------------+------------------------------------------------------------------+
-| state                              | Indicates the state of the cell determined from its length and   |
-|                                    | fluorescence thresholds. -1 for death, 0 for normal, and 1 for   |
-|                                    | filamentation (see Section                                       |
-|                                    | \@ref(experiment-general-preprocessing) for detailed             |
-|                                    | information).                                                    |
-+------------------------------------+------------------------------------------------------------------+
+| Column         | Description                                                                                                                                                                                                                 |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| experimentID   | Unique identifier of the experiment.                                                                                                                                                                                        |
+| trapID         | Unique identifier of the trap used.                                                                                                                                                                                         |
+| lineageID      | Unique integer of the stem cell and its ancestry.                                                                                                                                                                           |
+| cellID         | Unique identification number for each cell existing since the beginning of the experiment or generated later.                                                                                                               |
+| motherID       | Represents the identification number of the stem cell that gave rise to the progeny.                                                                                                                                        |
+| trackID        | Indicates the x-y coordinates where the cell being tracked starts.                                                                                                                                                          |
+| roiID          | Indicates the x-y position in which the cell is located, followed after each photograph.                                                                                                                                    |
+| frame          | Number of the photograph in the sequence of photographs taken, indicating the elapsed time (10 minutes per frame).                                                                                                          |
+| length         | Cell length.                                                                                                                                                                                                                |
+| division       | Indicates cell division events, represented by the value 1 when they occur and 0 otherwise.                                                                                                                                 |
+| GFP            | Represents the relative fluorescence intensity in each cell by green fluorescent protein (*i.e.*, GFP).                                                                                                                     |
+| DsRed          | Represents the relative fluorescence intensity for cells generated by rhodamine's internalization (*i.e.*, DsRed); an indicator of cell death events.                                                                       |
+| tracking_score | Determine how good or bad the tracking of a cell was.                                                                                                                                                                       |
+| state          | Indicates the state of the cell determined from its length and fluorescence thresholds. -1 for death, 0 for normal, and 1 for filamentation (see Section \@ref(experiment-general-preprocessing) for detailed information). |
 
-: Resulting table from image processing. {#tbl-data-columns-specifications}
+: Resulting table from image processing.
+{#tbl-data-columns-specifications}
