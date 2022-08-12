@@ -589,3 +589,127 @@ p_metric_differences <- cells_df %>%
 
 p_metric_differences
 ```
+
+## Number of divisions and cell age do not appear to play a clear role in determining cell survival
+
+In @sec-length-gfp-crucial, we explored how GFP variability
+and cell length influence cell survival. However,
+@fig-just-initial-values and @fig-metric-differences showed us the
+possibility of other factors relevant to the phenomenon under study. As
+some papers in the literature suggest, some of these other factors may be
+cell division and chronological age (*i.e.*, how much time has passed since
+the last cell division at the time of exposure to a toxic agent)
+[@moger-reischer2019; @roostalu2008; @heinrich2015]. Therefore, we chose
+to observe these two metrics in experiments at a purely qualitative
+level, i.e., without the inclusion of, e.g., metrics of membrane or cell
+cycle properties [@Joseleau-Petit1999].
+
+Although we expected to see a small contribution, either by the number
+of divisions or cell age, in @fig-number-divisions and 
+@fig-time-since-last-division, we could not observe
+a precise effect of these variables on cell survival. Patterns that,
+although they could have an explanation or biological significance, we
+decided to omit as relevant in the characterization of our cells, since
+the signal was not clear. However, we derived from this analysis a
+slightly simpler variable that tells us whether a cell underwent a cell
+division event or not. So it gives us a more generalized picture of the
+contribution of division to cell survival (see
+@fig-plasmid-pca-variable-contribution).
+
+```{r}
+#| label: fig-number-divisions
+#| fig-scap: Cell's number of divisions.
+#| fig-cap: >
+#|   **Cell's number of divisions.**
+#|   Chromosomal cells exhibited more divisions for surviving classes
+#|   and non-surviving filamented cells (*i.e.*, purple, green, and
+#|   red dots) relative to unchanged behavior in plasmid cells.
+#|   Therefore, its contribution to filamentation remains uncertain.
+#|   
+p_number_divisions <-cells_df %>% 
+  ggplot(aes(x = cell_status, y = n_divisions, fill = cell_status)) +
+  stat_eye(position = "dodge") +
+  stat_compare_means(
+    label = "p.signif",
+    method = "t.test",
+    ref.group = "Filamented - Survived",
+    label.y.npc = 0.75,
+    hide.ns = TRUE
+  ) +
+  stat_compare_means(
+    method = "t.test",
+    comparisons = list(c("Not filamented - Survived", "Not filamented - Not survived")),
+    label = "p.signif",
+    label.y = 7,
+    hide.ns = TRUE
+  ) +
+  facet_grid(. ~ experiment_id) +
+  coord_cartesian(ylim = c(0, 10)) +
+  guides(
+    fill = guide_legend(ncol = 2)
+  ) +
+  theme(
+    panel.grid.major = element_blank(),
+    axis.text.x = element_blank()
+  ) +
+  labs(
+    x = "Cell status",
+    y = "Number of divisions",
+    fill = "Cell status"
+  ) +
+  NULL
+
+p_number_divisions
+```
+
+```{r}
+#| label: fig-time-since-last-division
+#| fig-scap: Time elapsed since the last division at the beginning of the experiment.
+#| fig-cap: >
+#|   **Time elapsed since the last division at the beginning of the experiment.**
+#|   The mean time of the last division before starting the experiment
+#|   indicates that it did not influence the final result for chromosomal
+#|   cells. There is a slight difference between the filamented-not survived
+#|   cells and the rest for cells with plasmids. However, the signal does not
+#|   appear to be strong on the survival role. Therefore, we conclude that we
+#|   have no evidence to support that the time of the last division at the
+#|   beginning of the experiment influences the final classification results.
+#|   
+p_time_since_last_division <- cells_df %>% 
+  filter(!is.na(time_since_last_division_to_experiment_start)) %>% 
+  ggplot(
+    aes(
+      x = experiment_id,
+      y = time_since_last_division_to_experiment_start,
+      fill = cell_status
+    )
+  ) +
+  stat_eye(position = "dodge") +
+  labs(
+    x = "Experiment",
+    y = "Time since last division to experiment start",
+    fill = "Cell status"
+  ) +
+  guides(
+    color = guide_legend(ncol = 2),
+    fill = guide_legend(ncol = 2)
+  ) +
+  NULL
+
+p_time_since_last_division
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
