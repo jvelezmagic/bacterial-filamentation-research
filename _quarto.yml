@@ -17,11 +17,12 @@ book:
     - 02-experiment-analysis.qmd
     - 03-model-analysis.qmd
     - 04-discussion.qmd
+    - 98-appendices.qmd
     - references.qmd
   comments:
     hypothesis: true
 
-bibliography: references.bib
+bibliography: [references.bib, project-general-packages.bib, project-r-packages.bib]
 
 format:
   html:
