@@ -1591,14 +1591,6 @@
         "askpass"
       ]
     },
-    "packrat": {
-      "Package": "packrat",
-      "Version": "0.8.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "d84055adcb6bb1f4f0ce8c5f235bc328",
-      "Requirements": []
-    },
     "parallelly": {
       "Package": "parallelly",
       "Version": "1.32.1",
@@ -1868,22 +1860,6 @@
         "survival"
       ]
     },
-    "quarto": {
-      "Package": "quarto",
-      "Version": "1.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "298a252816cabed120391c955aced484",
-      "Requirements": [
-        "jsonlite",
-        "later",
-        "processx",
-        "rmarkdown",
-        "rsconnect",
-        "rstudioapi",
-        "yaml"
-      ]
-    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -2091,22 +2067,6 @@
         "vctrs"
       ]
     },
-    "rsconnect": {
-      "Package": "rsconnect",
-      "Version": "0.8.27",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "114103fbb50af041e93921ee67db8fa0",
-      "Requirements": [
-        "curl",
-        "digest",
-        "jsonlite",
-        "openssl",
-        "packrat",
-        "rstudioapi",
-        "yaml"
-      ]
-    },
     "rstatix": {
       "Package": "rstatix",
       "Version": "0.7.0",
@@ -2290,17 +2250,6 @@
         "Matrix"
       ]
     },
-    "svglite": {
-      "Package": "svglite",
-      "Version": "2.1.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "68dfdf211af6aa4e5f050f064f64d401",
-      "Requirements": [
-        "cpp11",
-        "systemfonts"
-      ]
-    },
     "sys": {
       "Package": "sys",
       "Version": "3.4",
@@ -2308,16 +2257,6 @@
       "Repository": "CRAN",
       "Hash": "b227d13e29222b4574486cfcbde077fa",
       "Requirements": []
-    },
-    "systemfonts": {
-      "Package": "systemfonts",
-      "Version": "1.0.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "90b28393209827327de889f49935140a",
-      "Requirements": [
-        "cpp11"
-      ]
     },
     "tensorflow": {
       "Package": "tensorflow",
