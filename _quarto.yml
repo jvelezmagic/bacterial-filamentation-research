@@ -27,8 +27,15 @@ bibliography: [references.bib, project-general-packages.bib, project-r-packages.
 format:
   html:
     theme: cosmo
+    code-tools: true
+    execute:
+        echo: false
+        warning: false
   pdf:
     documentclass: scrreprt
+    execute:
+        echo: false
+        warning: false
 
 editor: visual
 
