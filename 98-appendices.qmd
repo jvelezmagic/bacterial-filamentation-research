@@ -31,25 +31,15 @@ Below is the main list of packages used for Chapter
 @sec-image-processing
 
 -   Python [@10.5555/1593511].
-
 -   dask [@rocklin2015dask].
-
 -   ipython [@perez2007ipython].
-
 -   matplotlib [@hunter2007matplotlib].
-
 -   napari [@sofroniew2021a].
-
 -   networkx [@hagberg2008exploring].
-
 -   numpy [@2020NumPy-Array].
-
 -   pandas [@mckinney2010data].
-
 -   pickle [@van1995python].
-
 -   scikit-image [@vanderwalt2014].
-
 -   shapely [@shapely2007].
 
 ### R
@@ -211,7 +201,6 @@ pkgs |>
     Source = stringr::str_remove(Source, "\\\\@[a-f0-9]*")
   ) |>
   knitr::kable(
-    format = "pipe",
-    caption = "Packages used to built the project documents."
+    format = "pipe"
   )
 ```
