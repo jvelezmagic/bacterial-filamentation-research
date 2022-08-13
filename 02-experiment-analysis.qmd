@@ -98,10 +98,10 @@ parse_metrics_column <- function(.data, metric_column) {
 
 ## Introduction
 
-The previous chapter (see @sec-image-processing) detailed the
-steps necessary to extract data from a set of microfluidic images
-through image analysis techniques and fluorescence microscopy. Each step
-was instrumental in creating a dataset that was easy to explore and ask
+The previous chapter (see @sec-image-processing) detailed the steps
+necessary to extract data from a set of microfluidic images through
+image analysis techniques and fluorescence microscopy. Each step was
+instrumental in creating a dataset that was easy to explore and ask
 questions. With the help of computational biology, systems biology, and
 data analysis techniques, we could process these files to help us in the
 search to find the role of filamentation in cell survival.
@@ -150,19 +150,18 @@ fluorescence intensity that would allow us to detect cell dead.
 
 Ultimately, we decided to classify cells into four fundamental groups
 based on whether the cell filamented and survived (see
-@fig-cell-distribution-across-experiments). We
-define a *filamented cell* as a cell with more than two standard
-deviations from the mean concerning the lengths observed before
-introducing antibiotics into the system. On the other hand, although
-there are multiple ways to define death from single-cell observations
-[@trevors2012; @kroemer2008], we considered a *cell dead or missing*
-when we stopped having information about it, either because of
-fluorescence in the red channel was above a given threshold (resulting
-from an increase in cell membrane permeability and the introduction of
-fluorescent dye into the cell) or because it left the field of
-observation. Therefore, a *surviving cell* is defined as a cell observed
-before and after exposure to the antibiotic and does not surpass the
-DsRed threshold.
+@fig-cell-distribution-across-experiments). We define a *filamented
+cell* as a cell with more than two standard deviations from the mean
+concerning the lengths observed before introducing antibiotics into the
+system. On the other hand, although there are multiple ways to define
+death from single-cell observations [@trevors2012; @kroemer2008], we
+considered a *cell dead or missing* when we stopped having information
+about it, either because of fluorescence in the red channel was above a
+given threshold (resulting from an increase in cell membrane
+permeability and the introduction of fluorescent dye into the cell) or
+because it left the field of observation. Therefore, a *surviving cell*
+is defined as a cell observed before and after exposure to the
+antibiotic and does not surpass the DsRed threshold.
 
 ```{r}
 #| label: fig-cell-distribution-across-experiments
@@ -247,19 +246,18 @@ of this investigation.
 
 We define the *initial time* as the first time we observed the cell in
 the experiment. *Filamentation time* equals when a cell reaches the
-filamentation threshold (see @fig-length-temporal-distribution) for the first
-time. We defined the *end time* as the time of the last observation of
-the cell. We decided to bound the end time for surviving cells to one
-frame (10 min) after the end of antibiotic exposure so that the observed
-signal would reflect the final stress responses.
+filamentation threshold (see @fig-length-temporal-distribution) for the
+first time. We defined the *end time* as the time of the last
+observation of the cell. We decided to bound the end time for surviving
+cells to one frame (10 min) after the end of antibiotic exposure so that
+the observed signal would reflect the final stress responses.
 
 When we compared the distributions of DsRed, GFP, and length for both
 experiments, we observed its changes in its role for cell survival. In
-@fig-dsred-temporal-distribution, we show
-that indistinctly and, as expected, surviving cells managed to eliminate
-the antibiotic by the end time. In contrast, dead cells presented higher
-levels of antibiotics (measured by proxy through the mean DsRed
-intensity of the cell).
+@fig-dsred-temporal-distribution, we show that indistinctly and, as
+expected, surviving cells managed to eliminate the antibiotic by the end
+time. In contrast, dead cells presented higher levels of antibiotics
+(measured by proxy through the mean DsRed intensity of the cell).
 
 ```{r}
 #| label: fig-dsred-temporal-distribution
@@ -332,12 +330,11 @@ p_temporal_dsred_distributution <- cells_df %>%
 p_temporal_dsred_distributution
 ```
 
-On the other hand, GFP observations in
-@fig-gfp-temporal-distribution showed us two
-essential things for cell classification: 1) The chromosomal strain did
-not exhibit noticeable changes in GFP levels, and 2) filamented cells
-were those that had low fluorescent intensities (low plasmid
-copy-number) at the beginning of the experiment. For the final
+On the other hand, GFP observations in @fig-gfp-temporal-distribution
+showed us two essential things for cell classification: 1) The
+chromosomal strain did not exhibit noticeable changes in GFP levels, and
+2) filamented cells were those that had low fluorescent intensities (low
+plasmid copy-number) at the beginning of the experiment. For the final
 observation times, GFP measurements indicated that among the cells that
 did not filament, the ones that survived exhibited a reduced GFP
 expression concerning cells killed by the antibiotic. Meanwhile, for the
@@ -412,21 +409,21 @@ p_temporal_gfp_distributution
 ```
 
 Cell length was one of the factors that GFP expression levels could not
-explain for cell survival. In @fig-length-temporal-distribution, we show that the
-conclusions regarding filamentation were applicable for both chromosomal
-or plasmid strains. For the initial times, filamented and survived cells
-were shorter in length than those that died but longer than not
-filamented cells of both classes, while non-filamented cells did not
-differ from each other. We observed no length differences between cells
-at filamentation time. Thus, survival could depend on other factors,
-such as growth rate. At the final time, the results were well-defined.
-Surviving cells had a greater length relative to their non-surviving
-pair (*i.e.*, dead filamented and non-filamented cells). However, for
-filamented cells, surviving cells represent a distribution of higher
-final length values in general but not as extensive as their dead
-counterpart. Which we could explain as a length limit to which cells can
-grow without dying. Nevertheless, we had no information to evaluate such
-a hypothesis.
+explain for cell survival. In @fig-length-temporal-distribution, we show
+that the conclusions regarding filamentation were applicable for both
+chromosomal or plasmid strains. For the initial times, filamented and
+survived cells were shorter in length than those that died but longer
+than not filamented cells of both classes, while non-filamented cells
+did not differ from each other. We observed no length differences
+between cells at filamentation time. Thus, survival could depend on
+other factors, such as growth rate. At the final time, the results were
+well-defined. Surviving cells had a greater length relative to their
+non-surviving pair (*i.e.*, dead filamented and non-filamented cells).
+However, for filamented cells, surviving cells represent a distribution
+of higher final length values in general but not as extensive as their
+dead counterpart. Which we could explain as a length limit to which
+cells can grow without dying. Nevertheless, we had no information to
+evaluate such a hypothesis.
 
 ```{r}
 #| label: fig-length-temporal-distribution
@@ -502,30 +499,25 @@ p_temporal_length_distributution <- cells_df %>%
 p_temporal_length_distributution
 ```
 
-
 Once we observed the effects of GFP expression levels and lengths in
 determining whether a cell lives or dies, we projected the cells onto
 the plane and painted them with their class status (See
-@fig-cell-distribution-across-experiments) to
-determine whether these two variables contained the necessary
-information to cluster the data correctly. In @fig-just-initial-values, 
-we show the initial GFP
-and length values projection. While, with some work, we could
-contextually place the results in Figures
-@fig-gfp-temporal-distribution and
-@fig-length-temporal-distribution, the initial
-values did not appear to determine the classes. Therefore, we explored
-the final versus initial values differences in
-@fig-metric-differences. With this new
+@fig-cell-distribution-across-experiments) to determine whether these
+two variables contained the necessary information to cluster the data
+correctly. In @fig-just-initial-values, we show the initial GFP and
+length values projection. While, with some work, we could contextually
+place the results in Figures @fig-gfp-temporal-distribution and
+@fig-length-temporal-distribution, the initial values did not appear to
+determine the classes. Therefore, we explored the final versus initial
+values differences in @fig-metric-differences. With this new
 representation of the cells in the plane, we contextualized the
-statistical results presented in Figures
-@fig-gfp-temporal-distribution and
-@fig-length-temporal-distribution. Besides, it
-showed us that differences in length (*i.e.*, filamentation) and
-reductions in GFP expression are essential in determining cell survival.
-Though, the clustering of cells by state is not completely separated,
-which means that other variables are affection the experimental results
-in cell survival.
+statistical results presented in Figures @fig-gfp-temporal-distribution
+and @fig-length-temporal-distribution. Besides, it showed us that
+differences in length (*i.e.*, filamentation) and reductions in GFP
+expression are essential in determining cell survival. Though, the
+clustering of cells by state is not completely separated, which means
+that other variables are affection the experimental results in cell
+survival.
 
 ```{r}
 #| label: fig-just-initial-values
@@ -592,29 +584,28 @@ p_metric_differences
 
 ## Number of divisions and cell age do not appear to play a clear role in determining cell survival
 
-In @sec-length-gfp-crucial, we explored how GFP variability
-and cell length influence cell survival. However,
-@fig-just-initial-values and @fig-metric-differences showed us the
-possibility of other factors relevant to the phenomenon under study. As
-some papers in the literature suggest, some of these other factors may be
-cell division and chronological age (*i.e.*, how much time has passed since
-the last cell division at the time of exposure to a toxic agent)
-[@moger-reischer2019; @roostalu2008; @heinrich2015]. Therefore, we chose
-to observe these two metrics in experiments at a purely qualitative
-level, i.e., without the inclusion of, e.g., metrics of membrane or cell
-cycle properties [@Joseleau-Petit1999].
+In @sec-length-gfp-crucial, we explored how GFP variability and cell
+length influence cell survival. However, @fig-just-initial-values and
+@fig-metric-differences showed us the possibility of other factors
+relevant to the phenomenon under study. As some papers in the literature
+suggest, some of these other factors may be cell division and
+chronological age (*i.e.*, how much time has passed since the last cell
+division at the time of exposure to a toxic agent) [@moger-reischer2019;
+@roostalu2008; @heinrich2015]. Therefore, we chose to observe these two
+metrics in experiments at a purely qualitative level, i.e., without the
+inclusion of, e.g., metrics of membrane or cell cycle properties
+[@Joseleau-Petit1999].
 
 Although we expected to see a small contribution, either by the number
-of divisions or cell age, in @fig-number-divisions and 
-@fig-time-since-last-division, we could not observe
-a precise effect of these variables on cell survival. Patterns that,
-although they could have an explanation or biological significance, we
-decided to omit as relevant in the characterization of our cells, since
-the signal was not clear. However, we derived from this analysis a
-slightly simpler variable that tells us whether a cell underwent a cell
-division event or not. So it gives us a more generalized picture of the
-contribution of division to cell survival (see
-@fig-plasmid-pca-variable-contribution).
+of divisions or cell age, in @fig-number-divisions and
+@fig-time-since-last-division, we could not observe a precise effect of
+these variables on cell survival. Patterns that, although they could
+have an explanation or biological significance, we decided to omit as
+relevant in the characterization of our cells, since the signal was not
+clear. However, we derived from this analysis a slightly simpler
+variable that tells us whether a cell underwent a cell division event or
+not. So it gives us a more generalized picture of the contribution of
+division to cell survival (see @fig-plasmid-pca-variable-contribution).
 
 ```{r}
 #| label: fig-number-divisions
@@ -701,16 +692,14 @@ p_time_since_last_division
 
 ### Time to reach filamentation matters in determining cell survival
 
-In @fig-dsred-temporal-distribution,
-@fig-gfp-temporal-distribution, and
-@fig-length-temporal-distribution, we showed how, at
-the time of filamentation, DsRed and GFP levels appeared indifferent to
-the cells. Therefore, we hypothesized that a possible variable that
-could determine cell survival could be its time to activate its
-anti-stress response system that causes filamentation. Furthermore, we
-also guided our hypothesis by previous reports showing us how the gene
-expression level can induce filamentation with tight temporal
-coordination [x].
+In @fig-dsred-temporal-distribution, @fig-gfp-temporal-distribution, and
+@fig-length-temporal-distribution, we showed how, at the time of
+filamentation, DsRed and GFP levels appeared indifferent to the cells.
+Therefore, we hypothesized that a possible variable that could determine
+cell survival could be its time to activate its anti-stress response
+system that causes filamentation. Furthermore, we also guided our
+hypothesis by previous reports showing us how the gene expression level
+can induce filamentation with tight temporal coordination \[x\].
 
 While, for our analyses, we did not measure the concentration of
 antibiotic that triggers filamentation per se, we indirectly quantified
@@ -720,17 +709,16 @@ recognize that the observed effect was a product of the experiment, we
 decided to keep only filamented cells just once antibiotic exposure
 began.
 
-@fig-time-to-filamentation-filtered shows how
-filamentation times are narrower for chromosomal cells than for
-plasmid-bearing cells. Then, we hypothesize that the effect could come
-from the heterogeneity in the plasmid copy number in the population.
-Also, interestingly, we observed that, for both experiments, cells that
-survived had longer filamentation times than the cells that died. These
-differences in response times suggest the following: 1) if the cell
-grows too fast, it will reach a limit and start to accumulate
-antibiotics constantly, and 2) if the cell grows too fast, it is likely
-that the cost of maintaining an ample length for prolonged periods of
-exposure will become counterproductive.
+@fig-time-to-filamentation-filtered shows how filamentation times are
+narrower for chromosomal cells than for plasmid-bearing cells. Then, we
+hypothesize that the effect could come from the heterogeneity in the
+plasmid copy number in the population. Also, interestingly, we observed
+that, for both experiments, cells that survived had longer filamentation
+times than the cells that died. These differences in response times
+suggest the following: 1) if the cell grows too fast, it will reach a
+limit and start to accumulate antibiotics constantly, and 2) if the cell
+grows too fast, it is likely that the cost of maintaining an ample
+length for prolonged periods of exposure will become counterproductive.
 
 ```{r}
 #| label: fig-time-to-filamentation-filtered
@@ -765,19 +753,17 @@ p_time_to_filamentation_filtered <- cells_df %>%
 p_time_to_filamentation_filtered
 ```
 
-
-In Figure @fig-initial-values-with-time, we decided
-to project the results of Figure
-@fig-time-to-filamentation-filtered in a space
-similar to the one described in Figure
-@fig-just-initial-values). Thus, we separated our
-data into cells that survived and cells that did not, and painted them
-when it took them to reach their filamented state. We realized that,
-indeed, by adding this temporal component to the initial variables of
-length and GFP, we could separate surviving cells from dead cells to a
-greater degree. However, it may still not be enough, and there are still
-many other variables that play a crucial role in understanding the
-ecology of stress and how some cells will be survivors or not.
+In Figure @fig-initial-values-with-time, we decided to project the
+results of Figure @fig-time-to-filamentation-filtered in a space similar
+to the one described in Figure @fig-just-initial-values). Thus, we
+separated our data into cells that survived and cells that did not, and
+painted them when it took them to reach their filamented state. We
+realized that, indeed, by adding this temporal component to the initial
+variables of length and GFP, we could separate surviving cells from dead
+cells to a greater degree. However, it may still not be enough, and
+there are still many other variables that play a crucial role in
+understanding the ecology of stress and how some cells will be survivors
+or not.
 
 ```{r}
 #| label: fig-initial-values-with-time
