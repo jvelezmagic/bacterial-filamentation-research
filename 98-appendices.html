@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bacterial filamentation: a bet for survival in stressful environments - Appendix</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./04-discussion.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Appendix</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Bacterial filamentation: a bet for survival in stressful environments</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/jvelezmagic/bacterial-filamentation-research" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="./Bacterial-filamentation--a-bet-for-survival-in-stressful-environments.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+            <i class="bi bi-bi-linkedin pe-1"></i>
+          LinkedIn
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-introduction.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-image-processing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Image processing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-experiment-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Experiment analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-model-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Models to the rescue; filamentation abstraction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-discussion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./98-appendices.html" class="sidebar-item-text sidebar-link active">Appendix</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#code-availability" id="toc-code-availability" class="nav-link active" data-scroll-target="#code-availability">Code availability</a></li>
+  <li><a href="#software-tools" id="toc-software-tools" class="nav-link" data-scroll-target="#software-tools">Software tools</a>
+  <ul class="collapse">
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
+  <li><a href="#julia" id="toc-julia" class="nav-link" data-scroll-target="#julia">Julia</a></li>
+  </ul></li>
+  <li><a href="#software-usage" id="toc-software-usage" class="nav-link" data-scroll-target="#software-usage">Software usage</a>
+  <ul class="collapse">
+  <li><a href="#undergraduate-research-project" id="toc-undergraduate-research-project" class="nav-link" data-scroll-target="#undergraduate-research-project">Undergraduate research project</a></li>
+  <li><a href="#cell-viewer" id="toc-cell-viewer" class="nav-link" data-scroll-target="#cell-viewer">Cell-viewer</a></li>
+  <li><a href="#filamentation-model" id="toc-filamentation-model" class="nav-link" data-scroll-target="#filamentation-model">Filamentation model</a></li>
+  </ul></li>
+  <li><a href="#colophon" id="toc-colophon" class="nav-link" data-scroll-target="#colophon">Colophon</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jvelezmagic/bacterial-filamentation-research/blob/main/98-appendices.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/jvelezmagic/bacterial-filamentation-research/issues/new" class="toc-action">Report an issue</a></p><p><a href="https://github.com/jvelezmagic/bacterial-filamentation-research/edit/main/98-appendices.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Appendix</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="code-availability" class="level2 appendix">
+<h2 class="appendix anchored" data-anchor-id="code-availability">Code availability</h2>
+<p>All code that we used in each phase of the project can be located on Github. Below we listed the repositories used as well as a brief description of their content.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-github-repositories-used" class="anchored">
+<table class="table table-sm table-striped">
+<caption>Table 1: Github repositories used for this project.</caption>
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Repository</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/ccg-esb-lab/uJ" class="uri">https://github.com/ccg-esb-lab/uJ</a></td>
+<td style="text-align: left;">It contains a series of programs in <span class="math inline">\(\mu \mathrm{J}\)</span>, which consist of an <span class="math inline">\(ImageJ\)</span> macro library for quantifying unicellular bacterial dynamics in microfluidic devices. Besides, it includes all the Python code used for the image analysis processing and our developed custom Napari cell-viewer (see <a href="01-image-processing.html"><span>Chapter&nbsp;1</span></a>).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/jvelezmagic/undergraduate_research_project" class="uri">https://github.com/jvelezmagic/undergraduate_research_project</a></td>
+<td style="text-align: left;">It contains all the files necessary to reproduce this document in its entirety. In addition, it includes the code used in R to analyze the tabular data of the experiments (see <a href="02-experiment-analysis.html"><span>Chapter&nbsp;2</span></a>).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/jvelezmagic/CellFilamentation" class="uri">https://github.com/jvelezmagic/CellFilamentation</a></td>
+<td style="text-align: left;">In includes all the Julia code used to create the mathematical filamentation model exposed in <a href="03-model-analysis.html"><span>Chapter&nbsp;3</span></a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="software-tools" class="level2 appendix">
+<h2 class="appendix anchored" data-anchor-id="software-tools">Software tools</h2>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
+<p>Below is the main list of packages used for Chapter <a href="01-image-processing.html"><span>Chapter&nbsp;1</span></a></p>
+<ul>
+<li><p>Python <span class="citation" data-cites="10.5555/1593511">(<a href="references.html#ref-10.5555/1593511" role="doc-biblioref"><strong>10.5555/1593511?</strong></a>)</span>.</p></li>
+<li><p>dask <span class="citation" data-cites="rocklin2015dask">(<a href="references.html#ref-rocklin2015dask" role="doc-biblioref"><strong>rocklin2015dask?</strong></a>)</span>.</p></li>
+<li><p>ipython <span class="citation" data-cites="perez2007ipython">(<a href="references.html#ref-perez2007ipython" role="doc-biblioref"><strong>perez2007ipython?</strong></a>)</span>.</p></li>
+<li><p>matplotlib <span class="citation" data-cites="hunter2007matplotlib">(<a href="references.html#ref-hunter2007matplotlib" role="doc-biblioref"><strong>hunter2007matplotlib?</strong></a>)</span>.</p></li>
+<li><p>napari <span class="citation" data-cites="sofroniew2021a">(<a href="references.html#ref-sofroniew2021a" role="doc-biblioref"><strong>sofroniew2021a?</strong></a>)</span>.</p></li>
+<li><p>networkx <span class="citation" data-cites="hagberg2008exploring">(<a href="references.html#ref-hagberg2008exploring" role="doc-biblioref"><strong>hagberg2008exploring?</strong></a>)</span>.</p></li>
+<li><p>numpy <span class="citation" data-cites="2020NumPy-Array">(<a href="references.html#ref-2020NumPy-Array" role="doc-biblioref"><strong>2020NumPy-Array?</strong></a>)</span>.</p></li>
+<li><p>pandas <span class="citation" data-cites="mckinney2010data">(<a href="references.html#ref-mckinney2010data" role="doc-biblioref"><strong>mckinney2010data?</strong></a>)</span>.</p></li>
+<li><p>pickle <span class="citation" data-cites="van1995python">(<a href="references.html#ref-van1995python" role="doc-biblioref"><strong>van1995python?</strong></a>)</span>.</p></li>
+<li><p>scikit-image <span class="citation" data-cites="vanderwalt2014">(<a href="references.html#ref-vanderwalt2014" role="doc-biblioref"><strong>vanderwalt2014?</strong></a>)</span>.</p></li>
+<li><p>shapely <span class="citation" data-cites="shapely2007">(<a href="references.html#ref-shapely2007" role="doc-biblioref"><strong>shapely2007?</strong></a>)</span>.</p></li>
+</ul>
+</section>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
+<p>Below is the main list of packages used for Chapter <a href="02-experiment-analysis.html"><span>Chapter&nbsp;2</span></a> as well for the reproducibility of this undergraduate research project.</p>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<ul>
+<li>base <span class="citation" data-cites="R-base">(<a href="references.html#ref-R-base" role="doc-biblioref"><strong>R-base?</strong></a>)</span>.</li>
+<li>embed <span class="citation" data-cites="R-embed">(<a href="references.html#ref-R-embed" role="doc-biblioref"><strong>R-embed?</strong></a>)</span>.</li>
+<li>fs <span class="citation" data-cites="R-fs">(<a href="references.html#ref-R-fs" role="doc-biblioref"><strong>R-fs?</strong></a>)</span>.</li>
+<li>GGally <span class="citation" data-cites="R-GGally">(<a href="references.html#ref-R-GGally" role="doc-biblioref"><strong>R-GGally?</strong></a>)</span>.</li>
+<li>ggdist <span class="citation" data-cites="R-ggdist">(<a href="references.html#ref-R-ggdist" role="doc-biblioref"><strong>R-ggdist?</strong></a>)</span>.</li>
+<li>ggpubr <span class="citation" data-cites="R-ggpubr">(<a href="references.html#ref-R-ggpubr" role="doc-biblioref"><strong>R-ggpubr?</strong></a>)</span>.</li>
+<li>here <span class="citation" data-cites="R-here">(<a href="references.html#ref-R-here" role="doc-biblioref"><strong>R-here?</strong></a>)</span>.</li>
+<li>janitor <span class="citation" data-cites="R-janitor">(<a href="references.html#ref-R-janitor" role="doc-biblioref"><strong>R-janitor?</strong></a>)</span>.</li>
+<li>knitr <span class="citation" data-cites="R-knitr">(<a href="references.html#ref-R-knitr" role="doc-biblioref"><strong>R-knitr?</strong></a>)</span>.</li>
+<li>patchwork <span class="citation" data-cites="R-patchwork">(<a href="references.html#ref-R-patchwork" role="doc-biblioref"><strong>R-patchwork?</strong></a>)</span>.</li>
+<li>plotly <span class="citation" data-cites="R-plotly">(<a href="references.html#ref-R-plotly" role="doc-biblioref"><strong>R-plotly?</strong></a>)</span>.</li>
+<li>renv <span class="citation" data-cites="R-renv">(<a href="references.html#ref-R-renv" role="doc-biblioref"><strong>R-renv?</strong></a>)</span>.</li>
+<li>rmarkdown <span class="citation" data-cites="R-rmarkdown">(<a href="references.html#ref-R-rmarkdown" role="doc-biblioref"><strong>R-rmarkdown?</strong></a>)</span>.</li>
+<li>sessioninfo <span class="citation" data-cites="R-sessioninfo">(<a href="references.html#ref-R-sessioninfo" role="doc-biblioref"><strong>R-sessioninfo?</strong></a>)</span>.</li>
+<li>stringr <span class="citation" data-cites="R-stringr">(<a href="references.html#ref-R-stringr" role="doc-biblioref"><strong>R-stringr?</strong></a>)</span>.</li>
+<li>tidymodels <span class="citation" data-cites="R-tidymodels">(<a href="references.html#ref-R-tidymodels" role="doc-biblioref"><strong>R-tidymodels?</strong></a>)</span>.</li>
+<li>tidytext <span class="citation" data-cites="R-tidytext">(<a href="references.html#ref-R-tidytext" role="doc-biblioref"><strong>R-tidytext?</strong></a>)</span>.</li>
+<li>tidyverse <span class="citation" data-cites="R-tidyverse">(<a href="references.html#ref-R-tidyverse" role="doc-biblioref"><strong>R-tidyverse?</strong></a>)</span>.</li>
+</ul>
+</section>
+<section id="julia" class="level3">
+<h3 class="anchored" data-anchor-id="julia">Julia</h3>
+<p>Below is the main list of packages used for Chapter <a href="03-model-analysis.html"><span>Chapter&nbsp;3</span></a>.</p>
+<ul>
+<li>Julia <span class="citation" data-cites="Julia-2017">(<a href="references.html#ref-Julia-2017" role="doc-biblioref"><strong>Julia-2017?</strong></a>)</span>.</li>
+<li>DrWatson.jl <span class="citation" data-cites="datseris2020">(<a href="references.html#ref-datseris2020" role="doc-biblioref"><strong>datseris2020?</strong></a>)</span>.</li>
+<li>DifferentialEquations.jl <span class="citation" data-cites="rackauckas2017differentialequations rackauckas2017adaptive rackauckas_stability-optimized_2018">(<a href="references.html#ref-rackauckas2017differentialequations" role="doc-biblioref"><strong>rackauckas2017differentialequations?</strong></a>; <a href="references.html#ref-rackauckas2017adaptive" role="doc-biblioref"><strong>rackauckas2017adaptive?</strong></a>; <a href="references.html#ref-rackauckas_stability-optimized_2018" role="doc-biblioref"><strong>rackauckas_stability-optimized_2018?</strong></a>)</span>.</li>
+<li>DataFrames.jl <span class="citation" data-cites="white2021">(<a href="references.html#ref-white2021" role="doc-biblioref"><strong>white2021?</strong></a>)</span>.</li>
+</ul>
+</section>
+</section>
+<section id="software-usage" class="level2 appendix">
+<h2 class="appendix anchored" data-anchor-id="software-usage">Software usage</h2>
+<section id="undergraduate-research-project" class="level3">
+<h3 class="anchored" data-anchor-id="undergraduate-research-project">Undergraduate research project</h3>
+<p>This code base is using the <code>R Language</code> and <code>renv</code> to make a reproducible scientific project named <code>undergraduate_research_project</code>.</p>
+<ol type="1">
+<li>Clone the repository with: <code>git clone https://github.com/jvelezmagic/undergraduate_research_project</code>.</li>
+<li>Download latest version of <a href="https://cran.r-project.org/">R</a>.</li>
+<li>Open R project.</li>
+<li>Install the <code>renv</code> package with <code>install.packages('renv')</code>.</li>
+<li>Restore working environment with: <code>renv::restore()</code>.</li>
+<li>Render the book with: <code>bookdown::render_book()</code>.</li>
+<li>Edit documents and render again.</li>
+</ol>
+</section>
+<section id="cell-viewer" class="level3">
+<h3 class="anchored" data-anchor-id="cell-viewer">Cell-viewer</h3>
+<p>This code base is using the <code>Python Language</code>.</p>
+<ol type="1">
+<li>Clone the repository with: <code>git clone https://github.com/ccg-esb-lab/uJ</code>.</li>
+<li>Go to <code>single-channel</code> directory.</li>
+<li>Inside of <code>MGGT-AMP-Pulse</code> (<em>i.e.</em>, chromosome strain) or <code>pBGT-AMP-Pulse</code> (<em>i.e.</em>, plasmid strain) enter to <code>6_Lineages_corrector_napari.ipynb</code>.</li>
+<li>Change the parameters and use it.</li>
+</ol>
+</section>
+<section id="filamentation-model" class="level3">
+<h3 class="anchored" data-anchor-id="filamentation-model">Filamentation model</h3>
+<p>This code base is using the <code>Julia Language</code> and <code>DrWatson</code> to make a reproducible scientific project named <code>CellFilamentation</code>.</p>
+<ol type="1">
+<li>Clone the repository with: <code>git clone https://github.com/jvelezmagic/CellFilamentation</code>.</li>
+<li>Download latest version of <a href="https://julialang.org/downloads/">Julia</a>.</li>
+<li>Open Julia project.</li>
+<li>Open Julia console and do the following to restore working environment:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Pkg</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">activate</span>(<span class="st">"."</span>) <span class="co"># Path to the project.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">instantiate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>Play with the model.</li>
+</ol>
+</section>
+</section>
+<section id="colophon" class="level2 appendix">
+<h2 class="appendix anchored" data-anchor-id="colophon">Colophon</h2>
+<p>This undergraduate research project was written in <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> using <a href="https://quarto.org"><strong>quarto</strong></a>. The <a href="https://jvelezmagic.github.io/undergraduate_research_project/">website</a> is hosted via Github Pages, and the complete source is available via Github.</p>
+<p>This version of the project was built with R version 4.2.0 (2022-04-22) and the following packages:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-colophon" class="anchored">
+<table class="table table-sm table-striped">
+<caption>Table 2: Packages used to built the project documents.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Package</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">embed</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fs</td>
+<td style="text-align: left;">1.5.2</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">GGally</td>
+<td style="text-align: left;">2.1.2</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ggdist</td>
+<td style="text-align: left;">3.2.0</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ggpubr</td>
+<td style="text-align: left;">0.4.0</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">here</td>
+<td style="text-align: left;">1.0.1</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">janitor</td>
+<td style="text-align: left;">2.1.0</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">knitr</td>
+<td style="text-align: left;">1.39</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">patchwork</td>
+<td style="text-align: left;">1.1.1</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">plotly</td>
+<td style="text-align: left;">4.10.0</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">quarto</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">renv</td>
+<td style="text-align: left;">0.15.5</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">rmarkdown</td>
+<td style="text-align: left;">2.14</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sessioninfo</td>
+<td style="text-align: left;">1.2.2</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stringr</td>
+<td style="text-align: left;">1.4.0</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tidymodels</td>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tidytext</td>
+<td style="text-align: left;">0.3.3</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tidyverse</td>
+<td style="text-align: left;">1.3.2</td>
+<td style="text-align: left;">CRAN (R 4.2.0)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04-discussion.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Appendix {.unnumbered}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code availability {.appendix}</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>All code that we used in each phase of the project can be located on</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Github. Below we listed the repositories used as well as a brief</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>description of their content.</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-github-repositories-used</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Github repositories used for this project.</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: asis</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-colwidths: [50, 70]</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>Repository, <span class="sc">~</span>Description,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;https://github.com/ccg-esb-lab/uJ&gt;"</span>, <span class="st">"It contains a series of programs in $</span><span class="sc">\\</span><span class="st">mu </span><span class="sc">\\</span><span class="st">mathrm{J}$, which consist of an $ImageJ$ macro library for quantifying unicellular bacterial dynamics in microfluidic devices. Besides, it includes all the Python code used for the image analysis processing and our developed custom Napari cell-viewer (see @sec-image-processing). "</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;https://github.com/jvelezmagic/undergraduate_research_project&gt;"</span>, <span class="st">"It contains all the files necessary to reproduce this document in its entirety. In addition, it includes the code used in R to analyze the tabular data of the experiments (see @sec-experiment-analysis)."</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;https://github.com/jvelezmagic/CellFilamentation&gt;"</span>, <span class="st">"In includes all the Julia code used to create the mathematical filamentation model exposed in @sec-model-analysis."</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">format =</span> <span class="st">"pipe"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">padding =</span> <span class="dv">1</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Software tools {.appendix}</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">### Python</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>Below is the main list of packages used for Chapter</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>@sec-image-processing</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Python <span class="co">[</span><span class="ot">@10.5555/1593511</span><span class="co">]</span>.</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>dask <span class="co">[</span><span class="ot">@rocklin2015dask</span><span class="co">]</span>.</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>ipython <span class="co">[</span><span class="ot">@perez2007ipython</span><span class="co">]</span>.</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>matplotlib <span class="co">[</span><span class="ot">@hunter2007matplotlib</span><span class="co">]</span>.</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>napari <span class="co">[</span><span class="ot">@sofroniew2021a</span><span class="co">]</span>.</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>networkx <span class="co">[</span><span class="ot">@hagberg2008exploring</span><span class="co">]</span>.</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>numpy <span class="co">[</span><span class="ot">@2020NumPy-Array</span><span class="co">]</span>.</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>pandas <span class="co">[</span><span class="ot">@mckinney2010data</span><span class="co">]</span>.</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>pickle <span class="co">[</span><span class="ot">@van1995python</span><span class="co">]</span>.</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>scikit-image <span class="co">[</span><span class="ot">@vanderwalt2014</span><span class="co">]</span>.</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>shapely <span class="co">[</span><span class="ot">@shapely2007</span><span class="co">]</span>.</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="fu">### R</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>Below is the main list of packages used for Chapter</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>@sec-experiment-analysis as well for the reproducibility of this</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>undergraduate research project.</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: used-packages</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  <span class="st">"quarto"</span>,</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown"</span>,</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  <span class="st">"knitr"</span>,</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>  <span class="st">"GGally"</span>,</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  <span class="st">"embed"</span>,</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  <span class="st">"fs"</span>,</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ggdist"</span>,</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ggpubr"</span>,</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="st">"here"</span>,</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>  <span class="st">"janitor"</span>,</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>  <span class="st">"patchwork"</span>,</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  <span class="st">"plotly"</span>,</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidymodels"</span>,</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidytext"</span>,</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>,</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>  <span class="st">"stringr"</span>,</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>  <span class="st">"sessioninfo"</span>,</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>  <span class="st">"renv"</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: write-packages-citations</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">write_bib</span>(</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.packages</span>(),</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>    pkgs</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"project-R-packages.bib"</span>)</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: save-citations-vector</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>pkgs_citations <span class="ot">&lt;-</span> knitr<span class="sc">::</span><span class="fu">write_bib</span>(</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="fu">.packages</span>(), pkgs)</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create-r-citations-table</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: asis</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>r_citations <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>  <span class="at">package =</span> <span class="fu">names</span>(pkgs_citations),</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>  <span class="at">citation =</span> pkgs_citations</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>    <span class="at">citation =</span> purrr<span class="sc">::</span><span class="fu">map</span>(citation, as.character),</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>    <span class="at">citation =</span> purrr<span class="sc">::</span><span class="fu">map_chr</span>(citation, dplyr<span class="sc">::</span>first),</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>    <span class="at">citation =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(citation, <span class="st">"</span><span class="sc">\\</span><span class="st">{(.+)"</span>),</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>    <span class="at">citation =</span> stringr<span class="sc">::</span><span class="fu">str_remove_all</span>(citation, <span class="st">"</span><span class="sc">\\</span><span class="st">{|,"</span>),</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>    <span class="at">citation =</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="st">"@"</span>, citation)</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(citation, <span class="st">"@R-"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">identity</span>()</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>r_citations <span class="sc">|&gt;</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>    <span class="at">output_citation =</span> stringr<span class="sc">::</span><span class="fu">str_c</span>(<span class="st">"- "</span>, package, <span class="st">" ["</span>, citation, <span class="st">"].</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">pull</span>(output_citation) <span class="sc">|&gt;</span></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>()</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="fu">### Julia</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>Below is the main list of packages used for Chapter</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>@sec-model-analysis.</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Julia <span class="co">[</span><span class="ot">@Julia-2017</span><span class="co">]</span>.</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>DrWatson.jl <span class="co">[</span><span class="ot">@datseris2020</span><span class="co">]</span>.</span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>DifferentialEquations.jl [@rackauckas2017differentialequations;</span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>    @rackauckas2017adaptive; @rackauckas_stability-optimized_2018].</span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>DataFrames.jl <span class="co">[</span><span class="ot">@white2021</span><span class="co">]</span>.</span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="fu">## Software usage {.appendix}</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="fu">### Undergraduate research project</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>This code base is using the <span class="in">`R Language`</span> and <span class="in">`renv`</span> to make a</span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>reproducible scientific project named <span class="in">`undergraduate_research_project`</span>.</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Clone the repository with:</span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>    <span class="in">`git clone https://github.com/jvelezmagic/undergraduate_research_project`</span>.</span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Download latest version of <span class="co">[</span><span class="ot">R</span><span class="co">](https://cran.r-project.org/)</span>.</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Open R project.</span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Install the <span class="in">`renv`</span> package with <span class="in">`install.packages('renv')`</span>.</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Restore working environment with: <span class="in">`renv::restore()`</span>.</span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>Render the book with: <span class="in">`bookdown::render_book()`</span>.</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a><span class="ss">7.  </span>Edit documents and render again.</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cell-viewer</span></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>This code base is using the <span class="in">`Python Language`</span>.</span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Clone the repository with:</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>    <span class="in">`git clone https://github.com/ccg-esb-lab/uJ`</span>.</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Go to <span class="in">`single-channel`</span> directory.</span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Inside of <span class="in">`MGGT-AMP-Pulse`</span> (*i.e.*, chromosome strain) or</span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>    <span class="in">`pBGT-AMP-Pulse`</span> (*i.e.*, plasmid strain) enter to</span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>    <span class="in">`6_Lineages_corrector_napari.ipynb`</span>.</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Change the parameters and use it.</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a><span class="fu">### Filamentation model</span></span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>This code base is using the <span class="in">`Julia Language`</span> and <span class="in">`DrWatson`</span> to make a</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>reproducible scientific project named <span class="in">`CellFilamentation`</span>.</span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Clone the repository with:</span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>    <span class="in">`git clone https://github.com/jvelezmagic/CellFilamentation`</span>.</span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Download latest version of</span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>    <span class="co">[</span><span class="ot">Julia</span><span class="co">](https://julialang.org/downloads/)</span>.</span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Open Julia project.</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Open Julia console and do the following to restore working</span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>    environment:</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a><span class="in">``` julia</span></span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>using Pkg</span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>Pkg.activate(<span class="ot">"</span><span class="st">.</span><span class="ot">"</span>) <span class="co"># Path to the project.</span></span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>Pkg.instantiate()</span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Play with the model.</span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## Colophon {.appendix}</span></span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>This undergraduate research project was written in</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">RStudio</span><span class="co">](https://www.rstudio.com/products/rstudio/)</span> using</span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">**quarto**</span><span class="co">](https://quarto.org)</span>. The</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">website</span><span class="co">](https://jvelezmagic.github.io/undergraduate_research_project/)</span></span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>is hosted via Github Pages, and the complete source is available via</span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>Github.</span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>This version of the project was built with <span class="in">`r R.version.string`</span> and the</span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>following packages:</span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-colophon</span></span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: asis</span></span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Packages used to built the project documents.</span></span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>pkgs <span class="sc">|&gt;</span></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>  sessioninfo<span class="sc">::</span><span class="fu">package_info</span>(<span class="at">dependencies =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a>  tibble<span class="sc">::</span><span class="fu">as_tibble</span>() <span class="sc">|&gt;</span></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">transmute</span>(</span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>    <span class="at">Package =</span> package,</span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>    <span class="at">Version =</span> ondiskversion,</span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>    <span class="at">Source =</span> stringr<span class="sc">::</span><span class="fu">str_replace</span>(source, <span class="st">"@"</span>, <span class="st">"</span><span class="sc">\\\\</span><span class="st">@"</span>),</span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>    <span class="at">Source =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(Source, <span class="st">"</span><span class="sc">\\\\</span><span class="st">@[a-f0-9]*"</span>)</span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>    <span class="at">format =</span> <span class="st">"pipe"</span>,</span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Packages used to built the project documents."</span></span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>
