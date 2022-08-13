@@ -128,8 +128,7 @@ r_citations |>
 
 ### Julia
 
-Below is the main list of packages used for Chapter
-@sec-model-analysis.
+Below is the main list of packages used for Chapter @sec-model-analysis.
 
 -   Julia [@Julia-2017].
 -   DrWatson.jl [@datseris2020].

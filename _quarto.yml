@@ -22,7 +22,7 @@ book:
   comments:
     hypothesis: true
 
-bibliography: references.bib
+bibliography: [references.bib, project-general-packages.bib, project-R-packages.bib]
 
 format:
   html:
