@@ -244,10 +244,9 @@ div.csl-indent {
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"> <span class="header-section-number">2.3</span> Results</a>
   <ul class="collapse">
   <li><a href="#sec-length-gfp-crucial" id="toc-sec-length-gfp-crucial" class="nav-link" data-scroll-target="#sec-length-gfp-crucial"> <span class="header-section-number">2.3.1</span> Cell length and the amount of GFP are crucial in determining cell survival</a></li>
-  </ul></li>
-  <li><a href="#number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival" id="toc-number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival" class="nav-link" data-scroll-target="#number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival"> <span class="header-section-number">2.4</span> Number of divisions and cell age do not appear to play a clear role in determining cell survival</a>
-  <ul class="collapse">
-  <li><a href="#time-to-reach-filamentation-matters-in-determining-cell-survival" id="toc-time-to-reach-filamentation-matters-in-determining-cell-survival" class="nav-link" data-scroll-target="#time-to-reach-filamentation-matters-in-determining-cell-survival"> <span class="header-section-number">2.4.1</span> Time to reach filamentation matters in determining cell survival</a></li>
+  <li><a href="#number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival" id="toc-number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival" class="nav-link" data-scroll-target="#number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival"> <span class="header-section-number">2.3.2</span> Number of divisions and cell age do not appear to play a clear role in determining cell survival</a></li>
+  <li><a href="#time-to-reach-filamentation-matters-in-determining-cell-survival" id="toc-time-to-reach-filamentation-matters-in-determining-cell-survival" class="nav-link" data-scroll-target="#time-to-reach-filamentation-matters-in-determining-cell-survival"> <span class="header-section-number">2.3.3</span> Time to reach filamentation matters in determining cell survival</a></li>
+  <li><a href="#increasing-the-complexity-of-the-system-and-analyzing-it-in-an-unsupervised-way-allows-a-correct-classification-of-cell-states" id="toc-increasing-the-complexity-of-the-system-and-analyzing-it-in-an-unsupervised-way-allows-a-correct-classification-of-cell-states" class="nav-link" data-scroll-target="#increasing-the-complexity-of-the-system-and-analyzing-it-in-an-unsupervised-way-allows-a-correct-classification-of-cell-states"> <span class="header-section-number">2.3.4</span> Increasing the complexity of the system and analyzing it in an unsupervised way allows a correct classification of cell states</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jvelezmagic/bacterial-filamentation-research/blob/main/02-experiment-analysis.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/jvelezmagic/bacterial-filamentation-research/issues/new" class="toc-action">Report an issue</a></p><p><a href="https://github.com/jvelezmagic/bacterial-filamentation-research/edit/main/02-experiment-analysis.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
@@ -432,11 +431,10 @@ div.csl-indent {
 </div>
 </div>
 </section>
-</section>
-<section id="number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival"><span class="header-section-number">2.4</span> Number of divisions and cell age do not appear to play a clear role in determining cell survival</h2>
+<section id="number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="number-of-divisions-and-cell-age-do-not-appear-to-play-a-clear-role-in-determining-cell-survival"><span class="header-section-number">2.3.2</span> Number of divisions and cell age do not appear to play a clear role in determining cell survival</h3>
 <p>In <a href="#sec-length-gfp-crucial"><span>Section&nbsp;2.3.1</span></a>, we explored how GFP variability and cell length influence cell survival. However, <a href="#fig-just-initial-values">Figure&nbsp;<span>2.5</span></a> and <a href="#fig-metric-differences">Figure&nbsp;<span>2.6</span></a> showed us the possibility of other factors relevant to the phenomenon under study. As some papers in the literature suggest, some of these other factors may be cell division and chronological age (<em>i.e.</em>, how much time has passed since the last cell division at the time of exposure to a toxic agent) <span class="citation" data-cites="moger-reischer2019 roostalu2008 heinrich2015">(<a href="references.html#ref-moger-reischer2019" role="doc-biblioref">Moger-Reischer and Lennon 2019</a>; <a href="references.html#ref-roostalu2008" role="doc-biblioref">Roostalu et al. 2008</a>; <a href="references.html#ref-heinrich2015" role="doc-biblioref">Heinrich, Leslie, and Jonas 2015</a>)</span>. Therefore, we chose to observe these two metrics in experiments at a purely qualitative level, i.e., without the inclusion of, e.g., metrics of membrane or cell cycle properties <span class="citation" data-cites="Joseleau-Petit1999">(<a href="references.html#ref-Joseleau-Petit1999" role="doc-biblioref">Joseleau-Petit, Vinella, and D’Ari 1999</a>)</span>.</p>
-<p>Although we expected to see a small contribution, either by the number of divisions or cell age, in <a href="#fig-number-divisions">Figure&nbsp;<span>2.7</span></a> and <a href="#fig-time-since-last-division">Figure&nbsp;<span>2.8</span></a>, we could not observe a precise effect of these variables on cell survival. Patterns that, although they could have an explanation or biological significance, we decided to omit as relevant in the characterization of our cells, since the signal was not clear. However, we derived from this analysis a slightly simpler variable that tells us whether a cell underwent a cell division event or not. So it gives us a more generalized picture of the contribution of division to cell survival (see <span class="quarto-unresolved-ref">?fig-plasmid-pca-variable-contribution</span>).</p>
+<p>Although we expected to see a small contribution, either by the number of divisions or cell age, in <a href="#fig-number-divisions">Figure&nbsp;<span>2.7</span></a> and <a href="#fig-time-since-last-division">Figure&nbsp;<span>2.8</span></a>, we could not observe a precise effect of these variables on cell survival. Patterns that, although they could have an explanation or biological significance, we decided to omit as relevant in the characterization of our cells, since the signal was not clear. However, we derived from this analysis a slightly simpler variable that tells us whether a cell underwent a cell division event or not. So it gives us a more generalized picture of the contribution of division to cell survival (see <a href="#fig-plasmid-pca-variable-contribution">Figure&nbsp;<span>2.14</span></a>).</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-number-divisions" class="quarto-figure quarto-figure-center anchored">
@@ -457,8 +455,9 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<section id="time-to-reach-filamentation-matters-in-determining-cell-survival" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="time-to-reach-filamentation-matters-in-determining-cell-survival"><span class="header-section-number">2.4.1</span> Time to reach filamentation matters in determining cell survival</h3>
+</section>
+<section id="time-to-reach-filamentation-matters-in-determining-cell-survival" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="time-to-reach-filamentation-matters-in-determining-cell-survival"><span class="header-section-number">2.3.3</span> Time to reach filamentation matters in determining cell survival</h3>
 <p>In <a href="#fig-dsred-temporal-distribution">Figure&nbsp;<span>2.2</span></a>, <a href="#fig-gfp-temporal-distribution">Figure&nbsp;<span>2.3</span></a>, and <a href="#fig-length-temporal-distribution">Figure&nbsp;<span>2.4</span></a>, we showed how, at the time of filamentation, DsRed and GFP levels appeared indifferent to the cells. Therefore, we hypothesized that a possible variable that could determine cell survival could be its time to activate its anti-stress response system that causes filamentation. Furthermore, we also guided our hypothesis by previous reports showing us how the gene expression level can induce filamentation with tight temporal coordination [x].</p>
 <p>While, for our analyses, we did not measure the concentration of antibiotic that triggers filamentation per se, we indirectly quantified its effect by using the time it took for a cell to reach a length at which it is already considered a filamentating cell. Furthermore, to recognize that the observed effect was a product of the experiment, we decided to keep only filamented cells just once antibiotic exposure began.</p>
 <p><a href="#fig-time-to-filamentation-filtered">Figure&nbsp;<span>2.9</span></a> shows how filamentation times are narrower for chromosomal cells than for plasmid-bearing cells. Then, we hypothesize that the effect could come from the heterogeneity in the plasmid copy number in the population. Also, interestingly, we observed that, for both experiments, cells that survived had longer filamentation times than the cells that died. These differences in response times suggest the following: 1) if the cell grows too fast, it will reach a limit and start to accumulate antibiotics constantly, and 2) if the cell grows too fast, it is likely that the cost of maintaining an ample length for prolonged periods of exposure will become counterproductive.</p>
@@ -483,6 +482,66 @@ div.csl-indent {
 </div>
 </div>
 </div>
+</section>
+<section id="increasing-the-complexity-of-the-system-and-analyzing-it-in-an-unsupervised-way-allows-a-correct-classification-of-cell-states" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="increasing-the-complexity-of-the-system-and-analyzing-it-in-an-unsupervised-way-allows-a-correct-classification-of-cell-states"><span class="header-section-number">2.3.4</span> Increasing the complexity of the system and analyzing it in an unsupervised way allows a correct classification of cell states</h3>
+<p>In the experiments, we observed the importance of GFP filamentation and variability for cell survival. Similarly, we realized that other variables must be affecting the final results. Filamentation and GFP variability alone did not fully recapitulate the expected behavior of the data. That is, the target variables did not capture the heterogeneity of the system.</p>
+<p>The inability to reproduce cell classification led us to question two things: 1) the possibility that our sorting was wrong beforehand and 2) we did not have enough variables to capture the study phenomenon. We decided to take the unsupervised learning way to answer these subjects because it allows us to project our data without a <em>priori</em> knowledge [@].</p>
+<p>We opted for the path of dimensionality reduction techniques where each variable or feature is equivalent to one dimension. The essence of dimensionality reduction is that it is not feasible to analyze each dimension with many dimensions. Furthermore, dimensionality reduction helps us counteract several problems such as reducing the complexity of a model, reducing the possibility of overfitting a model, removing all correlated variables, and, of course, visualizing our data in a two- or three-dimensional space for better appreciation [@]. Improved visualization and identification of essential variables are the main reasons to guide and complement our research with this technique.</p>
+<section id="principal-component-analysis-pca-emphasizes-the-importance-of-cell-length-and-its-gfp-in-cell-survival" class="level4" data-number="2.3.4.1">
+<h4 data-number="2.3.4.1" class="anchored" data-anchor-id="principal-component-analysis-pca-emphasizes-the-importance-of-cell-length-and-its-gfp-in-cell-survival"><span class="header-section-number">2.3.4.1</span> Principal Component Analysis (PCA) emphasizes the importance of cell length and its GFP in cell survival</h4>
+<div class="cell">
+
+</div>
+<p>The first dimensionality reduction technique we decided to use was Principal Component Analysis (PCA) <span class="citation" data-cites="pearson1901 hotelling1936">(<a href="references.html#ref-pearson1901" role="doc-biblioref">Pearson 1901</a>; <a href="references.html#ref-hotelling1936" role="doc-biblioref">Hotelling 1936</a>)</span>. Scientist mainly uses PCA to create predictive models or in Exploratory Data Analysis (EDA). In our case, we only use it as an EDA.</p>
+<p>For chromosomal and plasmid strain, in <a href="#fig-chromosome-pca-new-coordinates">Figure&nbsp;<span>2.11</span></a> and <a href="#fig-plasmid-pca-new-coordinates">Figure&nbsp;<span>2.12</span></a>, we show the projection of the first two principal components (PCs), respectively. <a href="#fig-chromosome-pca-new-coordinates">Figure&nbsp;<span>2.11</span></a> separates the manually annotated classes, surviving cells separated from non-surviving cells. However, for <a href="#fig-plasmid-pca-new-coordinates">Figure&nbsp;<span>2.12</span></a>, the class separation was a bit rougher but allowed us to separate the surviving filament cells from the dead ones.</p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-chromosome-pca-new-coordinates" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="02-experiment-analysis_files/figure-html/fig-chromosome-pca-new-coordinates-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 2.11: <strong>Principal Component Analysis of chromosomal strain.</strong> When integrating the information of different variables in a dimensionality reduction analysis, we observed a clear separation between the surviving cells and those that did not. The contributions that determined this phenomenon come mainly from the last amount of DsRed, GFP, and cell length (see <a href="#fig-chromosome-pca-variable-contribution">Figure&nbsp;<span>2.13</span></a>). Although it seems obvious, it effectively confirms that the temporal classification that we carry out makes sense. Longer length represents a greater uptake of antibiotics but in a much larger volume, so the net effect is an internal reduction of antibiotics (see <span class="quarto-unresolved-ref">?fig-cell-dimensions-relationship</span>).</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-plasmid-pca-new-coordinates" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="02-experiment-analysis_files/figure-html/fig-plasmid-pca-new-coordinates-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 2.12: <strong>Principal Component Analysis of plasmid strain.</strong> By integrating the information from different variables in a dimensionality reduction analysis, we observed a clear separation between the filamented and non-filamented cells. Said class separation is given by component 2 (Y-axis), which is determined primarily by the initial and final lengths of the cells (see <a href="#fig-plasmid-pca-variable-contribution">Figure&nbsp;<span>2.14</span></a>). Furthermore, the classification also allows us to separate those filamented cells that died from those that survived. Therefore, despite the increase in the system’s complexity, length plays a role in determining survival.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>For their part, in <a href="#fig-chromosome-pca-variable-contribution">Figure&nbsp;<span>2.13</span></a> and <a href="#fig-plasmid-pca-variable-contribution">Figure&nbsp;<span>2.14</span></a>, we show the total contribution of each variable per PC for the chromosomal and plasmid strain, respectively. Finding that, indeed, filamentation plays a crucial role in determining cell survival. For example, for PC2, we appreciated how the variable end DsRed directed the dots to the positive side, while the variable end and start length directed the dots to the opposing side. Therefore, we can support that filamentation has a role in moving cells away from having higher amounts of DsRed.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-chromosome-pca-variable-contribution" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="02-experiment-analysis_files/figure-html/fig-chromosome-pca-variable-contribution-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 2.13: <strong>Variables contribution of Principal Component Analysis of chromosomal strain.</strong> In the <a href="#fig-chromosome-pca-new-coordinates">Figure&nbsp;<span>2.11</span></a>, we see that the classes we created manually reflected what we observed when performing a reduction of dimensions analysis. Here we show the individual contribution of each variable for the first two components. The variables that most affected components 1 and 2 (X-axis and Y-axis, respectively) are the final measurements of DsRed, GFP, length, and the initial amount of GFP. Given that they are chromosomal strains, we should note that this variability could be produced by intrinsic experimental noise that we could not remove. With that in mind, having the DsRed and the final length highlights the inherent role of cells by having increased its size.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-plasmid-pca-variable-contribution" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="02-experiment-analysis_files/figure-html/fig-plasmid-pca-variable-contribution-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 2.14: <strong>Variables contribution of Principal Component Analysis of plasmid strain.</strong> In <a href="#fig-plasmid-pca-new-coordinates">Figure&nbsp;<span>2.12</span></a>, we saw that we could separate the filamented cells from the non-filamented ones. The reduction analysis also shows a slight difference between surviving and dead cells within the small group of filamented cells. Here we offer the individual contribution of each variable for the first two components. For the first component (x-axis in <a href="#fig-chromosome-pca-new-coordinates">Figure&nbsp;<span>2.11</span></a>), the initial and final GFP measurements received mainly the variability. We expected this component’s importance since, being a chromosomal strain, we hope that its inherent variation will be inherited into the system. On the other hand, the second component (Y-axis in <a href="#fig-chromosome-pca-new-coordinates">Figure&nbsp;<span>2.11</span></a>) was determined by the length of the cell. Factors that, in the chromosomal strain (see <a href="#fig-chromosome-pca-variable-contribution">Figure&nbsp;<span>2.13</span></a>), determined with the help of DsRed the separation between surviving and dead cells.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 <!-- -->
@@ -494,6 +553,9 @@ Bruggeman, Frank J., Jorrit J. Hornberg, Fred C. Boogerd, and Hans V. Westerhoff
 <div id="ref-heinrich2015" class="csl-entry" role="doc-biblioentry">
 Heinrich, Kristina, David J. Leslie, and Kristina Jonas. 2015. <span>“Modulation of Bacterial Proliferation as a Survival Strategy.”</span> In, 127–71. Elsevier. <a href="https://doi.org/10.1016/bs.aambs.2015.02.004">https://doi.org/10.1016/bs.aambs.2015.02.004</a>.
 </div>
+<div id="ref-hotelling1936" class="csl-entry" role="doc-biblioentry">
+Hotelling, Harold. 1936. <span>“Relations Between Two Sets of Variates.”</span> <em>Biometrika</em> 28 (3/4): 321. <a href="https://doi.org/10.2307/2333955">https://doi.org/10.2307/2333955</a>.
+</div>
 <div id="ref-Joseleau-Petit1999" class="csl-entry" role="doc-biblioentry">
 Joseleau-Petit, Daniel̀e, Daniel Vinella, and Richard D’Ari. 1999. <span>“Metabolic Alarms and Cell Division in Escherichia Coli.”</span> <em>Journal of Bacteriology</em> 181 (1): 9–14. <a href="https://doi.org/10.1128/jb.181.1.9-14.1999">https://doi.org/10.1128/jb.181.1.9-14.1999</a>.
 </div>
@@ -502,6 +564,9 @@ Kroemer, G, L Galluzzi, P Vandenabeele, J Abrams, E S Alnemri, E H Baehrecke, M 
 </div>
 <div id="ref-moger-reischer2019" class="csl-entry" role="doc-biblioentry">
 Moger-Reischer, Roy Z., and Jay T. Lennon. 2019. <span>“Microbial Ageing and Longevity.”</span> <em>Nature Reviews Microbiology</em> 17 (11): 679–90. <a href="https://doi.org/10.1038/s41579-019-0253-y">https://doi.org/10.1038/s41579-019-0253-y</a>.
+</div>
+<div id="ref-pearson1901" class="csl-entry" role="doc-biblioentry">
+Pearson, Karl. 1901. <span>“LIII. On Lines and Planes of Closest Fit to Systems of Points in Space.”</span> <em>The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science</em> 2 (11): 559–72. <a href="https://doi.org/10.1080/14786440109462720">https://doi.org/10.1080/14786440109462720</a>.
 </div>
 <div id="ref-roostalu2008" class="csl-entry" role="doc-biblioentry">
 Roostalu, Johanna, Arvi Jõers, Hannes Luidalepp, Niilo Kaldalu, and Tanel Tenson. 2008. <span>“Cell Division in Escherichia Colicultures Monitored at Single Cell Resolution.”</span> <em>BMC Microbiology</em> 8 (1). <a href="https://doi.org/10.1186/1471-2180-8-68">https://doi.org/10.1186/1471-2180-8-68</a>.
@@ -513,6 +578,7 @@ Trevors, J.T. 2012. <span>“Can Dead Bacterial Cells Be Defined and Are Genes E
 TURING, A. M. 1950. <span>“I.<span></span>COMPUTING MACHINERY AND INTELLIGENCE.”</span> <em>Mind</em> LIX (236): 433–60. <a href="https://doi.org/10.1093/mind/lix.236.433">https://doi.org/10.1093/mind/lix.236.433</a>.
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -1261,7 +1327,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>p_metric_differences</span>
 <span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a><span class="fu">## Number of divisions and cell age do not appear to play a clear role in determining cell survival</span></span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a><span class="fu">### Number of divisions and cell age do not appear to play a clear role in determining cell survival</span></span>
 <span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>In @sec-length-gfp-crucial, we explored how GFP variability and cell</span>
 <span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>length influence cell survival. However, @fig-just-initial-values and</span>
@@ -1474,6 +1540,264 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-827"><a href="#cb1-827" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-828"><a href="#cb1-828" aria-hidden="true" tabindex="-1"></a>p_initial_values_with_time</span>
 <span id="cb1-829"><a href="#cb1-829" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-830"><a href="#cb1-830" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-831"><a href="#cb1-831" aria-hidden="true" tabindex="-1"></a><span class="fu">### Increasing the complexity of the system and analyzing it in an unsupervised way allows a correct classification of cell states</span></span>
+<span id="cb1-832"><a href="#cb1-832" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-833"><a href="#cb1-833" aria-hidden="true" tabindex="-1"></a>In the experiments, we observed the importance of GFP filamentation and</span>
+<span id="cb1-834"><a href="#cb1-834" aria-hidden="true" tabindex="-1"></a>variability for cell survival. Similarly, we realized that other</span>
+<span id="cb1-835"><a href="#cb1-835" aria-hidden="true" tabindex="-1"></a>variables must be affecting the final results. Filamentation and GFP</span>
+<span id="cb1-836"><a href="#cb1-836" aria-hidden="true" tabindex="-1"></a>variability alone did not fully recapitulate the expected behavior of</span>
+<span id="cb1-837"><a href="#cb1-837" aria-hidden="true" tabindex="-1"></a>the data. That is, the target variables did not capture the</span>
+<span id="cb1-838"><a href="#cb1-838" aria-hidden="true" tabindex="-1"></a>heterogeneity of the system.</span>
+<span id="cb1-839"><a href="#cb1-839" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-840"><a href="#cb1-840" aria-hidden="true" tabindex="-1"></a>The inability to reproduce cell classification led us to question two</span>
+<span id="cb1-841"><a href="#cb1-841" aria-hidden="true" tabindex="-1"></a>things: 1) the possibility that our sorting was wrong beforehand and 2)</span>
+<span id="cb1-842"><a href="#cb1-842" aria-hidden="true" tabindex="-1"></a>we did not have enough variables to capture the study phenomenon. We</span>
+<span id="cb1-843"><a href="#cb1-843" aria-hidden="true" tabindex="-1"></a>decided to take the unsupervised learning way to answer these subjects</span>
+<span id="cb1-844"><a href="#cb1-844" aria-hidden="true" tabindex="-1"></a>because it allows us to project our data without a *priori* knowledge</span>
+<span id="cb1-845"><a href="#cb1-845" aria-hidden="true" tabindex="-1"></a><span class="sc">\[</span>\@<span class="sc">\]</span>.</span>
+<span id="cb1-846"><a href="#cb1-846" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-847"><a href="#cb1-847" aria-hidden="true" tabindex="-1"></a>We opted for the path of dimensionality reduction techniques where each</span>
+<span id="cb1-848"><a href="#cb1-848" aria-hidden="true" tabindex="-1"></a>variable or feature is equivalent to one dimension. The essence of</span>
+<span id="cb1-849"><a href="#cb1-849" aria-hidden="true" tabindex="-1"></a>dimensionality reduction is that it is not feasible to analyze each</span>
+<span id="cb1-850"><a href="#cb1-850" aria-hidden="true" tabindex="-1"></a>dimension with many dimensions. Furthermore, dimensionality reduction</span>
+<span id="cb1-851"><a href="#cb1-851" aria-hidden="true" tabindex="-1"></a>helps us counteract several problems such as reducing the complexity of</span>
+<span id="cb1-852"><a href="#cb1-852" aria-hidden="true" tabindex="-1"></a>a model, reducing the possibility of overfitting a model, removing all</span>
+<span id="cb1-853"><a href="#cb1-853" aria-hidden="true" tabindex="-1"></a>correlated variables, and, of course, visualizing our data in a two- or</span>
+<span id="cb1-854"><a href="#cb1-854" aria-hidden="true" tabindex="-1"></a>three-dimensional space for better appreciation <span class="sc">\[</span>\@<span class="sc">\]</span>. Improved</span>
+<span id="cb1-855"><a href="#cb1-855" aria-hidden="true" tabindex="-1"></a>visualization and identification of essential variables are the main</span>
+<span id="cb1-856"><a href="#cb1-856" aria-hidden="true" tabindex="-1"></a>reasons to guide and complement our research with this technique.</span>
+<span id="cb1-857"><a href="#cb1-857" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-858"><a href="#cb1-858" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Principal Component Analysis (PCA) emphasizes the importance of cell length and its GFP in cell survival</span></span>
+<span id="cb1-859"><a href="#cb1-859" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-860"><a href="#cb1-860" aria-hidden="true" tabindex="-1"></a><span class="in">```{r experiment-03-split-datasets}</span></span>
+<span id="cb1-861"><a href="#cb1-861" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
+<span id="cb1-862"><a href="#cb1-862" aria-hidden="true" tabindex="-1"></a>experiment_datasets <span class="ot">&lt;-</span> cells_df <span class="sc">%&gt;%</span> </span>
+<span id="cb1-863"><a href="#cb1-863" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(experiment_id, cell_status, divided, <span class="fu">contains</span>(<span class="st">"first"</span>), <span class="fu">contains</span>(<span class="st">"last"</span>), <span class="sc">-</span><span class="fu">contains</span>(<span class="st">"time"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-864"><a href="#cb1-864" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">divided =</span> <span class="fu">as.numeric</span>(divided)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-865"><a href="#cb1-865" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(<span class="sc">~!</span><span class="fu">any</span>(<span class="fu">is.na</span>(.)))) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-866"><a href="#cb1-866" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glimpse</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-867"><a href="#cb1-867" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-868"><a href="#cb1-868" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(experiment_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-869"><a href="#cb1-869" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-870"><a href="#cb1-870" aria-hidden="true" tabindex="-1"></a>    grouped_data <span class="ot">&lt;-</span> .</span>
+<span id="cb1-871"><a href="#cb1-871" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_split</span>(grouped_data) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-872"><a href="#cb1-872" aria-hidden="true" tabindex="-1"></a>      <span class="fu">set_names</span>(<span class="at">nm =</span> <span class="fu">group_keys</span>(grouped_data) <span class="sc">%&gt;%</span> <span class="fu">pull</span>())</span>
+<span id="cb1-873"><a href="#cb1-873" aria-hidden="true" tabindex="-1"></a>  } <span class="sc">%&gt;%</span> </span>
+<span id="cb1-874"><a href="#cb1-874" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(select, <span class="sc">-</span>experiment_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-875"><a href="#cb1-875" aria-hidden="true" tabindex="-1"></a>  <span class="fu">identity</span>()</span>
+<span id="cb1-876"><a href="#cb1-876" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-877"><a href="#cb1-877" aria-hidden="true" tabindex="-1"></a>chromosome_df <span class="ot">&lt;-</span> experiment_datasets<span class="sc">$</span>Chromosome</span>
+<span id="cb1-878"><a href="#cb1-878" aria-hidden="true" tabindex="-1"></a>plasmid_df <span class="ot">&lt;-</span> experiment_datasets<span class="sc">$</span>Plasmid</span>
+<span id="cb1-879"><a href="#cb1-879" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-880"><a href="#cb1-880" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-881"><a href="#cb1-881" aria-hidden="true" tabindex="-1"></a>The first dimensionality reduction technique we decided to use was</span>
+<span id="cb1-882"><a href="#cb1-882" aria-hidden="true" tabindex="-1"></a>Principal Component Analysis (PCA) <span class="co">[</span><span class="ot">@pearson1901; @hotelling1936</span><span class="co">]</span>.</span>
+<span id="cb1-883"><a href="#cb1-883" aria-hidden="true" tabindex="-1"></a>Scientist mainly uses PCA to create predictive models or in Exploratory</span>
+<span id="cb1-884"><a href="#cb1-884" aria-hidden="true" tabindex="-1"></a>Data Analysis (EDA). In our case, we only use it as an EDA.</span>
+<span id="cb1-885"><a href="#cb1-885" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-886"><a href="#cb1-886" aria-hidden="true" tabindex="-1"></a>For chromosomal and plasmid strain, in</span>
+<span id="cb1-887"><a href="#cb1-887" aria-hidden="true" tabindex="-1"></a>@fig-chromosome-pca-new-coordinates and</span>
+<span id="cb1-888"><a href="#cb1-888" aria-hidden="true" tabindex="-1"></a>@fig-plasmid-pca-new-coordinates, we show the projection of the first</span>
+<span id="cb1-889"><a href="#cb1-889" aria-hidden="true" tabindex="-1"></a>two principal components (PCs), respectively.</span>
+<span id="cb1-890"><a href="#cb1-890" aria-hidden="true" tabindex="-1"></a>@fig-chromosome-pca-new-coordinates separates the manually annotated</span>
+<span id="cb1-891"><a href="#cb1-891" aria-hidden="true" tabindex="-1"></a>classes, surviving cells separated from non-surviving cells. However,</span>
+<span id="cb1-892"><a href="#cb1-892" aria-hidden="true" tabindex="-1"></a>for @fig-plasmid-pca-new-coordinates, the class separation was a bit</span>
+<span id="cb1-893"><a href="#cb1-893" aria-hidden="true" tabindex="-1"></a>rougher but allowed us to separate the surviving filament cells from the</span>
+<span id="cb1-894"><a href="#cb1-894" aria-hidden="true" tabindex="-1"></a>dead ones.</span>
+<span id="cb1-895"><a href="#cb1-895" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-896"><a href="#cb1-896" aria-hidden="true" tabindex="-1"></a><span class="in">```{r experiment-03-chromosome-pca-prep}</span></span>
+<span id="cb1-897"><a href="#cb1-897" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
+<span id="cb1-898"><a href="#cb1-898" aria-hidden="true" tabindex="-1"></a>c_pca_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(cell_status <span class="sc">~</span> ., <span class="at">data =</span> chromosome_df) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-899"><a href="#cb1-899" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_naomit</span>(<span class="fu">all_predictors</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-900"><a href="#cb1-900" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb1-901"><a href="#cb1-901" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_pca</span>(<span class="fu">all_predictors</span>())</span>
+<span id="cb1-902"><a href="#cb1-902" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-903"><a href="#cb1-903" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb1-904"><a href="#cb1-904" aria-hidden="true" tabindex="-1"></a>c_pca_prep <span class="ot">&lt;-</span> <span class="fu">prep</span>(c_pca_rec)</span>
+<span id="cb1-905"><a href="#cb1-905" aria-hidden="true" tabindex="-1"></a>c_pca_prep</span>
+<span id="cb1-906"><a href="#cb1-906" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-907"><a href="#cb1-907" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-910"><a href="#cb1-910" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-911"><a href="#cb1-911" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chromosome-pca-new-coordinates</span></span>
+<span id="cb1-912"><a href="#cb1-912" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Principal Component Analysis of chromosomal strain.</span></span>
+<span id="cb1-913"><a href="#cb1-913" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-914"><a href="#cb1-914" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Principal Component Analysis of chromosomal strain.**</span></span>
+<span id="cb1-915"><a href="#cb1-915" aria-hidden="true" tabindex="-1"></a><span class="co">#|   When integrating the information of different variables in a</span></span>
+<span id="cb1-916"><a href="#cb1-916" aria-hidden="true" tabindex="-1"></a><span class="co">#|   dimensionality reduction analysis, we observed a clear separation</span></span>
+<span id="cb1-917"><a href="#cb1-917" aria-hidden="true" tabindex="-1"></a><span class="co">#|   between the surviving cells and those that did not. The contributions</span></span>
+<span id="cb1-918"><a href="#cb1-918" aria-hidden="true" tabindex="-1"></a><span class="co">#|   that determined this phenomenon come mainly from the last amount of</span></span>
+<span id="cb1-919"><a href="#cb1-919" aria-hidden="true" tabindex="-1"></a><span class="co">#|   DsRed, GFP, and cell length (see @fig-chromosome-pca-variable-contribution).</span></span>
+<span id="cb1-920"><a href="#cb1-920" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Although it seems obvious, it effectively confirms that the temporal</span></span>
+<span id="cb1-921"><a href="#cb1-921" aria-hidden="true" tabindex="-1"></a><span class="co">#|   classification that we carry out makes sense. Longer length represents</span></span>
+<span id="cb1-922"><a href="#cb1-922" aria-hidden="true" tabindex="-1"></a><span class="co">#|   a greater uptake of antibiotics but in a much larger volume, so the net</span></span>
+<span id="cb1-923"><a href="#cb1-923" aria-hidden="true" tabindex="-1"></a><span class="co">#|   effect is an internal reduction of antibiotics</span></span>
+<span id="cb1-924"><a href="#cb1-924" aria-hidden="true" tabindex="-1"></a><span class="co">#|   (see @fig-cell-dimensions-relationship).</span></span>
+<span id="cb1-925"><a href="#cb1-925" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-926"><a href="#cb1-926" aria-hidden="true" tabindex="-1"></a>p_c_pca <span class="ot">&lt;-</span> c_pca_prep <span class="sc">%&gt;%</span> </span>
+<span id="cb1-927"><a href="#cb1-927" aria-hidden="true" tabindex="-1"></a>  <span class="fu">juice</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-928"><a href="#cb1-928" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> PC1, <span class="at">y =</span> PC2, <span class="at">color =</span> cell_status)) <span class="sc">+</span></span>
+<span id="cb1-929"><a href="#cb1-929" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb1-930"><a href="#cb1-930" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb1-931"><a href="#cb1-931" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb1-932"><a href="#cb1-932" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(</span>
+<span id="cb1-933"><a href="#cb1-933" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">alpha =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">1</span>)),</span>
+<span id="cb1-934"><a href="#cb1-934" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb1-935"><a href="#cb1-935" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-936"><a href="#cb1-936" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-937"><a href="#cb1-937" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Cell status"</span></span>
+<span id="cb1-938"><a href="#cb1-938" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-939"><a href="#cb1-939" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span>
+<span id="cb1-940"><a href="#cb1-940" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-941"><a href="#cb1-941" aria-hidden="true" tabindex="-1"></a>p_c_pca</span>
+<span id="cb1-942"><a href="#cb1-942" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-943"><a href="#cb1-943" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-944"><a href="#cb1-944" aria-hidden="true" tabindex="-1"></a><span class="in">```{r experiment-03-plasmid-pca-prep}</span></span>
+<span id="cb1-945"><a href="#cb1-945" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
+<span id="cb1-946"><a href="#cb1-946" aria-hidden="true" tabindex="-1"></a>p_pca_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(cell_status <span class="sc">~</span> ., <span class="at">data =</span> plasmid_df) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-947"><a href="#cb1-947" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_naomit</span>(<span class="fu">all_predictors</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-948"><a href="#cb1-948" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb1-949"><a href="#cb1-949" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_pca</span>(<span class="fu">all_predictors</span>())</span>
+<span id="cb1-950"><a href="#cb1-950" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-951"><a href="#cb1-951" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb1-952"><a href="#cb1-952" aria-hidden="true" tabindex="-1"></a>p_pca_prep <span class="ot">&lt;-</span> <span class="fu">prep</span>(p_pca_rec)</span>
+<span id="cb1-953"><a href="#cb1-953" aria-hidden="true" tabindex="-1"></a>p_pca_prep</span>
+<span id="cb1-954"><a href="#cb1-954" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-955"><a href="#cb1-955" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-958"><a href="#cb1-958" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-959"><a href="#cb1-959" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-plasmid-pca-new-coordinates</span></span>
+<span id="cb1-960"><a href="#cb1-960" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Principal Component Analysis of plasmid strain.</span></span>
+<span id="cb1-961"><a href="#cb1-961" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-962"><a href="#cb1-962" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Principal Component Analysis of plasmid strain.**</span></span>
+<span id="cb1-963"><a href="#cb1-963" aria-hidden="true" tabindex="-1"></a><span class="co">#|   By integrating the information from different variables in a</span></span>
+<span id="cb1-964"><a href="#cb1-964" aria-hidden="true" tabindex="-1"></a><span class="co">#|   dimensionality reduction analysis, we observed a clear separation</span></span>
+<span id="cb1-965"><a href="#cb1-965" aria-hidden="true" tabindex="-1"></a><span class="co">#|   between the filamented and non-filamented cells. Said class separation</span></span>
+<span id="cb1-966"><a href="#cb1-966" aria-hidden="true" tabindex="-1"></a><span class="co">#|   is given by component 2 (Y-axis), which is determined primarily by the</span></span>
+<span id="cb1-967"><a href="#cb1-967" aria-hidden="true" tabindex="-1"></a><span class="co">#|   initial and final lengths of the cells (see</span></span>
+<span id="cb1-968"><a href="#cb1-968" aria-hidden="true" tabindex="-1"></a><span class="co">#|   @fig-plasmid-pca-variable-contribution). Furthermore, the classification</span></span>
+<span id="cb1-969"><a href="#cb1-969" aria-hidden="true" tabindex="-1"></a><span class="co">#|   also allows us to separate those filamented cells that died from those</span></span>
+<span id="cb1-970"><a href="#cb1-970" aria-hidden="true" tabindex="-1"></a><span class="co">#|   that survived. Therefore, despite the increase in the system's</span></span>
+<span id="cb1-971"><a href="#cb1-971" aria-hidden="true" tabindex="-1"></a><span class="co">#|   complexity, length plays a role in determining survival.</span></span>
+<span id="cb1-972"><a href="#cb1-972" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-973"><a href="#cb1-973" aria-hidden="true" tabindex="-1"></a>p_p_pca <span class="ot">&lt;-</span> p_pca_prep <span class="sc">%&gt;%</span> </span>
+<span id="cb1-974"><a href="#cb1-974" aria-hidden="true" tabindex="-1"></a>  <span class="fu">juice</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-975"><a href="#cb1-975" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> PC1, <span class="at">y =</span> PC2, <span class="at">color =</span> cell_status)) <span class="sc">+</span></span>
+<span id="cb1-976"><a href="#cb1-976" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb1-977"><a href="#cb1-977" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb1-978"><a href="#cb1-978" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">size =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-979"><a href="#cb1-979" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="cn">NA</span>,  <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb1-980"><a href="#cb1-980" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">7</span>)) <span class="sc">+</span></span>
+<span id="cb1-981"><a href="#cb1-981" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(</span>
+<span id="cb1-982"><a href="#cb1-982" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">alpha =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">1</span>)),</span>
+<span id="cb1-983"><a href="#cb1-983" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb1-984"><a href="#cb1-984" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-985"><a href="#cb1-985" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-986"><a href="#cb1-986" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Cell status"</span></span>
+<span id="cb1-987"><a href="#cb1-987" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-988"><a href="#cb1-988" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span>
+<span id="cb1-989"><a href="#cb1-989" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-990"><a href="#cb1-990" aria-hidden="true" tabindex="-1"></a>p_p_pca</span>
+<span id="cb1-991"><a href="#cb1-991" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-992"><a href="#cb1-992" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-993"><a href="#cb1-993" aria-hidden="true" tabindex="-1"></a>For their part, in @fig-chromosome-pca-variable-contribution</span>
+<span id="cb1-994"><a href="#cb1-994" aria-hidden="true" tabindex="-1"></a>and @fig-plasmid-pca-variable-contribution, we show the total</span>
+<span id="cb1-995"><a href="#cb1-995" aria-hidden="true" tabindex="-1"></a>contribution of each variable per PC for the chromosomal and plasmid</span>
+<span id="cb1-996"><a href="#cb1-996" aria-hidden="true" tabindex="-1"></a>strain, respectively. Finding that, indeed, filamentation plays a</span>
+<span id="cb1-997"><a href="#cb1-997" aria-hidden="true" tabindex="-1"></a>crucial role in determining cell survival. For example, for PC2, we</span>
+<span id="cb1-998"><a href="#cb1-998" aria-hidden="true" tabindex="-1"></a>appreciated how the variable end DsRed directed the dots to the positive</span>
+<span id="cb1-999"><a href="#cb1-999" aria-hidden="true" tabindex="-1"></a>side, while the variable end and start length directed the dots to the</span>
+<span id="cb1-1000"><a href="#cb1-1000" aria-hidden="true" tabindex="-1"></a>opposing side. Therefore, we can support that filamentation has a role</span>
+<span id="cb1-1001"><a href="#cb1-1001" aria-hidden="true" tabindex="-1"></a>in moving cells away from having higher amounts of DsRed.</span>
+<span id="cb1-1002"><a href="#cb1-1002" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1005"><a href="#cb1-1005" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-1006"><a href="#cb1-1006" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chromosome-pca-variable-contribution</span></span>
+<span id="cb1-1007"><a href="#cb1-1007" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Variables contribution of Principal Component Analysis of chromosomal strain.</span></span>
+<span id="cb1-1008"><a href="#cb1-1008" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-1009"><a href="#cb1-1009" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Variables contribution of Principal Component Analysis of chromosomal strain.**</span></span>
+<span id="cb1-1010"><a href="#cb1-1010" aria-hidden="true" tabindex="-1"></a><span class="co">#|   In the @fig-chromosome-pca-new-coordinates, we see that the classes we</span></span>
+<span id="cb1-1011"><a href="#cb1-1011" aria-hidden="true" tabindex="-1"></a><span class="co">#|   created manually reflected what we observed when performing a reduction</span></span>
+<span id="cb1-1012"><a href="#cb1-1012" aria-hidden="true" tabindex="-1"></a><span class="co">#|   of dimensions analysis. Here we show the individual contribution of each</span></span>
+<span id="cb1-1013"><a href="#cb1-1013" aria-hidden="true" tabindex="-1"></a><span class="co">#|   variable for the first two components. The variables that most affected</span></span>
+<span id="cb1-1014"><a href="#cb1-1014" aria-hidden="true" tabindex="-1"></a><span class="co">#|   components 1 and 2 (X-axis and Y-axis, respectively) are the final</span></span>
+<span id="cb1-1015"><a href="#cb1-1015" aria-hidden="true" tabindex="-1"></a><span class="co">#|   measurements of DsRed, GFP, length, and the initial amount of GFP.</span></span>
+<span id="cb1-1016"><a href="#cb1-1016" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Given that they are chromosomal strains, we should note that this</span></span>
+<span id="cb1-1017"><a href="#cb1-1017" aria-hidden="true" tabindex="-1"></a><span class="co">#|   variability could be produced by intrinsic experimental noise that we</span></span>
+<span id="cb1-1018"><a href="#cb1-1018" aria-hidden="true" tabindex="-1"></a><span class="co">#|   could not remove. With that in mind, having the DsRed and the final</span></span>
+<span id="cb1-1019"><a href="#cb1-1019" aria-hidden="true" tabindex="-1"></a><span class="co">#|   length highlights the inherent role of cells by having increased its size.</span></span>
+<span id="cb1-1020"><a href="#cb1-1020" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-1021"><a href="#cb1-1021" aria-hidden="true" tabindex="-1"></a>c_tidied_pca <span class="ot">&lt;-</span> <span class="fu">tidy</span>(c_pca_prep, <span class="dv">3</span>)</span>
+<span id="cb1-1022"><a href="#cb1-1022" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1023"><a href="#cb1-1023" aria-hidden="true" tabindex="-1"></a>p_c_titied_pca <span class="ot">&lt;-</span> c_tidied_pca <span class="sc">%&gt;%</span></span>
+<span id="cb1-1024"><a href="#cb1-1024" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(component <span class="sc">%in%</span> <span class="fu">paste0</span>(<span class="st">"PC"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-1025"><a href="#cb1-1025" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-1026"><a href="#cb1-1026" aria-hidden="true" tabindex="-1"></a>    <span class="at">component =</span> <span class="fu">fct_inorder</span>(component),</span>
+<span id="cb1-1027"><a href="#cb1-1027" aria-hidden="true" tabindex="-1"></a>    <span class="at">terms =</span> <span class="fu">reorder_within</span>(terms, <span class="fu">abs</span>(value), component)</span>
+<span id="cb1-1028"><a href="#cb1-1028" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-1029"><a href="#cb1-1029" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb1-1030"><a href="#cb1-1030" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb1-1031"><a href="#cb1-1031" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="fu">abs</span>(value), </span>
+<span id="cb1-1032"><a href="#cb1-1032" aria-hidden="true" tabindex="-1"></a>      <span class="at">y=</span> terms,</span>
+<span id="cb1-1033"><a href="#cb1-1033" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> value <span class="sc">&gt;</span> <span class="dv">0</span></span>
+<span id="cb1-1034"><a href="#cb1-1034" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-1035"><a href="#cb1-1035" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-1036"><a href="#cb1-1036" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb1-1037"><a href="#cb1-1037" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(component <span class="sc">~</span> ., <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb1-1038"><a href="#cb1-1038" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_reordered</span>() <span class="sc">+</span></span>
+<span id="cb1-1039"><a href="#cb1-1039" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-1040"><a href="#cb1-1040" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Absolute value of contribution"</span>,</span>
+<span id="cb1-1041"><a href="#cb1-1041" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Metric"</span>,</span>
+<span id="cb1-1042"><a href="#cb1-1042" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Is positive?"</span></span>
+<span id="cb1-1043"><a href="#cb1-1043" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-1044"><a href="#cb1-1044" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1045"><a href="#cb1-1045" aria-hidden="true" tabindex="-1"></a>p_c_titied_pca</span>
+<span id="cb1-1046"><a href="#cb1-1046" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-1047"><a href="#cb1-1047" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1050"><a href="#cb1-1050" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-1051"><a href="#cb1-1051" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-plasmid-pca-variable-contribution</span></span>
+<span id="cb1-1052"><a href="#cb1-1052" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Variables contribution of Principal Component Analysis of plasmid strain.</span></span>
+<span id="cb1-1053"><a href="#cb1-1053" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-1054"><a href="#cb1-1054" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Variables contribution of Principal Component Analysis of plasmid strain.**</span></span>
+<span id="cb1-1055"><a href="#cb1-1055" aria-hidden="true" tabindex="-1"></a><span class="co">#|   In @fig-plasmid-pca-new-coordinates, we saw that we could separate the</span></span>
+<span id="cb1-1056"><a href="#cb1-1056" aria-hidden="true" tabindex="-1"></a><span class="co">#|   filamented cells from the non-filamented ones. The reduction analysis also</span></span>
+<span id="cb1-1057"><a href="#cb1-1057" aria-hidden="true" tabindex="-1"></a><span class="co">#|   shows a slight difference between surviving and dead cells within the</span></span>
+<span id="cb1-1058"><a href="#cb1-1058" aria-hidden="true" tabindex="-1"></a><span class="co">#|   small group of filamented cells. Here we offer the individual</span></span>
+<span id="cb1-1059"><a href="#cb1-1059" aria-hidden="true" tabindex="-1"></a><span class="co">#|   contribution of each variable for the first two components. For the first</span></span>
+<span id="cb1-1060"><a href="#cb1-1060" aria-hidden="true" tabindex="-1"></a><span class="co">#|   component (x-axis in  @fig-chromosome-pca-new-coordinates), the initial</span></span>
+<span id="cb1-1061"><a href="#cb1-1061" aria-hidden="true" tabindex="-1"></a><span class="co">#|   and final GFP measurements received mainly the variability. We expected</span></span>
+<span id="cb1-1062"><a href="#cb1-1062" aria-hidden="true" tabindex="-1"></a><span class="co">#|   this component's importance since, being a chromosomal strain, we hope</span></span>
+<span id="cb1-1063"><a href="#cb1-1063" aria-hidden="true" tabindex="-1"></a><span class="co">#|   that its inherent variation will be inherited into the system. On the</span></span>
+<span id="cb1-1064"><a href="#cb1-1064" aria-hidden="true" tabindex="-1"></a><span class="co">#|   other hand, the second component (Y-axis in</span></span>
+<span id="cb1-1065"><a href="#cb1-1065" aria-hidden="true" tabindex="-1"></a><span class="co">#|   @fig-chromosome-pca-new-coordinates) was determined by the length of</span></span>
+<span id="cb1-1066"><a href="#cb1-1066" aria-hidden="true" tabindex="-1"></a><span class="co">#|   the cell. Factors that, in the chromosomal strain (see</span></span>
+<span id="cb1-1067"><a href="#cb1-1067" aria-hidden="true" tabindex="-1"></a><span class="co">#|   @fig-chromosome-pca-variable-contribution), determined with the</span></span>
+<span id="cb1-1068"><a href="#cb1-1068" aria-hidden="true" tabindex="-1"></a><span class="co">#|   help of DsRed the separation between surviving and dead cells.</span></span>
+<span id="cb1-1069"><a href="#cb1-1069" aria-hidden="true" tabindex="-1"></a><span class="co">#|   </span></span>
+<span id="cb1-1070"><a href="#cb1-1070" aria-hidden="true" tabindex="-1"></a>p_tidied_pca <span class="ot">&lt;-</span> <span class="fu">tidy</span>(p_pca_prep, <span class="dv">3</span>)</span>
+<span id="cb1-1071"><a href="#cb1-1071" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1072"><a href="#cb1-1072" aria-hidden="true" tabindex="-1"></a>p_p_titied_pca <span class="ot">&lt;-</span> p_tidied_pca <span class="sc">%&gt;%</span></span>
+<span id="cb1-1073"><a href="#cb1-1073" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(component <span class="sc">%in%</span> <span class="fu">paste0</span>(<span class="st">"PC"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-1074"><a href="#cb1-1074" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-1075"><a href="#cb1-1075" aria-hidden="true" tabindex="-1"></a>    <span class="at">component =</span> <span class="fu">fct_inorder</span>(component),</span>
+<span id="cb1-1076"><a href="#cb1-1076" aria-hidden="true" tabindex="-1"></a>    <span class="at">terms =</span> <span class="fu">reorder_within</span>(terms, <span class="fu">abs</span>(value), component)</span>
+<span id="cb1-1077"><a href="#cb1-1077" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-1078"><a href="#cb1-1078" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb1-1079"><a href="#cb1-1079" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb1-1080"><a href="#cb1-1080" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="fu">abs</span>(value), </span>
+<span id="cb1-1081"><a href="#cb1-1081" aria-hidden="true" tabindex="-1"></a>      <span class="at">y=</span> terms,</span>
+<span id="cb1-1082"><a href="#cb1-1082" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> value <span class="sc">&gt;</span> <span class="dv">0</span></span>
+<span id="cb1-1083"><a href="#cb1-1083" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-1084"><a href="#cb1-1084" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-1085"><a href="#cb1-1085" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb1-1086"><a href="#cb1-1086" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(component <span class="sc">~</span> ., <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb1-1087"><a href="#cb1-1087" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_reordered</span>() <span class="sc">+</span></span>
+<span id="cb1-1088"><a href="#cb1-1088" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-1089"><a href="#cb1-1089" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Absolute value of contribution"</span>,</span>
+<span id="cb1-1090"><a href="#cb1-1090" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Metric"</span>,</span>
+<span id="cb1-1091"><a href="#cb1-1091" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Is positive?"</span></span>
+<span id="cb1-1092"><a href="#cb1-1092" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-1093"><a href="#cb1-1093" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1094"><a href="#cb1-1094" aria-hidden="true" tabindex="-1"></a>p_p_titied_pca</span>
+<span id="cb1-1095"><a href="#cb1-1095" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
