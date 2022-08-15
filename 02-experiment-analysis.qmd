@@ -582,7 +582,7 @@ p_metric_differences <- cells_df %>%
 p_metric_differences
 ```
 
-## Number of divisions and cell age do not appear to play a clear role in determining cell survival
+### Number of divisions and cell age do not appear to play a clear role in determining cell survival
 
 In @sec-length-gfp-crucial, we explored how GFP variability and cell
 length influence cell survival. However, @fig-just-initial-values and
@@ -794,4 +794,262 @@ p_initial_values_with_time <- cells_df %>%
   NULL
 
 p_initial_values_with_time
+```
+
+### Increasing the complexity of the system and analyzing it in an unsupervised way allows a correct classification of cell states
+
+In the experiments, we observed the importance of GFP filamentation and
+variability for cell survival. Similarly, we realized that other
+variables must be affecting the final results. Filamentation and GFP
+variability alone did not fully recapitulate the expected behavior of
+the data. That is, the target variables did not capture the
+heterogeneity of the system.
+
+The inability to reproduce cell classification led us to question two
+things: 1) the possibility that our sorting was wrong beforehand and 2)
+we did not have enough variables to capture the study phenomenon. We
+decided to take the unsupervised learning way to answer these subjects
+because it allows us to project our data without a *priori* knowledge
+\[\@\].
+
+We opted for the path of dimensionality reduction techniques where each
+variable or feature is equivalent to one dimension. The essence of
+dimensionality reduction is that it is not feasible to analyze each
+dimension with many dimensions. Furthermore, dimensionality reduction
+helps us counteract several problems such as reducing the complexity of
+a model, reducing the possibility of overfitting a model, removing all
+correlated variables, and, of course, visualizing our data in a two- or
+three-dimensional space for better appreciation \[\@\]. Improved
+visualization and identification of essential variables are the main
+reasons to guide and complement our research with this technique.
+
+#### Principal Component Analysis (PCA) emphasizes the importance of cell length and its GFP in cell survival
+
+```{r experiment-03-split-datasets}
+#| results: hide
+experiment_datasets <- cells_df %>% 
+  select(experiment_id, cell_status, divided, contains("first"), contains("last"), -contains("time")) %>% 
+  mutate(divided = as.numeric(divided)) %>% 
+  select(where(~!any(is.na(.)))) %>% 
+  glimpse() %>% 
+  
+  group_by(experiment_id) %>% 
+  {
+    grouped_data <- .
+    group_split(grouped_data) %>% 
+      set_names(nm = group_keys(grouped_data) %>% pull())
+  } %>% 
+  map(select, -experiment_id) %>% 
+  identity()
+
+chromosome_df <- experiment_datasets$Chromosome
+plasmid_df <- experiment_datasets$Plasmid
+```
+
+The first dimensionality reduction technique we decided to use was
+Principal Component Analysis (PCA) [@pearson1901; @hotelling1936].
+Scientist mainly uses PCA to create predictive models or in Exploratory
+Data Analysis (EDA). In our case, we only use it as an EDA.
+
+For chromosomal and plasmid strain, in
+@fig-chromosome-pca-new-coordinates and
+@fig-plasmid-pca-new-coordinates, we show the projection of the first
+two principal components (PCs), respectively.
+@fig-chromosome-pca-new-coordinates separates the manually annotated
+classes, surviving cells separated from non-surviving cells. However,
+for @fig-plasmid-pca-new-coordinates, the class separation was a bit
+rougher but allowed us to separate the surviving filament cells from the
+dead ones.
+
+```{r experiment-03-chromosome-pca-prep}
+#| results: hide
+c_pca_rec <- recipe(cell_status ~ ., data = chromosome_df) %>% 
+  step_naomit(all_predictors()) %>% 
+  step_normalize(all_predictors()) %>%
+  step_pca(all_predictors())
+
+set.seed(42)
+c_pca_prep <- prep(c_pca_rec)
+c_pca_prep
+```
+
+```{r}
+#| label: fig-chromosome-pca-new-coordinates
+#| fig-scap: Principal Component Analysis of chromosomal strain.
+#| fig-cap: >
+#|   **Principal Component Analysis of chromosomal strain.**
+#|   When integrating the information of different variables in a
+#|   dimensionality reduction analysis, we observed a clear separation
+#|   between the surviving cells and those that did not. The contributions
+#|   that determined this phenomenon come mainly from the last amount of
+#|   DsRed, GFP, and cell length (see @fig-chromosome-pca-variable-contribution).
+#|   Although it seems obvious, it effectively confirms that the temporal
+#|   classification that we carry out makes sense. Longer length represents
+#|   a greater uptake of antibiotics but in a much larger volume, so the net
+#|   effect is an internal reduction of antibiotics
+#|   (see @fig-cell-dimensions-relationship).
+#|
+p_c_pca <- c_pca_prep %>% 
+  juice() %>% 
+  ggplot(aes(x = PC1, y = PC2, color = cell_status)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_jitter(size = 0.7) +
+  guides(
+    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 1)),
+    fill = guide_legend(ncol = 2)
+  ) +
+  labs(
+    color = "Cell status"
+  ) +
+  NULL
+
+p_c_pca
+```
+
+```{r experiment-03-plasmid-pca-prep}
+#| results: hide
+p_pca_rec <- recipe(cell_status ~ ., data = plasmid_df) %>% 
+  step_naomit(all_predictors()) %>% 
+  step_normalize(all_predictors()) %>%
+  step_pca(all_predictors())
+
+set.seed(42)
+p_pca_prep <- prep(p_pca_rec)
+p_pca_prep
+```
+
+```{r}
+#| label: fig-plasmid-pca-new-coordinates
+#| fig-scap: Principal Component Analysis of plasmid strain.
+#| fig-cap: >
+#|   **Principal Component Analysis of plasmid strain.**
+#|   By integrating the information from different variables in a
+#|   dimensionality reduction analysis, we observed a clear separation
+#|   between the filamented and non-filamented cells. Said class separation
+#|   is given by component 2 (Y-axis), which is determined primarily by the
+#|   initial and final lengths of the cells (see
+#|   @fig-plasmid-pca-variable-contribution). Furthermore, the classification
+#|   also allows us to separate those filamented cells that died from those
+#|   that survived. Therefore, despite the increase in the system's
+#|   complexity, length plays a role in determining survival.
+
+p_p_pca <- p_pca_prep %>% 
+  juice() %>% 
+  ggplot(aes(x = PC1, y = PC2, color = cell_status)) +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  geom_jitter(size = 0.1, alpha = 1/3) +
+  scale_x_continuous(limits = c(NA,  5)) +
+  scale_y_continuous(limits = c(NA, 7)) +
+  guides(
+    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 1)),
+    fill = guide_legend(ncol = 2)
+  ) +
+  labs(
+    color = "Cell status"
+  ) +
+  NULL
+
+p_p_pca
+```
+
+For their part, in @fig-chromosome-pca-variable-contribution
+and @fig-plasmid-pca-variable-contribution, we show the total
+contribution of each variable per PC for the chromosomal and plasmid
+strain, respectively. Finding that, indeed, filamentation plays a
+crucial role in determining cell survival. For example, for PC2, we
+appreciated how the variable end DsRed directed the dots to the positive
+side, while the variable end and start length directed the dots to the
+opposing side. Therefore, we can support that filamentation has a role
+in moving cells away from having higher amounts of DsRed.
+
+```{r}
+#| label: fig-chromosome-pca-variable-contribution
+#| fig-scap: Variables contribution of Principal Component Analysis of chromosomal strain.
+#| fig-cap: >
+#|   **Variables contribution of Principal Component Analysis of chromosomal strain.**
+#|   In the @fig-chromosome-pca-new-coordinates, we see that the classes we
+#|   created manually reflected what we observed when performing a reduction
+#|   of dimensions analysis. Here we show the individual contribution of each
+#|   variable for the first two components. The variables that most affected
+#|   components 1 and 2 (X-axis and Y-axis, respectively) are the final
+#|   measurements of DsRed, GFP, length, and the initial amount of GFP.
+#|   Given that they are chromosomal strains, we should note that this
+#|   variability could be produced by intrinsic experimental noise that we
+#|   could not remove. With that in mind, having the DsRed and the final
+#|   length highlights the inherent role of cells by having increased its size.
+#|
+c_tidied_pca <- tidy(c_pca_prep, 3)
+
+p_c_titied_pca <- c_tidied_pca %>%
+  filter(component %in% paste0("PC", 1:2)) %>%
+  mutate(
+    component = fct_inorder(component),
+    terms = reorder_within(terms, abs(value), component)
+  ) %>%
+  ggplot(
+    aes(
+      x = abs(value), 
+      y= terms,
+      fill = value > 0
+    )
+  ) +
+  geom_bar(stat = "identity") +
+  facet_grid(component ~ ., scales = "free_y") +
+  scale_y_reordered() +
+  labs(
+    x = "Absolute value of contribution",
+    y = "Metric",
+    fill = "Is positive?"
+  )
+
+p_c_titied_pca
+```
+
+```{r}
+#| label: fig-plasmid-pca-variable-contribution
+#| fig-scap: Variables contribution of Principal Component Analysis of plasmid strain.
+#| fig-cap: >
+#|   **Variables contribution of Principal Component Analysis of plasmid strain.**
+#|   In @fig-plasmid-pca-new-coordinates, we saw that we could separate the
+#|   filamented cells from the non-filamented ones. The reduction analysis also
+#|   shows a slight difference between surviving and dead cells within the
+#|   small group of filamented cells. Here we offer the individual
+#|   contribution of each variable for the first two components. For the first
+#|   component (x-axis in  @fig-chromosome-pca-new-coordinates), the initial
+#|   and final GFP measurements received mainly the variability. We expected
+#|   this component's importance since, being a chromosomal strain, we hope
+#|   that its inherent variation will be inherited into the system. On the
+#|   other hand, the second component (Y-axis in
+#|   @fig-chromosome-pca-new-coordinates) was determined by the length of
+#|   the cell. Factors that, in the chromosomal strain (see
+#|   @fig-chromosome-pca-variable-contribution), determined with the
+#|   help of DsRed the separation between surviving and dead cells.
+#|   
+p_tidied_pca <- tidy(p_pca_prep, 3)
+
+p_p_titied_pca <- p_tidied_pca %>%
+  filter(component %in% paste0("PC", 1:2)) %>%
+  mutate(
+    component = fct_inorder(component),
+    terms = reorder_within(terms, abs(value), component)
+  ) %>%
+  ggplot(
+    aes(
+      x = abs(value), 
+      y= terms,
+      fill = value > 0
+    )
+  ) +
+  geom_bar(stat = "identity") +
+  facet_grid(component ~ ., scales = "free_y") +
+  scale_y_reordered() +
+  labs(
+    x = "Absolute value of contribution",
+    y = "Metric",
+    fill = "Is positive?"
+  )
+
+p_p_titied_pca
 ```
