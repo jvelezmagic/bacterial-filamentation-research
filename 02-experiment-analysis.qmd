@@ -25,6 +25,7 @@ library(ggdist)
 library(embed)
 library(here)
 library(fs)
+library(patchwork)
 ```
 
 ```{r}
@@ -1159,4 +1160,241 @@ p_p_umap <- juice(p_umap_prep) %>%
   NULL
 
 p_p_umap
+```
+
+### Population dynamics reveal how filamentation contributes cell survival
+
+```{r}
+#| label: population-read-data
+#| results: hide
+#| 
+lineages_file <- here("data", "processed", "lineages.csv")
+lineages_raw_df <- read_csv(
+  file = lineages_file,
+  show_col_types = FALSE
+) %>%
+  glimpse()
+```
+
+```{r}
+#| label: population-create-factors
+#| results: hide
+#| 
+lineages_processed_1_df <- lineages_raw_df %>%
+  mutate(
+    filamented_id = factor(
+      x = filamented_id,
+      levels = c(FALSE, TRUE),
+      labels = c("Not filamented", "Filamented")
+    ),
+    filamented_at_time = factor(
+      x = filamented_at_time,
+      levels = c(FALSE, TRUE),
+      labels = c("Not filamented", "Filamented")
+    ),
+    survived = factor(
+      x = survived,
+      levels = c(FALSE, TRUE),
+      labels = c("Not survived", "Survived")
+    ),
+    cell_status = interaction(
+      filamented_id,
+      survived,
+      sep = " - "
+    ) %>%
+      as.character() %>%
+      as.factor()
+  ) %>%
+  glimpse()
+```
+
+```{r}
+#| label: population-create-status-over-time-dataset
+#| results: hide
+#| 
+status_time_df <- lineages_processed_1_df %>%
+  select(experiment_id, id, time) %>%
+  group_by(experiment_id) %>%
+  group_modify(~ complete(expand(.x, id, time))) %>%
+  ungroup() %>%
+  left_join(lineages_processed_1_df) %>%
+  rename(cell_status_at_time = filamented_at_time) %>%
+  fill(time_first, time_last, gfp_first, filamentation_threshold, ds_red_threshold, .direction = "up") %>%
+  fill(antibiotic_start_time, antibiotic_end_time, .direction = "down") %>%
+  filter(time >= time_first) %>%
+  mutate(
+    cell_status_at_time = as.character(cell_status_at_time),
+    cell_status_at_time = replace_na(cell_status_at_time, "Dead"),
+    cell_status_at_time = factor(
+      x = cell_status_at_time,
+      levels = c("Not filamented", "Filamented", "Dead")
+    ),
+    time = factor(time)
+  ) %>%
+  glimpse() %>%
+  identity()
+```
+
+From the full tracking dataset, we evaluated how the different cell
+states behaved over time---for example, understanding how the cells
+absorbed antibiotics or how they elongated in time. In contrast to the
+dataset generated in the @sec-length-gfp-crucial, we did not
+truncate the results 10 minutes after the antibiotic exposure. In this
+way, we were able to observe cell behavior before and after the presence
+of the toxic agent.
+
+In @fig-status-with-dead, we observed a small
+fraction of cells that were already filamentous without exposure to the
+toxic agent in both cell strains. However, after the onset of antibiotic
+exposure at minute 60, we observed increases in the proportion of
+filamented cells. It is interesting to note how filamented cells grew
+after antibiotic exposure for the chromosomal strain. We speculate that
+this post-antibiotic growth exists because, once the SOS system that
+triggers filamentation is activated, the system continues to grow until
+it reaches a limit regardless of whether the damaging agent is still
+present or not [@justiceMorphologicalPlasticityBacterial2008;
+@mückl2018]. Moreover, we observed how the cells start to divide again
+after some time because the proportion of non-filament cells starts to
+grow while the filament cells start to divide. We observed the same
+effects for the plasmid strain. However, by experimental design, the
+number of filament cells expected was much lower.
+
+```{r}
+#| label: fig-status-with-dead
+#| fig-scap: Population status over time.
+#| fig-cap: >
+#|   **Population status over time.**
+#|   We calculate how many cells of each type existed for each time point:
+#|  non-filamented and filamented living cells (blue and green areas,
+#|  respectively) and dead cells (red area; we considered *dead* cells as
+#|  those cells that existed at one time and then stopped tracking). The
+#|  black vertical lines represent the start and end of antibiotic exposure
+#|  for each experiment. The effect of filamentation and its spread after
+#|  exposure to the antibiotic is evident for the chromosomal strain. The
+#|  experiment was finalized with the resolution of the cells when they
+#|  returned to their non-filamented state. For its part, for the plasmid
+#|  strain, it is observed how the filamented cells begin to appear slowly.
+#|  Their proportion is as expected, given that the population had a wide
+#|  distribution of GFP that allowed them to combat exposure to the antibiotic.
+#|
+p_status_with_dead <- status_time_df %>%
+  ggplot(aes(x = time, fill = cell_status_at_time)) +
+  geom_bar(position = "fill", stat = "count", width = 1) +
+  geom_vline(aes(xintercept = factor(antibiotic_start_time)), linetype = "dashed") +
+  geom_vline(aes(xintercept = factor(antibiotic_end_time)), linetype = "dashed") +
+  facet_grid(experiment_id ~ .) +
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0), labels = scales::percent) +
+  theme(
+    panel.spacing.y = unit(1, "lines")
+  ) +
+  geom_text(
+    data = data.frame(
+      x = c(7.5, 15.5),
+      y = c(0.75, 0.25),
+      label = c("Start", "End"),
+      experiment_id = "Plasmid"
+    ),
+    mapping = aes(x = x, y = y, label = label),
+    size = 6,
+    hjust = 0L,
+    vjust = 0L,
+    colour = "white",
+    inherit.aes = FALSE
+  ) +
+  labs(
+    x = "Time (minutes)",
+    y = "Percentage of cells",
+    fill = "Cell status"
+  ) +
+  scale_fill_hue(direction = -1, h.start = 90) +
+  NULL
+
+p_status_with_dead
+```
+
+In @fig-metrics-over-time, we showed how once
+antibiotics exposure began, those cells that died had a much faster
+increase in DsRed than those that did manage to live, regardless of
+whether they filamented or not. On the other hand, surviving cells
+managed to maintain their DsRed levels relatively stable. We noted that
+length was critical for the surviving cells for the chromosomal strain
+by turning to the GFP and length variables for a temporal explanation.
+Even cells categorized as non-filamented reached the filamentation
+threshold minutes after antibiotic exposure. However, the distinction of
+live or dead filamented cells was not as evident as expected. As for
+cells with plasmids, the effect on GFP for surviving cells was
+maintained for filamented cells and decreased for non-filamented cells.
+For the filament cells that died, we showed that they had, on average, a
+much longer initial length than the surviving cells, so we also consider
+it as a necessary factor in understanding which variables affect cell
+survival.
+
+```{r}
+#| label: fig-metrics-over-time
+#| fig-scap: Population measurements over time.
+#| fig-cap: >
+#|   **Population measurements over time.**
+#|  The colored lines symbolize the average value of each metric at each
+#|  instant of time, while its surrounded gray shaded area represents the
+#|  95% confidence interval. The vertical lines represent the start and
+#|  end of antibiotic exposure. The horizontal line in the length metric
+#|  symbolizes the threshold to consider a cell filament. We observed a faster
+#|  increase of DsRed for the non-surviving populations in both experiments.
+#|  Regarding the GFP metric, the behavior is relatively stable for the
+#|  chromosomal strain. In contrast, for the plasmid strain, a decline in GFP
+#|  is observed for the population that did not survive. For the length metric,
+#|  it is interesting to note how the chromosome cells that did not filament
+#|  continued to grow past the filamentation threshold once the exposure to
+#|  the antibiotic in the chromosomal strain had ended. On the other hand, the
+#|  filamented and dead cells seem to have a greater length from the beginning
+#|  for the plasmid strain.
+#|
+p_metrics_over_time <- lineages_processed_1_df %>%
+  select(experiment_id, cell_status, time, length, gfp, ds_red) %>%
+  pivot_longer(
+    cols = c(length, gfp, ds_red),
+    names_to = "metric"
+  ) %>%
+  mutate(
+    metric = case_when(
+      metric == "ds_red" ~ "DsRed",
+      metric == "gfp" ~ "GFP",
+      metric == "length" ~ "Length"
+    ),
+    filamentation_threshold = ifelse(metric == "length", filamentation_threshold, NA)
+  ) %>%
+  group_by(experiment_id, cell_status, time, metric) %>%
+  summarise(
+    ci = list(mean_cl_normal(value)),
+    .groups = "drop"
+  ) %>%
+  unnest(cols = c(ci)) %>%
+  left_join(
+    y = lineages_processed_1_df %>%
+      select(experiment_id, antibiotic_start_time, antibiotic_end_time, filamentation_threshold) %>%
+      distinct(),
+    by = c("experiment_id")
+  ) %>%
+  mutate(
+    filamentation_threshold = ifelse(metric == "Length", filamentation_threshold, NA)
+  ) %>%
+  ggplot(aes(x = time, y = y, ymin = ymin, ymax = ymax, color = cell_status)) +
+  geom_vline(aes(xintercept = antibiotic_start_time), linetype = "dashed") +
+  geom_vline(aes(xintercept = antibiotic_end_time), linetype = "dashed") +
+  geom_hline(aes(yintercept = as.numeric(filamentation_threshold)), linetype = "dashed") +
+  geom_smooth(method = "loess") +
+  facet_grid(metric ~ experiment_id, scales = "free_y") +
+  labs(
+    x = "Time (minutes)",
+    y = "Value",
+    color = "Cell status"
+  ) +
+  guides(
+    color = guide_legend(ncol = 2),
+    fill = guide_legend(ncol = 2)
+  ) +
+  NULL
+
+p_metrics_over_time
 ```
