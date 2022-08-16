@@ -24,6 +24,12 @@ book:
 
 bibliography: [references.bib, project-general-packages.bib, project-R-packages.bib]
 
+knitr:
+  opts_chunk: 
+    collapse: true
+    comment: "#>"
+    out.width: "100%"
+
 format:
   html:
     theme: cosmo
@@ -40,6 +46,19 @@ format:
         warning: false
     toc: true
     toc-depth: 4
+    lof: true
+    lot: true
+    geometry: 
+      - left=2.5cm
+      - right=2.5cm
+      - heightrounded
+    colorlinks: true
+    papersize: a4
+    link-citations: true
+    fontsize: 12pt
+    fig-pos: H
+    dpi: 600
+    fig-width: 8
+    fig-height: 6
     
 editor: visual
-
