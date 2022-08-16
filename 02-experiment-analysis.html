@@ -249,6 +249,7 @@ div.csl-indent {
   <li><a href="#increasing-the-complexity-of-the-system-and-analyzing-it-in-an-unsupervised-way-allows-a-correct-classification-of-cell-states" id="toc-increasing-the-complexity-of-the-system-and-analyzing-it-in-an-unsupervised-way-allows-a-correct-classification-of-cell-states" class="nav-link" data-scroll-target="#increasing-the-complexity-of-the-system-and-analyzing-it-in-an-unsupervised-way-allows-a-correct-classification-of-cell-states"> <span class="header-section-number">2.3.4</span> Increasing the complexity of the system and analyzing it in an unsupervised way allows a correct classification of cell states</a>
   <ul class="collapse">
   <li><a href="#principal-component-analysis-pca-emphasizes-the-importance-of-cell-length-and-its-gfp-in-cell-survival" id="toc-principal-component-analysis-pca-emphasizes-the-importance-of-cell-length-and-its-gfp-in-cell-survival" class="nav-link" data-scroll-target="#principal-component-analysis-pca-emphasizes-the-importance-of-cell-length-and-its-gfp-in-cell-survival"> <span class="header-section-number">2.3.4.1</span> Principal Component Analysis (PCA) emphasizes the importance of cell length and its GFP in cell survival</a></li>
+  <li><a href="#uniform-manifold-approximation-and-projection-umap-correctly-represents-the-local-structure-of-cell-states" id="toc-uniform-manifold-approximation-and-projection-umap-correctly-represents-the-local-structure-of-cell-states" class="nav-link" data-scroll-target="#uniform-manifold-approximation-and-projection-umap-correctly-represents-the-local-structure-of-cell-states"> <span class="header-section-number">2.3.4.2</span> Uniform Manifold Approximation and Projection (UMAP) correctly represents the local structure of cell states</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -545,6 +546,37 @@ div.csl-indent {
 </div>
 </div>
 </div>
+</section>
+<section id="uniform-manifold-approximation-and-projection-umap-correctly-represents-the-local-structure-of-cell-states" class="level4" data-number="2.3.4.2">
+<h4 data-number="2.3.4.2" class="anchored" data-anchor-id="uniform-manifold-approximation-and-projection-umap-correctly-represents-the-local-structure-of-cell-states"><span class="header-section-number">2.3.4.2</span> Uniform Manifold Approximation and Projection (UMAP) correctly represents the local structure of cell states</h4>
+<p>Staying with only a one-dimensionality reduction technique was not an option, so we used the UMAP technique <span class="citation" data-cites="mcinnes2018umap">(<a href="references.html#ref-mcinnes2018umap" role="doc-biblioref">McInnes, Healy, and Melville 2018</a>)</span>. We mainly decided to use UMAP for clustering purposes and see if the annotated clusters corresponded to the manually annotated ones. UMAP has certain advantages for these purposes, e.g., it preserves the global structure across the whole space, so the distances between clusters matter.</p>
+<p>In <a href="#fig-chromosome-umap-new-coordinates">Figure&nbsp;<span>2.15</span></a> and <a href="#fig-plasmid-umap-new-coordinates">Figure&nbsp;<span>2.16</span></a>, we show how, using the same variables used in the “PCA” section, UMAP was able to cluster the four proposed classes correctly. Interestingly, in <a href="#fig-chromosome-umap-new-coordinates">Figure&nbsp;<span>2.15</span></a>, UMAP formed three general groups and four for <a href="#fig-plasmid-umap-new-coordinates">Figure&nbsp;<span>2.16</span></a>. However, in general, UMAP clustered the surviving cells from those that did not survived. On investigating why this separation occurred, we found that the large groups coalesced into one another if we eliminated the division variable. So, in a way, the division also has a role in determining survival, but it is not essential or at least not over-represented in our data.</p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-chromosome-umap-new-coordinates" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="02-experiment-analysis_files/figure-html/fig-chromosome-umap-new-coordinates-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 2.15: <strong>UMAP coordinates of chromosome strain.</strong> We represented the cells in a low dimensional space. This new projection made it possible to group the cells that survived and those that did not. Therefore, as in PCA <a href="#fig-chromosome-pca-new-coordinates">Figure&nbsp;<span>2.11</span></a>, this technique supports the manual classification that we carry out.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-plasmid-umap-new-coordinates" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="02-experiment-analysis_files/figure-html/fig-plasmid-umap-new-coordinates-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 2.16: <strong>UMAP coordinates of plasmid strain.</strong> As in its <a href="#fig-chromosome-umap-new-coordinates">Figure&nbsp;<span>2.15</span></a> pair, the representation in a low-dimensional space helped classify the cells, grouping mainly into four groups, two of survivors and two of non-survivors. The variable <em>division</em> marks the separation of classes. The <em>division</em> variable indicates whether a cell is divided during its lifetime or not. Together, the UMAP represents the manually assigned classes.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 <!-- -->
@@ -564,6 +596,9 @@ Joseleau-Petit, Daniel̀e, Daniel Vinella, and Richard D’Ari. 1999. <span>“M
 </div>
 <div id="ref-kroemer2008" class="csl-entry" role="doc-biblioentry">
 Kroemer, G, L Galluzzi, P Vandenabeele, J Abrams, E S Alnemri, E H Baehrecke, M V Blagosklonny, et al. 2008. <span>“Classification of Cell Death: Recommendations of the Nomenclature Committee on Cell Death 2009.”</span> <em>Cell Death &amp; Differentiation</em> 16 (1): 3–11. <a href="https://doi.org/10.1038/cdd.2008.150">https://doi.org/10.1038/cdd.2008.150</a>.
+</div>
+<div id="ref-mcinnes2018umap" class="csl-entry" role="doc-biblioentry">
+McInnes, Leland, John Healy, and James Melville. 2018. <span>“Umap: Uniform Manifold Approximation and Projection for Dimension Reduction.”</span> <em>arXiv Preprint arXiv:1802.03426</em>.
 </div>
 <div id="ref-moger-reischer2019" class="csl-entry" role="doc-biblioentry">
 Moger-Reischer, Roy Z., and Jay T. Lennon. 2019. <span>“Microbial Ageing and Longevity.”</span> <em>Nature Reviews Microbiology</em> 17 (11): 679–90. <a href="https://doi.org/10.1038/s41579-019-0253-y">https://doi.org/10.1038/s41579-019-0253-y</a>.
@@ -1365,7 +1400,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a><span class="co">#|   red dots) relative to unchanged behavior in plasmid cells.</span></span>
 <span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Therefore, its contribution to filamentation remains uncertain.</span></span>
 <span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a><span class="co">#|   </span></span>
-<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a>p_number_divisions <span class="ot">&lt;-</span>cells_df <span class="sc">%&gt;%</span> </span>
+<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a>p_number_divisions <span class="ot">&lt;-</span> cells_df <span class="sc">%&gt;%</span> </span>
 <span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> cell_status, <span class="at">y =</span> n_divisions, <span class="at">fill =</span> cell_status)) <span class="sc">+</span></span>
 <span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_eye</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
 <span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_compare_means</span>(</span>
@@ -1801,6 +1836,113 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-1093"><a href="#cb1-1093" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-1094"><a href="#cb1-1094" aria-hidden="true" tabindex="-1"></a>p_p_titied_pca</span>
 <span id="cb1-1095"><a href="#cb1-1095" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-1096"><a href="#cb1-1096" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1097"><a href="#cb1-1097" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Uniform Manifold Approximation and Projection (UMAP) correctly represents the local structure of cell states</span></span>
+<span id="cb1-1098"><a href="#cb1-1098" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1099"><a href="#cb1-1099" aria-hidden="true" tabindex="-1"></a>Staying with only a one-dimensionality reduction technique was not an</span>
+<span id="cb1-1100"><a href="#cb1-1100" aria-hidden="true" tabindex="-1"></a>option, so we used the UMAP technique <span class="co">[</span><span class="ot">@mcinnes2018umap</span><span class="co">]</span>. We mainly</span>
+<span id="cb1-1101"><a href="#cb1-1101" aria-hidden="true" tabindex="-1"></a>decided to use UMAP for clustering purposes and see if the annotated</span>
+<span id="cb1-1102"><a href="#cb1-1102" aria-hidden="true" tabindex="-1"></a>clusters corresponded to the manually annotated ones. UMAP has certain</span>
+<span id="cb1-1103"><a href="#cb1-1103" aria-hidden="true" tabindex="-1"></a>advantages for these purposes, e.g., it preserves the global structure</span>
+<span id="cb1-1104"><a href="#cb1-1104" aria-hidden="true" tabindex="-1"></a>across the whole space, so the distances between clusters matter.</span>
+<span id="cb1-1105"><a href="#cb1-1105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1106"><a href="#cb1-1106" aria-hidden="true" tabindex="-1"></a>In @fig-chromosome-umap-new-coordinates and</span>
+<span id="cb1-1107"><a href="#cb1-1107" aria-hidden="true" tabindex="-1"></a>@fig-plasmid-umap-new-coordinates, we show how,</span>
+<span id="cb1-1108"><a href="#cb1-1108" aria-hidden="true" tabindex="-1"></a>using the same variables used in the "PCA" section, UMAP was able to</span>
+<span id="cb1-1109"><a href="#cb1-1109" aria-hidden="true" tabindex="-1"></a>cluster the four proposed classes correctly. Interestingly, in </span>
+<span id="cb1-1110"><a href="#cb1-1110" aria-hidden="true" tabindex="-1"></a>@fig-chromosome-umap-new-coordinates, UMAP formed</span>
+<span id="cb1-1111"><a href="#cb1-1111" aria-hidden="true" tabindex="-1"></a>three general groups and four for </span>
+<span id="cb1-1112"><a href="#cb1-1112" aria-hidden="true" tabindex="-1"></a>@fig-plasmid-umap-new-coordinates. However, in</span>
+<span id="cb1-1113"><a href="#cb1-1113" aria-hidden="true" tabindex="-1"></a>general, UMAP clustered the surviving cells from those that did not</span>
+<span id="cb1-1114"><a href="#cb1-1114" aria-hidden="true" tabindex="-1"></a>survived. On investigating why this separation occurred, we found that</span>
+<span id="cb1-1115"><a href="#cb1-1115" aria-hidden="true" tabindex="-1"></a>the large groups coalesced into one another if we eliminated the</span>
+<span id="cb1-1116"><a href="#cb1-1116" aria-hidden="true" tabindex="-1"></a>division variable. So, in a way, the division also has a role in</span>
+<span id="cb1-1117"><a href="#cb1-1117" aria-hidden="true" tabindex="-1"></a>determining survival, but it is not essential or at least not</span>
+<span id="cb1-1118"><a href="#cb1-1118" aria-hidden="true" tabindex="-1"></a>over-represented in our data.</span>
+<span id="cb1-1119"><a href="#cb1-1119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1122"><a href="#cb1-1122" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-1123"><a href="#cb1-1123" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: chromosome-umap-prep</span></span>
+<span id="cb1-1124"><a href="#cb1-1124" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
+<span id="cb1-1125"><a href="#cb1-1125" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-1126"><a href="#cb1-1126" aria-hidden="true" tabindex="-1"></a>c_umap_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(cell_status <span class="sc">~</span> ., <span class="at">data =</span> chromosome_df) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-1127"><a href="#cb1-1127" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_naomit</span>(<span class="fu">all_predictors</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-1128"><a href="#cb1-1128" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb1-1129"><a href="#cb1-1129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_umap</span>(<span class="fu">all_predictors</span>())</span>
+<span id="cb1-1130"><a href="#cb1-1130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1131"><a href="#cb1-1131" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb1-1132"><a href="#cb1-1132" aria-hidden="true" tabindex="-1"></a>c_umap_prep <span class="ot">&lt;-</span> <span class="fu">prep</span>(c_umap_rec)</span>
+<span id="cb1-1133"><a href="#cb1-1133" aria-hidden="true" tabindex="-1"></a>c_umap_prep</span>
+<span id="cb1-1134"><a href="#cb1-1134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-1135"><a href="#cb1-1135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1138"><a href="#cb1-1138" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-1139"><a href="#cb1-1139" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chromosome-umap-new-coordinates</span></span>
+<span id="cb1-1140"><a href="#cb1-1140" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: UMAP coordinates of chromosome strain.</span></span>
+<span id="cb1-1141"><a href="#cb1-1141" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-1142"><a href="#cb1-1142" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **UMAP coordinates of chromosome strain.**</span></span>
+<span id="cb1-1143"><a href="#cb1-1143" aria-hidden="true" tabindex="-1"></a><span class="co">#|   We represented the cells in a low dimensional space. This new </span></span>
+<span id="cb1-1144"><a href="#cb1-1144" aria-hidden="true" tabindex="-1"></a><span class="co">#|   projection made it possible to group the cells that survived and</span></span>
+<span id="cb1-1145"><a href="#cb1-1145" aria-hidden="true" tabindex="-1"></a><span class="co">#|   those that did not. Therefore, as in PCA </span></span>
+<span id="cb1-1146"><a href="#cb1-1146" aria-hidden="true" tabindex="-1"></a><span class="co">#|   @fig-chromosome-pca-new-coordinates, this technique supports the manual</span></span>
+<span id="cb1-1147"><a href="#cb1-1147" aria-hidden="true" tabindex="-1"></a><span class="co">#|   classification that we carry out.</span></span>
+<span id="cb1-1148"><a href="#cb1-1148" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-1149"><a href="#cb1-1149" aria-hidden="true" tabindex="-1"></a>p_c_umap <span class="ot">&lt;-</span> <span class="fu">juice</span>(c_umap_prep) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-1150"><a href="#cb1-1150" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(UMAP1, UMAP2)) <span class="sc">+</span></span>
+<span id="cb1-1151"><a href="#cb1-1151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> cell_status), <span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1-1152"><a href="#cb1-1152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(</span>
+<span id="cb1-1153"><a href="#cb1-1153" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">alpha =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">1</span>)),</span>
+<span id="cb1-1154"><a href="#cb1-1154" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb1-1155"><a href="#cb1-1155" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-1156"><a href="#cb1-1156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-1157"><a href="#cb1-1157" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"UMAP 1"</span>,</span>
+<span id="cb1-1158"><a href="#cb1-1158" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"UMAP 2"</span>,</span>
+<span id="cb1-1159"><a href="#cb1-1159" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Cell status"</span></span>
+<span id="cb1-1160"><a href="#cb1-1160" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-1161"><a href="#cb1-1161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1162"><a href="#cb1-1162" aria-hidden="true" tabindex="-1"></a>p_c_umap</span>
+<span id="cb1-1163"><a href="#cb1-1163" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-1164"><a href="#cb1-1164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1167"><a href="#cb1-1167" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-1168"><a href="#cb1-1168" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: plasmid-umap-prep</span></span>
+<span id="cb1-1169"><a href="#cb1-1169" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
+<span id="cb1-1170"><a href="#cb1-1170" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-1171"><a href="#cb1-1171" aria-hidden="true" tabindex="-1"></a>p_umap_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(cell_status <span class="sc">~</span> ., <span class="at">data =</span> plasmid_df) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-1172"><a href="#cb1-1172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_naomit</span>(<span class="fu">all_predictors</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-1173"><a href="#cb1-1173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb1-1174"><a href="#cb1-1174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_umap</span>(<span class="fu">all_predictors</span>())</span>
+<span id="cb1-1175"><a href="#cb1-1175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1176"><a href="#cb1-1176" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb1-1177"><a href="#cb1-1177" aria-hidden="true" tabindex="-1"></a>p_umap_prep <span class="ot">&lt;-</span> <span class="fu">prep</span>(p_umap_rec)</span>
+<span id="cb1-1178"><a href="#cb1-1178" aria-hidden="true" tabindex="-1"></a>p_umap_prep</span>
+<span id="cb1-1179"><a href="#cb1-1179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-1180"><a href="#cb1-1180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1183"><a href="#cb1-1183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-1184"><a href="#cb1-1184" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-plasmid-umap-new-coordinates</span></span>
+<span id="cb1-1185"><a href="#cb1-1185" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: UMAP coordinates of plasmid strain.</span></span>
+<span id="cb1-1186"><a href="#cb1-1186" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-1187"><a href="#cb1-1187" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **UMAP coordinates of plasmid strain.**</span></span>
+<span id="cb1-1188"><a href="#cb1-1188" aria-hidden="true" tabindex="-1"></a><span class="co">#|   As in its @fig-chromosome-umap-new-coordinates pair, the representation</span></span>
+<span id="cb1-1189"><a href="#cb1-1189" aria-hidden="true" tabindex="-1"></a><span class="co">#|   in a low-dimensional space helped classify the cells, grouping mainly</span></span>
+<span id="cb1-1190"><a href="#cb1-1190" aria-hidden="true" tabindex="-1"></a><span class="co">#|   into four groups, two of survivors and two of non-survivors.</span></span>
+<span id="cb1-1191"><a href="#cb1-1191" aria-hidden="true" tabindex="-1"></a><span class="co">#|   The variable *division* marks the separation of classes. The *division*</span></span>
+<span id="cb1-1192"><a href="#cb1-1192" aria-hidden="true" tabindex="-1"></a><span class="co">#|   variable indicates whether a cell is divided during its lifetime or not.</span></span>
+<span id="cb1-1193"><a href="#cb1-1193" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Together, the UMAP represents the manually assigned classes.</span></span>
+<span id="cb1-1194"><a href="#cb1-1194" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-1195"><a href="#cb1-1195" aria-hidden="true" tabindex="-1"></a>p_p_umap <span class="ot">&lt;-</span> <span class="fu">juice</span>(p_umap_prep) <span class="sc">%&gt;%</span></span>
+<span id="cb1-1196"><a href="#cb1-1196" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(UMAP1, UMAP2)) <span class="sc">+</span></span>
+<span id="cb1-1197"><a href="#cb1-1197" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> cell_status), <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-1198"><a href="#cb1-1198" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-1199"><a href="#cb1-1199" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"UMAP 1"</span>,</span>
+<span id="cb1-1200"><a href="#cb1-1200" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"UMAP 2"</span>,</span>
+<span id="cb1-1201"><a href="#cb1-1201" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Cell status"</span></span>
+<span id="cb1-1202"><a href="#cb1-1202" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-1203"><a href="#cb1-1203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(</span>
+<span id="cb1-1204"><a href="#cb1-1204" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">alpha =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">1</span>)),</span>
+<span id="cb1-1205"><a href="#cb1-1205" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb1-1206"><a href="#cb1-1206" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-1207"><a href="#cb1-1207" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span>
+<span id="cb1-1208"><a href="#cb1-1208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-1209"><a href="#cb1-1209" aria-hidden="true" tabindex="-1"></a>p_p_umap</span>
+<span id="cb1-1210"><a href="#cb1-1210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
