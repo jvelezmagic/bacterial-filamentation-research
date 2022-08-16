@@ -617,7 +617,7 @@ division to cell survival (see @fig-plasmid-pca-variable-contribution).
 #|   red dots) relative to unchanged behavior in plasmid cells.
 #|   Therefore, its contribution to filamentation remains uncertain.
 #|   
-p_number_divisions <-cells_df %>% 
+p_number_divisions <- cells_df %>% 
   ggplot(aes(x = cell_status, y = n_divisions, fill = cell_status)) +
   stat_eye(position = "dodge") +
   stat_compare_means(
@@ -1052,4 +1052,111 @@ p_p_titied_pca <- p_tidied_pca %>%
   )
 
 p_p_titied_pca
+```
+
+#### Uniform Manifold Approximation and Projection (UMAP) correctly represents the local structure of cell states
+
+Staying with only a one-dimensionality reduction technique was not an
+option, so we used the UMAP technique [@mcinnes2018umap]. We mainly
+decided to use UMAP for clustering purposes and see if the annotated
+clusters corresponded to the manually annotated ones. UMAP has certain
+advantages for these purposes, e.g., it preserves the global structure
+across the whole space, so the distances between clusters matter.
+
+In @fig-chromosome-umap-new-coordinates and
+@fig-plasmid-umap-new-coordinates, we show how,
+using the same variables used in the "PCA" section, UMAP was able to
+cluster the four proposed classes correctly. Interestingly, in 
+@fig-chromosome-umap-new-coordinates, UMAP formed
+three general groups and four for 
+@fig-plasmid-umap-new-coordinates. However, in
+general, UMAP clustered the surviving cells from those that did not
+survived. On investigating why this separation occurred, we found that
+the large groups coalesced into one another if we eliminated the
+division variable. So, in a way, the division also has a role in
+determining survival, but it is not essential or at least not
+over-represented in our data.
+
+```{r}
+#| label: chromosome-umap-prep
+#| results: hide
+#|
+c_umap_rec <- recipe(cell_status ~ ., data = chromosome_df) %>% 
+  step_naomit(all_predictors()) %>% 
+  step_normalize(all_predictors()) %>%
+  step_umap(all_predictors())
+
+set.seed(42)
+c_umap_prep <- prep(c_umap_rec)
+c_umap_prep
+```
+
+```{r}
+#| label: fig-chromosome-umap-new-coordinates
+#| fig-scap: UMAP coordinates of chromosome strain.
+#| fig-cap: >
+#|   **UMAP coordinates of chromosome strain.**
+#|   We represented the cells in a low dimensional space. This new 
+#|   projection made it possible to group the cells that survived and
+#|   those that did not. Therefore, as in PCA 
+#|   @fig-chromosome-pca-new-coordinates, this technique supports the manual
+#|   classification that we carry out.
+#|
+p_c_umap <- juice(c_umap_prep) %>% 
+  ggplot(aes(UMAP1, UMAP2)) +
+  geom_point(aes(color = cell_status), alpha = 0.7, size = 2) +
+  guides(
+    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 1)),
+    fill = guide_legend(ncol = 2)
+  ) +
+  labs(
+    x = "UMAP 1",
+    y = "UMAP 2",
+    color = "Cell status"
+  )
+
+p_c_umap
+```
+
+```{r}
+#| label: plasmid-umap-prep
+#| results: hide
+#|
+p_umap_rec <- recipe(cell_status ~ ., data = plasmid_df) %>% 
+  step_naomit(all_predictors()) %>% 
+  step_normalize(all_predictors()) %>%
+  step_umap(all_predictors())
+
+set.seed(42)
+p_umap_prep <- prep(p_umap_rec)
+p_umap_prep
+```
+
+```{r}
+#| label: fig-plasmid-umap-new-coordinates
+#| fig-scap: UMAP coordinates of plasmid strain.
+#| fig-cap: >
+#|   **UMAP coordinates of plasmid strain.**
+#|   As in its @fig-chromosome-umap-new-coordinates pair, the representation
+#|   in a low-dimensional space helped classify the cells, grouping mainly
+#|   into four groups, two of survivors and two of non-survivors.
+#|   The variable *division* marks the separation of classes. The *division*
+#|   variable indicates whether a cell is divided during its lifetime or not.
+#|   Together, the UMAP represents the manually assigned classes.
+#|
+p_p_umap <- juice(p_umap_prep) %>%
+  ggplot(aes(UMAP1, UMAP2)) +
+  geom_point(aes(color = cell_status), alpha = 1/3, size = 1) +
+  labs(
+    x = "UMAP 1",
+    y = "UMAP 2",
+    color = "Cell status"
+  ) +
+  guides(
+    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 1)),
+    fill = guide_legend(ncol = 2)
+  ) +
+  NULL
+
+p_p_umap
 ```
