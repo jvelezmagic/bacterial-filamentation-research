@@ -797,7 +797,7 @@ p_initial_values_with_time <- cells_df %>%
 p_initial_values_with_time
 ```
 
-### Increasing the complexity of the system and analyzing it in an unsupervised way allows a correct classification of cell states
+### Increasing the complexity of the system and analyzing it in an unsupervised way allows a correct classification of cell states {#sec-unsupervised-classification}
 
 In the experiments, we observed the importance of GFP filamentation and
 variability for cell survival. Similarly, we realized that other
@@ -1312,7 +1312,6 @@ p_status_with_dead <- status_time_df %>%
 p_status_with_dead
 ```
 
-
 In @fig-metrics-over-time, we showed how once antibiotics exposure
 began, those cells that died had a much faster increase in DsRed than
 those that did manage to live, regardless of whether they filamented or
@@ -1397,3 +1396,281 @@ p_metrics_over_time <- lineages_processed_1_df %>%
 
 p_metrics_over_time
 ```
+
+### Heterogeneity in plasmid copy-number allows various forms of survival in addition to filamentation
+
+We are confident that filamentation has a fundamental role in
+determining cell survival, with what we have shown so far. However, for
+plasmid cells, we have a component that is of our complete interest;
+heterogeneity. Each cell can possess a different plasmid copy-number;
+thus, each could show a different behavior under stress
+[@sanmillan2016]. For instance, heterogeneity can produce resistant
+cells that do not suffer damage, susceptible cells, and cells that form
+filaments to mitigate environmental stress.
+
+To study the effect of variability in plasmid copy number in the
+survival probability of the population, we decided to group cells by the
+proportion of initial GFP with respect to the population maximum. We
+defined 100% of the population as the number of total cells at the onset
+of antibiotic exposure. @fig-proportion-living-cells-gfp-by-row shows
+how the cells with the highest amount of GFP remained unchanged once
+antibiotic exposure began, while the rest of the cells started to
+decrease their percentage of surviving cells. However, the decrease was
+not linear. On the contrary, we observed a bi-modal distribution on the
+reduction of live cells. An average GFP point provided higher survival
+than a point below or above the average (except for cells very close to
+the population maximum).
+
+```{r}
+#| label: fig-proportion-living-cells-gfp-by-row-cap
+#| fig-scap: Population survivals binned by initial GFP over time.
+#| fig-cap: >
+#|   **Population survivals binned by initial GFP over time.**
+#|   We categorized the cells' GFP into ranges of proportions 0.05 concerning
+#|   the maximum amount of GFP in the population. 100% cells per bin of GFP
+#|   was taken as the number of cells one frame before the start of exposure
+#|   to the antibiotic (minute 50). Therefore, dark to light colors represent a
+#|   generation of new cells, and light to dark colors the death of cells.
+#|   The black vertical bars represent the start and end of the antibiotic
+#|   exposure. Bars size and color on the right represent the percentage of
+#|   the living cells 10 minutes after the end of the experiment. As shown in
+#|   @fig-gfp-survival-probability, we showed that the surviving cells appear
+#|   to follow something similar to a bimodal distribution. More cells survive
+#|   with a moderate amount of GFP or with an amount close to the maximum of
+#|   the population.
+#|
+counts_survived_by_gfp <- status_time_df %>%
+  filter(experiment_id == "Plasmid") %>%
+  mutate(
+    gfp_first = gfp_first / max(gfp_first),
+    gfp_first = cut(gfp_first, breaks = seq(0, 1, 0.05))
+  ) %>%
+  with_groups(
+    gfp_first,
+    ~ mutate(.x, n_at_gfp = filter(cur_data(), time == antibiotic_start_time) %>% nrow())
+  ) %>%
+  group_by(time, gfp_first) %>%
+  summarise(
+    percentage_alive = sum(cell_status_at_time != "Dead") / first(n_at_gfp),
+    antibiotic_start_time = first(antibiotic_start_time),
+    antibiotic_end_time = first(antibiotic_end_time),
+    .groups = "drop"
+  ) %>%
+  identity()
+
+survived_p1 <- counts_survived_by_gfp %>%
+  ggplot(aes(x = time, y = gfp_first, fill = percentage_alive)) +
+  geom_tile() +
+  geom_vline(aes(xintercept = factor(antibiotic_start_time)), linetype = "dashed") +
+  geom_vline(aes(xintercept = factor(antibiotic_end_time)), linetype = "dashed") +
+  scale_x_discrete(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) +
+  scale_fill_viridis_c(
+    option = "inferno",
+    labels = scales::label_percent(),
+  ) +
+  labs(
+    x = "Time (minutes)",
+    y = "Proportion of GFP",
+    fill = "Percentage of living cells"
+  ) +
+  theme(
+    legend.spacing.x = unit(1, "cm")
+  ) +
+  guides(
+    fill = guide_colorbar(
+      barwidth = 8
+    )
+  ) +
+  NULL
+
+survived_p2 <- counts_survived_by_gfp %>%
+  filter(time == antibiotic_end_time + 10) %>%
+  ggplot(aes(x = percentage_alive, y = gfp_first, fill = percentage_alive)) +
+  geom_bar(stat = "identity") +
+  scale_fill_viridis_c(
+    option = "inferno",
+    labels = scales::percent,
+    limits = c(min(counts_survived_by_gfp$percentage_alive), max(counts_survived_by_gfp$percentage_alive))
+  ) +
+  theme_void() +
+  theme(
+    legend.position = "none"
+  ) +
+  NULL
+
+p_proportions_by_gfp_row <- (survived_p1 | survived_p2) +
+  plot_layout(
+    widths = c(8, 1)
+  )
+
+p_proportions_by_gfp_row
+```
+
+Therefore, what we observed was a bimodal distribution for GFP-dependent
+cell survival. In order to show this effect more clearly, in
+@fig-gfp-survival-probability, we plotted the survival probability for
+each GFP bin without normalizing for the population maximum. This new
+plot allowed us to observe how the bimodal survival distribution occurs
+for cells that did not grow as filaments, whereas cells that filament
+increase their survival probability gradually as they have more initial
+GFP (see also @fig-gfp-temporal-distribution).
+
+```{r}
+#| label: fig-gfp-survival-probability
+#| fig-scap: Plasmid initial GFP survival probability.
+#| fig-cap: >
+#|   **Plasmid initial GFP survival probability.**
+#|   We calculated the survival probability after comparing the population
+#|   distributions of GFP with those of the cells that managed to survive.
+#|   To assess survival by GFP, we only used plasmid cells. For non-filamented
+#|   cells (blue dots), a bell forms with an upturned tail. On the other hand,
+#|   for the filamented cells (red dots), a continuous increase in survival is
+#|   shown just when it seems that the probability of the non-filamented cells
+#|   has decreased. In global, much GFP has higher resistance, but an average
+#|   GFP value without filamentation also increases the probability of survival.
+#|
+step <- 0.04
+breaks <- seq(min(lineages_processed_1_df$gfp) - step, max(lineages_processed_1_df$gfp) + step, step)
+hist_gfp_control_info <- hist(
+  lineages_processed_1_df$gfp,
+  breaks = breaks,
+  plot = FALSE
+)
+
+p_survival_probability_gfp <- lineages_processed_1_df %>%
+  filter(experiment_id == "Plasmid", survived == "Survived", time == time_first) %>%
+  group_by(filamented_id) %>%
+  summarize(
+    counts = list(hist(gfp, plot = FALSE, breaks = breaks)$counts)
+  ) %>%
+  unnest(counts) %>%
+  mutate(
+    mids = rep(hist_gfp_control_info$mids, 2),
+    control_counts = rep(hist_gfp_control_info$counts, times = 2),
+    survival_probability = counts / control_counts
+  ) %>%
+  identity() %>%
+  # filter(survival_probability != 0) %>%
+  ggplot(aes(x = mids, y = survival_probability, color = filamented_id)) +
+  geom_point() +
+  geom_smooth(
+    se = FALSE,
+    size = 0.5,
+    linetype = "dashed"
+  ) +
+  scale_x_continuous() +
+  scale_y_continuous(labels = scales::label_percent()) +
+  scale_color_hue(direction = -1, h.start = 90) +
+  labs(
+    x = "Initial GFP",
+    y = "Survival probability",
+    color = "Cell status"
+  )
+
+p_survival_probability_gfp
+```
+
+As in @fig-gfp-survival-probability, in
+@fig-length-survival-probability, we show the survival probability given
+an initial length. We observe that survival is higher for cells that did
+not grow as filament if the initial length was less than the average. In
+contrast, for filamented cells, the probability of survival increased as
+cells length was longer at the beginning of the experiment (see also
+@fig-length-temporal-distribution). However, it is noteworthy that the
+probability of survival had a limit in which a higher initial length
+meant a lower probability of survival (see red dotted lines in
+@fig-length-survival-probability).
+
+```{r}
+#| label: fig-length-survival-probability
+#| fig-scap: Plasmid initial length survival probability.
+#| fig-cap: >
+#|   **Plasmid initial length survival probability.**
+#|   We calculated the survival probability after comparing the population
+#|   distributions of length with those of the cells that managed to survive.
+#|   For non-filamented cells (blue dots), the survival probability is higher
+#|   for those cells with initial lengths and small. It seems to decrease with
+#|   a more extensive initial size. For their part, for filamented cells
+#|   (red dots), the probability of survival increases according to their
+#|   length but then declines when the cells are too long at first (see red
+#|   dotted line). Therefore, in general, a small and moderate length or an
+#|   initial length already filamented from the beginning increases the
+#|   chances of survival.
+#|
+step <- 1
+breaks <- seq(min(lineages_processed_1_df$length) - step, max(lineages_processed_1_df$length) + step, step)
+hist_length_control_info <- hist(
+  lineages_processed_1_df$length,
+  breaks = breaks,
+  plot = FALSE
+)
+
+survival_probability_length <- lineages_processed_1_df %>%
+  filter(experiment_id == "Plasmid", survived == "Survived", time == time_first) %>%
+  group_by(filamented_id) %>%
+  summarize(
+    counts = list(hist(length, plot = FALSE, breaks = breaks)$counts)
+  ) %>%
+  unnest(counts) %>%
+  mutate(
+    mids = rep(hist_length_control_info$mids, 2),
+    control_counts = rep(hist_length_control_info$counts, times = 2),
+    survival_probability = counts / control_counts
+  ) %>%
+  identity()
+
+p_survival_probability_length <- survival_probability_length %>%
+  filter(survival_probability != 1) %>%
+  ggplot(aes(x = mids, y = survival_probability, color = filamented_id)) +
+  geom_point() +
+  geom_smooth(
+    se = FALSE,
+    size = 0.5,
+    linetype = "dashed"
+  ) +
+  scale_x_continuous() +
+  scale_y_continuous(labels = scales::label_percent()) +
+  scale_color_hue(direction = -1, h.start = 90) +
+  labs(
+    x = "Initial length",
+    y = "Survival probability",
+    color = "Cell status"
+  ) +
+  coord_cartesian(
+    xlim = c(FALSE, 120),
+    ylim = c(0, 0.1)
+  )
+
+p_survival_probability_length
+```
+
+## Discussion
+
+Here, we evaluated different variables that could determine cell
+survival upon exposure to toxic agents by studying two experimental
+populations of *E. coli*, one strain with a resistance gene on the
+chromosome and the other on multicopy plasmids. We identified two
+variables that are predominantly responsible for cell survival: cell
+length and GFP amount related to the cell's inherent resistance to the
+toxic agent and heterogeneity in response times.
+
+On the other hand, as other studies have already mentioned
+[@heinrich2015; @wang2009], we examined cell activity and youth in a
+minimalistic way. While the distribution of the number of divisions
+exemplifies a broader and more uniform range for the surviving cells,
+the cells that died showed a tendency to a lower number of divisions.
+However, for the study of cellular youth at the time of exposure to the
+toxic agent, the results did not show a clear pattern of behavior for
+cell fate determination. Therefore, it would be interesting to study
+cellular youth at a higher level of complexity in future studies to
+understand its contribution to cell survival.
+
+Interestingly, when we used temporal measurements of cell length, GFP,
+DsRed, and if a cell divided, we could recapitulate, for the most part,
+the fates of cellular states (see @sec-length-gfp-crucial and
+@sec-unsupervised-classification). Thus, increasing the system's
+complexity led to better clustering cell states, but not how these
+factors interact biologically in determining cell survival. Therefore,
+we decided to postulate a mathematical model that helps us understand
+the critical components in cell survival.
