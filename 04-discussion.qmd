@@ -1,3 +1,9 @@
+---
+filters: 
+    - lightbox
+lightbox: auto
+---
+
 # Discussion {#sec-general-discussion}
 
 Bacterial cell survival is part of a complex biological system, which is

@@ -1,3 +1,9 @@
+---
+filters: 
+    - lightbox
+lightbox: auto
+---
+
 # Introduction {#sec-introduction .unnumbered}
 
 Antimicrobial resistance (AMR) can be considered one of the most

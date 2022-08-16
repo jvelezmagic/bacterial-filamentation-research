@@ -1,3 +1,9 @@
+---
+filters: 
+    - lightbox
+lightbox: auto
+---
+
 # Appendix {.unnumbered}
 
 ## Code availability {.appendix}

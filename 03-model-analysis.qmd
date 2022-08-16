@@ -1,3 +1,9 @@
+---
+filters: 
+    - lightbox
+lightbox: auto
+---
+
 # Models to the rescue; filamentation abstraction {#sec-model-analysis}
 
 ```{r}
@@ -45,10 +51,10 @@ area ($SA$) and the cell volume ($V$), whereby the uptake rate of the
 toxin depends on the $SA$. However, $V's$ rate of change for $SA$ is
 higher than $SA$ for $V$, which results in a transient reduction in the
 intracellular toxin concentration (see
-@fig-cell-dimensions-relationship)). Therefore, we hypothesized that
-this geometric interpretation of filamentation represents a biophysical
-defense line to increase the probability of a bacterial population's
-survival in response to stressful environments.
+renv::@fig-cell-dimensions-relationship)). Therefore, we hypothesized
+that this geometric interpretation of filamentation represents a
+biophysical defense line to increase the probability of a bacterial
+population's survival in response to stressful environments.
 
 ```{r}
 #| label: fig-cell-dimensions-relationship

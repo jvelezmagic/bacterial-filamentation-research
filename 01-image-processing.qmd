@@ -1,3 +1,9 @@
+---
+filters: 
+    - lightbox
+lightbox: auto
+---
+
 # Image processing {#sec-image-processing}
 
 ## Introduction
@@ -116,7 +122,7 @@ statistical computation and plotting (see @sec-experiment-analysis)
 [@R-base].
 
 | Column         | Description                                                                                                                                                                                                               |
-|----------------------|-----------------------------------------------------------|
+|--------------------|----------------------------------------------------|
 | experimentID   | Unique identifier of the experiment.                                                                                                                                                                                      |
 | trapID         | Unique identifier of the trap used.                                                                                                                                                                                       |
 | lineageID      | Unique integer of the stem cell and its ancestry.                                                                                                                                                                         |
