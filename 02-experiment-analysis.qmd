@@ -955,15 +955,15 @@ p_p_pca <- p_pca_prep %>%
 p_p_pca
 ```
 
-For their part, in @fig-chromosome-pca-variable-contribution
-and @fig-plasmid-pca-variable-contribution, we show the total
-contribution of each variable per PC for the chromosomal and plasmid
-strain, respectively. Finding that, indeed, filamentation plays a
-crucial role in determining cell survival. For example, for PC2, we
-appreciated how the variable end DsRed directed the dots to the positive
-side, while the variable end and start length directed the dots to the
-opposing side. Therefore, we can support that filamentation has a role
-in moving cells away from having higher amounts of DsRed.
+For their part, in @fig-chromosome-pca-variable-contribution and
+@fig-plasmid-pca-variable-contribution, we show the total contribution
+of each variable per PC for the chromosomal and plasmid strain,
+respectively. Finding that, indeed, filamentation plays a crucial role
+in determining cell survival. For example, for PC2, we appreciated how
+the variable end DsRed directed the dots to the positive side, while the
+variable end and start length directed the dots to the opposing side.
+Therefore, we can support that filamentation has a role in moving cells
+away from having higher amounts of DsRed.
 
 ```{r}
 #| label: fig-chromosome-pca-variable-contribution
@@ -1065,18 +1065,17 @@ advantages for these purposes, e.g., it preserves the global structure
 across the whole space, so the distances between clusters matter.
 
 In @fig-chromosome-umap-new-coordinates and
-@fig-plasmid-umap-new-coordinates, we show how,
-using the same variables used in the "PCA" section, UMAP was able to
-cluster the four proposed classes correctly. Interestingly, in 
-@fig-chromosome-umap-new-coordinates, UMAP formed
-three general groups and four for 
-@fig-plasmid-umap-new-coordinates. However, in
-general, UMAP clustered the surviving cells from those that did not
-survived. On investigating why this separation occurred, we found that
-the large groups coalesced into one another if we eliminated the
-division variable. So, in a way, the division also has a role in
-determining survival, but it is not essential or at least not
-over-represented in our data.
+@fig-plasmid-umap-new-coordinates, we show how, using the same variables
+used in the "PCA" section, UMAP was able to cluster the four proposed
+classes correctly. Interestingly, in
+@fig-chromosome-umap-new-coordinates, UMAP formed three general groups
+and four for @fig-plasmid-umap-new-coordinates. However, in general,
+UMAP clustered the surviving cells from those that did not survived. On
+investigating why this separation occurred, we found that the large
+groups coalesced into one another if we eliminated the division
+variable. So, in a way, the division also has a role in determining
+survival, but it is not essential or at least not over-represented in
+our data.
 
 ```{r}
 #| label: chromosome-umap-prep
@@ -1238,26 +1237,26 @@ status_time_df <- lineages_processed_1_df %>%
 From the full tracking dataset, we evaluated how the different cell
 states behaved over time---for example, understanding how the cells
 absorbed antibiotics or how they elongated in time. In contrast to the
-dataset generated in the @sec-length-gfp-crucial, we did not
-truncate the results 10 minutes after the antibiotic exposure. In this
-way, we were able to observe cell behavior before and after the presence
-of the toxic agent.
+dataset generated in the @sec-length-gfp-crucial, we did not truncate
+the results 10 minutes after the antibiotic exposure. In this way, we
+were able to observe cell behavior before and after the presence of the
+toxic agent.
 
-In @fig-status-with-dead, we observed a small
-fraction of cells that were already filamentous without exposure to the
-toxic agent in both cell strains. However, after the onset of antibiotic
-exposure at minute 60, we observed increases in the proportion of
-filamented cells. It is interesting to note how filamented cells grew
-after antibiotic exposure for the chromosomal strain. We speculate that
-this post-antibiotic growth exists because, once the SOS system that
-triggers filamentation is activated, the system continues to grow until
-it reaches a limit regardless of whether the damaging agent is still
-present or not [@justiceMorphologicalPlasticityBacterial2008;
-@mückl2018]. Moreover, we observed how the cells start to divide again
-after some time because the proportion of non-filament cells starts to
-grow while the filament cells start to divide. We observed the same
-effects for the plasmid strain. However, by experimental design, the
-number of filament cells expected was much lower.
+In @fig-status-with-dead, we observed a small fraction of cells that
+were already filamentous without exposure to the toxic agent in both
+cell strains. However, after the onset of antibiotic exposure at minute
+60, we observed increases in the proportion of filamented cells. It is
+interesting to note how filamented cells grew after antibiotic exposure
+for the chromosomal strain. We speculate that this post-antibiotic
+growth exists because, once the SOS system that triggers filamentation
+is activated, the system continues to grow until it reaches a limit
+regardless of whether the damaging agent is still present or not
+[@justiceMorphologicalPlasticityBacterial2008; @mückl2018]. Moreover, we
+observed how the cells start to divide again after some time because the
+proportion of non-filament cells starts to grow while the filament cells
+start to divide. We observed the same effects for the plasmid strain.
+However, by experimental design, the number of filament cells expected
+was much lower.
 
 ```{r}
 #| label: fig-status-with-dead
@@ -1265,17 +1264,17 @@ number of filament cells expected was much lower.
 #| fig-cap: >
 #|   **Population status over time.**
 #|   We calculate how many cells of each type existed for each time point:
-#|  non-filamented and filamented living cells (blue and green areas,
-#|  respectively) and dead cells (red area; we considered *dead* cells as
-#|  those cells that existed at one time and then stopped tracking). The
-#|  black vertical lines represent the start and end of antibiotic exposure
-#|  for each experiment. The effect of filamentation and its spread after
-#|  exposure to the antibiotic is evident for the chromosomal strain. The
-#|  experiment was finalized with the resolution of the cells when they
-#|  returned to their non-filamented state. For its part, for the plasmid
-#|  strain, it is observed how the filamented cells begin to appear slowly.
-#|  Their proportion is as expected, given that the population had a wide
-#|  distribution of GFP that allowed them to combat exposure to the antibiotic.
+#|   non-filamented and filamented living cells (blue and green areas,
+#|   respectively) and dead cells (red area; we considered *dead* cells as
+#|   those cells that existed at one time and then stopped tracking). The
+#|   black vertical lines represent the start and end of antibiotic exposure
+#|   for each experiment. The effect of filamentation and its spread after
+#|   exposure to the antibiotic is evident for the chromosomal strain. The
+#|   experiment was finalized with the resolution of the cells when they
+#|   returned to their non-filamented state. For its part, for the plasmid
+#|   strain, it is observed how the filamented cells begin to appear slowly.
+#|   Their proportion is as expected, given that the population had a wide
+#|   distribution of GFP that allowed them to combat exposure to the antibiotic.
 #|
 p_status_with_dead <- status_time_df %>%
   ggplot(aes(x = time, fill = cell_status_at_time)) +
@@ -1313,42 +1312,42 @@ p_status_with_dead <- status_time_df %>%
 p_status_with_dead
 ```
 
-In @fig-metrics-over-time, we showed how once
-antibiotics exposure began, those cells that died had a much faster
-increase in DsRed than those that did manage to live, regardless of
-whether they filamented or not. On the other hand, surviving cells
-managed to maintain their DsRed levels relatively stable. We noted that
-length was critical for the surviving cells for the chromosomal strain
-by turning to the GFP and length variables for a temporal explanation.
-Even cells categorized as non-filamented reached the filamentation
-threshold minutes after antibiotic exposure. However, the distinction of
-live or dead filamented cells was not as evident as expected. As for
-cells with plasmids, the effect on GFP for surviving cells was
-maintained for filamented cells and decreased for non-filamented cells.
-For the filament cells that died, we showed that they had, on average, a
-much longer initial length than the surviving cells, so we also consider
-it as a necessary factor in understanding which variables affect cell
-survival.
+
+In @fig-metrics-over-time, we showed how once antibiotics exposure
+began, those cells that died had a much faster increase in DsRed than
+those that did manage to live, regardless of whether they filamented or
+not. On the other hand, surviving cells managed to maintain their DsRed
+levels relatively stable. We noted that length was critical for the
+surviving cells for the chromosomal strain by turning to the GFP and
+length variables for a temporal explanation. Even cells categorized as
+non-filamented reached the filamentation threshold minutes after
+antibiotic exposure. However, the distinction of live or dead filamented
+cells was not as evident as expected. As for cells with plasmids, the
+effect on GFP for surviving cells was maintained for filamented cells
+and decreased for non-filamented cells. For the filament cells that
+died, we showed that they had, on average, a much longer initial length
+than the surviving cells, so we also consider it as a necessary factor
+in understanding which variables affect cell survival.
 
 ```{r}
 #| label: fig-metrics-over-time
 #| fig-scap: Population measurements over time.
 #| fig-cap: >
 #|   **Population measurements over time.**
-#|  The colored lines symbolize the average value of each metric at each
-#|  instant of time, while its surrounded gray shaded area represents the
-#|  95% confidence interval. The vertical lines represent the start and
-#|  end of antibiotic exposure. The horizontal line in the length metric
-#|  symbolizes the threshold to consider a cell filament. We observed a faster
-#|  increase of DsRed for the non-surviving populations in both experiments.
-#|  Regarding the GFP metric, the behavior is relatively stable for the
-#|  chromosomal strain. In contrast, for the plasmid strain, a decline in GFP
-#|  is observed for the population that did not survive. For the length metric,
-#|  it is interesting to note how the chromosome cells that did not filament
-#|  continued to grow past the filamentation threshold once the exposure to
-#|  the antibiotic in the chromosomal strain had ended. On the other hand, the
-#|  filamented and dead cells seem to have a greater length from the beginning
-#|  for the plasmid strain.
+#|   The colored lines symbolize the average value of each metric at each
+#|   instant of time, while its surrounded gray shaded area represents the
+#|   95% confidence interval. The vertical lines represent the start and
+#|   end of antibiotic exposure. The horizontal line in the length metric
+#|   symbolizes the threshold to consider a cell filament. We observed a faster
+#|   increase of DsRed for the non-surviving populations in both experiments.
+#|   Regarding the GFP metric, the behavior is relatively stable for the
+#|   chromosomal strain. In contrast, for the plasmid strain, a decline in GFP
+#|   is observed for the population that did not survive. For the length metric,
+#|   it is interesting to note how the chromosome cells that did not filament
+#|   continued to grow past the filamentation threshold once the exposure to
+#|   the antibiotic in the chromosomal strain had ended. On the other hand, the
+#|   filamented and dead cells seem to have a greater length from the beginning
+#|   for the plasmid strain.
 #|
 p_metrics_over_time <- lineages_processed_1_df %>%
   select(experiment_id, cell_status, time, length, gfp, ds_red) %>%
