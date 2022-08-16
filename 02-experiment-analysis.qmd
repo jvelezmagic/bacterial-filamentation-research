@@ -1422,7 +1422,7 @@ than a point below or above the average (except for cells very close to
 the population maximum).
 
 ```{r}
-#| label: fig-proportion-living-cells-gfp-by-row-cap
+#| label: fig-proportion-living-cells-gfp-by-row
 #| fig-scap: Population survivals binned by initial GFP over time.
 #| fig-cap: >
 #|   **Population survivals binned by initial GFP over time.**
