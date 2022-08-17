@@ -653,10 +653,10 @@ p_number_divisions <- cells_df %>%
     fill = "Cell status"
   ) +
   theme(
-    panel.grid.major.y = element_line(),
-    panel.grid.minor.y = element_line(),
     axis.title.x = element_blank(),
-    axis.ticks.x = element_blank()
+    axis.ticks.x = element_blank(),
+    panel.grid = element_line(colour = "grey92"),
+    panel.grid.minor = element_line(size = rel(0.5))
   ) +
   NULL
 
@@ -696,7 +696,9 @@ p_time_since_last_division <- cells_df %>%
     fill = guide_legend(ncol = 2)
   ) +
   theme(
-    panel.grid.major.x = element_blank()  
+    panel.grid.major.x = element_blank(),
+    panel.grid = element_line(colour = "grey92"),
+    panel.grid.minor = element_line(size = rel(0.5))
   ) +
   NULL
 
@@ -825,7 +827,9 @@ p_time_to_filamentation_filtered <- cells_df %>%
     fill = "Cell status"
   ) +
   theme(
-      panel.grid.major.x = element_blank()
+      panel.grid.major.x = element_blank(),
+      panel.grid = element_line(colour = "grey92"),
+      panel.grid.minor = element_line(size = rel(0.5))
   )
 
 p_time_to_filamentation_filtered
@@ -1217,7 +1221,8 @@ p_c_umap <- juice(c_umap_prep) %>%
     color = "Cell status"
   ) +
   theme(
-      panel.grid.major = element_line()
+      panel.grid = element_line(colour = "grey92"),
+      panel.grid.minor = element_line(size = rel(0.5))
   )
 
 p_c_umap
@@ -1262,7 +1267,8 @@ p_p_umap <- juice(p_umap_prep) %>%
     fill = guide_legend(ncol = 2)
   ) +
   theme(
-      panel.grid.major = element_line()
+       panel.grid = element_line(colour = "grey92"),
+      panel.grid.minor = element_line(size = rel(0.5))
   ) +
   NULL
 
