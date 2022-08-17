@@ -1529,6 +1529,34 @@ survived_p1 <- counts_survived_by_gfp %>%
       title.position = "top"
     )
   ) +
+  geom_rect(
+    data = data.frame(
+      xmin = c(7.9, 0.5),
+      xmax = c(9, 1.6),
+      ymin = c(14.5, 14.5),
+      ymax = c(14.6, 14.6)
+    ),
+    mapping = aes(
+      xmin = xmin,
+      xmax = xmax,
+      ymin = ymin,
+      ymax = ymax
+    ),
+    size = 0L,
+    colour = "black",
+    fill = "black",
+    alpha = 0.5,
+    inherit.aes = FALSE
+  ) +
+  geom_text(
+    data = data.frame(x = 4.76, y = 14.6, label = "Antibiotic Exposure"),
+    mapping = aes(x = x, y = y, label = label),
+    size = 4,
+    fontface = 2,
+    color = "black",
+    alpha = 0.8,
+    inherit.aes = FALSE
+  ) +
   NULL
 
 survived_p2 <- counts_survived_by_gfp %>%
