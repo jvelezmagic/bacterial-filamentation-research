@@ -703,6 +703,68 @@ p_time_since_last_division <- cells_df %>%
 p_time_since_last_division
 ```
 
+```{r}
+#| label: fitness-cost-measured-in-single-cell-data
+#| fig-scap: Fitness cost measured in single-cell data.
+#| fig-cap: >
+#|   **Number of cell divisions before drug.**
+#|   exposure for MG/pBGT (green) and MG:GT (blue). Note that the plasmid-bearing
+#|   strain presented significantly fewer divisions compared to the chromosomal strain,
+#|   consistent with prior studies showing that carrying plasmids is associated with
+#|   a fitness cost in non-selective conditions.
+lineages_processed_1_df |> 
+    filter(
+        time <= antibiotic_start_time
+    ) |> 
+    count(experiment_id, id, wt = division) |> 
+    ggplot(aes(
+        x = n,
+        y = experiment_id
+    )) +
+    stat_halfeye(
+        adjust = 0.5,
+        .width = 0,
+        height = 0.6,
+        point_color = NA,
+        position = position_nudge(y = 0.3)
+    ) +
+    geom_boxplot(
+        position = position_nudge(y = 0.2),
+        width = 0.1,
+        outlier.shape = NA,
+        color = c("#D0DEEB", "#DAEAD5"),
+        fill = c("#D0DEEB", "#DAEAD5")
+    ) +
+    geom_point(
+        position = position_jitter(
+            width = 0.4,
+            height = 0.03,
+            seed = 42
+        ),
+        alpha = 1/200
+    ) +
+    scale_x_continuous(
+        breaks = 0:6,
+        expand = c(0, 0)
+    ) +
+    scale_y_discrete(
+        expand = c(0, 0)
+    ) +
+    theme_classic() +
+    theme(
+        panel.grid.major.x = element_line(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.y = element_text(
+            vjust = -3.5
+        )
+    ) +
+    labs(
+        x = "Number of divisions prior to drug exposure"
+    )
+```
+
 ### Time to reach filamentation matters in determining cell survival
 
 In @fig-dsred-temporal-distribution, @fig-gfp-temporal-distribution, and
