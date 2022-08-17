@@ -782,11 +782,13 @@ lineages_processed_1_df |>
         position = position_nudge(y = 0.3)
     ) +
     geom_boxplot(
+        aes(
+            color = experiment_id,
+            fill = experiment_id
+        ),
         position = position_nudge(y = 0.2),
         width = 0.1,
-        outlier.shape = NA,
-        color = c("#D0DEEB", "#DAEAD5"),
-        fill = c("#D0DEEB", "#DAEAD5")
+        outlier.shape = NA
     ) +
     geom_point(
         position = position_jitter(
@@ -803,6 +805,12 @@ lineages_processed_1_df |>
     scale_y_discrete(
         expand = c(0, 0)
     ) +
+    scale_color_manual(
+        values = c("#D0DEEB", "#DAEAD5")
+    ) +
+    scale_fill_manual(
+        values = c("#D0DEEB", "#DAEAD5")
+    ) +
     theme_classic() +
     theme(
         panel.grid.major.x = element_line(),
@@ -811,7 +819,8 @@ lineages_processed_1_df |>
         axis.title.y = element_blank(),
         axis.text.y = element_text(
             vjust = -3.5
-        )
+        ),
+        legend.position = "none"
     ) +
     labs(
         x = "Number of divisions prior to drug exposure"
