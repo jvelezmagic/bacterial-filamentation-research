@@ -588,7 +588,20 @@ p_metric_differences
 
 ```{r}
 #| label: fig-histogram-gpf-intensity
-
+#| fig-scap: Histograms of fluorescent intensity for classified cells.
+#| fig-cap: >
+#|   **Histograms of fluorescent intensity for classified cells.**
+#|   A) Cells in MG:GT exhibit a fluorescent distribution with low variance
+#|   and with no significant differences in mean GFP between cells that
+#|   produced filaments and were killed (red) or survived (green), as well
+#|   as for cells that did not produce filaments and died (blue), and those
+#|   that survived drug exposure (purple). B) GFP distributions of the
+#|   plasmid-bearing population exhibit large variance. Cells that
+#|   survived showed increased mean fluorescence relative to cells that were
+#|   killed. For surviving cells, mean GFP was significantly lower for cells
+#|   that did not produce filaments with respect to cells that triggered the
+#|   SOS response system.
+#|
 cells_df |> 
   ggplot(aes(
     x = gfp_first,
