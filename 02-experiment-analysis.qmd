@@ -652,6 +652,12 @@ p_number_divisions <- cells_df %>%
     y = "Number of divisions",
     fill = "Cell status"
   ) +
+  theme(
+    panel.grid.major.y = element_line(),
+    panel.grid.minor.y = element_line(),
+    axis.title.x = element_blank(),
+    axis.ticks.x = element_blank()
+  ) +
   NULL
 
 p_number_divisions
@@ -688,6 +694,9 @@ p_time_since_last_division <- cells_df %>%
   guides(
     color = guide_legend(ncol = 2),
     fill = guide_legend(ncol = 2)
+  ) +
+  theme(
+    panel.grid.major.x = element_blank()  
   ) +
   NULL
 
@@ -752,6 +761,9 @@ p_time_to_filamentation_filtered <- cells_df %>%
     x = "Experiment",
     y = "Time to filamentation (minutes)",
     fill = "Cell status"
+  ) +
+  theme(
+      panel.grid.major.x = element_blank()
   )
 
 p_time_to_filamentation_filtered
@@ -1141,6 +1153,9 @@ p_c_umap <- juice(c_umap_prep) %>%
     x = "UMAP 1",
     y = "UMAP 2",
     color = "Cell status"
+  ) +
+  theme(
+      panel.grid.major = element_line()
   )
 
 p_c_umap
@@ -1183,6 +1198,9 @@ p_p_umap <- juice(p_umap_prep) %>%
   guides(
     color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 2)),
     fill = guide_legend(ncol = 2)
+  ) +
+  theme(
+      panel.grid.major = element_line()
   ) +
   NULL
 
