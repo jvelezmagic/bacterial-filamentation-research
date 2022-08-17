@@ -709,7 +709,8 @@ p_time_since_last_division
 #| label: fitness-cost-measured-in-single-cell-data
 #| fig-scap: Fitness cost measured in single-cell data.
 #| fig-cap: >
-#|   **Number of cell divisions before drug.**
+#|   **Fitness cost measured in single-cell data.**
+#|   Number of cell divisions before drug.
 #|   exposure for MG/pBGT (green) and MG:GT (blue). Note that the plasmid-bearing
 #|   strain presented significantly fewer divisions compared to the chromosomal strain,
 #|   consistent with prior studies showing that carrying plasmids is associated with
