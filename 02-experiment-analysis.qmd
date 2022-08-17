@@ -586,6 +586,43 @@ p_metric_differences <- cells_df %>%
 p_metric_differences
 ```
 
+```{r}
+#| label: fig-histogram-gpf-intensity
+
+cells_df |> 
+  ggplot(aes(
+    x = gfp_first,
+    y = ..scaled..,
+    color = cell_status,
+    fill = cell_status
+  )) +
+  geom_density(
+    alpha = 1 / 4,
+  ) +
+  facet_grid(experiment_id ~ .) +
+  scale_x_continuous(
+    expand = c(0, 0)
+  ) +
+  scale_y_continuous(
+    expand = c(0, 0),
+    labels = scales::label_percent()
+  ) +
+  guides(
+    color = guide_legend(ncol = 2),
+    fill = guide_legend(ncol = 2)
+  ) +
+  theme(
+    legend.position = "top",
+    panel.spacing = unit(1, "lines")
+  ) +
+  labs(
+    x = "GFP",
+    y = "Scaled density",
+    color = "Cell status",
+    fill = "Cell status"
+  )
+```
+
 ### Number of divisions and cell age do not appear to play a clear role in determining cell survival
 
 In @sec-length-gfp-crucial, we explored how GFP variability and cell
@@ -706,7 +743,7 @@ p_time_since_last_division
 ```
 
 ```{r}
-#| label: fitness-cost-measured-in-single-cell-data
+#| label: fig-fitness-cost-measured-in-single-cell-data
 #| fig-scap: Fitness cost measured in single-cell data.
 #| fig-cap: >
 #|   **Fitness cost measured in single-cell data.**
