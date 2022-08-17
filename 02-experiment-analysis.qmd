@@ -1529,34 +1529,44 @@ survived_p1 <- counts_survived_by_gfp %>%
       title.position = "top"
     )
   ) +
-  geom_rect(
-    data = data.frame(
-      xmin = c(7.9, 0.5),
-      xmax = c(9, 1.6),
-      ymin = c(14.5, 14.5),
-      ymax = c(14.6, 14.6)
-    ),
-    mapping = aes(
-      xmin = xmin,
-      xmax = xmax,
-      ymin = ymin,
-      ymax = ymax
-    ),
-    size = 0L,
-    colour = "black",
-    fill = "black",
-    alpha = 0.5,
-    inherit.aes = FALSE
+  # geom_text(
+  #   data = data.frame(x = 4.76, y = 17.6, label = "Antibiotic Exposure"),
+  #   mapping = aes(x = x, y = y, label = label),
+  #   size = 4,
+  #   fontface = 2,
+  #   color = "black",
+  #   alpha = 0.8,
+  #   inherit.aes = FALSE
+  # ) +
+  cowplot::draw_label(
+    label = "Antibiotic exposure",
+    x = 4.7,
+    y = 17.5,
+    size = 12
   ) +
-  geom_text(
-    data = data.frame(x = 4.76, y = 14.6, label = "Antibiotic Exposure"),
-    mapping = aes(x = x, y = y, label = label),
-    size = 4,
-    fontface = 2,
-    color = "black",
-    alpha = 0.8,
-    inherit.aes = FALSE
+  annotation_custom(
+    grob = grid::linesGrob(
+      x = unit(c(0, 1), "npc"),
+      y = unit(c(0, 1), "npc"),
+      gp = grid::gpar(lty = "dashed")
+    ),
+    xmin = 0.5,
+    xmax = 1.7,
+    ymin = 17,
+    ymax = 15.5
   ) +
+  annotation_custom(
+    grob = grid::linesGrob(
+      x = unit(c(0, 1), "npc"),
+      y = unit(c(1, 0), "npc"),
+      gp = grid::gpar(lty = "dashed")
+    ),
+    xmin = 7.8,
+    xmax = 9,
+    ymin = 17,
+    ymax = Inf
+  ) +
+  coord_cartesian(clip = "off") +
   NULL
 
 survived_p2 <- counts_survived_by_gfp %>%
