@@ -74,7 +74,8 @@ theme_set(
   theme_bw() +
   theme(
     legend.position = "top",
-    strip.background = element_blank()
+    strip.background = element_blank(),
+    panel.grid = element_blank()
   )
 )
 ```
@@ -290,9 +291,8 @@ p_temporal_dsred_distributution <- cells_df %>%
   parse_metrics_column(metric) %>% 
   filter(!is.na(value)) %>% 
   identity() %>% 
-  ggplot(aes(x = cell_status, y = value, fill = cell_status)) +
+  ggplot(aes(x = cell_status, y = value, fill = cell_status, color = cell_status)) +
   stat_eye() +
-  stat_summary(fun=median, geom="line", aes(group=1))  +
   stat_compare_means(
     method = "t.test",
     comparisons = list(c("Not filamented - Survived", "Not filamented - Not survived")),
@@ -300,18 +300,18 @@ p_temporal_dsred_distributution <- cells_df %>%
     label.y = c(0.4),
     hide.ns = TRUE
   ) +
-  # stat_compare_means(
-  #   method = "anova",
-  #   label.y.npc = 0.93
-  # ) + # Add global annova p-value
+  stat_compare_means(
+    method = "anova",
+    label.x.npc = 0.10,
+    label.y.npc = 0.93
+  ) + # Add global annova p-value
   stat_compare_means(
     label = "p.signif",
     method = "t.test",
     ref.group = "Filamented - Survived",
     hide.ns = TRUE,
-    label.y.npc = 0.75
-    ) +
-  stat_gradientinterval(position = "dodge", fill_type = "segments") +
+    label.y.npc = 0.80
+  ) +
   facet_grid(experiment_id ~ metric) +
   guides(
     color = guide_legend(ncol = 2),
@@ -320,10 +320,12 @@ p_temporal_dsred_distributution <- cells_df %>%
   theme(
     axis.title.x = element_blank(),
     axis.text.x = element_blank(),
-    axis.ticks.x = element_blank()
+    axis.ticks.x = element_blank(),
+    panel.grid = element_blank()
   ) +
   labs(
     fill = "Cell status",
+    color = "Cell status",
     y = "DsRed value"
   ) +
   NULL
@@ -368,9 +370,8 @@ p_temporal_gfp_distributution <- cells_df %>%
   parse_metrics_column(metric) %>% 
   filter(!is.na(value)) %>% 
   identity() %>% 
-  ggplot(aes(x = cell_status, y = value, fill = cell_status)) +
+  ggplot(aes(x = cell_status, y = value, fill = cell_status, color = cell_status)) +
   stat_eye() +
-  stat_summary(fun=median, geom="line", aes(group=1))  +
   stat_compare_means(
     method = "t.test",
     comparisons = list(c("Not filamented - Survived", "Not filamented - Not survived")),
@@ -380,6 +381,7 @@ p_temporal_gfp_distributution <- cells_df %>%
   ) +
   stat_compare_means(
     method = "anova",
+    label.x.npc = 0.10,
     label.y.npc = 0.93
   ) + # Add global annova p-value
   stat_compare_means(
@@ -389,7 +391,6 @@ p_temporal_gfp_distributution <- cells_df %>%
     hide.ns = TRUE,
     label.y.npc = 0.75
     ) +
-  stat_gradientinterval(position = "dodge", fill_type = "segments") +
   facet_grid(experiment_id ~ metric) +
   guides(
     color = guide_legend(ncol = 2),
@@ -398,10 +399,12 @@ p_temporal_gfp_distributution <- cells_df %>%
   theme(
     axis.title.x = element_blank(),
     axis.text.x = element_blank(),
-    axis.ticks.x = element_blank()
+    axis.ticks.x = element_blank(),
+    panel.grid = element_blank()
   ) +
   labs(
     fill = "Cell status",
+    color = "Cell status",
     y = "GFP value"
   ) +
   NULL
@@ -454,10 +457,9 @@ p_temporal_length_distributution <- cells_df %>%
   parse_metrics_column(metric) %>% 
   filter(!is.na(value)) %>% 
   identity() %>% 
-  ggplot(aes(x = cell_status, y = value, fill = cell_status)) +
+  ggplot(aes(x = cell_status, y = value, fill = cell_status, color = cell_status)) +
   geom_hline(aes(yintercept = filamentation_threshold), linetype = "dashed", alpha = 1 / 2) +
   stat_eye() +
-  stat_summary(fun=median, geom="line", aes(group=1))  +
   stat_compare_means(
     method = "t.test",
     comparisons = list(
@@ -479,7 +481,6 @@ p_temporal_length_distributution <- cells_df %>%
     hide.ns = TRUE,
     label.y.npc = 0.3
   ) +
-  #stat_gradientinterval(position = "dodge", fill_type = "segments") +
   facet_grid(experiment_id ~ metric) +
   coord_cartesian(ylim = c(0, 150)) +
   guides(
@@ -489,10 +490,12 @@ p_temporal_length_distributution <- cells_df %>%
   theme(
     axis.title.x = element_blank(),
     axis.text.x = element_blank(),
-    axis.ticks.x = element_blank()
+    axis.ticks.x = element_blank(),
+    panel.grid = element_blank()
   ) +
   labs(
     fill = "Cell status",
+    color = "Cell status",
     y = "Length value"
   ) +
   NULL
@@ -893,12 +896,12 @@ c_pca_prep
 p_c_pca <- c_pca_prep %>% 
   juice() %>% 
   ggplot(aes(x = PC1, y = PC2, color = cell_status)) +
-  geom_vline(xintercept = 0) +
-  geom_hline(yintercept = 0) +
-  geom_jitter(size = 0.7) +
+  geom_vline(xintercept = 0, color = "gray", linetype = "dashed") +
+  geom_hline(yintercept = 0, color = "gray", linetype = "dashed") +
+  geom_jitter(size = 0.7, position = position_jitter(seed = 42)) +
   guides(
-    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 1)),
-    fill = guide_legend(ncol = 2)
+    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 2)),
+    fill = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 2))
   ) +
   labs(
     color = "Cell status"
@@ -938,14 +941,15 @@ p_pca_prep
 p_p_pca <- p_pca_prep %>% 
   juice() %>% 
   ggplot(aes(x = PC1, y = PC2, color = cell_status)) +
-  geom_vline(xintercept = 0) +
-  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0, color = "gray", linetype = "dashed") +
+  geom_hline(yintercept = 0, color = "gray", linetype = "dashed") +
   geom_jitter(size = 0.1, alpha = 1/3) +
   scale_x_continuous(limits = c(NA,  5)) +
   scale_y_continuous(limits = c(NA, 7)) +
+  geom_jitter(size = 0.7, position = position_jitter(seed = 42)) +
   guides(
-    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 1)),
-    fill = guide_legend(ncol = 2)
+    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 2)),
+    fill = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 2))
   ) +
   labs(
     color = "Cell status"
@@ -997,12 +1001,24 @@ p_c_titied_pca <- c_tidied_pca %>%
     )
   ) +
   geom_bar(stat = "identity") +
+  geom_text(aes(label = round(abs(value), digits = 2)), hjust = -0.2, size = 3.5) +
   facet_grid(component ~ ., scales = "free_y") +
   scale_y_reordered() +
+  scale_x_continuous(
+      expand = c(0, 0),
+      limits = c(0, 0.8)
+  ) +
   labs(
     x = "Absolute value of contribution",
     y = "Metric",
     fill = "Is positive?"
+  ) +
+  theme_minimal() +
+  theme(
+      panel.grid = element_blank(),
+      legend.position = "top",
+      axis.ticks.y = element_blank(),
+      axis.text.x = element_blank()
   )
 
 p_c_titied_pca
@@ -1044,12 +1060,24 @@ p_p_titied_pca <- p_tidied_pca %>%
     )
   ) +
   geom_bar(stat = "identity") +
+  geom_text(aes(label = round(abs(value), digits = 2)), hjust = -0.2, size = 3.5) +
   facet_grid(component ~ ., scales = "free_y") +
   scale_y_reordered() +
+  scale_x_continuous(
+      expand = c(0, 0),
+      limits = c(0, 0.8)
+  ) +
   labs(
     x = "Absolute value of contribution",
     y = "Metric",
     fill = "Is positive?"
+  ) +
+  theme_minimal() +
+  theme(
+      panel.grid = element_blank(),
+      legend.position = "top",
+      axis.ticks.y = element_blank(),
+      axis.text.x = element_blank()
   )
 
 p_p_titied_pca
@@ -1106,7 +1134,7 @@ p_c_umap <- juice(c_umap_prep) %>%
   ggplot(aes(UMAP1, UMAP2)) +
   geom_point(aes(color = cell_status), alpha = 0.7, size = 2) +
   guides(
-    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 1)),
+    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 2)),
     fill = guide_legend(ncol = 2)
   ) +
   labs(
@@ -1153,7 +1181,7 @@ p_p_umap <- juice(p_umap_prep) %>%
     color = "Cell status"
   ) +
   guides(
-    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 1)),
+    color = guide_legend(ncol = 2, override.aes = list(alpha = 1, size = 2)),
     fill = guide_legend(ncol = 2)
   ) +
   NULL
@@ -1279,8 +1307,8 @@ was much lower.
 p_status_with_dead <- status_time_df %>%
   ggplot(aes(x = time, fill = cell_status_at_time)) +
   geom_bar(position = "fill", stat = "count", width = 1) +
-  geom_vline(aes(xintercept = factor(antibiotic_start_time)), linetype = "dashed") +
-  geom_vline(aes(xintercept = factor(antibiotic_end_time)), linetype = "dashed") +
+  geom_vline(aes(xintercept = factor(antibiotic_start_time)), linetype = "dashed", color = "gray") +
+  geom_vline(aes(xintercept = factor(antibiotic_end_time)), linetype = "dashed", color = "gray") +
   facet_grid(experiment_id ~ .) +
   scale_x_discrete(expand = c(0, 0)) +
   scale_y_continuous(expand = c(0, 0), labels = scales::percent) +
@@ -1377,16 +1405,17 @@ p_metrics_over_time <- lineages_processed_1_df %>%
   mutate(
     filamentation_threshold = ifelse(metric == "Length", filamentation_threshold, NA)
   ) %>%
-  ggplot(aes(x = time, y = y, ymin = ymin, ymax = ymax, color = cell_status)) +
-  geom_vline(aes(xintercept = antibiotic_start_time), linetype = "dashed") +
-  geom_vline(aes(xintercept = antibiotic_end_time), linetype = "dashed") +
-  geom_hline(aes(yintercept = as.numeric(filamentation_threshold)), linetype = "dashed") +
+  ggplot(aes(x = time, y = y, ymin = ymin, ymax = ymax, color = cell_status, fill = cell_status)) +
+  geom_vline(aes(xintercept = antibiotic_start_time), linetype = "dashed", color = "gray") +
+  geom_vline(aes(xintercept = antibiotic_end_time), linetype = "dashed", color = "gray") +
+  geom_hline(aes(yintercept = as.numeric(filamentation_threshold)), linetype = "dashed", color = "gray") +
   geom_smooth(method = "loess") +
   facet_grid(metric ~ experiment_id, scales = "free_y") +
   labs(
     x = "Time (minutes)",
     y = "Value",
-    color = "Cell status"
+    color = "Cell status",
+    fill = "Cell status"
   ) +
   guides(
     color = guide_legend(ncol = 2),
@@ -1449,6 +1478,12 @@ counts_survived_by_gfp <- status_time_df %>%
     gfp_first,
     ~ mutate(.x, n_at_gfp = filter(cur_data(), time == antibiotic_start_time) %>% nrow())
   ) %>%
+  mutate(
+    gfp_first = stringr::str_extract(
+      string = gfp_first,
+      pattern = "\\d+.\\d+"
+    )
+  ) %>%
   group_by(time, gfp_first) %>%
   summarise(
     percentage_alive = sum(cell_status_at_time != "Dead") / first(n_at_gfp),
@@ -1459,10 +1494,19 @@ counts_survived_by_gfp <- status_time_df %>%
   identity()
 
 survived_p1 <- counts_survived_by_gfp %>%
+  mutate(
+    time = as.numeric(as.character(time)) - antibiotic_start_time,
+    antibiotic_end_time = antibiotic_end_time - antibiotic_start_time
+  ) %>%
+  filter(
+    time >= 0
+  ) %>%
+  mutate(
+    time = as.factor(time)
+  ) %>%
   ggplot(aes(x = time, y = gfp_first, fill = percentage_alive)) +
   geom_tile() +
-  geom_vline(aes(xintercept = factor(antibiotic_start_time)), linetype = "dashed") +
-  geom_vline(aes(xintercept = factor(antibiotic_end_time)), linetype = "dashed") +
+  geom_vline(aes(xintercept = factor(antibiotic_end_time)), linetype = "dashed", color = "gray") +
   scale_x_discrete(expand = c(0, 0)) +
   scale_y_discrete(expand = c(0, 0)) +
   scale_fill_viridis_c(
@@ -1475,33 +1519,42 @@ survived_p1 <- counts_survived_by_gfp %>%
     fill = "Percentage of living cells"
   ) +
   theme(
-    legend.spacing.x = unit(1, "cm")
+    legend.spacing.x = unit(1, "cm"),
+    legend.position = "top",
+    legend.justification = "right"
   ) +
   guides(
     fill = guide_colorbar(
-      barwidth = 8
+      barwidth = 8,
+      title.position = "top"
     )
   ) +
   NULL
 
 survived_p2 <- counts_survived_by_gfp %>%
   filter(time == antibiotic_end_time + 10) %>%
-  ggplot(aes(x = percentage_alive, y = gfp_first, fill = percentage_alive)) +
+  ggplot(aes(x = percentage_alive * 100, y = gfp_first, fill = percentage_alive)) +
   geom_bar(stat = "identity") +
   scale_fill_viridis_c(
     option = "inferno",
     labels = scales::percent,
     limits = c(min(counts_survived_by_gfp$percentage_alive), max(counts_survived_by_gfp$percentage_alive))
   ) +
-  theme_void() +
   theme(
-    legend.position = "none"
+    legend.position = "none",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.title.y = element_blank()
   ) +
+  labs(
+    x = "Survival (%)"
+  ) +
+  scale_x_continuous(expand = c(0, 0), labels = scales::label_number(digits = 1)) +
   NULL
 
 p_proportions_by_gfp_row <- (survived_p1 | survived_p2) +
   plot_layout(
-    widths = c(8, 1)
+    widths = c(10, 3)
   )
 
 p_proportions_by_gfp_row
@@ -1514,7 +1567,7 @@ each GFP bin without normalizing for the population maximum. This new
 plot allowed us to observe how the bimodal survival distribution occurs
 for cells that did not grow as filaments, whereas cells that filament
 increase their survival probability gradually as they have more initial
-GFP (see also @fig-gfp-temporal-distribution).
+GFP (see also @fig-gfp-temporal-distribution).-distribution).
 
 ```{r}
 #| label: fig-gfp-survival-probability
@@ -1590,7 +1643,7 @@ meant a lower probability of survival (see red dotted lines in
 #|   We calculated the survival probability after comparing the population
 #|   distributions of length with those of the cells that managed to survive.
 #|   For non-filamented cells (blue dots), the survival probability is higher
-#|   for those cells with initial lengths and small. It seems to decrease with
+#|   for those cells with small initial lengths, while It seems to decrease with
 #|   a more extensive initial size. For their part, for filamented cells
 #|   (red dots), the probability of survival increases according to their
 #|   length but then declines when the cells are too long at first (see red
