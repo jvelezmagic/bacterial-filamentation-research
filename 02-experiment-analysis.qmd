@@ -1345,7 +1345,7 @@ lineages_processed_1_df |>
             fill = experiment_id
         ),
         position = position_nudge(y = 0.2),
-        width = 0.1,
+        width = 0.15,
         outlier.shape = NA
     ) +
     geom_point(
