@@ -248,15 +248,18 @@ p_2 <- model_datasets$increase_resistance %>%
   geom_area(alpha = 1/ 3) +
   labs(
     x = "Exposure time",
-    y = "Increased resistance",
+    y = "Increased\nresistance",
     tag = "B"
   ) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  theme_classic() +
   theme(
     plot.tag.position = "topright"
   )
 
 p_toxin_exposure_experiment <- (p_1 / p_2) +
-  plot_layout(heights = c(4,1))
+  plot_layout(heights = c(8,4))
 
 p_toxin_exposure_experiment
 ```
@@ -310,17 +313,16 @@ antitoxin_dist_p <- model_datasets$antitoxins_distributions %>%
   geom_histogram(binwidth = 5, breaks = seq(0, 70, 5)) +
   facet_grid(. ~ sigma) +
   scale_fill_viridis_c(option = "inferno", labels = scales::percent) +
-  theme(
-    legend.position = "none"
-  ) +
   labs(
     x = "Amount of antitoxin",
     y = "Number of cells"
   ) +
   theme(
+    legend.position = "none",
     panel.spacing.x = unit(1, "lines"),
     strip.background = element_blank(),
-    plot.tag.position = "topright"
+    plot.tag.position = "topright",
+    panel.grid = element_blank()
   )
 
 antitoxin_lines_p <- model_datasets$df_antitoxin_experiment %>% 
