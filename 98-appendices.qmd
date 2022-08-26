@@ -33,8 +33,7 @@ tibble::tribble(
 
 ### Python
 
-Below is the main list of packages used for Chapter
-@sec-image-processing
+Below is the main list of packages used for @sec-image-processing
 
 -   Python [@10.5555/1593511].
 -   dask [@rocklin2015dask].
@@ -50,9 +49,8 @@ Below is the main list of packages used for Chapter
 
 ### R
 
-Below is the main list of packages used for Chapter
-@sec-experiment-analysis as well for the reproducibility of this
-undergraduate research project.
+Below is the main list of packages used for @sec-experiment-analysis as
+well for the reproducibility of this undergraduate research project.
 
 ```{r}
 #| label: used-packages
@@ -124,7 +122,7 @@ r_citations |>
 
 ### Julia
 
-Below is the main list of packages used for Chapter @sec-model-analysis.
+Below is the main list of packages used for @sec-model-analysis.
 
 -   Julia [@Julia-2017].
 -   DrWatson.jl [@datseris2020].
@@ -187,7 +185,7 @@ Pkg.instantiate()
 
 This undergraduate research project was written in
 [RStudio](https://www.rstudio.com/products/rstudio/) using
-[**quarto**](https://quarto.org). The
+[Quarto](https://quarto.org). The
 [website](https://jvelezmagic.github.io/undergraduate_research_project/)
 is hosted via Github Pages, and the complete source is available via
 Github.
