@@ -3,7 +3,17 @@ project:
 
 book:
   title: "Bacterial filamentation: a bet for survival in stressful environments"
-  author: "Jesús Vélez Santiago"
+  author:
+    - name: "Jesús Vélez Santiago"
+      orcid: 0000-0001-5128-3838
+      url: https://jvelezmagic.com
+      affiliations:
+        - ref: ccg-unam
+    - name: "Rafael Peña-Miller"
+      orcid: 0000-0002-2767-0640
+      affiliations:
+        - ref: ccg-unam
+      url: http://www.penamiller.com/lab/ 
   date: today
   search: true
   repo-url: https://github.com/jvelezmagic/bacterial-filamentation-research
@@ -22,6 +32,11 @@ book:
   comments:
     hypothesis: true
   cover-image: bacterial-filamentation-cover.png
+
+affiliations:
+    - id: ccg-unam
+      name: Center for Genomic Sciences - National Autonomous University of Mexico
+
 
 bibliography: [references.bib, project-general-packages.bib, project-R-packages.bib]
 
