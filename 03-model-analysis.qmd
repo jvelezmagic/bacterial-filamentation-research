@@ -51,10 +51,10 @@ area ($SA$) and the cell volume ($V$), whereby the uptake rate of the
 toxin depends on the $SA$. However, $V's$ rate of change for $SA$ is
 higher than $SA$ for $V$, which results in a transient reduction in the
 intracellular toxin concentration (see
-renv::@fig-cell-dimensions-relationship)). Therefore, we hypothesized
-that this geometric interpretation of filamentation represents a
-biophysical defense line to increase the probability of a bacterial
-population's survival in response to stressful environments.
+@fig-cell-dimensions-relationship)). Therefore, we hypothesized that
+this geometric interpretation of filamentation represents a biophysical
+defense line to increase the probability of a bacterial population's
+survival in response to stressful environments.
 
 ```{r}
 #| label: fig-cell-dimensions-relationship
@@ -240,6 +240,9 @@ p_1 <- model_datasets$toxin_exposure_experiment %>%
     fill = "Cell status",
     tag = "A"
   ) +
+  scale_fill_manual(
+      values = c("#43b284", "#fab255", "#dd5129")
+  ) +
   NULL
 
 p_2 <- model_datasets$increase_resistance %>% 
@@ -339,6 +342,9 @@ antitoxin_lines_p <- model_datasets$df_antitoxin_experiment %>%
     x = "Exposure time",
     y = "Fraction population",
     fill = "Cell status"
+  ) +
+  scale_fill_manual(
+      values = c("#43b284", "#fab255", "#dd5129")
   ) +
   theme(
     panel.spacing.x = unit(1, "lines"),
