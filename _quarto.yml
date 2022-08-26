@@ -8,11 +8,11 @@ book:
       orcid: 0000-0001-5128-3838
       url: https://jvelezmagic.com
       affiliations:
-        - ref: ccg-unam
+        - name: Center for Genomic Sciences - National Autonomous University of Mexico
     - name: "Rafael Peña-Miller"
       orcid: 0000-0002-2767-0640
       affiliations:
-        - ref: ccg-unam
+        - name: Center for Genomic Sciences - National Autonomous University of Mexico
       url: http://www.penamiller.com/lab/ 
   date: today
   search: true
@@ -32,11 +32,6 @@ book:
   comments:
     hypothesis: true
   cover-image: bacterial-filamentation-cover.png
-
-affiliations:
-    - id: ccg-unam
-      name: Center for Genomic Sciences - National Autonomous University of Mexico
-
 
 bibliography: [references.bib, project-general-packages.bib, project-R-packages.bib]
 
