@@ -896,18 +896,23 @@ p_time_to_filamentation_filtered <- cells_df %>%
   mutate(
     time_to_sos = time_sos - antibiotic_start_time,
   ) %>%
-  ggplot(aes( x = experiment_id, y = time_to_sos, fill = survived)) +
+  ggplot(aes( x = cell_status, y = time_to_sos, fill = survived)) +
   stat_eye(position = "dodge") +
   stat_compare_means(
     label = "p.signif",
-    label.y.npc = 0.9
+    label.y.npc = 0.8,
+    comparisons = list(c("Filamented - Not survived", "Filamented - Survived"))
   ) +
+  facet_grid(. ~ experiment_id) +
   labs(
     x = "Experiment",
     y = "Time to filamentation (minutes)",
     fill = "Cell status"
   ) +
   theme( 
+      axis.title.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.text.x = element_blank(),
       panel.grid.major.x = element_blank(),
       panel.grid = element_line(colour = "grey92"),
       panel.grid.minor = element_line(size = rel(0.5))
