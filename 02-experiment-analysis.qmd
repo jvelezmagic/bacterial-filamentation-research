@@ -958,7 +958,7 @@ p_initial_values_with_time <- cells_df %>%
   # stat_summary_2d() +
   geom_point() +
   facet_grid(experiment_id ~ survived) +
-  scale_color_viridis_c(option = "magma") +
+  scale_color_viridis_c(option = "inferno") +
   labs(
     x = "Initial length",
     y = "Initial GFP",
