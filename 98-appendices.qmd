@@ -136,17 +136,19 @@ Below is the main list of packages used for Chapter @sec-model-analysis.
 
 ### Undergraduate research project
 
-This code base is using the `R Language` and `renv` to make a
-reproducible scientific project named `undergraduate_research_project`.
+This code base is using the `R Language` , `Quarto`, and `renv` to make
+a reproducible scientific project named
+`bacterial-filamentation-research`.
 
 1.  Clone the repository with:
-    `git clone https://github.com/jvelezmagic/undergraduate_research_project`.
+    `git clone https://github.com/jvelezmagic/bacterial-filamentation-research`.
 2.  Download latest version of [R](https://cran.r-project.org/).
-3.  Open R project.
-4.  Install the `renv` package with `install.packages('renv')`.
-5.  Restore working environment with: `renv::restore()`.
-6.  Render the book with: `bookdown::render_book()`.
-7.  Edit documents and render again.
+3.  Download latest version of [Quarto](https://quarto.org).
+4.  Open R project.
+5.  Install the `renv` package with `install.packages('renv')`.
+6.  Restore working environment with: `renv::restore()`.
+7.  Render the book with: `quarto::quarto_render()`.
+8.  Edit documents and render again.
 
 ### Cell-viewer
 
