@@ -949,14 +949,15 @@ p_initial_values_with_time <- cells_df %>%
     time_sos > antibiotic_start_time
   ) %>% 
   mutate(time_to_sos = time_sos - antibiotic_start_time) %>%
-  ggplot(aes(x = length_first, y = log(gfp_first), z = time_to_sos)) +
-  stat_summary_2d() +
+  ggplot(aes(x = length_first, y = log(gfp_first), z = time_to_sos, color = time_to_sos)) +
+  # stat_summary_2d() +
+  geom_point() +
   facet_grid(experiment_id ~ survived) +
-  scale_fill_viridis_c(option = "magma") +
+  scale_color_viridis_c(option = "magma") +
   labs(
     x = "Initial length",
     y = "Initial GFP",
-    fill = "Time to filamentation (minutes)"
+    color = "Time to filamentation (minutes)"
   ) +
   NULL
 
