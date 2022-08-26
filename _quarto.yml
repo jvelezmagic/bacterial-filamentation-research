@@ -4,7 +4,7 @@ project:
 book:
   title: "Bacterial filamentation: a bet for survival in stressful environments"
   author: "Jesús Vélez Santiago"
-  date: "8/8/2022"
+  date: today
   search: true
   repo-url: https://github.com/jvelezmagic/bacterial-filamentation-research
   repo-actions: [source, issue, edit]
