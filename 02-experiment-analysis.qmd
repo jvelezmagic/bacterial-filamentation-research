@@ -982,8 +982,7 @@ The inability to reproduce cell classification led us to question two
 things: 1) the possibility that our sorting was wrong beforehand and 2)
 we did not have enough variables to capture the study phenomenon. We
 decided to take the unsupervised learning way to answer these subjects
-because it allows us to project our data without a *priori* knowledge
-\[\@\].
+because it allows us to project our data without a *priori* knowledge.
 
 We opted for the path of dimensionality reduction techniques where each
 variable or feature is equivalent to one dimension. The essence of
@@ -992,9 +991,9 @@ dimension with many dimensions. Furthermore, dimensionality reduction
 helps us counteract several problems such as reducing the complexity of
 a model, reducing the possibility of overfitting a model, removing all
 correlated variables, and, of course, visualizing our data in a two- or
-three-dimensional space for better appreciation \[\@\]. Improved
-visualization and identification of essential variables are the main
-reasons to guide and complement our research with this technique.
+three-dimensional space for better appreciation. Improved visualization
+and identification of essential variables are the main reasons to guide
+and complement our research with this technique.
 
 #### Principal Component Analysis (PCA) emphasizes the importance of cell length and its GFP in cell survival
 
