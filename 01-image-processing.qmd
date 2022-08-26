@@ -125,6 +125,7 @@ statistical computation and plotting (see @sec-experiment-analysis)
 #| label: tbl-data-columns-specifications
 #| results: asis
 #| tbl-cap: Resulting data table from image processing.
+#| tbl-colwidths: [20, 70]
 tibble::tribble(
     ~Column, ~Description,
     "experimentID", "Unique identifier of the experiment.",
@@ -146,4 +147,3 @@ tibble::tribble(
         format = "pipe"
     )
 ```
-
