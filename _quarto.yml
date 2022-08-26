@@ -21,6 +21,7 @@ book:
     - references.qmd
   comments:
     hypothesis: true
+  cover-image: bacterial-filamentation-cover.png
 
 bibliography: [references.bib, project-general-packages.bib, project-R-packages.bib]
 
