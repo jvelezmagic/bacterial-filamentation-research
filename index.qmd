@@ -1,13 +1,11 @@
 ::: {.content-visible when-format="html"}
 ## Welcome {.unnumbered}
 
-Etiam venenatis purus eu felis viverra sodales. Sed et varius ex. Nullam
-sit amet aliquet purus. Fusce elementum vitae est eget vulputate.
-Aliquam erat volutpat. Donec ac suscipit leo, sed euismod nisi. Duis
-malesuada elementum pulvinar. Ut et vulputate augue. In dignissim ligula
-at nulla feugiat cursus. Suspendisse sed diam ut ligula sollicitudin
-pellentesque. Etiam ut gravida velit, vitae lobortis mi. Nam congue
-laoreet mauris sit amet iaculis.
+Welcome to the online version of my research work for the degree in
+Genomic Sciences from the [Autonomous University of Mexico at the Center
+for Genomic Science](https://www.ccg.unam.mx/)s. In this work, you will
+find a detailed version of the research and results accompanied by the
+necessary code to ensure reproducibility. Please enjoy.
 :::
 
 ## Abstract {.unnumbered}
@@ -31,4 +29,5 @@ conditions.
 
 ## Acknowledgements {.unnumbered}
 
-For all those who once helped me and believed in me.
+I offer this work with gratitude to all the people who have been part of
+my personal and intellectual growth. Thanks.
