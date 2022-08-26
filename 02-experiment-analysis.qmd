@@ -624,7 +624,7 @@ p_initial_values
 #|   
 p_metric_differences <- cells_df %>% 
   ggplot(aes(x = log(gfp_last) - log(gfp_first), y = length_last - length_first, color = cell_status)) +
-  geom_point(alpha = 1/20) +
+  geom_point(alpha = 1/2, size = 0.5) +
   facet_grid(~experiment_id) +
   guides(
     color = guide_legend(ncol = 2, override.aes = list(alpha = 1)),
