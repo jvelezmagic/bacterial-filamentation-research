@@ -41,22 +41,20 @@ knitr:
     comment: "#>"
     out.width: "100%"
 
+execute:
+  echo: false
+  warning: false
+
 format:
   html:
     theme:
         light: cosmo
         dark: darkly
     code-tools: true
-    execute:
-        echo: false
-        warning: false
     toc: true
     toc-depth: 4
   pdf:
     documentclass: scrreprt
-    execute:
-        echo: false
-        warning: false
     toc: true
     toc-depth: 4
     lof: true
