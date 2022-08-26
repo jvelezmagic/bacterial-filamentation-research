@@ -32,7 +32,9 @@ knitr:
 
 format:
   html:
-    theme: cosmo
+    theme:
+        light: cosmo
+        dark: darkly
     code-tools: true
     execute:
         echo: false
