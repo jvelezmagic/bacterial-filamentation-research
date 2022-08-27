@@ -28,7 +28,7 @@ book:
     - 03-model-analysis.qmd
     - 04-discussion.qmd
     - 98-appendices.qmd
-    - references.qmd
+    - 99-references.qmd
   comments:
     hypothesis: true
   cover-image: bacterial-filamentation-cover.png
