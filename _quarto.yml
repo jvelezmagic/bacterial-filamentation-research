@@ -53,6 +53,9 @@ format:
     code-tools: true
     toc: true
     toc-depth: 4
+    knitr:
+      opts_chunk:
+        dev: "svg"
   pdf:
     documentclass: scrreprt
     toc: true
