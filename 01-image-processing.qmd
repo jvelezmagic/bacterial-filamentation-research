@@ -85,17 +85,16 @@ segmentation masks is not absolved of errors (see also
 
 From the image segmentation, we obtain ROI files (region of interest),
 which contain coordinates of the position of individual cells in each
-photograph [@10.5555/1386553]. Tracking is the tracking of a region of
+photograph [@10.5555/1386553]. *Tracking* is following a region of
 interest in a consecutive series of images. In this case, the tracking
-generates the identification of the lineages, that is, the ancestry of
-each cell.
+identifies the lineages, that is, the ancestry of each cell.
 
 We read the ROI files in Python through the *shapely* package, which
 efficiently reconstructs polygons, thus calculating the length of the
-cells [@10.5555/1593511; @shapely2007]. Also, in Python using ROI files,
-we track cells with the k-nearest neighbors algorithm that uses various
-properties such as fluorescence intensity, length, and shape of each
-cell, to identify cell lineages [@altman1992].
+cells [@10.5555/1593511; @shapely2007]. Also, in Python, using ROI
+files, we track cells with the k-nearest neighbors' algorithm that uses
+various cell properties, such as fluorescence intensity, length, and
+shape of each cell, to identify cell lineages [@altman1992].
 
 ## Manual corrections {#sec-manual-corrections}
 
