@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.175">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -278,34 +278,40 @@ div.csl-indent {
 
 <section id="introduction" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
-<p>With the progress of technology, optical and fluorescence microscopy has become a fundamental tool for the characterization and understanding of the bacterial world. Microscopy has allowed humanity to extend its senses to observe the unknown world with exciting new perspectives that they might never otherwise have envisioned. Furthermore, microscopy offers a clear advantage over other techniques used to characterize bacteria since it can acquire data from living cells in spatial resolution <span class="citation" data-cites="schermelleh2019">(<a href="99-references.html#ref-schermelleh2019" role="doc-biblioref">Schermelleh et al. 2019</a>)</span>.</p>
-<p>Including the discovery of fluorescent proteins (<em>e.g.</em>, GFP and DsRed) and improvements in fluorescent reporters, it is possible to specifically label specific cellular components and track cellular functions <span class="citation" data-cites="Specht2017">(<a href="99-references.html#ref-Specht2017" role="doc-biblioref">Specht, Braselmann, and Palmer 2017</a>)</span>. On the other hand, mechanical and intellectual development of microfluidic research techniques provides an excellent opportunity to overcome bio-medical and chemical techniques <span class="citation" data-cites="convery2019">(<a href="99-references.html#ref-convery2019" role="doc-biblioref">Convery and Gadegaard 2019</a>)</span>. Collectively, it is possible to study communities of bacteria at the level of individual cells <span class="citation" data-cites="balaban2004a elowitz2002">(<a href="99-references.html#ref-balaban2004a" role="doc-biblioref">Balaban et al. 2004</a>; <a href="99-references.html#ref-elowitz2002" role="doc-biblioref">Elowitz et al. 2002</a>)</span>.</p>
-<p>Although all this technological development has provided a significant advance for the scientific community, after acquiring fluorescence images, the extraction of quantitative properties from these images is crucial, but unfortunately, a difficult step for analyzing experiments. Not so long ago, image analysis in biology relied on manual quantification. However, manual analysis suffers from two main problems: 1) accuracy and 2) scalability (that is, analyzing miles or more images). Fortunately, improvements in image accuracy and computational image analysis capabilities are revolutionizing the quantification of biological processes through <span class="citation" data-cites="Caicedo2017 Smith2018">(<a href="99-references.html#ref-Caicedo2017" role="doc-biblioref">Caicedo et al. 2017</a>; <a href="99-references.html#ref-Smith2018" role="doc-biblioref">Smith et al. 2018</a>)</span>. Therefore, the manual correction required to analyze the experiments is minimal.</p>
-<p>Here, we used a series of programs in <span class="math inline">\(\mu \mathrm{J}\)</span> (<a href="https://github.com/ccg-esb-lab/uJ" class="uri">https://github.com/ccg-esb-lab/uJ</a>), which consists of an <span class="math inline">\(\mathrm{ImageJ}\)</span> macro library (mainly) for quantifying unicellular bacterial dynamics in microfluidic devices <span class="citation" data-cites="schneider2012">(<a href="99-references.html#ref-schneider2012" role="doc-biblioref">Schneider, Rasband, and Eliceiri 2012</a>)</span>. The specific steps used are described below and are summarized in Figure <span class="quarto-unresolved-ref">?fig-something</span>.</p>
+<p>With the progress of technology, optical and fluorescence microscopy has become a fundamental tool for the characterization and understanding of the bacterial world. Microscopy has allowed humanity to extend its senses to observe the unknown world with exciting new perspectives they might never have envisioned otherwise. Furthermore, microscopy offers a clear advantage over other techniques that characterize bacteria since it can acquire data from living cells in spatial resolution <span class="citation" data-cites="schermelleh2019">(<a href="99-references.html#ref-schermelleh2019" role="doc-biblioref">Schermelleh et al. 2019</a>)</span>. <span class="citation" data-cites="schermelleh2019">(<a href="99-references.html#ref-schermelleh2019" role="doc-biblioref">Schermelleh et al. 2019</a>)</span>.</p>
+<p>Microfluidic research techniques’ mechanical and intellectual development provides an excellent opportunity to overcome bio-medical and chemical techniques <span class="citation" data-cites="convery2019">(<a href="99-references.html#ref-convery2019" role="doc-biblioref">Convery and Gadegaard 2019</a>)</span>. With the discovery of fluorescent proteins (e.g., GFP and DsRed) and improvements in fluorescent reporters, it is possible to specifically label distinctive cellular components and track cellular functions <span class="citation" data-cites="Specht2017">(<a href="99-references.html#ref-Specht2017" role="doc-biblioref">Specht, Braselmann, and Palmer 2017</a>)</span>. Therefore, collectively, it is possible to study communities of bacteria at the level of individual cells <span class="citation" data-cites="balaban2004a elowitz2002">(<a href="99-references.html#ref-balaban2004a" role="doc-biblioref">Balaban et al. 2004</a>; <a href="99-references.html#ref-elowitz2002" role="doc-biblioref">Elowitz et al. 2002</a>)</span>.</p>
+<p>Although all this technological development has provided a significant advance for the scientific community in the image analysis field, extracting quantitative properties from these images is crucial. Unfortunately, it is a difficult step for analyzing experiments.</p>
+<p>Not so long ago, image analysis in biology relied on manual quantification. However, manual analysis suffers from two main problems: 1) accuracy and 2) scalability (that is, analyzing thousands or more images). Fortunately, improvements in image accuracy and computational image analysis capabilities are revolutionizing the quantification of biological processes, reducing the manual correction required to analyze the experiments. <span class="citation" data-cites="Caicedo2017 Smith2018">(<a href="99-references.html#ref-Caicedo2017" role="doc-biblioref">Caicedo et al. 2017</a>; <a href="99-references.html#ref-Smith2018" role="doc-biblioref">Smith et al. 2018</a>)</span>.</p>
+<p>Here, we used a series of programs in <span class="math inline">\(\mu \mathrm{J}\)</span> (<a href="https://github.com/ccg-esb-lab/uJ" class="uri">https://github.com/ccg-esb-lab/uJ</a>), which consists of an <span class="math inline">\(\mathrm{ImageJ}\)</span> macro library (mainly) for quantifying unicellular bacterial dynamics in microfluidic devices <span class="citation" data-cites="schneider2012">(<a href="99-references.html#ref-schneider2012" role="doc-biblioref">Schneider, Rasband, and Eliceiri 2012</a>)</span>. The specific steps we used are described below and summarized in <span class="quarto-unresolved-ref">?fig-something</span>.</p>
 </section>
 <section id="preprocessing" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="preprocessing"><span class="header-section-number">1.2</span> Preprocessing</h2>
-<p>We exported the figures obtained by the NIS-Elements software (RRID:SCR_014329) from the microfluidics experiments in TIFF (Tagged Image File Format) format. Each figure was named as follows: <em>experimentxyc1t001</em> where <em>experiment</em> indicates the name assigned to the experiment, <em>xy</em> the trap number, <em>c</em> the fluorescence channel, and <em>t</em> the passage of time.</p>
+<p>We exported the figures obtained by the NIS-Elements software (RRID:SCR_014329) from the microfluidics experiments in TIFF (Tagged Image File Format) format. Each figure was named as follows: <em>experimentxyc1t001,</em> where <em>experiment</em> indicates the name assigned to the experiment, <em>xy</em> the trap number, <em>c</em> the fluorescence channel, and <em>t</em> the passage of time.</p>
 <p>Subsequently, we compile the images, rename them and save them as images in different folders. We maintained the classification by fluorescence channels and phase contrast, and within the channel folder, it is the sub-classification by trap number.</p>
 </section>
 <section id="segmentation" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="segmentation"><span class="header-section-number">1.3</span> Segmentation</h2>
-<p>To determine which parts of the photographs correspond to cells, we carry out an image segmentation analysis. Segmentation consists of classification at the pixel level, which allows us to define the pixels that give identity to the limit of a cell, its interior, and the image’s background (everything that is not a cell). A new image is generated from the above, known as the segmentation mask, containing only the pixels that identify cells.</p>
-<p>To build the segmentation mask, we used <em>Deepcell</em> <span class="citation" data-cites="vanvalen2016">(<a href="99-references.html#ref-vanvalen2016" role="doc-biblioref">Van Valen et al. 2016</a>)</span>. <em>Deepcell</em> is a network trained with a robust set of images that people previously classified as cells. However, the generation of the segmentation masks is not absolved of errors (see also <a href="#sec-manual-corrections"><span>Section&nbsp;1.5</span></a>). Sometimes we must correct them manually due to 1) mistakenly identifying two or more cells as one, 2) identifying two or more cells when it is only one cell, and 3) failing to identify a cell.</p>
+<p>We carry out an image segmentation analysis to determine which parts of the photographs correspond to cells. <em>Segmentation</em> consists of classification at the pixel level, which allows us to define the pixels that give identity to the limit of a cell, its interior, and the image’s background (everything that is not a cell). The resulting image is the <em>segmentation mask</em>, containing only the pixels that identify cells.</p>
+<p>To build the segmentation mask, we used <em>Deepcell</em> <span class="citation" data-cites="vanvalen2016">(<a href="99-references.html#ref-vanvalen2016" role="doc-biblioref">Van Valen et al. 2016</a>)</span>. <em>Deepcell</em> is a network trained with a robust set of images that people previously classified as cells. However, the generation of the segmentation masks is not absolved of errors (see also <a href="#sec-manual-corrections"><span>Section&nbsp;1.5</span></a>). Sometimes we must correct them manually due to</p>
+<ol type="1">
+<li><p>mistakenly identifying two or more cells as one,</p></li>
+<li><p>identifying two or more cells when there is only one cell, and</p></li>
+<li><p>failing to identify a cell.</p></li>
+</ol>
 </section>
 <section id="tracking" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="tracking"><span class="header-section-number">1.4</span> Tracking</h2>
-<p>From the image segmentation, we obtain ROI files (region of interest), which contain coordinates of the position of individual cells in each photograph <span class="citation" data-cites="10.5555/1386553">(<a href="99-references.html#ref-10.5555/1386553" role="doc-biblioref">Brinkmann 2008</a>)</span>. Tracking is the tracking of a region of interest in a consecutive series of images. In this case, the tracking generates the identification of the lineages, that is, the ancestry of each cell.</p>
-<p>We read the ROI files in Python through the <em>shapely</em> package, which efficiently reconstructs polygons, thus calculating the length of the cells <span class="citation" data-cites="10.5555/1593511 shapely2007">(<a href="99-references.html#ref-10.5555/1593511" role="doc-biblioref">Van Rossum and Drake 2009</a>; <a href="99-references.html#ref-shapely2007" role="doc-biblioref">Gillies et al. 2007--</a>)</span>. Also, in Python using ROI files, we track cells with the k-nearest neighbors algorithm that uses various properties such as fluorescence intensity, length, and shape of each cell, to identify cell lineages <span class="citation" data-cites="altman1992">(<a href="99-references.html#ref-altman1992" role="doc-biblioref">Altman 1992</a>)</span>.</p>
+<p>From the image segmentation, we obtain ROI files (region of interest), which contain coordinates of the position of individual cells in each photograph <span class="citation" data-cites="10.5555/1386553">(<a href="99-references.html#ref-10.5555/1386553" role="doc-biblioref">Brinkmann 2008</a>)</span>. <em>Tracking</em> is following a region of interest in a consecutive series of images. In this case, the tracking identifies the lineages, that is, the ancestry of each cell.</p>
+<p>We read the ROI files in Python through the <em>shapely</em> package, which efficiently reconstructs polygons, thus calculating the length of the cells <span class="citation" data-cites="10.5555/1593511 shapely2007">(<a href="99-references.html#ref-10.5555/1593511" role="doc-biblioref">Van Rossum and Drake 2009</a>; <a href="99-references.html#ref-shapely2007" role="doc-biblioref">Gillies et al. 2007--</a>)</span>. Also, in Python, using ROI files, we track cells with the k-nearest neighbors’ algorithm that uses various cell properties, such as fluorescence intensity, length, and shape of each cell, to identify cell lineages <span class="citation" data-cites="altman1992">(<a href="99-references.html#ref-altman1992" role="doc-biblioref">Altman 1992</a>)</span>.</p>
 </section>
 <section id="sec-manual-corrections" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="sec-manual-corrections"><span class="header-section-number">1.5</span> Manual corrections</h2>
-<p>For cell-tracking manual correction, we used <em>Napari,</em> an open-source python-based tool designed to explore, annotate, and analyze large multidimensional images <span class="citation" data-cites="sofroniew2021a">(<a href="99-references.html#ref-sofroniew2021a" role="doc-biblioref">Sofroniew et al. 2021</a>)</span>. Our custom cell-viewer allows us to easy lineage data visualization, custom-plotting, and lineage-correction. Code for our cell-viewer is available on <a href="https://github.com/ccg-esb-lab/uJ/tree/master/single-channel" class="uri">https://github.com/ccg-esb-lab/uJ/tree/master/single-channel</a>.</p>
-<p>We produced high-throughput data of thousands of cells with a single-cell resolution to the end of the lineages manual reconstruction. We obtained data about time-series of fluorescent intensity, morphological properties of individual cells (<em>e.g.</em>, elongation, duplication rate), and time-resolved population-level statistics (<em>e.g.</em>, probability of survival to the antibiotic shock).</p>
+<p>For cell-tracking manual correction, we used <em>Napari,</em> an open-source python-based tool designed to explore, annotate, and analyze large multidimensional images <span class="citation" data-cites="sofroniew2021a">(<a href="99-references.html#ref-sofroniew2021a" role="doc-biblioref">Sofroniew et al. 2021</a>)</span>. Our custom cell-viewer allows us to easy lineage data visualization, custom-plotting, and lineage correction. Code for our cell-viewer is available on <a href="https://github.com/ccg-esb-lab/uJ/tree/master/single-channel" class="uri">https://github.com/ccg-esb-lab/uJ/tree/master/single-channel</a>.</p>
+<p>We produced high-throughput data of thousands of cells with a single-cell resolution to the end of the lineage manual reconstruction. We obtained data on the time series of fluorescent intensity, morphological properties of individual cells (<em>e.g.</em>, elongation, duplication rate), and time-resolved population-level statistics (<em>e.g.</em>, probability of survival to the antibiotic shock).</p>
 </section>
 <section id="data-extraction" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="data-extraction"><span class="header-section-number">1.6</span> Data extraction</h2>
-<p>We construct a file in columnar format through image processing that contains the information necessary to analyze each experiment (<em>i.e.</em>, chromosomal and plasmids) in its different traps (<em>i.e.</em>, XY identifier). See <a href="#tbl-data-columns-specifications">Table&nbsp;<span>1.1</span></a> for a full description of the output data. Subsequently, the table was analyzed in R for statistical computation and plotting (see <a href="02-experiment-analysis.html"><span>Chapter&nbsp;2</span></a>) <span class="citation" data-cites="R-base">(<a href="99-references.html#ref-R-base" role="doc-biblioref">R Core Team 2022</a>)</span>.</p>
+<p>We construct a file in columnar format through image processing that contains the information necessary to analyze each experiment (<em>i.e.</em>, chromosomal and plasmids) in its different traps (<em>i.e.</em>, XY identifier). See <a href="#tbl-data-columns-specifications">Table&nbsp;<span>1.1</span></a> for a complete description of the output data. Subsequently, the table was analyzed in R for statistical computation and plotting (see <a href="02-experiment-analysis.html"><span>Chapter&nbsp;2</span></a>) <span class="citation" data-cites="R-base">(<a href="99-references.html#ref-R-base" role="doc-biblioref">R Core Team 2022</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-data-columns-specifications" class="anchored">
@@ -364,11 +370,11 @@ div.csl-indent {
 </tr>
 <tr class="odd">
 <td style="text-align: left;">GFP</td>
-<td style="text-align: left;">Represents the relative fluorescence intensity in each cell by green fluorescent protein (i.e., GFP).</td>
+<td style="text-align: left;">Represents the relative fluorescence intensity in each cell by green fluorescent protein (<em>i.e.</em>, GFP).</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">DsRed</td>
-<td style="text-align: left;">Represents the relative fluorescence intensity for cells generated by rhodamine’s internalization (i.e., DsRed); an indicator of cell death events.</td>
+<td style="text-align: left;">Represents the relative fluorescence intensity for cells generated by rhodamine’s internalization (<em>i.e.</em>, DsRed); an indicator of cell death events.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">tracking_score</td>
@@ -724,39 +730,39 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>With the progress of technology, optical and fluorescence microscopy has</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>become a fundamental tool for the characterization and understanding of</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>the bacterial world. Microscopy has allowed humanity to extend its</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>senses to observe the unknown world with exciting new perspectives that</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>they might never otherwise have envisioned. Furthermore, microscopy</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>offers a clear advantage over other techniques used to characterize</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>bacteria since it can acquire data from living cells in spatial</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>resolution <span class="co">[</span><span class="ot">@schermelleh2019</span><span class="co">]</span>.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>senses to observe the unknown world with exciting new perspectives they</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>might never have envisioned otherwise. Furthermore, microscopy offers a</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>clear advantage over other techniques that characterize bacteria since</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>it can acquire data from living cells in spatial resolution</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@schermelleh2019</span><span class="co">]</span>. <span class="co">[</span><span class="ot">@schermelleh2019</span><span class="co">]</span>.</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Including the discovery of fluorescent proteins (*e.g.*, GFP and DsRed)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>and improvements in fluorescent reporters, it is possible to</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>specifically label specific cellular components and track cellular</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>functions <span class="co">[</span><span class="ot">@Specht2017</span><span class="co">]</span>. On the other hand, mechanical and intellectual</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>development of microfluidic research techniques provides an excellent</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>opportunity to overcome bio-medical and chemical techniques</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@convery2019</span><span class="co">]</span>. Collectively, it is possible to study communities of</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>bacteria at the level of individual cells <span class="co">[</span><span class="ot">@balaban2004a; @elowitz2002</span><span class="co">]</span>.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Microfluidic research techniques' mechanical and intellectual</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>development provides an excellent opportunity to overcome bio-medical</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>and chemical techniques <span class="co">[</span><span class="ot">@convery2019</span><span class="co">]</span>. With the discovery of</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>fluorescent proteins (e.g., GFP and DsRed) and improvements in</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>fluorescent reporters, it is possible to specifically label distinctive</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>cellular components and track cellular functions <span class="co">[</span><span class="ot">@Specht2017</span><span class="co">]</span>.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>Therefore, collectively, it is possible to study communities of bacteria</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>at the level of individual cells <span class="co">[</span><span class="ot">@balaban2004a; @elowitz2002</span><span class="co">]</span>.</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>Although all this technological development has provided a significant</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>advance for the scientific community, after acquiring fluorescence</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>images, the extraction of quantitative properties from these images is</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>crucial, but unfortunately, a difficult step for analyzing experiments.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Not so long ago, image analysis in biology relied on manual</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>quantification. However, manual analysis suffers from two main</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>problems: 1) accuracy and 2) scalability (that is, analyzing miles or</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>more images). Fortunately, improvements in image accuracy and</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>computational image analysis capabilities are revolutionizing the</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>quantification of biological processes through [@Caicedo2017;</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>@Smith2018]. Therefore, the manual correction required to analyze the</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>experiments is minimal.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>advance for the scientific community in the image analysis field,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>extracting quantitative properties from these images is crucial.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Unfortunately, it is a difficult step for analyzing experiments.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Not so long ago, image analysis in biology relied on manual</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>quantification. However, manual analysis suffers from two main</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>problems: 1) accuracy and 2) scalability (that is, analyzing thousands</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>or more images). Fortunately, improvements in image accuracy and</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>computational image analysis capabilities are revolutionizing the</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>quantification of biological processes, reducing the manual correction</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>required to analyze the experiments. <span class="co">[</span><span class="ot">@Caicedo2017; @Smith2018</span><span class="co">]</span>.</span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Here, we used a series of programs in $\mu \mathrm{J}$</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>(<span class="ot">&lt;https://github.com/ccg-esb-lab/uJ&gt;</span>), which consists of an</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>$\mathrm{ImageJ}$ macro library (mainly) for quantifying unicellular</span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>bacterial dynamics in microfluidic devices <span class="co">[</span><span class="ot">@schneider2012</span><span class="co">]</span>. The</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>specific steps used are described below and are summarized in Figure</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>specific steps we used are described below and summarized in</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>@fig-something.</span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preprocessing</span></span>
@@ -764,7 +770,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>We exported the figures obtained by the NIS-Elements software</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>(RRID:SCR_014329) from the microfluidics experiments in TIFF (Tagged</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>Image File Format) format. Each figure was named as follows:</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>*experimentxyc1t001* where *experiment* indicates the name assigned to</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>*experimentxyc1t001,* where *experiment* indicates the name assigned to</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>the experiment, *xy* the trap number, *c* the fluorescence channel, and</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>*t* the passage of time.</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
@@ -775,91 +781,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Segmentation</span></span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>To determine which parts of the photographs correspond to cells, we</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>carry out an image segmentation analysis. Segmentation consists of</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>We carry out an image segmentation analysis to determine which parts of</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>the photographs correspond to cells. *Segmentation* consists of</span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>classification at the pixel level, which allows us to define the pixels</span>
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>that give identity to the limit of a cell, its interior, and the image's</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>background (everything that is not a cell). A new image is generated</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>from the above, known as the segmentation mask, containing only the</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>pixels that identify cells.</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>To build the segmentation mask, we used *Deepcell* <span class="co">[</span><span class="ot">@vanvalen2016</span><span class="co">]</span>.</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>*Deepcell* is a network trained with a robust set of images that people</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>previously classified as cells. However, the generation of the</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>segmentation masks is not absolved of errors (see also</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>@sec-manual-corrections). Sometimes we must correct them manually due</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>to 1) mistakenly identifying two or more cells as one, 2) identifying</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>two or more cells when it is only one cell, and 3) failing to identify a</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>cell.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>background (everything that is not a cell). The resulting image is the</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>*segmentation mask*, containing only the pixels that identify cells.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>To build the segmentation mask, we used *Deepcell* <span class="co">[</span><span class="ot">@vanvalen2016</span><span class="co">]</span>.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>*Deepcell* is a network trained with a robust set of images that people</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>previously classified as cells. However, the generation of the</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>segmentation masks is not absolved of errors (see also</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>@sec-manual-corrections). Sometimes we must correct them manually due to</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>mistakenly identifying two or more cells as one,</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>identifying two or more cells when there is only one cell, and</span>
 <span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tracking</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>failing to identify a cell.</span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>From the image segmentation, we obtain ROI files (region of interest),</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>which contain coordinates of the position of individual cells in each</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>photograph <span class="co">[</span><span class="ot">@10.5555/1386553</span><span class="co">]</span>. Tracking is the tracking of a region of</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>interest in a consecutive series of images. In this case, the tracking</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>generates the identification of the lineages, that is, the ancestry of</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>each cell.</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>We read the ROI files in Python through the *shapely* package, which</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>efficiently reconstructs polygons, thus calculating the length of the</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>cells <span class="co">[</span><span class="ot">@10.5555/1593511; @shapely2007</span><span class="co">]</span>. Also, in Python using ROI files,</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>we track cells with the k-nearest neighbors algorithm that uses various</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>properties such as fluorescence intensity, length, and shape of each</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>cell, to identify cell lineages <span class="co">[</span><span class="ot">@altman1992</span><span class="co">]</span>.</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="fu">## Manual corrections {#sec-manual-corrections}</span></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>For cell-tracking manual correction, we used *Napari,* an open-source</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>python-based tool designed to explore, annotate, and analyze large</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>multidimensional images <span class="co">[</span><span class="ot">@sofroniew2021a</span><span class="co">]</span>. Our custom cell-viewer allows</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>us to easy lineage data visualization, custom-plotting, and</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>lineage-correction. Code for our cell-viewer is available on</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://github.com/ccg-esb-lab/uJ/tree/master/single-channel&gt;</span>.</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>We produced high-throughput data of thousands of cells with a</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>single-cell resolution to the end of the lineages manual reconstruction.</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>We obtained data about time-series of fluorescent intensity,</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>morphological properties of individual cells (*e.g.*, elongation,</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>duplication rate), and time-resolved population-level statistics</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>(*e.g.*, probability of survival to the antibiotic shock).</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data extraction</span></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>We construct a file in columnar format through image processing that</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>contains the information necessary to analyze each experiment (*i.e.*,</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>chromosomal and plasmids) in its different traps (*i.e.*, XY</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>identifier). See @tbl-data-columns-specifications for a full description</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>of the output data. Subsequently, the table was analyzed in R for</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>statistical computation and plotting (see @sec-experiment-analysis)</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@R-base</span><span class="co">]</span>.</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-data-columns-specifications</span></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: asis</span></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Resulting data table from image processing.</span></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-colwidths: [20, 70]</span></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Column, <span class="sc">~</span>Description,</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>    <span class="st">"experimentID"</span>, <span class="st">"Unique identifier of the experiment."</span>,</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>    <span class="st">"trapID"</span>, <span class="st">"Unique identifier of the trap used."</span>,</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lineageID"</span>, <span class="st">"Unique integer of the stem cell and its ancestry."</span>,</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cellID"</span>, <span class="st">"Unique identification number for each cell existing since the beginning of the experiment or generated later."</span>,</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>    <span class="st">"motherID"</span>, <span class="st">"Unique identification number for each cell existing since the beginning of the experiment or generated later."</span>,</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>    <span class="st">"trackID"</span>, <span class="st">"Indicates the x-y coordinates where the cell being tracked starts."</span>,</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>    <span class="st">"roiID"</span>, <span class="st">"Indicates the x-y position in which the cell is located, followed after each photograph."</span>,</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>    <span class="st">"frame"</span>, <span class="st">"Number of the photograph in the sequence of photographs taken, indicating the elapsed time (10 minutes per frame)."</span>,</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>    <span class="st">"length"</span>, <span class="st">"Cell length."</span>,</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    <span class="st">"division"</span>, <span class="st">"Indicates cell division events, represented by the value 1 when they occur and 0 otherwise."</span>,</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GFP"</span>, <span class="st">"Represents the relative fluorescence intensity in each cell by green fluorescent protein (i.e., GFP)."</span>,</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DsRed"</span>, <span class="st">"Represents the relative fluorescence intensity for cells generated by rhodamine’s internalization (i.e., DsRed); an indicator of cell death events."</span>,</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tracking_score"</span>, <span class="st">"Determine how good or bad the tracking of a cell was."</span>,</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>    <span class="st">"state"</span>, <span class="st">"Indicates the state of the cell determined from its length and fluorescence thresholds. -1 for death, 0 for normal, and 1 for filamentation (see @sec-experiment-general-preprocessing for detailed information)."</span></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>    knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>        <span class="at">format =</span> <span class="st">"pipe"</span></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tracking</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>From the image segmentation, we obtain ROI files (region of interest),</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>which contain coordinates of the position of individual cells in each</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>photograph <span class="co">[</span><span class="ot">@10.5555/1386553</span><span class="co">]</span>. *Tracking* is following a region of</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>interest in a consecutive series of images. In this case, the tracking</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>identifies the lineages, that is, the ancestry of each cell.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>We read the ROI files in Python through the *shapely* package, which</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>efficiently reconstructs polygons, thus calculating the length of the</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>cells <span class="co">[</span><span class="ot">@10.5555/1593511; @shapely2007</span><span class="co">]</span>. Also, in Python, using ROI</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>files, we track cells with the k-nearest neighbors' algorithm that uses</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>various cell properties, such as fluorescence intensity, length, and</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>shape of each cell, to identify cell lineages <span class="co">[</span><span class="ot">@altman1992</span><span class="co">]</span>.</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Manual corrections {#sec-manual-corrections}</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>For cell-tracking manual correction, we used *Napari,* an open-source</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>python-based tool designed to explore, annotate, and analyze large</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>multidimensional images <span class="co">[</span><span class="ot">@sofroniew2021a</span><span class="co">]</span>. Our custom cell-viewer allows</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>us to easy lineage data visualization, custom-plotting, and lineage</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>correction. Code for our cell-viewer is available on</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://github.com/ccg-esb-lab/uJ/tree/master/single-channel&gt;</span>.</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>We produced high-throughput data of thousands of cells with a</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>single-cell resolution to the end of the lineage manual reconstruction.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>We obtained data on the time series of fluorescent intensity,</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>morphological properties of individual cells (*e.g.*, elongation,</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>duplication rate), and time-resolved population-level statistics</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>(*e.g.*, probability of survival to the antibiotic shock).</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data extraction</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>We construct a file in columnar format through image processing that</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>contains the information necessary to analyze each experiment (*i.e.*,</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>chromosomal and plasmids) in its different traps (*i.e.*, XY</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>identifier). See @tbl-data-columns-specifications for a complete</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>description of the output data. Subsequently, the table was analyzed in</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>R for statistical computation and plotting (see</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>@sec-experiment-analysis) <span class="co">[</span><span class="ot">@R-base</span><span class="co">]</span>.</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-data-columns-specifications</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: asis</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Resulting data table from image processing.</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-colwidths: [20, 70]</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>Column, <span class="sc">~</span>Description,</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>    <span class="st">"experimentID"</span>, <span class="st">"Unique identifier of the experiment."</span>,</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>    <span class="st">"trapID"</span>, <span class="st">"Unique identifier of the trap used."</span>,</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lineageID"</span>, <span class="st">"Unique integer of the stem cell and its ancestry."</span>,</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cellID"</span>, <span class="st">"Unique identification number for each cell existing since the beginning of the experiment or generated later."</span>,</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>    <span class="st">"motherID"</span>, <span class="st">"Unique identification number for each cell existing since the beginning of the experiment or generated later."</span>,</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>    <span class="st">"trackID"</span>, <span class="st">"Indicates the x-y coordinates where the cell being tracked starts."</span>,</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>    <span class="st">"roiID"</span>, <span class="st">"Indicates the x-y position in which the cell is located, followed after each photograph."</span>,</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>    <span class="st">"frame"</span>, <span class="st">"Number of the photograph in the sequence of photographs taken, indicating the elapsed time (10 minutes per frame)."</span>,</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    <span class="st">"length"</span>, <span class="st">"Cell length."</span>,</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>    <span class="st">"division"</span>, <span class="st">"Indicates cell division events, represented by the value 1 when they occur and 0 otherwise."</span>,</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GFP"</span>, <span class="st">"Represents the relative fluorescence intensity in each cell by green fluorescent protein (_i.e._, GFP)."</span>,</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DsRed"</span>, <span class="st">"Represents the relative fluorescence intensity for cells generated by rhodamine’s internalization (_i.e._, DsRed); an indicator of cell death events."</span>,</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tracking_score"</span>, <span class="st">"Determine how good or bad the tracking of a cell was."</span>,</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>    <span class="st">"state"</span>, <span class="st">"Indicates the state of the cell determined from its length and fluorescence thresholds. -1 for death, 0 for normal, and 1 for filamentation (see @sec-experiment-general-preprocessing for detailed information)."</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>    knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>        <span class="at">format =</span> <span class="st">"pipe"</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
