@@ -126,18 +126,17 @@ questions. With the help of computational biology, systems biology, and
 data analysis techniques, we could process these files to help us in the
 search to find the role of filamentation in cell survival.
 
-Both the ideas and concepts of computational biology and systems biology
-contributed to the development of this analysis. In principle,
-computational biology originated after the origin of computer science
-with the British mathematician and logistician Alan Turing (regularly
-known as the father of computing) [@turing1950]. Over time, systems
-biology emerged as an area that synergistically combines models and
-experimental data to understand biological processes [@bruggeman]. Thus,
-giving a step towards creating models that, in general, are
-phenomenological but that sometimes serve to discover new ideas about
-the process under study. Ideas and aspects of the study of biological
-sciences that otherwise could be unthinkable without the computer's
-power.
+Computational biology and systems biology contributed to the development
+of this analysis. In principle, computational biology originated after
+the origin of computer science with the British mathematician and
+logistician Alan Turing (regularly known as the father of computing)
+[@turing1950]. Over time, systems biology emerged as an area that
+synergistically combines models and experimental data to understand
+biological processes [@bruggeman]. Thus, giving a step towards
+creating models that, in general, are phenomenological but sometimes
+serve to discover new ideas about the process under study. Without the
+computer's power, modern ideas and aspects of studying biological
+sciences would otherwise be unthinkable.
 
 Here, we divide the experimental analysis into two main parts: 1) at the
 cell level or measurements at specific points in time and 2) at the
