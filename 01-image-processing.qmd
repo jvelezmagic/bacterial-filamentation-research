@@ -62,22 +62,24 @@ sub-classification by trap number.
 
 ## Segmentation
 
-To determine which parts of the photographs correspond to cells, we
-carry out an image segmentation analysis. Segmentation consists of
+We carry out an image segmentation analysis to determine which parts of
+the photographs correspond to cells. *Segmentation* consists of
 classification at the pixel level, which allows us to define the pixels
 that give identity to the limit of a cell, its interior, and the image's
-background (everything that is not a cell). A new image is generated
-from the above, known as the segmentation mask, containing only the
-pixels that identify cells.
+background (everything that is not a cell). The resulting image is the
+*segmentation mask*, containing only the pixels that identify cells.
 
 To build the segmentation mask, we used *Deepcell* [@vanvalen2016].
 *Deepcell* is a network trained with a robust set of images that people
 previously classified as cells. However, the generation of the
 segmentation masks is not absolved of errors (see also
-@sec-manual-corrections). Sometimes we must correct them manually due
-to 1) mistakenly identifying two or more cells as one, 2) identifying
-two or more cells when it is only one cell, and 3) failing to identify a
-cell.
+@sec-manual-corrections). Sometimes we must correct them manually due to
+
+1.  mistakenly identifying two or more cells as one,
+
+2.  identifying two or more cells when there is only one cell, and
+
+3.  failing to identify a cell.
 
 ## Tracking
 
