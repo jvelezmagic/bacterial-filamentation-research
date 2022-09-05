@@ -101,13 +101,13 @@ shape of each cell, to identify cell lineages [@altman1992].
 For cell-tracking manual correction, we used *Napari,* an open-source
 python-based tool designed to explore, annotate, and analyze large
 multidimensional images [@sofroniew2021a]. Our custom cell-viewer allows
-us to easy lineage data visualization, custom-plotting, and
-lineage-correction. Code for our cell-viewer is available on
+us to easy lineage data visualization, custom-plotting, and lineage
+correction. Code for our cell-viewer is available on
 <https://github.com/ccg-esb-lab/uJ/tree/master/single-channel>.
 
 We produced high-throughput data of thousands of cells with a
-single-cell resolution to the end of the lineages manual reconstruction.
-We obtained data about time-series of fluorescent intensity,
+single-cell resolution to the end of the lineage manual reconstruction.
+We obtained data on the time series of fluorescent intensity,
 morphological properties of individual cells (*e.g.*, elongation,
 duplication rate), and time-resolved population-level statistics
 (*e.g.*, probability of survival to the antibiotic shock).
