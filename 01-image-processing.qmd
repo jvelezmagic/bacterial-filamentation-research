@@ -51,7 +51,7 @@ specific steps we used are described below and summarized in
 We exported the figures obtained by the NIS-Elements software
 (RRID:SCR_014329) from the microfluidics experiments in TIFF (Tagged
 Image File Format) format. Each figure was named as follows:
-*experimentxyc1t001* where *experiment* indicates the name assigned to
+*experimentxyc1t001,* where *experiment* indicates the name assigned to
 the experiment, *xy* the trap number, *c* the fluorescence channel, and
 *t* the passage of time.
 
