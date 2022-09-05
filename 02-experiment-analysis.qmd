@@ -274,7 +274,7 @@ cells to one frame (10 min) after the end of antibiotic exposure so that
 the observed signal would reflect the final stress responses.
 
 When we compared the distributions of DsRed, GFP, and length for both
-experiments, we observed its changes in its role for cell survival. In
+experiments, we observed the changes in their role in cell survival. In
 @fig-dsred-temporal-distribution, we show that indistinctly and, as
 expected, surviving cells managed to eliminate the antibiotic by the end
 time. In contrast, dead cells presented higher levels of antibiotics
@@ -291,8 +291,7 @@ time. In contrast, dead cells presented higher levels of antibiotics
 #|   significance value when comparing a group X to the filamented and
 #|   surviving cell reference. Asterisks in a line indicate whether or not
 #|   there is a significant difference in the survival of non-filamented cells.
-#|   The black dots represent the mean of each group, and the lines that join
-#|   them are a comparative guide. The extent of the black bars represents the
+#|   Dots represent the mean of each group. The line bars represents the
 #|   distribution of the data. Although, at the initial time, we observe
 #|   multiple significant differences, this is likely due to the intrinsic
 #|   noise of the system since, as expected, the values are close to zero.
@@ -361,16 +360,16 @@ p_temporal_dsred_distributution
 ```
 
 On the other hand, GFP observations in @fig-gfp-temporal-distribution
-showed us two essential things for cell classification: 1) The
-chromosomal strain did not exhibit noticeable changes in GFP levels, and
-2) filamented cells were those that had low fluorescent intensities (low
-plasmid copy-number) at the beginning of the experiment. For the final
-observation times, GFP measurements indicated that among the cells that
-did not filament, the ones that survived exhibited a reduced GFP
-expression concerning cells killed by the antibiotic. Meanwhile, for the
-filamented cells, whether surviving or dead, their GFP measurements
-indicated no difference at the beginning or the end of the experiment,
-suggesting the presence of other determinants of cell survival.
+showed us that filamented cells had low fluorescent intensities (low
+plasmid copy-number) at the beginning of the experiment. In comparison,
+the chromosomal strain did not exhibit noticeable changes in GFP levels.
+For the final observation times, GFP measurements indicated that among
+the cells that did not filament, the ones that survived exhibited a
+reduced GFP expression concerning cells killed by the antibiotic.
+Meanwhile, for the filamented cells, whether surviving or dead, their
+GFP measurements indicated no difference at the beginning or the end of
+the experiment, suggesting the presence of other determinants of cell
+survival.
 
 ```{r}
 #| label: fig-gfp-temporal-distribution
@@ -381,8 +380,8 @@ suggesting the presence of other determinants of cell survival.
 #|   the same notation as in @fig-dsred-temporal-distribution.
 #|   The chromosomal strain exhibits variability in GFP at different
 #|   time points, mainly due to experimental noise resulting from low
-#|   fluorescent intensity values. As expected,
-#|   in the plasmid strain, filamented cells had a lower initial GFP.
+#|   fluorescent intensity values. As expected, filamented cells had
+#|   a lower initial GFP in the plasmid strain.
 #|   At the time of filamentation, there appear to be differences in
 #|   fluorescence between surviving and dead cells. However, in the end time,
 #|   we observed that the surviving non-filamented cells have lower GFP
@@ -450,19 +449,19 @@ p_temporal_gfp_distributution
 Cell length was one of the factors that GFP expression levels could not
 explain for cell survival. In @fig-length-temporal-distribution, we show
 that the conclusions regarding filamentation were applicable for both
-chromosomal or plasmid strains. For the initial times, filamented and
+chromosomal and plasmid strains. For the initial times, filamented and
 survived cells were shorter in length than those that died but longer
 than not filamented cells of both classes, while non-filamented cells
-did not differ from each other. We observed no length differences
-between cells at filamentation time. Thus, survival could depend on
-other factors, such as growth rate. At the final time, the results were
-well-defined. Surviving cells had a greater length relative to their
-non-surviving pair (*i.e.*, dead filamented and non-filamented cells).
-However, for filamented cells, surviving cells represent a distribution
-of higher final length values in general but not as extensive as their
-dead counterpart. Which we could explain as a length limit to which
-cells can grow without dying. Nevertheless, we had no information to
-evaluate such a hypothesis.
+did not differ. We observed no length differences between cells at
+filamentation time. Thus, survival could depend on other factors, such
+as growth rate. In the final time, the results were well-defined.
+Surviving cells had a greater length than their non-surviving pair
+(*i.e.*, dead filamented and non-filamented cells). However, for
+filamented cells, surviving cells generally represent a distribution of
+higher final length values but are not as extensive as their dead
+counterpart. Which we could explain as a length limit to which cells can
+grow without dying. Nevertheless, we had no information to evaluate such
+a hypothesis.
 
 ```{r}
 #| label: fig-length-temporal-distribution
@@ -473,7 +472,7 @@ evaluate such a hypothesis.
 #|   we use the same notation as in @fig-dsred-temporal-distribution.
 #|   The observations for both strains, chromosomal or plasmid, are the same.
 #|   In the beginning, the surviving filamented cells already have a difference
-#|   in length concerning the rest of the classes. At the time of
+#|   in length from the rest of the classes. At the time of
 #|   filamentation, there is no difference to help determine whether the
 #|   cell will survive or not. Finally, in the final time, it seems that
 #|   the surviving filamented cells have a greater length than the rest
@@ -548,7 +547,7 @@ p_temporal_length_distributution
 
 Once we observed the effects of GFP expression levels and lengths in
 determining whether a cell lives or dies, we projected the cells onto
-the plane and painted them with their class status (See
+the plane. We painted them with their class status (See
 @fig-cell-distribution-across-experiments) to determine whether these
 two variables contained the necessary information to cluster the data
 correctly. In @fig-just-initial-values, we show the initial GFP and
@@ -558,19 +557,18 @@ place the results in Figures @fig-gfp-temporal-distribution and
 determine the classes. Therefore, we explored the final versus initial
 values differences in @fig-metric-differences. With this new
 representation of the cells in the plane, we contextualized the
-statistical results presented in Figures @fig-gfp-temporal-distribution
-and @fig-length-temporal-distribution. Besides, it showed us that
+statistical results presented in @fig-gfp-temporal-distribution and
+@fig-length-temporal-distribution. Besides, it showed us that
 differences in length (*i.e.*, filamentation) and reductions in GFP
-expression are essential in determining cell survival. Though, the
-clustering of cells by state is not completely separated, which means
-that other variables are affection the experimental results in cell
-survival.
+expression are essential in determining cell survival. Though the
+clustering of cell status is not entirely separated, other variables
+affect the experimental results in cell survival.
 
 ```{r}
 #| label: fig-just-initial-values
-#| fig-scap: Experiment initial values.
+#| fig-scap: Experiment's initial values.
 #| fig-cap: >
-#|   **Experiment initial values.**
+#|   **Experiment's initial values.**
 #|   By positioning a cell in space based on its initial length and GFP
 #|   values, we can see that class separation occurs, but not as a strong
 #|   signal. Therefore, we concluded that although the initial state
@@ -607,15 +605,15 @@ p_initial_values
 
 ```{r}
 #| label: fig-metric-differences
-#| fig-scap: Experiment initial values differences.
+#| fig-scap: Experiment's initial values differences.
 #| fig-cap: >
-#|   **Experiment initial values differences.**
+#|   **Experiment's initial values differences.**
 #|   By comparing the metric differences of the last observation and
 #|   the first observation of a cell, we can separate mainly the
 #|   surviving filamented cells from those that did not do it in both
-#|   experiments (green dots). Meanwhile, cells with plasmids form a
+#|   experiments (blue dots). Meanwhile, cells with plasmids form a
 #|   small accumulation of surviving cells that did not produce
-#|   filament (purple dots). However, this has made a breakthrough in
+#|   filament (green dots). However, this has made a breakthrough in
 #|   understanding what is affecting cell survival. There are still
 #|   variables that we can include to understand this phenomenon better.
 #|   
@@ -653,9 +651,9 @@ p_metric_differences
 #|   **Histograms of fluorescent intensity for classified cells.**
 #|   A) Cells in MG:GT exhibit a fluorescent distribution with low variance
 #|   and with no significant differences in mean GFP between cells that
-#|   produced filaments and were killed (red) or survived (green), as well
-#|   as for cells that did not produce filaments and died (blue), and those
-#|   that survived drug exposure (purple). B) GFP distributions of the
+#|   produced filaments and were killed (red) or survived (blue), as well
+#|   as for cells that did not produce filaments and died (orange), and those
+#|   that survived drug exposure (green). B) GFP distributions of the
 #|   plasmid-bearing population exhibit large variance. Cells that
 #|   survived showed increased mean fluorescence relative to cells that were
 #|   killed. For surviving cells, mean GFP was significantly lower for cells
