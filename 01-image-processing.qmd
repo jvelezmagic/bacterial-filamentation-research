@@ -11,39 +11,39 @@ lightbox: auto
 With the progress of technology, optical and fluorescence microscopy has
 become a fundamental tool for the characterization and understanding of
 the bacterial world. Microscopy has allowed humanity to extend its
-senses to observe the unknown world with exciting new perspectives that
-they might never otherwise have envisioned. Furthermore, microscopy
-offers a clear advantage over other techniques used to characterize
-bacteria since it can acquire data from living cells in spatial
-resolution [@schermelleh2019].
+senses to observe the unknown world with exciting new perspectives they
+might never have envisioned otherwise. Furthermore, microscopy offers a
+clear advantage over other techniques that characterize bacteria since
+it can acquire data from living cells in spatial resolution
+[@schermelleh2019]. [@schermelleh2019].
 
-Including the discovery of fluorescent proteins (*e.g.*, GFP and DsRed)
-and improvements in fluorescent reporters, it is possible to
-specifically label specific cellular components and track cellular
-functions [@Specht2017]. On the other hand, mechanical and intellectual
-development of microfluidic research techniques provides an excellent
-opportunity to overcome bio-medical and chemical techniques
-[@convery2019]. Collectively, it is possible to study communities of
-bacteria at the level of individual cells [@balaban2004a; @elowitz2002].
+Microfluidic research techniques' mechanical and intellectual
+development provides an excellent opportunity to overcome bio-medical
+and chemical techniques [@convery2019]. With the discovery of
+fluorescent proteins (e.g., GFP and DsRed) and improvements in
+fluorescent reporters, it is possible to specifically label distinctive
+cellular components and track cellular functions [@Specht2017].
+Therefore, collectively, it is possible to study communities of bacteria
+at the level of individual cells [@balaban2004a; @elowitz2002].
 
 Although all this technological development has provided a significant
-advance for the scientific community, after acquiring fluorescence
-images, the extraction of quantitative properties from these images is
-crucial, but unfortunately, a difficult step for analyzing experiments.
+advance for the scientific community in the image analysis field,
+extracting quantitative properties from these images is crucial.
+Unfortunately, it is a difficult step for analyzing experiments.
+
 Not so long ago, image analysis in biology relied on manual
 quantification. However, manual analysis suffers from two main
-problems: 1) accuracy and 2) scalability (that is, analyzing miles or
-more images). Fortunately, improvements in image accuracy and
+problems: 1) accuracy and 2) scalability (that is, analyzing thousands
+or more images). Fortunately, improvements in image accuracy and
 computational image analysis capabilities are revolutionizing the
-quantification of biological processes through [@Caicedo2017;
-@Smith2018]. Therefore, the manual correction required to analyze the
-experiments is minimal.
+quantification of biological processes, reducing the manual correction
+required to analyze the experiments. [@Caicedo2017; @Smith2018].
 
 Here, we used a series of programs in $\mu \mathrm{J}$
 (<https://github.com/ccg-esb-lab/uJ>), which consists of an
 $\mathrm{ImageJ}$ macro library (mainly) for quantifying unicellular
 bacterial dynamics in microfluidic devices [@schneider2012]. The
-specific steps used are described below and are summarized in Figure
+specific steps we used are described below and summarized in
 @fig-something.
 
 ## Preprocessing
