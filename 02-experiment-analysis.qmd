@@ -1323,11 +1323,11 @@ across the whole space, so the distances between clusters matter.
 
 In @fig-chromosome-umap-new-coordinates and
 @fig-plasmid-umap-new-coordinates, we show how, using the same variables
-used in the "PCA" section, UMAP was able to cluster the four proposed
-classes correctly. Interestingly, in
+used in the "PCA" section, UMAP accomplished clustering the four
+proposed classes correctly. Interestingly, in
 @fig-chromosome-umap-new-coordinates, UMAP formed three general groups
 and four for @fig-plasmid-umap-new-coordinates. However, in general,
-UMAP clustered the surviving cells from those that did not survived. On
+UMAP clustered the surviving cells from those that did not survive. On
 investigating why this separation occurred, we found that the large
 groups coalesced into one another if we eliminated the division
 variable. So, in a way, the division also has a role in determining
@@ -1353,8 +1353,8 @@ c_umap_prep
 #| fig-scap: UMAP coordinates of chromosome strain.
 #| fig-cap: >
 #|   **UMAP coordinates of chromosome strain.**
-#|   We represented the cells in a low dimensional space. This new 
-#|   projection made it possible to group the cells that survived and
+#|   We represented the cells in a low-dimensional space. This new 
+#|   projection allowed it to group the cells that survived and
 #|   those that did not. Therefore, as in PCA 
 #|   @fig-chromosome-pca-new-coordinates, this technique supports the manual
 #|   classification that we carry out.
@@ -1407,11 +1407,11 @@ p_umap_prep
 #| fig-scap: UMAP coordinates of plasmid strain.
 #| fig-cap: >
 #|   **UMAP coordinates of plasmid strain.**
-#|   As in its @fig-chromosome-umap-new-coordinates pair, the representation
-#|   in a low-dimensional space helped classify the cells, grouping mainly
-#|   into four groups, two of survivors and two of non-survivors.
+#|   As in @fig-chromosome-umap-new-coordinates, the representation
+#|   in a low-dimensional space helped classify the cells into four groups,
+#|   two survivors and two non-survivors.
 #|   The variable *division* marks the separation of classes. The *division*
-#|   variable indicates whether a cell is divided during its lifetime or not.
+#|   variable indicates whether a cell divided during its lifetime or not.
 #|   Together, the UMAP represents the manually assigned classes.
 #|
 p_p_umap <- juice(p_umap_prep) %>%
