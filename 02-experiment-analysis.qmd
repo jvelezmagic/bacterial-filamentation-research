@@ -893,11 +893,11 @@ p_time_since_last_division
 In @fig-dsred-temporal-distribution, @fig-gfp-temporal-distribution, and
 @fig-length-temporal-distribution, we showed how, at the time of
 filamentation, DsRed and GFP levels appeared indifferent to the cells.
-Therefore, we hypothesized that a possible variable that could determine
-cell survival could be its time to activate its anti-stress response
-system that causes filamentation. Furthermore, we also guided our
-hypothesis by previous reports showing us how the gene expression level
-can induce filamentation with tight temporal coordination \[x\].
+Therefore, we hypothesized that a possible variable determining cell
+survival could be its time to activate its anti-stress response system
+that causes filamentation. Furthermore, we also guided our hypothesis by
+previous reports showing us how the gene expression level can induce
+filamentation with tight temporal coordination \[x\].
 
 While, for our analyses, we did not measure the concentration of
 antibiotic that triggers filamentation per se, we indirectly quantified
@@ -912,23 +912,22 @@ narrower for chromosomal cells than for plasmid-bearing cells. Then, we
 hypothesize that the effect could come from the heterogeneity in the
 plasmid copy number in the population. Also, interestingly, we observed
 that, for both experiments, cells that survived had longer filamentation
-times than the cells that died. These differences in response times
-suggest the following: 1) if the cell grows too fast, it will reach a
-limit and start to accumulate antibiotics constantly, and 2) if the cell
-grows too fast, it is likely that the cost of maintaining an ample
-length for prolonged periods of exposure will become counterproductive.
+times than those that died. These differences in response times suggest
+the following: 1) if the cell grows too fast, it will reach a limit and
+start to accumulate antibiotics constantly, and 2) if the cell grows too
+fast, likely, the cost of maintaining an ample length for prolonged
+periods of exposure will become counterproductive.
 
 ```{r}
 #| label: fig-time-to-filamentation-filtered
 #| fig-scap: Time to filamentation filtered.
 #| fig-cap: >
 #|  **Time to filamentation filtered.**
-#|  To quantify the effect of filamented to survive, we filtered those
-#|  cells that filamented during the experiment. In this way, we
-#|  normalize the start times for the calculation of the filamentation
-#|  time. For both strains, the filamentation time had a more significant
-#|  delay in the surviving cells.
-#|
+#|  We only keep cells that filamented during the antibiotic exposure to
+#|  quantify their time to filamentation and its effect on survival. 
+#|  In this way, we normalize the start times for the calculation of the
+#|  filamentation time. For both strains, the filamentation time had a more
+#|  significant delay in the surviving cells.
 p_time_to_filamentation_filtered <- cells_df %>% 
   filter(
     filamented_id == "Filamented",
@@ -969,9 +968,9 @@ p_time_to_filamentation_filtered
 In Figure @fig-initial-values-with-time, we decided to project the
 results of Figure @fig-time-to-filamentation-filtered in a space similar
 to the one described in Figure @fig-just-initial-values). Thus, we
-separated our data into cells that survived and cells that did not, and
+separated our data into cells that survived and cells that did not and
 painted them when it took them to reach their filamented state. We
-realized that, indeed, by adding this temporal component to the initial
+realized that, by adding this temporal component to the initial
 variables of length and GFP, we could separate surviving cells from dead
 cells to a greater degree. However, it may still not be enough, and
 there are still many other variables that play a crucial role in
@@ -983,12 +982,11 @@ or not.
 #| fig-scap: Experiment initial values with time to filamentation.
 #| fig-cap: >
 #|   **Experiment initial values with time to filamentation.**
-#|   As in @fig-just-initial-values, including the time it will take for
-#|   cells to filament allows us to understand the phenomenon of survival
-#|   better. Cells that filamented and survived generally have a much
-#|   higher delay than their non-filamented peers for both strains
+#|   As in @fig-just-initial-values, including the time it will take for cells
+#|   to filament allows us to better understand the phenomenon of survival.
+#|   Cells that filamented and survived generally have a much higher delay
+#|   than their non-filamented peers for both strains
 #|   (see @fig-time-to-filamentation-filtered).
-#|
 p_initial_values_with_time <- cells_df %>% 
   filter(
     filamented_id == "Filamented",
