@@ -17,15 +17,15 @@ resistance gene on the chromosome and one on multicopy plasmids, in a
 stressful environment with ampicillin. In both cases, we observed four
 states in the cells at the end of the experiment: live filamented, live
 non-filamented, dead filamented, and dead non-filamented cells. By
-inspecting the specific characteristics of each category, we were able
-to identify that cell length was indeed related to the probability of
-survival. In addition, we showed that each cell's inherent resistance
-defined whether or not filamentation would occur for the plasmid strain,
-where low resistance values were conducive to filamentation.
+inspecting each category's specific characteristics, we could identify
+that cell length was indeed related to the probability of survival. In
+addition, we showed that each cell's inherent resistance defined whether
+or not filamentation would occur for the plasmid strain, where low
+resistance values were conducive to filamentation.
 
 However, the growth rate was critical in determining the final cellular
-state. We observed that moderate growths mainly were related to
-survival. In contrast, rapid growth was associated with cell death.
+state. We observed that moderate growths were mainly related to
+survival. In contrast, we associated rapid growth with cell death.
 Previous findings, in addition, could have other explanations that are
 not mutually exclusive, such as the cell cycle or how fast a given cell
 was dividing. So the contribution of these variables in conjunction with
@@ -57,8 +57,8 @@ depend entirely on its inherent resistance levels.
 In addition to the increase in the expected lifetime of the cell upon
 exposure to a toxic agent, the model showed us that filamentation could
 confer an increase in the Minimum Inhibitory Concentration (MIC). So if
-a cell can grow as filament, a higher amount of the toxic agent will be
-needed to kill it. However, bacteria generally live in heterogeneous
+a cell can grow as a filament, a higher amount of the toxic agent will
+be needed to kill it. However, bacteria generally live in heterogeneous
 populations, and sometimes their inherent resistance levels will play a
 vital role in their survival.
 
@@ -67,8 +67,8 @@ systems could represent a double-edged sword for cell survival depending
 on the time of exposure to the toxin. Heterogeneity could be favorable
 for survival if the time of exposure to the toxic agent is longer than
 the time at which the population without heterogeneity dies completely,
-while it would be detrimental otherwise. Thus, globally, filamentation,
-both at the individual and population scale, is crucial for resilience.
+while it would be detrimental otherwise. Thus, globally, filamentation
+is crucial for resilience, both at the individual and population scale.
 
 However, although our model's advantages are its simplicity, ease of
 interpretation, and reproducibility of the biological phenomenon in
@@ -78,16 +78,15 @@ Our model assumes zero growth if the cell does not reach the
 filamentation threshold. While this may be true at the population
 average level, the reality is that cells are constantly growing and
 dividing. Integrating constant growth and division events could help us
-understand in more detail how, under what conditions, and why
-filamentation might be beneficial or detrimental when considering new
-transition states.
+understand how, under what conditions, and why filamentation might be
+beneficial or detrimental when considering new transition states.
 
 Another limiting factor is the lack of a system that penalizes prolonged
 filamentation. Once the cell filaments, our model considers only two
-possible scenarios, the cell can either continue with filamentation for
+possible scenarios; the cell can either continue with filamentation for
 its entire lifetime or die from crossing a toxic agent threshold.
 However, we can suggest that maintaining a filamentary state carries an
-energetic and membrane material cost that may be difficult to supply.
+energetic and membrane-material cost that may be difficult to supply.
 Thus, a cell could die from spending too long in the filamentation state
 if exposure to the toxic agent does not cease.
 
@@ -97,11 +96,11 @@ different scenarios: for instance, filament cells could absorb a more
 significant amount of the toxic agent so that some surrounding cells
 will not perceive much threat. On the other hand, if a cell dies,
 eventually, the capabilities of the cell membrane disappear, and its
-contents can diffuse into the environment. Hence, this would represent
-an increase in the toxic agent's local concentration that nearby cells
-could acquire. How would this change the overall dynamics of the system?
-What would be the new cellular states when evaluating filamentation in
-the context of cellular communities?
+contents can diffuse into the environment. Hence, this would increase in
+the toxic agent's local concentration that nearby cells could acquire.
+How would this change the overall dynamics of the system? What would be
+the new cellular states when evaluating filamentation in the context of
+cellular communities?
 
 In conclusion, although we based our model on experimental evidence, it
 does not consider all possible biological aspects. However, this allowed
