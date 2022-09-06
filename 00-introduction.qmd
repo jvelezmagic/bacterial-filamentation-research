@@ -21,27 +21,26 @@ Bacterial adaptability to hostile environmental conditions can be
 explained by different elements, not necessarily exclusive. For
 instance, mutational phenomena that allow bacteria to evade the
 mechanisms of action of certain antibiotics have been one of the most
-studied [@dever1991; @andersson2005]. However, the continuous
-technological development has allowed us to explore hypotheses where
-phenotypic heterogeneity is considered in detail, allowing us to study
-emergent behaviors in isogenic populations [@ackermann2015]. Thus, we
-have gone from studying bacterial communities as a whole to studying
-them from each of the cells that compose them and their emergent
-properties.
+studied [@dever1991; @andersson2005]. However, continuous technological
+development has allowed us to explore hypotheses where phenotypic
+heterogeneity is considered in detail, allowing us to study emergent
+behaviors in isogenic populations [@ackermann2015]. Thus, we have gone
+from studying bacterial communities as a whole to studying them from
+each of the cells that compose them and their emergent properties.
 
 Single-cell microfluidics is one of the technologies that has made it
 possible to create and maintain the microenvironments necessary for
 studying bacteria [@yin2012]. Among the most outstanding utilities of
 microfluidics, we can find the engineering of bacterial systems,
-microbial ecology, bacterial cell cycle, homeostasis, even cell shape,
-and geometry. The latter is one of the characteristics that allow the
-study of bacterial filamentation, a phenomenon that occurs when the cell
-stops dividing but continues to grow, thus producing elongated cells in
-the form of filaments.
+microbial ecology, bacterial cell cycle, homeostasis, cell shape, and
+geometry. The latter is one of the characteristics that allow the study
+of bacterial filamentation, a phenomenon that occurs when the cell stops
+dividing but continues to grow, thus producing elongated cells in the
+form of filaments.
 
 Mathematical modeling is among the most common strategies to address the
-AMR problem. Mathematical modeling allows to pose real-life problems in
-a space filled with mathematical language, solve them, and test their
+AMR problem. Mathematical modeling allows one to pose real-life problems
+in a space filled with mathematical language, solve them, and test their
 solutions in a real-life living system [@verschaffel2002]. Therefore,
 this approach can also be used to analyze in detail why a particular
 biological phenomenon is occurring, how its behavior can be modified,
@@ -55,13 +54,14 @@ mathematical modeling. We divided this thesis into three chapters that
 explain the methodologies used and take us one step closer to
 understanding filamentation with each chapter.
 
-@sec-image-processing describes the fundamental process to identify and
-quantify the properties of each cell over time, for example, its length,
-the amount of internal toxin, and the amount of resistance to the toxin.
+@sec-image-processing describes the fundamental process of identifying
+and quantifying the properties of each cell over time, for example, its
+length, the amount of internal toxin, and the amount of resistance to
+the toxin.
 
 @sec-experiment-analysis used the data processed in the previous chapter
 to explore bacterial filamentation at the population and single-cell
-level. Data exploration allowed us to simultaneously observe the
+levels. Data exploration allowed us to simultaneously observe the
 behavior of filamentation and its properties in heterogeneous
 populations. For reference, one population with an antibiotic resistance
 gene located on the chromosome and another on multicopy plasmids.
