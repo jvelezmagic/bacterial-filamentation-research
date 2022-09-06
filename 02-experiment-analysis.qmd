@@ -2047,18 +2047,18 @@ On the other hand, as other studies have already mentioned
 [@heinrich2015; @wang2009], we examined cell activity and youth in a
 minimalistic way. While the distribution of the number of divisions
 exemplifies a broader and more uniform range for the surviving cells,
-the cells that died showed a tendency to a lower number of divisions.
-However, for the study of cellular youth at the time of exposure to the
-toxic agent, the results did not show a clear pattern of behavior for
-cell fate determination. Therefore, it would be interesting to study
-cellular youth at a higher level of complexity in future studies to
-understand its contribution to cell survival.
+the cells that died tended to have fewer divisions. However, for the
+study of cellular youth at the time of exposure to the toxic agent, the
+results did not show a clear pattern of behavior for cell fate
+determination. Therefore, it would be interesting to study cellular
+youth at a higher level of complexity in future studies to understand
+its contribution to cell survival.
 
 Interestingly, when we used temporal measurements of cell length, GFP,
 DsRed, and if a cell divided, we could recapitulate, for the most part,
 the fates of cellular states (see @sec-length-gfp-crucial and
 @sec-unsupervised-classification). Thus, increasing the system's
-complexity led to better clustering cell states, but not how these
+complexity led to better clustering of cell states, but not how these
 factors interact biologically in determining cell survival. Therefore,
 we decided to postulate a mathematical model that helps us understand
-the critical components in cell survival.
+the critical components of cell survival.
