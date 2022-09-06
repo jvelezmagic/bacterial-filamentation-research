@@ -1753,8 +1753,8 @@ the population maximum).
 #|   was taken as the number of cells one frame before the start of exposure
 #|   to the antibiotic (minute 50). Therefore, dark to light colors represent a
 #|   generation of new cells, and light to dark colors the death of cells.
-#|   The black vertical bars represent the start and end of the antibiotic
-#|   exposure. Bars size and color on the right represent the percentage of
+#|   The gray vertical bars represent the start and end of antibiotic
+#|   exposure. Bar's size and color on the right represent the percentage of
 #|   the living cells 10 minutes after the end of the experiment. As shown in
 #|   @fig-gfp-survival-probability, we showed that the surviving cells appear
 #|   to follow something similar to a bimodal distribution. More cells survive
@@ -1907,9 +1907,9 @@ GFP (see also @fig-gfp-temporal-distribution).-distribution).
 #|   **Plasmid initial GFP survival probability.**
 #|   We calculated the survival probability after comparing the population
 #|   distributions of GFP with those of the cells that managed to survive.
-#|   To assess survival by GFP, we only used plasmid cells. For non-filamented
-#|   cells (blue dots), a bell forms with an upturned tail. On the other hand,
-#|   for the filamented cells (red dots), a continuous increase in survival is
+#|   To assess survival by GFP, we only used plasmid cells. A bell forms with
+#|   an upturned tail for non-filamented cells (green dots). On the other hand,
+#|   for the filamented cells (orange dots), a continuous increase in survival is
 #|   shown just when it seems that the probability of the non-filamented cells
 #|   has decreased. In global, much GFP has higher resistance, but an average
 #|   GFP value without filamentation also increases the probability of survival.
@@ -1980,7 +1980,7 @@ meant a lower probability of survival (see red dotted lines in
 #|   a more extensive initial size. For their part, for filamented cells
 #|   (red dots), the probability of survival increases according to their
 #|   length but then declines when the cells are too long at first (see red
-#|   dotted line). Therefore, in general, a small and moderate length or an
+#|   dotted line). Therefore, generally, a small and moderate length or an
 #|   initial length already filamented from the beginning increases the
 #|   chances of survival.
 #|
