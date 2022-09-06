@@ -1008,28 +1008,28 @@ p_initial_values_with_time <- cells_df %>%
 p_initial_values_with_time
 ```
 
-### Increasing the complexity of the system and analyzing it in an unsupervised way allows a correct classification of cell states {#sec-unsupervised-classification}
+### Increasing the system's complexity and analyzing it in an unsupervised way allows a correct classification of cell states {#sec-unsupervised-classification}
 
 In the experiments, we observed the importance of GFP filamentation and
 variability for cell survival. Similarly, we realized that other
 variables must be affecting the final results. Filamentation and GFP
 variability alone did not fully recapitulate the expected behavior of
-the data. That is, the target variables did not capture the
-heterogeneity of the system.
+the data. That is, the target variables did not capture the system's
+heterogeneity.
 
 The inability to reproduce cell classification led us to question two
-things: 1) the possibility that our sorting was wrong beforehand and 2)
+things: 1) the possibility that our sorting was wrong beforehand, and 2)
 we did not have enough variables to capture the study phenomenon. We
 decided to take the unsupervised learning way to answer these subjects
-because it allows us to project our data without a *priori* knowledge.
+because it allows us to project our data without prior knowledge.
 
 We opted for the path of dimensionality reduction techniques where each
 variable or feature is equivalent to one dimension. The essence of
 dimensionality reduction is that it is not feasible to analyze each
 dimension with many dimensions. Furthermore, dimensionality reduction
-helps us counteract several problems such as reducing the complexity of
+helps us counteract several problems, such as reducing the complexity of
 a model, reducing the possibility of overfitting a model, removing all
-correlated variables, and, of course, visualizing our data in a two- or
+correlated variables, and visualizing our data in a two- or
 three-dimensional space for better appreciation. Improved visualization
 and identification of essential variables are the main reasons to guide
 and complement our research with this technique.
