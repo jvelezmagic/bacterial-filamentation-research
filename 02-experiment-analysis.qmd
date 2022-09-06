@@ -552,7 +552,7 @@ the plane. We painted them with their class status (See
 two variables contained the necessary information to cluster the data
 correctly. In @fig-just-initial-values, we show the initial GFP and
 length values projection. While, with some work, we could contextually
-place the results in Figures @fig-gfp-temporal-distribution and
+place the results in @fig-gfp-temporal-distribution and
 @fig-length-temporal-distribution, the initial values did not appear to
 determine the classes. Therefore, we explored the final versus initial
 values differences in @fig-metric-differences. With this new
