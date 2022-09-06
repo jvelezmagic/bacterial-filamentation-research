@@ -73,6 +73,50 @@ cells_df <- cells_raw_df %>%
 ```
 
 ```{r}
+#| label: population-read-data
+#| results: hide
+#| 
+lineages_file <- here("data", "processed", "lineages.csv")
+lineages_raw_df <- read_csv(
+  file = lineages_file,
+  show_col_types = FALSE
+) %>%
+  glimpse()
+```
+
+```{r}
+#| label: population-create-factors
+#| results: hide
+#| 
+lineages_processed_1_df <- lineages_raw_df %>%
+  mutate(
+    filamented_id = factor(
+      x = filamented_id,
+      levels = c(FALSE, TRUE),
+      labels = c("Not filamented", "Filamented")
+    ),
+    filamented_at_time = factor(
+      x = filamented_at_time,
+      levels = c(FALSE, TRUE),
+      labels = c("Not filamented", "Filamented")
+    ),
+    survived = factor(
+      x = survived,
+      levels = c(FALSE, TRUE),
+      labels = c("Not survived", "Survived")
+    ),
+    cell_status = interaction(
+      filamented_id,
+      survived,
+      sep = " - "
+    ) %>%
+      as.character() %>%
+      as.factor()
+  ) %>%
+  glimpse()
+```
+
+```{r}
 #| label: set-default-plot-style
 theme_set(
   theme_bw() +
@@ -705,87 +749,89 @@ cells_df |>
 
 ### Number of divisions and cell age do not appear to play a clear role in determining cell survival
 
-In @sec-length-gfp-crucial, we explored how GFP variability and cell
-length influence cell survival. However, @fig-just-initial-values and
-@fig-metric-differences showed us the possibility of other factors
-relevant to the phenomenon under study. As some papers in the literature
-suggest, some of these other factors may be cell division and
-chronological age (*i.e.*, how much time has passed since the last cell
-division at the time of exposure to a toxic agent) [@moger-reischer2019;
-@roostalu2008; @heinrich2015]. Therefore, we chose to observe these two
-metrics in experiments at a purely qualitative level, i.e., without the
-inclusion of, e.g., metrics of membrane or cell cycle properties
-[@Joseleau-Petit1999].
+In @sec-length-gfp-crucial, we explored the effect on cell survival
+through GFP variability and cell length.However,
+@fig-just-initial-values and @fig-metric-differences showed us the
+possibility of other factors relevant to the phenomenon under study. As
+some papers in the literature suggest, some of these other factors may
+be cell division and chronological age (*i.e.*, how much time has passed
+since the last cell division at the time of exposure to a toxic agent)
+[@moger-reischer2019; @roostalu2008; @heinrich2015]. Therefore, we chose
+to observe these two metrics in experiments at a purely qualitative
+level, i.e., without the inclusion of, e.g., metrics of membrane or cell
+cycle properties [@Joseleau-Petit1999].
 
 Although we expected to see a small contribution, either by the number
 of divisions or cell age, in @fig-number-divisions and
 @fig-time-since-last-division, we could not observe a precise effect of
-these variables on cell survival. Patterns that, although they could
-have an explanation or biological significance, we decided to omit as
-relevant in the characterization of our cells, since the signal was not
-clear. However, we derived from this analysis a slightly simpler
-variable that tells us whether a cell underwent a cell division event or
-not. So it gives us a more generalized picture of the contribution of
-division to cell survival (see @fig-plasmid-pca-variable-contribution).
+these variables on cell survival. Although they could have an
+explanation or biological significance, we decided to omit as relevant
+in the characterization of our cells, since the signal was not clear.
+However, we derived from this analysis a slightly simpler variable that
+tells us whether a cell underwent a cell division event or not. So it
+gives us a more generalized picture of the contribution of division to
+cell survival (see @fig-plasmid-pca-variable-contribution).
 
 ```{r}
 #| label: fig-number-divisions
 #| fig-scap: Cell's number of divisions.
 #| fig-cap: >
 #|   **Cell's number of divisions.**
-#|   Chromosomal cells exhibited more divisions for surviving classes
-#|   and non-surviving filamented cells (*i.e.*, purple, green, and
-#|   red dots) relative to unchanged behavior in plasmid cells.
-#|   Therefore, its contribution to filamentation remains uncertain.
-#|   
-p_number_divisions <- cells_df %>% 
-  ggplot(aes(x = cell_status, y = n_divisions, fill = cell_status)) +
-  stat_eye(position = "dodge") +
-  stat_compare_means(
-    label = "p.signif",
-    method = "t.test",
-    ref.group = "Filamented - Survived",
-    label.y.npc = 0.75,
-    hide.ns = TRUE
-  ) +
-  stat_compare_means(
-    method = "t.test",
-    comparisons = list(c("Not filamented - Survived", "Not filamented - Not survived")),
-    label = "p.signif",
-    label.y = 7,
-    hide.ns = TRUE
-  ) +
-  facet_grid(. ~ experiment_id) +
-  coord_cartesian(ylim = c(0, 10)) +
-  guides(
-    fill = guide_legend(ncol = 2)
-  ) +
-  theme(
-    panel.grid.major = element_blank(),
-    axis.text.x = element_blank()
-  ) +
-  labs(
-    x = "Cell status",
-    y = "Number of divisions",
-    fill = "Cell status"
-  ) +
-  theme(
-    axis.title.x = element_blank(),
-    axis.ticks.x = element_blank(),
-    panel.grid = element_line(colour = "grey92"),
-    panel.grid.minor = element_line(size = rel(0.5))
-  ) +
-  scale_fill_manual(
+#|   Both chromosomal and plasmid cells exhibited a wider distribution of
+#|   divisions for the surviving cells against non-surviving cells. However,
+#|   we did not appreciate a significant change between the chromosome 
+#|   filamented cells. Therefore, the number of cell divisions' contribution
+#|   to filamentation remains uncertain.
+#| echo: false
+lineages_processed_1_df |> 
+    filter(
+        time <= antibiotic_start_time
+    ) |> 
+    count(experiment_id, id, cell_status, wt = division) |> 
+    ggplot(aes(
+        x = cell_status,
+        y = n,
+        fill = cell_status  
+    )) +
+    stat_eye() +
+    stat_compare_means(
+      label = "p.signif",
+      method = "t.test",
+      ref.group = "Filamented - Survived",
+      label.y.npc = 0.75,
+      hide.ns = TRUE
+    ) +
+    stat_compare_means(
+      method = "t.test",
+      comparisons = list(c("Not filamented - Survived", "Not filamented - Not survived")),
+      label = "p.signif",
+      label.y.npc = 0.6,
+      hide.ns = TRUE
+    ) +
+    facet_grid(. ~ experiment_id) +
+    guides(
+      fill = guide_legend(ncol = 2)
+    ) +
+    theme(
+      panel.grid.major = element_blank(),
+      axis.text.x = element_blank(),
+      axis.title.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      panel.grid = element_line(colour = "grey92"),
+      panel.grid.minor = element_line(size = rel(0.5))
+    ) +
+    scale_fill_manual(
       values = cell_status_pallete,
       breaks = cell_status_legend_order
-  ) +
-  scale_color_manual(
-      values = cell_status_pallete,
-      breaks = cell_status_legend_order
-  ) + 
-  NULL
-
-p_number_divisions
+    ) +
+    scale_y_continuous(
+        breaks = 0:6
+    ) +
+    labs(
+      y = "Number of divisions",
+      fill = "Cell status"
+    ) +
+    NULL
 ```
 
 ```{r}
@@ -1400,50 +1446,6 @@ p_p_umap
 ```
 
 ### Population dynamics reveal how filamentation contributes cell survival
-
-```{r}
-#| label: population-read-data
-#| results: hide
-#| 
-lineages_file <- here("data", "processed", "lineages.csv")
-lineages_raw_df <- read_csv(
-  file = lineages_file,
-  show_col_types = FALSE
-) %>%
-  glimpse()
-```
-
-```{r}
-#| label: population-create-factors
-#| results: hide
-#| 
-lineages_processed_1_df <- lineages_raw_df %>%
-  mutate(
-    filamented_id = factor(
-      x = filamented_id,
-      levels = c(FALSE, TRUE),
-      labels = c("Not filamented", "Filamented")
-    ),
-    filamented_at_time = factor(
-      x = filamented_at_time,
-      levels = c(FALSE, TRUE),
-      labels = c("Not filamented", "Filamented")
-    ),
-    survived = factor(
-      x = survived,
-      levels = c(FALSE, TRUE),
-      labels = c("Not survived", "Survived")
-    ),
-    cell_status = interaction(
-      filamented_id,
-      survived,
-      sep = " - "
-    ) %>%
-      as.character() %>%
-      as.factor()
-  ) %>%
-  glimpse()
-```
 
 ```{r}
 #| include: false
