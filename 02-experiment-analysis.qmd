@@ -1550,24 +1550,23 @@ states behaved over time---for example, understanding how the cells
 absorbed antibiotics or how they elongated in time. In contrast to the
 dataset generated in the @sec-length-gfp-crucial, we did not truncate
 the results 10 minutes after the antibiotic exposure. In this way, we
-could to observe cell behavior before and after the presence of the
-toxic agent.
+could observe cell behavior before and after the presence of the toxic
+agent.
 
-In @fig-status-with-dead, we observed a small fraction of already
-filamentous cells without exposure to the toxic agent in both cell
-strains. However, after antibiotic exposure at minute 60, we observed
-increases in the proportion of filamented cells. It is interesting to
-note how filamented cells grew after antibiotic exposure for the
-chromosomal strain. We speculate that this post-antibiotic growth exists
-because, once the SOS system that triggers filamentation is activated,
-the system continues to grow until it reaches a limit regardless of
-whether the damaging agent is still present
-[@justiceMorphologicalPlasticityBacterial2008; @mückl2018]. Moreover, we
-observed how the cells start to divide again after some time because the
-proportion of non-filament cells starts to grow while the filament cells
-start to divide. We observed the same effects for the plasmid strain.
-However, the number of filament cells expected was much lower by
-experimental design.
+In @fig-status-with-dead, we observed a small fraction of filamentous
+cells without exposure to the toxic agent in both cell strains. However,
+after antibiotic exposure at minute 60, we observed increases in the
+proportion of filamented cells. It is interesting to note how filamented
+cells grew after antibiotic exposure for the chromosomal strain. We
+speculate that this post-antibiotic growth exists because, once the SOS
+system that triggers filamentation is activated, the system continues to
+grow until it reaches a limit regardless of whether the damaging agent
+is still present [@justiceMorphologicalPlasticityBacterial2008;
+@mückl2018]. Moreover, we observed how the cells start to divide again
+after some time because the proportion of non-filament cells starts to
+grow while the filament cells start to divide. We observed the same
+effects for the plasmid strain. However, the number of filament cells
+expected was much lower by experimental design.
 
 ```{r}
 #| label: fig-status-with-dead
@@ -1723,15 +1722,15 @@ p_metrics_over_time
 ### Heterogeneity in plasmid copy-number allows various forms of survival in addition to filamentation
 
 We are confident that filamentation has a fundamental role in
-determining cell survival, with what we have shown so far. However, for
-plasmid cells, we have a component that is of our complete interest;
-heterogeneity. Each cell can possess a different plasmid copy-number;
-thus, each could show a different behavior under stress
-[@sanmillan2016]. For instance, heterogeneity can produce resistant
-cells that do not suffer damage, susceptible cells, and cells that form
-filaments to mitigate environmental stress.
+determining cell survival, as we have shown so far. However, for plasmid
+cells, we have a component of our complete interest; heterogeneity. Each
+cell can possess a different plasmid copy number; thus, each could show
+a different behavior under stress [@sanmillan2016]. For instance,
+heterogeneity can produce resistant cells that do not suffer damage,
+susceptible cells, and cells that form filaments to mitigate
+environmental stress.
 
-To study the effect of variability in plasmid copy number in the
+To study the effect of variability in plasmid copy number on the
 survival probability of the population, we decided to group cells by the
 proportion of initial GFP with respect to the population maximum. We
 defined 100% of the population as the number of total cells at the onset
@@ -1739,7 +1738,7 @@ of antibiotic exposure. @fig-proportion-living-cells-gfp-by-row shows
 how the cells with the highest amount of GFP remained unchanged once
 antibiotic exposure began, while the rest of the cells started to
 decrease their percentage of surviving cells. However, the decrease was
-not linear. On the contrary, we observed a bi-modal distribution on the
+not linear. On the contrary, we observed a bi-modal distribution in the
 reduction of live cells. An average GFP point provided higher survival
 than a point below or above the average (except for cells very close to
 the population maximum).
@@ -1961,9 +1960,9 @@ p_survival_probability_gfp
 As in @fig-gfp-survival-probability, in
 @fig-length-survival-probability, we show the survival probability given
 an initial length. We observe that survival is higher for cells that did
-not grow as filament if the initial length was less than the average. In
-contrast, for filamented cells, the probability of survival increased as
-cells length was longer at the beginning of the experiment (see also
+not grow as filaments if the initial length was less than the average.
+In contrast, for filamented cells, the survival probability increased as
+cell length was longer at the beginning of the experiment (see also
 @fig-length-temporal-distribution). However, it is noteworthy that the
 probability of survival had a limit in which a higher initial length
 meant a lower probability of survival (see red dotted lines in
