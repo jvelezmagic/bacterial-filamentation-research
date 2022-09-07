@@ -205,10 +205,10 @@ phenomenon of interest because it considers the change in shape and
 size, allowing us to study it as a strategy to promote bacterial
 survival.
 
-We decided to analyze the MIC change caused by filamentation through
-stable exposure experiments of different toxin amounts at other exposure
-times. Computational simulations show that when comparing cells unable
-to filament with those that can, there is an increase in the capacity to
+We analyzed the MIC change caused by filamentation through stable
+exposure experiments of different toxin amounts at other exposure times.
+Computational simulations show that when comparing cells unable to
+filament with those that can, there is an increase in the capacity to
 tolerate more generous amounts of toxin, increasing their MIC (see
 @fig-toxin-exposure-experiment). Therefore, it confers a gradual
 increase in resistance beyond filamentation's role in improving the
@@ -218,7 +218,13 @@ cell's life span as the exposure time is longer.
 #| label: fig-toxin-exposure-experiment
 #| fig-scap: Effect of filamentation on minimum inhibitory concentration (MIC).
 #| fig-cap: >
-#|   **Effect of filamentation on minimum inhibitory concentration (MIC).** By exposing a cell to different toxin concentrations with stable signals, the cell achieves a set MIC for conditions without or with filamentation (separation between stressed and dead state) for each exposure time, without representing a change for the normal state cells' points (blue zone). Thus, the green line represents a gradual MIC increase when comparing each MIC between conditions for each exposure time.
+#|   **Effect of filamentation on minimum inhibitory concentration (MIC).**
+#|   By exposing a cell to different toxin concentrations with stable signals,
+#|   the cell achieves a set MIC for conditions without or with filamentation
+#|   (separation between stressed and dead state) for each exposure time,
+#|   without representing a change for the normal state cells' points (blue zone). Thus,
+#|   the green line represents a gradual MIC increase when comparing each MIC
+#|   between conditions for each exposure time.
 p_1 <- model_datasets$toxin_exposure_experiment %>%
   mutate(
     state = factor(state, levels = c("Normal", "Stressed", "Dead")),
