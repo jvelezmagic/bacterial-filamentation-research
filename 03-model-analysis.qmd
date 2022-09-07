@@ -62,7 +62,7 @@ survival in response to stressful environments.
 #| fig-cap: >
 #|   **Cell dimensions relationship.**
 #|   We evaluated the resulting geometric properties on a grid of side lengths
-#|   and radii with a pill-shaped cell. We can see that by maintaining a
+#|   and radii with a pill-shaped cell. By maintaining a
 #|   constant radius (typical case in bacteria such as *E. coli*) and
 #|   increasing the side length, the surface area / volume relationship
 #|   ($SA/V$) tends to decline since the $V$ will grow at a higher rate
@@ -93,9 +93,9 @@ variables. $T_{sa}$ and $T_{vol}$ represent the surface area and volume
 of the toxin in the cell, respectively. $T_{ext}(t)$ is a function that
 returns the amount of toxin in the cell medium. $T_{anti}$ and $\alpha$
 symbolize the amount of antitoxin and its efficiency rate, respectively.
-$\beta$ as the rate of filamentation. $L_{max}$ is the maximum size
-\$the cell can reach when filamentation is on. $T_{sos}$ and $T_{kill}$
-are thresholds for filamentation and death, respectively. Finally,
+$\beta$ as the rate of filamentation. $L_{max}$ is the maximum size the
+cell can reach when filamentation is on. $T_{sos}$ and $T_{kill}$ are
+thresholds for filamentation and death, respectively. Finally,
 $\tau_{delay}$ is the amount of time required to activate filamentation
 after reaching the $T_{sos}$ threshold.
 
