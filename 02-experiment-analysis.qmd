@@ -897,7 +897,7 @@ Therefore, we hypothesized that a possible variable determining cell
 survival could be its time to activate its anti-stress response system
 that causes filamentation. Furthermore, we also guided our hypothesis by
 previous reports showing us how the gene expression level can induce
-filamentation with tight temporal coordination \[x\].
+filamentation with tight temporal coordination.
 
 While, for our analyses, we did not measure the concentration of
 antibiotic that triggers filamentation per se, we indirectly quantified
