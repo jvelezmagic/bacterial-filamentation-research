@@ -296,8 +296,8 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="fig-cell-dimensions-relationship" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/cell_dimensions_relationship.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Cell dimensions relationship. We evaluated the resulting geometric properties on a grid of side lengths and radii with a pill-shaped cell. We can see that by maintaining a constant radius (typical case in bacteria such as E. coli) and increasing the side length, the surface area / volume relationship (SA/V) tends to decline since the V will grow at a higher rate than the SA."><img src="https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/cell_dimensions_relationship.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.1: <strong>Cell dimensions relationship.</strong> We evaluated the resulting geometric properties on a grid of side lengths and radii with a pill-shaped cell. We can see that by maintaining a constant radius (typical case in bacteria such as <em>E. coli</em>) and increasing the side length, the surface area / volume relationship (<span class="math inline">\(SA/V\)</span>) tends to decline since the <span class="math inline">\(V\)</span> will grow at a higher rate than the <span class="math inline">\(SA\)</span>.</figcaption><p></p>
+<p><a href="https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/cell_dimensions_relationship.svg" class="lightbox" title="Cell dimensions relationship. We evaluated the resulting geometric properties on a grid of side lengths and radii with a pill-shaped cell. By maintaining a constant radius (typical case in bacteria such as E. coli) and increasing the side length, the surface area / volume relationship (SA/V) tends to decline since the V will grow at a higher rate than the SA." data-gallery="quarto-lightbox-gallery-1"><img src="https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/cell_dimensions_relationship.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.1: <strong>Cell dimensions relationship.</strong> We evaluated the resulting geometric properties on a grid of side lengths and radii with a pill-shaped cell. By maintaining a constant radius (typical case in bacteria such as <em>E. coli</em>) and increasing the side length, the surface area / volume relationship (<span class="math inline">\(SA/V\)</span>) tends to decline since the <span class="math inline">\(V\)</span> will grow at a higher rate than the <span class="math inline">\(SA\)</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -312,21 +312,21 @@ div.csl-indent {
 \frac{dL}{dt} &amp;=   \begin{cases}     \beta \cdot L,&amp; \text{if } T_{int} \geq T_{sos},  t \geq \tau_{sos} + \tau_{delay} \text{ and } L &lt; L_{max}  \\    0,            &amp; \text{otherwise}  \end{cases}
 \end{split}
 \tag{3.1}\]</span></span></p>
-<p>It considers the internal toxin (<span class="math inline">\(T_{int}\)</span>) and the cell length (<span class="math inline">\(L\)</span>) as variables. <span class="math inline">\(T_{sa}\)</span> and <span class="math inline">\(T_{vol}\)</span> represent the surface area and volume of the toxin in the cell, respectively. <span class="math inline">\(T_{ext}(t)\)</span> is a function that returns the amount of toxin in the cell medium. <span class="math inline">\(T_{anti}\)</span> and <span class="math inline">\(\alpha\)</span> symbolize the amount of antitoxin and its efficiency rate, respectively. <span class="math inline">\(\beta\)</span> as the rate of filamentation. <span class="math inline">\(L_{max}\)</span> is the maximum size that the cell can reach when filamentation is on. <span class="math inline">\(T_{sos}\)</span> and <span class="math inline">\(T_{kill}\)</span> are thresholds for filamentation and death, respectively. Finally, <span class="math inline">\(\tau_{delay}\)</span> is the amount of time required to activate filamentation after reaching the <span class="math inline">\(T_{sos}\)</span> threshold.</p>
+<p>It considers the internal toxin (<span class="math inline">\(T_{int}\)</span>) and the cell length (<span class="math inline">\(L\)</span>) as variables. <span class="math inline">\(T_{sa}\)</span> and <span class="math inline">\(T_{vol}\)</span> represent the surface area and volume of the toxin in the cell, respectively. <span class="math inline">\(T_{ext}(t)\)</span> is a function that returns the amount of toxin in the cell medium. <span class="math inline">\(T_{anti}\)</span> and <span class="math inline">\(\alpha\)</span> symbolize the amount of antitoxin and its efficiency rate, respectively. <span class="math inline">\(\beta\)</span> as the rate of filamentation. <span class="math inline">\(L_{max}\)</span> is the maximum size the cell can reach when filamentation is on. <span class="math inline">\(T_{sos}\)</span> and <span class="math inline">\(T_{kill}\)</span> are thresholds for filamentation and death, respectively. Finally, <span class="math inline">\(\tau_{delay}\)</span> is the amount of time required to activate filamentation after reaching the <span class="math inline">\(T_{sos}\)</span> threshold.</p>
 </section>
 <section id="numerical-results" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="numerical-results"><span class="header-section-number">3.3</span> Numerical results</h2>
 <section id="filamentation-provides-transient-resistance-to-stressful-conditions" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="filamentation-provides-transient-resistance-to-stressful-conditions"><span class="header-section-number">3.3.1</span> Filamentation provides transient resistance to stressful conditions</h3>
-<p>When growing rod-shaped bacterial cells under constant conditions, the distribution of lengths and radii is narrow <span class="citation" data-cites="schaechterGrowthCellNuclear1962">(<a href="99-references.html#ref-schaechterGrowthCellNuclear1962" role="doc-biblioref">Schaechter et al. 1962</a>)</span>. However, when growing under stress conditions, some cells produce filaments <span class="citation" data-cites="schaechterDependencyMediumTemperature1958">(<a href="99-references.html#ref-schaechterDependencyMediumTemperature1958" role="doc-biblioref">Schaechter, MaalOe, and Kjeldgaard 1958</a>)</span>. This phenomenon may depend on the SOS response system <span class="citation" data-cites="bosEmergenceAntibioticResistance2015">(<a href="99-references.html#ref-bosEmergenceAntibioticResistance2015" role="doc-biblioref">Bos et al. 2015</a>)</span>, which can repair DNA damage, giving the cell greater chances of recovering and surviving under stress conditions. Besides, the SOS response has been reported to have precise temporal coordination in individual bacteria <span class="citation" data-cites="friedmanPreciseTemporalModulation2005">(<a href="99-references.html#ref-friedmanPreciseTemporalModulation2005" role="doc-biblioref">Friedman et al. 2005</a>)</span>. Among the stress conditions that can trigger the SOS response is exposure to beta-lactam antibiotics <span class="citation" data-cites="millerSOSResponseInduction2004">(<a href="99-references.html#ref-millerSOSResponseInduction2004" role="doc-biblioref">Miller 2004</a>)</span>.</p>
+<p>When growing rod-shaped bacterial cells under constant conditions, the distribution of lengths and radii is narrow <span class="citation" data-cites="schaechterGrowthCellNuclear1962">(<a href="99-references.html#ref-schaechterGrowthCellNuclear1962" role="doc-biblioref">Schaechter et al. 1962</a>)</span>. However, some cells produce filaments when growing under stress conditions <span class="citation" data-cites="schaechterDependencyMediumTemperature1958">(<a href="99-references.html#ref-schaechterDependencyMediumTemperature1958" role="doc-biblioref">Schaechter, MaalOe, and Kjeldgaard 1958</a>)</span>. Among the stress conditions that can trigger the SOS response is exposure to beta-lactam antibiotics <span class="citation" data-cites="millerSOSResponseInduction2004">(<a href="99-references.html#ref-millerSOSResponseInduction2004" role="doc-biblioref">Miller 2004</a>)</span>. This phenomenon may depend on the SOS response system <span class="citation" data-cites="bosEmergenceAntibioticResistance2015">(<a href="99-references.html#ref-bosEmergenceAntibioticResistance2015" role="doc-biblioref">Bos et al. 2015</a>)</span>, which can repair DNA damage, giving the cell greater chances of recovering and surviving under stress conditions. Besides, the SOS response has been reported to have precise temporal coordination in individual bacteria <span class="citation" data-cites="friedmanPreciseTemporalModulation2005">(<a href="99-references.html#ref-friedmanPreciseTemporalModulation2005" role="doc-biblioref">Friedman et al. 2005</a>)</span>.</p>
 <p>In general, filamentation has been studied as an unavoidable consequence of stress. However, we considered filamentation an active process that produces the first line of defense against toxic agents. Therefore, a differential equation model was proposed that assesses the change in the amount of internal toxin as a function of cell length. At the core of this model, we include the intrinsic relationship between the surface area and the capsule volume since it is vital in determining cell size <span class="citation" data-cites="harrisRelativeRatesSurface2016">(<a href="99-references.html#ref-harrisRelativeRatesSurface2016" role="doc-biblioref">Harris and Theriot 2016</a>)</span>.</p>
-<p>In <a href="#fig-filamentation-model-ramp-signal">Figure&nbsp;<span>3.2</span></a>, cells grow in a ramp-shaped external toxin signal without considering a toxin-antitoxin system.As time progresses, the toxin in the external environment increases, so the cell raises its internal toxin levels. At approximately time <span class="math inline">\(22\)</span>, any cell reaches <span class="math inline">\(T_{sos}\)</span>. The control cell (unable to filament) and the average cell (capable of filamenting) reach the death threshold, <span class="math inline">\(T_{kill}\)</span>, at times <span class="math inline">\(31\)</span> and <span class="math inline">\(93\)</span> (hatched and solid black lines), respectively. Therefore, under this example, the cell has increased its life span three times more than in control by growing as a filament (green shaded area versus orange shaded area). In turn, <a href="#fig-filamentation-model-ramp-signal">Figure&nbsp;<span>3.2</span></a> also shows stochastic simulations of the system in the intake of internal toxins. Considering that cell growth and death processes are inherently stochastic, stochastic simulations would be a better approximation. However, from now on, we will continue with the study of the deterministic model.</p>
+<p>In <a href="#fig-filamentation-model-ramp-signal">Figure&nbsp;<span>3.2</span></a>, cells grow in a ramp-shaped external toxin signal without considering a toxin-antitoxin system. As time progresses, the toxin in the external environment increases, so the cell raises its internal toxin levels. At approximately time <span class="math inline">\(22\)</span>, any cell reaches <span class="math inline">\(T_{sos}\)</span>. The control cell (unable to filament) and the average cell (capable of filamenting) reach the death threshold, <span class="math inline">\(T_{kill}\)</span>, at times <span class="math inline">\(31\)</span> and <span class="math inline">\(93\)</span> (hatched and solid black lines), respectively. Therefore, under this example, the cell has increased its life span three times more than the control by growing as a filament (green shaded area versus orange shaded area). In turn, <a href="#fig-filamentation-model-ramp-signal">Figure&nbsp;<span>3.2</span></a> also shows stochastic simulations of the system in the intake of internal toxins. Since cell growth and death processes are inherently stochastic, stochastic simulations would be a better approximation. However, from now on, we will continue studying the deterministic model.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-filamentation-model-ramp-signal" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/filamentation_model_ramp_signal.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Effect of filamentation on intracellular toxin concentration. In the presence of an extracellular toxic agent, the intracellular concentration of the toxin (T_{int}) increases until reaching a damage threshold that triggers filamentation (T_{sos}, blue point), increasing cell length (L). When filamentation is on, the cell decreases T_{int} due to the intrinsic relationship between surface area and cell volume. When the cell reaches its maximum length, it eventually dies if the stressful stimulus is not removed (T_{kill}, red dot). The hatched line represents a cell that can not grow as filament. The orange shaded area is the time between stress and the non-filament cell’s death, while the green shaded area represents the temporal gain for doing so. The blue background lines represent stochastic simulations of the same system."><img src="https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/filamentation_model_ramp_signal.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.2: <strong>Effect of filamentation on intracellular toxin concentration.</strong> In the presence of an extracellular toxic agent, the intracellular concentration of the toxin (<span class="math inline">\(T_{int}\)</span>) increases until reaching a damage threshold that triggers filamentation (<span class="math inline">\(T_{sos}\)</span>, blue point), increasing cell length (<span class="math inline">\(L\)</span>). When filamentation is on, the cell decreases <span class="math inline">\(T_{int}\)</span> due to the intrinsic relationship between surface area and cell volume. When the cell reaches its maximum length, it eventually dies if the stressful stimulus is not removed (<span class="math inline">\(T_{kill}\)</span>, red dot). The hatched line represents a cell that can not grow as filament. The orange shaded area is the time between stress and the non-filament cell’s death, while the green shaded area represents the temporal gain for doing so. The blue background lines represent stochastic simulations of the same system.</figcaption><p></p>
+<p><a href="https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/filamentation_model_ramp_signal.svg" class="lightbox" title="Effect of filamentation on intracellular toxin concentration. In the presence of an extracellular toxic agent, the intracellular concentration of the toxin (T_{int}) increases until reaching a damage threshold that triggers filamentation (T_{sos}, blue point), increasing cell length (L). When filamentation is on, the cell decreases T_{int} due to the intrinsic relationship between surface area and cell volume. When the cell reaches its maximum length, it dies if the stressful stimulus is not removed (T_{kill}, red dot). The hatched line represents a cell that can not grow as a filament. The orange shaded area represents the time between stress and the non-filament cell’s death, while the green shaded area represents the temporal gain. The blue background lines represent stochastic simulations of the same system." data-gallery="quarto-lightbox-gallery-2"><img src="https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/filamentation_model_ramp_signal.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.2: <strong>Effect of filamentation on intracellular toxin concentration.</strong> In the presence of an extracellular toxic agent, the intracellular concentration of the toxin (<span class="math inline">\(T_{int}\)</span>) increases until reaching a damage threshold that triggers filamentation (<span class="math inline">\(T_{sos}\)</span>, blue point), increasing cell length (<span class="math inline">\(L\)</span>). When filamentation is on, the cell decreases <span class="math inline">\(T_{int}\)</span> due to the intrinsic relationship between surface area and cell volume. When the cell reaches its maximum length, it dies if the stressful stimulus is not removed (<span class="math inline">\(T_{kill}\)</span>, red dot). The hatched line represents a cell that can not grow as a filament. The orange shaded area represents the time between stress and the non-filament cell’s death, while the green shaded area represents the temporal gain. The blue background lines represent stochastic simulations of the same system.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -338,12 +338,12 @@ div.csl-indent {
 
 </div>
 <p>In other to characterize the degree of resistance, dose-response experiments determine the Minimum Inhibitory Concentration (MIC) <span class="citation" data-cites="andrews2001 andrewsDeterminationMinimumInhibitory2002">(<a href="99-references.html#ref-andrews2001" role="doc-biblioref">Jennifer M. Andrews 2001</a>; <a href="99-references.html#ref-andrewsDeterminationMinimumInhibitory2002" role="doc-biblioref">J. M. Andrews 2002</a>)</span>. Bacteria are capable of modifying their MIC through various mechanisms, for example, mutations <span class="citation" data-cites="lambertBacterialResistanceAntibiotics2005">(<a href="99-references.html#ref-lambertBacterialResistanceAntibiotics2005" role="doc-biblioref">Lambert 2005</a>)</span>, impaired membrane permeability <span class="citation" data-cites="satoOuterMembranePermeability1991">(<a href="99-references.html#ref-satoOuterMembranePermeability1991" role="doc-biblioref">Sato and Nakae 1991</a>)</span>, flux pumps <span class="citation" data-cites="webberImportanceEffluxPumps2003">(<a href="99-references.html#ref-webberImportanceEffluxPumps2003" role="doc-biblioref">Webber 2003</a>)</span>, toxin-inactivating enzymes <span class="citation" data-cites="wrightBacterialResistanceAntibiotics2005">(<a href="99-references.html#ref-wrightBacterialResistanceAntibiotics2005" role="doc-biblioref">Wright 2005</a>)</span>, and plasticity phenotypic <span class="citation" data-cites="justiceMorphologicalPlasticityBacterial2008">(<a href="99-references.html#ref-justiceMorphologicalPlasticityBacterial2008" role="doc-biblioref">Sheryl S. Justice et al. 2008</a>)</span>. The latter is our phenomenon of interest because it considers the change in shape and size, allowing us to study it as a strategy to promote bacterial survival.</p>
-<p>We decided to analyze the MIC change caused by filamentation through stable exposure experiments of different toxin amounts at other exposure times. Computational simulations show that when comparing cells unable to filament with those that can, there is an increase in the capacity to tolerate more generous amounts of toxin, increasing their MIC (see <a href="#fig-toxin-exposure-experiment">Figure&nbsp;<span>3.3</span></a>). Therefore, it confers a gradual increase in resistance beyond filamentation’s role in improving the cell’s life span as the exposure time is longer.</p>
+<p>We analyzed the MIC change caused by filamentation through stable exposure experiments of different toxin amounts at other exposure times. Computational simulations show that when comparing cells unable to filament with those that can, there is an increase in the capacity to tolerate more generous amounts of toxin, increasing their MIC (see <a href="#fig-toxin-exposure-experiment">Figure&nbsp;<span>3.3</span></a>). Therefore, it confers a gradual increase in resistance beyond filamentation’s role in improving the cell’s life span as the exposure time is longer.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-toxin-exposure-experiment" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="03-model-analysis_files/figure-html/fig-toxin-exposure-experiment-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Effect of filamentation on minimum inhibitory concentration (MIC). By exposing a cell to different toxin concentrations with stable signals, the cell achieves a set MIC for conditions without or with filamentation (separation between stressed and dead state) for each exposure time, without representing a change for the normal state cells’ points (blue zone). Thus, the green line represents a gradual MIC increase when comparing each MIC between conditions for each exposure time."><img src="03-model-analysis_files/figure-html/fig-toxin-exposure-experiment-1.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p><a href="03-model-analysis_files/figure-html/fig-toxin-exposure-experiment-1.svg" class="lightbox" title="Effect of filamentation on minimum inhibitory concentration (MIC). By exposing a cell to different toxin concentrations with stable signals, the cell achieves a set MIC for conditions without or with filamentation (separation between stressed and dead state) for each exposure time, without representing a change for the normal state cells’ points (blue zone). Thus, the green line represents a gradual MIC increase when comparing each MIC between conditions for each exposure time." data-gallery="quarto-lightbox-gallery-3"><img src="03-model-analysis_files/figure-html/fig-toxin-exposure-experiment-1.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;3.3: <strong>Effect of filamentation on minimum inhibitory concentration (MIC).</strong> By exposing a cell to different toxin concentrations with stable signals, the cell achieves a set MIC for conditions without or with filamentation (separation between stressed and dead state) for each exposure time, without representing a change for the normal state cells’ points (blue zone). Thus, the green line represents a gradual MIC increase when comparing each MIC between conditions for each exposure time.</figcaption><p></p>
 </figure>
 </div>
@@ -353,13 +353,13 @@ div.csl-indent {
 <section id="heterogeneity-in-the-toxin-antitoxin-system-represents-a-double-edged-sword-in-survival-probability" class="level3" data-number="3.3.3">
 <h3 data-number="3.3.3" class="anchored" data-anchor-id="heterogeneity-in-the-toxin-antitoxin-system-represents-a-double-edged-sword-in-survival-probability"><span class="header-section-number">3.3.3</span> Heterogeneity in the toxin-antitoxin system represents a double-edged sword in survival probability</h3>
 <p>One of the SOS response system properties is that it presents synchronous activation times within homogeneous populations <span class="citation" data-cites="friedmanPreciseTemporalModulation2005">(<a href="99-references.html#ref-friedmanPreciseTemporalModulation2005" role="doc-biblioref">Friedman et al. 2005</a>)</span>. It has constant gene expression rates that help it cope with stress; however, it is possible to introduce variability by considering having multicopy resistance plasmids <span class="citation" data-cites="million-weaverMechanismsPlasmidSegregation2014">(<a href="99-references.html#ref-million-weaverMechanismsPlasmidSegregation2014" role="doc-biblioref">Million-Weaver and Camps 2014</a>)</span>. Therefore, the response times would have an asynchronous behavior at the global level but synchronous at the local level.</p>
-<p>To include this observation into the model, we include a negative term to the internal toxin representing a toxin-antitoxin system. Therefore, the model now has an efficiency rate of the antitoxin and a stable amount per cell. We simulate the effect of the toxin-antitoxin system variation within a <span class="math inline">\(1000\)</span>-cell population; we initialize each one with similar initial conditions, except for the amount of internal antitoxin, defined as <span class="math inline">\(T_{anti} \sim N(\mu, \sigma)\)</span>. Considering that <span class="math inline">\(T_{anti}\)</span> values <span class="math inline">\(&lt; 0\)</span> are equal to <span class="math inline">\(0\)</span>. For each experiment, <span class="math inline">\(\mu = 25\)</span>, while it was evaluated in the range <span class="math inline">\([0-20]\)</span>. For the generation of pseudo-random numbers and to ensure the results’ reproducibility, the number <span class="math inline">\(42\)</span> was considered seed.</p>
-<p>As shown in Figure <a href="#fig-antitoxin-experiment">Figure&nbsp;<span>3.4</span></a>), when we compare heterogeneous populations in their toxin-antitoxin system, we can achieve different population dynamics, that is, changes in the final proportions of cell states; normal, stressed, and dead. This difference is because the cell sometimes has more or less antitoxin to handle the incoming stress situation.</p>
+<p>To include this observation in the model, we include a negative term for the internal toxin representing a toxin-antitoxin system. Therefore, the model now has an efficiency rate of the antitoxin and a stable amount per cell. We simulate the effect of the toxin-antitoxin system variation within a <span class="math inline">\(1000\)</span>-cell population; we initialize each one with similar initial conditions, except for the amount of internal antitoxin, defined as <span class="math inline">\(T_{anti} \sim N(\mu, \sigma)\)</span>. Considering that <span class="math inline">\(T_{anti}\)</span> values <span class="math inline">\(&lt; 0\)</span> are equal to <span class="math inline">\(0\)</span>. For each experiment, <span class="math inline">\(\mu = 25\)</span>, while it was evaluated in the range <span class="math inline">\([0-20]\)</span>. For the generation of pseudo-random numbers and to ensure the results’ reproducibility, the number <span class="math inline">\(42\)</span> was considered seed.</p>
+<p>As shown in <a href="#fig-antitoxin-experiment">Figure&nbsp;<span>3.4</span></a>), when we compare heterogeneous populations in their toxin-antitoxin system, we can achieve different population dynamics, that is, changes in the final proportions of cell states; normal, stressed, and dead. This difference is because the cell sometimes has more or less antitoxin to handle the incoming stress.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-antitoxin-experiment" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="03-model-analysis_files/figure-html/fig-antitoxin-experiment-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Variability in the toxin-antitoxin system produces different proportions of cell states. Histograms represent the distribution of antitoxin quantity, while the curves represent the population’s fraction over time. The cell will start to filament after reaching a certain internal toxin threshold, T_{sos}. Therefore, the expected global effect on the population’s response times based on the amount of antitoxin is asynchronous, while at the local level, it is synchronous. Consequently, different proportions are presented in the cellular states since some cells will activate the filamentation system before and others later."><img src="03-model-analysis_files/figure-html/fig-antitoxin-experiment-1.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p><a href="03-model-analysis_files/figure-html/fig-antitoxin-experiment-1.svg" class="lightbox" title="Variability in the toxin-antitoxin system produces different proportions of cell states. Histograms represent the distribution of antitoxin quantity, while the curves represent the population’s fraction over time. The cell will start to filament after reaching a certain internal toxin threshold, T_{sos}. Therefore, the expected global effect on the population’s response times based on the amount of antitoxin is asynchronous, while at the local level, it is synchronous. Consequently, different proportions are presented in the cellular states since some cells will activate the filamentation system before and others later." data-gallery="quarto-lightbox-gallery-4"><img src="03-model-analysis_files/figure-html/fig-antitoxin-experiment-1.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;3.4: <strong>Variability in the toxin-antitoxin system produces different proportions of cell states.</strong> Histograms represent the distribution of antitoxin quantity, while the curves represent the population’s fraction over time. The cell will start to filament after reaching a certain internal toxin threshold, <span class="math inline">\(T_{sos}\)</span>. Therefore, the expected global effect on the population’s response times based on the amount of antitoxin is asynchronous, while at the local level, it is synchronous. Consequently, different proportions are presented in the cellular states since some cells will activate the filamentation system before and others later.</figcaption><p></p>
 </figure>
 </div>
@@ -370,7 +370,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="fig-survival-probability" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="03-model-analysis_files/figure-html/fig-survival-probability-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Effect of variability on the toxin-antitoxin system. The color of the heatmap is representative of the fraction of living cells at exposure time. The white vertical line represents the death time of the homogeneous population (\tau_{kill}). At t < \tau_{kill}, it is shown that the fraction of survivors decreases as the variability in the population increases. When t = \tau_{kill}, the variability does not affect the fraction of survivors, but it represents a percentage improvement for the homogeneous population. Finally, when t > \tau_{kill}, the heterogeneity of the population favors survival."><img src="03-model-analysis_files/figure-html/fig-survival-probability-1.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p><a href="03-model-analysis_files/figure-html/fig-survival-probability-1.svg" class="lightbox" title="Effect of variability on the toxin-antitoxin system. The color of the heatmap is representative of the fraction of living cells at exposure time. The white vertical line represents the death time of the homogeneous population (\tau_{kill}). At t < \tau_{kill}, it is shown that the fraction of survivors decreases as the variability in the population increases. When t = \tau_{kill}, the variability does not affect the fraction of survivors, but it represents a percentage improvement for the homogeneous population. Finally, when t > \tau_{kill}, the heterogeneity of the population favors survival." data-gallery="quarto-lightbox-gallery-5"><img src="03-model-analysis_files/figure-html/fig-survival-probability-1.svg" class="img-fluid figure-img" style="width:100.0%"></a></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;3.5: <strong>Effect of variability on the toxin-antitoxin system.</strong> The color of the heatmap is representative of the fraction of living cells at exposure time. The white vertical line represents the death time of the homogeneous population (<span class="math inline">\(\tau_{kill}\)</span>). At <span class="math inline">\(t &lt; \tau_{kill}\)</span>, it is shown that the fraction of survivors decreases as the variability in the population increases. When <span class="math inline">\(t = \tau_{kill}\)</span>, the variability does not affect the fraction of survivors, but it represents a percentage improvement for the homogeneous population. Finally, when <span class="math inline">\(t &gt; \tau_{kill}\)</span>, the heterogeneity of the population favors survival.</figcaption><p></p>
 </figure>
 </div>
@@ -380,9 +380,9 @@ div.csl-indent {
 </section>
 <section id="benefits-and-limitations-of-the-model" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="benefits-and-limitations-of-the-model"><span class="header-section-number">3.4</span> Benefits and limitations of the model</h2>
-<p>Today, there have been advancements in the number of techniques that have allowed it to extend quantitative analyses to individual cells’ dynamic observations <span class="citation" data-cites="camposConstantSizeExtension2014 meldrumFacultyOpinionsRecommendation2005 sliusarenkoHighthroughputSubpixelPrecision2011 taheri-araghiCellSizeControlHomeostasis2017 ursellRapidPreciseQuantification2017">(<a href="99-references.html#ref-camposConstantSizeExtension2014" role="doc-biblioref">Campos et al. 2014</a>; <a href="99-references.html#ref-meldrumFacultyOpinionsRecommendation2005" role="doc-biblioref">Meldrum 2005</a>; <a href="99-references.html#ref-sliusarenkoHighthroughputSubpixelPrecision2011" role="doc-biblioref">Sliusarenko et al. 2011</a>; <a href="99-references.html#ref-taheri-araghiCellSizeControlHomeostasis2017" role="doc-biblioref">Taheri-Araghi et al. 2017</a>; <a href="99-references.html#ref-ursellRapidPreciseQuantification2017" role="doc-biblioref">Ursell et al. 2017</a>)</span>. Therefore, studying their cellular behavior every day from medium to medium can be somewhat reproducible, facilitating the association of complex biological functions in simple mathematical equations <span class="citation" data-cites="neidhardtBacterialGrowthConstant1999">(<a href="99-references.html#ref-neidhardtBacterialGrowthConstant1999" role="doc-biblioref">Neidhardt 1999</a>)</span>.</p>
-<p>Here, we proposed a mathematical model showing that filamentation could serve as a population’s resilience mechanism to stress conditions. Finding that filamentation’s net effect generates an additional window of time for the cell to survive, decreasing the toxin’s intracellular concentration. However, we also found that a side effect of filamentation is to increase the cell’s minimum inhibitory concentration. On the other hand, when we introduce variability in the amount of antitoxin in a cell population, we found that heterogeneity can be a double-edged sword, sometimes detrimental and sometimes beneficial, depending on the time of exposure to the toxic agent.</p>
-<p>Due to the above, despite being simple, the model could have the ability to recapitulate the behavior seen in nature from variables that we can calculate easily with single-cell measurements. However, in other situations, it could be helpful to consider the addition of variables such as cell wall production and peptidoglycans’ accumulation, among others. Notwithstanding the lack of parameters that are a little closer to reality, confirming that the model can work under experimental conditions would represent an achievement due to its explanatory simplicity, starting, in this way, the path of the study of filamentation oriented to the ecology of stress.</p>
+<p>Today, there have been advancements in the number of techniques that have allowed it to extend quantitative analyses to individual cells’ dynamic observations <span class="citation" data-cites="camposConstantSizeExtension2014 meldrumFacultyOpinionsRecommendation2005 sliusarenkoHighthroughputSubpixelPrecision2011 taheri-araghiCellSizeControlHomeostasis2017 ursellRapidPreciseQuantification2017">(<a href="99-references.html#ref-camposConstantSizeExtension2014" role="doc-biblioref">Campos et al. 2014</a>; <a href="99-references.html#ref-meldrumFacultyOpinionsRecommendation2005" role="doc-biblioref">Meldrum 2005</a>; <a href="99-references.html#ref-sliusarenkoHighthroughputSubpixelPrecision2011" role="doc-biblioref">Sliusarenko et al. 2011</a>; <a href="99-references.html#ref-taheri-araghiCellSizeControlHomeostasis2017" role="doc-biblioref">Taheri-Araghi et al. 2017</a>; <a href="99-references.html#ref-ursellRapidPreciseQuantification2017" role="doc-biblioref">Ursell et al. 2017</a>)</span>. Therefore, studying their cellular behavior daily from medium to medium can be somewhat reproducible, facilitating the association of complex biological functions in simple mathematical equations <span class="citation" data-cites="neidhardtBacterialGrowthConstant1999">(<a href="99-references.html#ref-neidhardtBacterialGrowthConstant1999" role="doc-biblioref">Neidhardt 1999</a>)</span>.</p>
+<p>Here, we proposed a mathematical model showing that filamentation could be a population’s resilience mechanism to stress conditions. Finding that filamentation’s net effect generates an additional window of time for the cell to survive, decreasing the toxin’s intracellular concentration. However, we also found that filamentation’s side effect increases the cell’s minimum inhibitory concentration. On the other hand, when we introduce variability in the amount of antitoxin in a cell population, we found that heterogeneity can be a double-edged sword, sometimes detrimental and sometimes beneficial, depending on the time of exposure to the toxic agent.</p>
+<p>Notwithstanding the lack of parameters that are a little closer to reality, confirming that the model can work under experimental conditions would represent an achievement due to its explanatory simplicity. Due to the above, despite being simple, the model could be able to recapitulate the behavior seen in nature from variables that we can easily calculate with single-cell measurements. However, in other situations, it could be helpful to consider adding variables such as cell wall production and peptidoglycans’ accumulation, among others. Starting in this way, the study of filamentation as a mechanism oriented to the ecology of stress.</p>
 
 
 <!-- -->
@@ -793,7 +793,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Cell dimensions relationship.**</span></span>
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co">#|   We evaluated the resulting geometric properties on a grid of side lengths</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="co">#|   and radii with a pill-shaped cell. We can see that by maintaining a</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="co">#|   and radii with a pill-shaped cell. By maintaining a</span></span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="co">#|   constant radius (typical case in bacteria such as *E. coli*) and</span></span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="co">#|   increasing the side length, the surface area / volume relationship</span></span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="co">#|   ($SA/V$) tends to decline since the $V$ will grow at a higher rate</span></span>
@@ -824,9 +824,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>of the toxin in the cell, respectively. $T_{ext}(t)$ is a function that</span>
 <span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>returns the amount of toxin in the cell medium. $T_{anti}$ and $\alpha$</span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>symbolize the amount of antitoxin and its efficiency rate, respectively.</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>$\beta$ as the rate of filamentation. $L_{max}$ is the maximum size that</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>the cell can reach when filamentation is on. $T_{sos}$ and $T_{kill}$</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>are thresholds for filamentation and death, respectively. Finally,</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>$\beta$ as the rate of filamentation. $L_{max}$ is the maximum size the</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>cell can reach when filamentation is on. $T_{sos}$ and $T_{kill}$ are</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>thresholds for filamentation and death, respectively. Finally,</span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>$\tau_{delay}$ is the amount of time required to activate filamentation</span>
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>after reaching the $T_{sos}$ threshold.</span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
@@ -836,361 +836,368 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>When growing rod-shaped bacterial cells under constant conditions, the</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>distribution of lengths and radii is narrow</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@schaechterGrowthCellNuclear1962</span><span class="co">]</span>. However, when growing under stress</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>conditions, some cells produce filaments</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@schaechterDependencyMediumTemperature1958</span><span class="co">]</span>. This phenomenon may depend</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>on the SOS response system <span class="co">[</span><span class="ot">@bosEmergenceAntibioticResistance2015</span><span class="co">]</span>,</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>which can repair DNA damage, giving the cell greater chances of</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>recovering and surviving under stress conditions. Besides, the SOS</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>response has been reported to have precise temporal coordination in</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>individual bacteria <span class="co">[</span><span class="ot">@friedmanPreciseTemporalModulation2005</span><span class="co">]</span>. Among the</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>stress conditions that can trigger the SOS response is exposure to</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>beta-lactam antibiotics <span class="co">[</span><span class="ot">@millerSOSResponseInduction2004</span><span class="co">]</span>.</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>In general, filamentation has been studied as an unavoidable consequence</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>of stress. However, we considered filamentation an active process that</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>produces the first line of defense against toxic agents. Therefore, a</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>differential equation model was proposed that assesses the change in the</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>amount of internal toxin as a function of cell length. At the core of</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>this model, we include the intrinsic relationship between the surface</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>area and the capsule volume since it is vital in determining cell size</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@harrisRelativeRatesSurface2016</span><span class="co">]</span>.</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>In @fig-filamentation-model-ramp-signal, cells grow in a ramp-shaped</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>external toxin signal without considering a toxin-antitoxin system.As</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>time progresses, the toxin in the external environment increases, so the</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>cell raises its internal toxin levels. At approximately time $22$, any</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>cell reaches $T_{sos}$. The control cell (unable to filament) and the</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>average cell (capable of filamenting) reach the death threshold,</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>$T_{kill}$, at times $31$ and $93$ (hatched and solid black lines),</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>respectively. Therefore, under this example, the cell has increased its</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>life span three times more than in control by growing as a filament</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>(green shaded area versus orange shaded area). In turn,</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>@fig-filamentation-model-ramp-signal also shows stochastic simulations</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>of the system in the intake of internal toxins. Considering that cell</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>growth and death processes are inherently stochastic, stochastic</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>simulations would be a better approximation. However, from now on, we</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>will continue with the study of the deterministic model.</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-filamentation-model-ramp-signal</span></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Effect of filamentation on intracellular toxin concentration.</span></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Effect of filamentation on intracellular toxin concentration.**</span></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="co">#|   In the presence of an extracellular toxic agent, the intracellular</span></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="co">#|   concentration of the toxin ($T_{int}$) increases until reaching a damage</span></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="co">#|   threshold that triggers filamentation ($T_{sos}$, blue point), increasing </span></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">#|   cell length ($L$). When filamentation is on, the cell decreases $T_{int}$</span></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="co">#|   due to the intrinsic relationship between surface area and cell volume.</span></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">#|   When the cell reaches its maximum length, it eventually dies if the</span></span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="co">#|   stressful stimulus is not removed ($T_{kill}$, red dot). The hatched line</span></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="co">#|   represents a cell that can not grow as filament. The orange shaded area</span></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="co">#|   is the time between stress and the non-filament cell's death, while the</span></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="co">#|   green shaded area represents the temporal gain for doing so. The blue</span></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="co">#|   background lines represent stochastic simulations of the same system.</span></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(knitr<span class="sc">::</span><span class="fu">is_html_output</span>()){</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/filamentation_model_ramp_signal.svg"</span>)</span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>  linguisticsdown<span class="sc">::</span><span class="fu">include_graphics2</span>(<span class="st">"https://github.com/jvelezmagic/CellFilamentation/raw/main/plots/filamentation_model_ramp_signal.pdf"</span>) </span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="fu">### Filamentation increases the minimum inhibitory concentration</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@schaechterGrowthCellNuclear1962</span><span class="co">]</span>. However, some cells produce</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>filaments when growing under stress conditions</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@schaechterDependencyMediumTemperature1958</span><span class="co">]</span>. Among the stress</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>conditions that can trigger the SOS response is exposure to beta-lactam</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>antibiotics <span class="co">[</span><span class="ot">@millerSOSResponseInduction2004</span><span class="co">]</span>. This phenomenon may</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>depend on the SOS response system</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@bosEmergenceAntibioticResistance2015</span><span class="co">]</span>, which can repair DNA damage,</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>giving the cell greater chances of recovering and surviving under stress</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>conditions. Besides, the SOS response has been reported to have precise</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>temporal coordination in individual bacteria</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@friedmanPreciseTemporalModulation2005</span><span class="co">]</span>.</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>In general, filamentation has been studied as an unavoidable consequence</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>of stress. However, we considered filamentation an active process that</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>produces the first line of defense against toxic agents. Therefore, a</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>differential equation model was proposed that assesses the change in the</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>amount of internal toxin as a function of cell length. At the core of</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>this model, we include the intrinsic relationship between the surface</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>area and the capsule volume since it is vital in determining cell size</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@harrisRelativeRatesSurface2016</span><span class="co">]</span>.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>In @fig-filamentation-model-ramp-signal, cells grow in a ramp-shaped</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>external toxin signal without considering a toxin-antitoxin system. As</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>time progresses, the toxin in the external environment increases, so the</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>cell raises its internal toxin levels. At approximately time $22$, any</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>cell reaches $T_{sos}$. The control cell (unable to filament) and the</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>average cell (capable of filamenting) reach the death threshold,</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>$T_{kill}$, at times $31$ and $93$ (hatched and solid black lines),</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>respectively. Therefore, under this example, the cell has increased its</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>life span three times more than the control by growing as a filament</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>(green shaded area versus orange shaded area). In turn,</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>@fig-filamentation-model-ramp-signal also shows stochastic simulations</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>of the system in the intake of internal toxins. Since cell growth and</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>death processes are inherently stochastic, stochastic simulations would</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>be a better approximation. However, from now on, we will continue</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>studying the deterministic model.</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-filamentation-model-ramp-signal</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Effect of filamentation on intracellular toxin concentration.</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Effect of filamentation on intracellular toxin concentration.**</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="co">#|   In the presence of an extracellular toxic agent, the intracellular</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="co">#|   concentration of the toxin ($T_{int}$) increases until reaching a damage</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">#|   threshold that triggers filamentation ($T_{sos}$, blue point), increasing </span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="co">#|   cell length ($L$). When filamentation is on, the cell decreases $T_{int}$</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">#|   due to the intrinsic relationship between surface area and cell volume.</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="co">#|   When the cell reaches its maximum length, it dies if the</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="co">#|   stressful stimulus is not removed ($T_{kill}$, red dot). The hatched line</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="co">#|   represents a cell that can not grow as a filament.</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="co">#|   The orange shaded area represents the time between stress and the</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="co">#|   non-filament cell’s death, while the green shaded area represents the</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="co">#|   temporal gain. The blue background lines represent stochastic simulations</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="co">#|   of the same system.</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(knitr<span class="sc">::</span><span class="fu">is_html_output</span>()){</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/filamentation_model_ramp_signal.svg"</span>)</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>  linguisticsdown<span class="sc">::</span><span class="fu">include_graphics2</span>(<span class="st">"https://github.com/jvelezmagic/CellFilamentation/raw/main/plots/filamentation_model_ramp_signal.pdf"</span>) </span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="in">```{r model-02-load-data}</span></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>base_url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/data/exp_raw/"</span></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>model_datasets <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>  <span class="st">"antitoxin_experiment.csv"</span>,</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>  <span class="st">"antitoxins_distributions.csv"</span>,</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>  <span class="st">"df_antitoxin_experiment.csv"</span>,</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>  <span class="st">"increase_resistance.csv"</span>,</span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>  <span class="st">"toxin_exposure_experiment.csv"</span></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(base_url, .) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_names</span>(</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> .,</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>    <span class="at">nm =</span> . <span class="sc">%&gt;%</span></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>      <span class="fu">path_file</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>      <span class="fu">path_ext_remove</span>()</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(read_csv, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(model_datasets)</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>In other to characterize the degree of resistance, dose-response</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>experiments determine the Minimum Inhibitory Concentration (MIC)</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@andrews2001; @andrewsDeterminationMinimumInhibitory2002</span><span class="co">]</span>. Bacteria are</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>capable of modifying their MIC through various mechanisms, for example,</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>mutations <span class="co">[</span><span class="ot">@lambertBacterialResistanceAntibiotics2005</span><span class="co">]</span>, impaired</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>membrane permeability <span class="co">[</span><span class="ot">@satoOuterMembranePermeability1991</span><span class="co">]</span>, flux pumps</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@webberImportanceEffluxPumps2003</span><span class="co">]</span>, toxin-inactivating enzymes</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@wrightBacterialResistanceAntibiotics2005</span><span class="co">]</span>, and plasticity phenotypic</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@justiceMorphologicalPlasticityBacterial2008</span><span class="co">]</span>. The latter is our</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>phenomenon of interest because it considers the change in shape and</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>size, allowing us to study it as a strategy to promote bacterial</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>survival.</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>We decided to analyze the MIC change caused by filamentation through</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>stable exposure experiments of different toxin amounts at other exposure</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>times. Computational simulations show that when comparing cells unable</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>to filament with those that can, there is an increase in the capacity to</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>tolerate more generous amounts of toxin, increasing their MIC (see</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>@fig-toxin-exposure-experiment). Therefore, it confers a gradual</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>increase in resistance beyond filamentation's role in improving the</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>cell's life span as the exposure time is longer.</span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-toxin-exposure-experiment</span></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Effect of filamentation on minimum inhibitory concentration (MIC).</span></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Effect of filamentation on minimum inhibitory concentration (MIC).** By exposing a cell to different toxin concentrations with stable signals, the cell achieves a set MIC for conditions without or with filamentation (separation between stressed and dead state) for each exposure time, without representing a change for the normal state cells' points (blue zone). Thus, the green line represents a gradual MIC increase when comparing each MIC between conditions for each exposure time.</span></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>p_1 <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>toxin_exposure_experiment <span class="sc">%&gt;%</span></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> <span class="fu">factor</span>(state, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Normal"</span>, <span class="st">"Stressed"</span>, <span class="st">"Dead"</span>)),</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>    <span class="at">experiment =</span> <span class="fu">factor</span>(experiment, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Normal"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Without filamentation"</span>, <span class="st">"With filamentation"</span>))</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> exposure_time, <span class="at">y =</span> amount_toxin, <span class="at">fill =</span> state)) <span class="sc">+</span></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> experiment) <span class="sc">+</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_hue</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">h.start =</span> <span class="dv">90</span>) <span class="sc">+</span></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.spacing.x =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"lines"</span>),</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.tag.position =</span> <span class="st">"topright"</span></span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">""</span>,</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Amount toxin"</span>,</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Cell status"</span>,</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>    <span class="at">tag =</span> <span class="st">"A"</span></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>      <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#43b284"</span>, <span class="st">"#fab255"</span>, <span class="st">"#dd5129"</span>)</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>p_2 <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>increase_resistance <span class="sc">%&gt;%</span> </span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> exposure_time, <span class="at">y =</span> tolerance)) <span class="sc">+</span></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Exposure time"</span>,</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Increased</span><span class="sc">\n</span><span class="st">resistance"</span>,</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>    <span class="at">tag =</span> <span class="st">"B"</span></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.tag.position =</span> <span class="st">"topright"</span></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>p_toxin_exposure_experiment <span class="ot">&lt;-</span> (p_1 <span class="sc">/</span> p_2) <span class="sc">+</span></span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_layout</span>(<span class="at">heights =</span> <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">4</span>))</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>p_toxin_exposure_experiment</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="fu">### Heterogeneity in the toxin-antitoxin system represents a double-edged sword in survival probability</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="fu">### Filamentation increases the minimum inhibitory concentration</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="in">```{r model-02-load-data}</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: hide</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="co">#| </span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>base_url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/data/exp_raw/"</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>model_datasets <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>  <span class="st">"antitoxin_experiment.csv"</span>,</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>  <span class="st">"antitoxins_distributions.csv"</span>,</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>  <span class="st">"df_antitoxin_experiment.csv"</span>,</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>  <span class="st">"increase_resistance.csv"</span>,</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>  <span class="st">"toxin_exposure_experiment.csv"</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(base_url, .) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_names</span>(</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> .,</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>    <span class="at">nm =</span> . <span class="sc">%&gt;%</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>      <span class="fu">path_file</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>      <span class="fu">path_ext_remove</span>()</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(read_csv, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(model_datasets)</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>In other to characterize the degree of resistance, dose-response</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>experiments determine the Minimum Inhibitory Concentration (MIC)</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@andrews2001; @andrewsDeterminationMinimumInhibitory2002</span><span class="co">]</span>. Bacteria are</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>capable of modifying their MIC through various mechanisms, for example,</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>mutations <span class="co">[</span><span class="ot">@lambertBacterialResistanceAntibiotics2005</span><span class="co">]</span>, impaired</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>membrane permeability <span class="co">[</span><span class="ot">@satoOuterMembranePermeability1991</span><span class="co">]</span>, flux pumps</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@webberImportanceEffluxPumps2003</span><span class="co">]</span>, toxin-inactivating enzymes</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@wrightBacterialResistanceAntibiotics2005</span><span class="co">]</span>, and plasticity phenotypic</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@justiceMorphologicalPlasticityBacterial2008</span><span class="co">]</span>. The latter is our</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>phenomenon of interest because it considers the change in shape and</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>size, allowing us to study it as a strategy to promote bacterial</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>survival.</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>We analyzed the MIC change caused by filamentation through stable</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>exposure experiments of different toxin amounts at other exposure times.</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>Computational simulations show that when comparing cells unable to</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>filament with those that can, there is an increase in the capacity to</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>tolerate more generous amounts of toxin, increasing their MIC (see</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>@fig-toxin-exposure-experiment). Therefore, it confers a gradual</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>increase in resistance beyond filamentation's role in improving the</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>cell's life span as the exposure time is longer.</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-toxin-exposure-experiment</span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Effect of filamentation on minimum inhibitory concentration (MIC).</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Effect of filamentation on minimum inhibitory concentration (MIC).**</span></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="co">#|   By exposing a cell to different toxin concentrations with stable signals,</span></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="co">#|   the cell achieves a set MIC for conditions without or with filamentation</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="co">#|   (separation between stressed and dead state) for each exposure time,</span></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="co">#|   without representing a change for the normal state cells' points (blue zone). Thus,</span></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="co">#|   the green line represents a gradual MIC increase when comparing each MIC</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="co">#|   between conditions for each exposure time.</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>p_1 <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>toxin_exposure_experiment <span class="sc">%&gt;%</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> <span class="fu">factor</span>(state, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Normal"</span>, <span class="st">"Stressed"</span>, <span class="st">"Dead"</span>)),</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>    <span class="at">experiment =</span> <span class="fu">factor</span>(experiment, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Normal"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Without filamentation"</span>, <span class="st">"With filamentation"</span>))</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> exposure_time, <span class="at">y =</span> amount_toxin, <span class="at">fill =</span> state)) <span class="sc">+</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> experiment) <span class="sc">+</span></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_hue</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">h.start =</span> <span class="dv">90</span>) <span class="sc">+</span></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.spacing.x =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"lines"</span>),</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.tag.position =</span> <span class="st">"topright"</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">""</span>,</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Amount toxin"</span>,</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Cell status"</span>,</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>    <span class="at">tag =</span> <span class="st">"A"</span></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>      <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#43b284"</span>, <span class="st">"#fab255"</span>, <span class="st">"#dd5129"</span>)</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>p_2 <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>increase_resistance <span class="sc">%&gt;%</span> </span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> exposure_time, <span class="at">y =</span> tolerance)) <span class="sc">+</span></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Exposure time"</span>,</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Increased</span><span class="sc">\n</span><span class="st">resistance"</span>,</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>    <span class="at">tag =</span> <span class="st">"B"</span></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.tag.position =</span> <span class="st">"topright"</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>One of the SOS response system properties is that it presents</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>synchronous activation times within homogeneous populations</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@friedmanPreciseTemporalModulation2005</span><span class="co">]</span>. It has constant gene</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>expression rates that help it cope with stress; however, it is possible</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>to introduce variability by considering having multicopy resistance</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>plasmids <span class="co">[</span><span class="ot">@million-weaverMechanismsPlasmidSegregation2014</span><span class="co">]</span>. Therefore,</span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>the response times would have an asynchronous behavior at the global</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>level but synchronous at the local level.</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>To include this observation into the model, we include a negative term</span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>to the internal toxin representing a toxin-antitoxin system. Therefore,</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>the model now has an efficiency rate of the antitoxin and a stable</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>amount per cell. We simulate the effect of the toxin-antitoxin system</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>variation within a $1000$-cell population; we initialize each one with</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>similar initial conditions, except for the amount of internal antitoxin,</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>defined as $T_{anti} \sim N(\mu, \sigma)$. Considering that $T_{anti}$</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>values $&lt; 0$ are equal to $0$. For each experiment, $\mu = 25$, while it</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>was evaluated in the range $<span class="co">[</span><span class="ot">0-20</span><span class="co">]</span>$. For the generation of pseudo-random</span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>numbers and to ensure the results' reproducibility, the number $42$ was</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>considered seed.</span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>As shown in Figure @fig-antitoxin-experiment), when we compare</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>heterogeneous populations in their toxin-antitoxin system, we can</span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>achieve different population dynamics, that is, changes in the final</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>proportions of cell states; normal, stressed, and dead. This difference</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>is because the cell sometimes has more or less antitoxin to handle the</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>incoming stress situation.</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-antitoxin-experiment</span></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Variability in the toxin-antitoxin system produces different proportions of cell states.</span></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Variability in the toxin-antitoxin system produces different proportions of cell states.** </span></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Histograms represent the distribution of antitoxin quantity, while the</span></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="co">#|   curves represent the population's fraction over time. The cell will start</span></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="co">#|   to filament after reaching a certain internal toxin threshold, $T_{sos}$.</span></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Therefore, the expected global effect on the population's response times</span></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="co">#|   based on the amount of antitoxin is asynchronous, while at the local</span></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="co">#|   level, it is synchronous. Consequently, different proportions are</span></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="co">#|   presented in the cellular states since some cells will activate the</span></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="co">#|   filamentation system before and others later.</span></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>antitoxin_dist_p <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>antitoxins_distributions <span class="sc">%&gt;%</span> </span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> antitoxin, <span class="at">fill =</span> ..x..)) <span class="sc">+</span></span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">70</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> sigma) <span class="sc">+</span></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"inferno"</span>, <span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Amount of antitoxin"</span>,</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of cells"</span></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.spacing.x =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"lines"</span>),</span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.tag.position =</span> <span class="st">"topright"</span>,</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>antitoxin_lines_p <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>df_antitoxin_experiment <span class="sc">%&gt;%</span> </span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>    <span class="at">variable =</span> <span class="fu">factor</span>(variable, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Normal"</span>, <span class="st">"Stressed"</span>, <span class="st">"Dead"</span>)),</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> value, <span class="at">fill =</span> variable)) <span class="sc">+</span></span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>() <span class="sc">+</span></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> sigma) <span class="sc">+</span></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_hue</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">h.start =</span> <span class="dv">90</span>) <span class="sc">+</span></span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Exposure time"</span>,</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Fraction population"</span>,</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Cell status"</span></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>      <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#43b284"</span>, <span class="st">"#fab255"</span>, <span class="st">"#dd5129"</span>)</span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.spacing.x =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"lines"</span>),</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.background =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.tag.position =</span> <span class="st">"topright"</span></span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>p_variability_toxin_antitoxin <span class="ot">&lt;-</span> (antitoxin_dist_p <span class="sc">/</span> antitoxin_lines_p) <span class="sc">+</span></span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_layout</span>(<span class="at">guides =</span> <span class="st">"collect"</span>)</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>p_variability_toxin_antitoxin</span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>Considering that the toxin-antitoxin system's variability can modify the</span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>proportions of final cell states, a question arose about heterogeneity</span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>levels' global behavior. To answer this question, we evaluate the</span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>probability of survival for each population, defined by its distribution</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>of antitoxin levels. In this way, we characterized the population</span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>survival probability function into three essential points according to</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>its effect: negative, invariant, and positive (see</span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>@fig-survival-probability). Furthermore, these points are relative to</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>the homogeneous population's death time in question ($\tau_{kill}$):</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>when $t &lt; \tau_{kill}$ will represent a detrimental effect on survival,</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>$t = \tau_{kill}$ will be independent of variability, and</span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>$t &gt; \tau_{kill}$ will be a beneficial point for survival. Therefore, we</span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>concluded that the effect of heterogeneity in a toxin-antitoxin system</span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>represents a double-edged sword.</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-survival-probability</span></span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Effect of variability on the toxin-antitoxin system.</span></span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Effect of variability on the toxin-antitoxin system.**</span></span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="co">#|   The color of the heatmap is representative of the fraction of living cells</span></span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a><span class="co">#|   at exposure time. The white vertical line represents the death time of</span></span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="co">#|   the homogeneous population ($\tau_{kill}$). At $t &lt; \tau_{kill}$, it is</span></span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a><span class="co">#|   shown that the fraction of survivors decreases as the variability in the</span></span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="co">#|   population increases. When $t = \tau_{kill}$, the variability does not</span></span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="co">#|   affect the fraction of survivors, but it represents a percentage</span></span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="co">#|   improvement for the homogeneous population. Finally, when</span></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="co">#|   $t &gt; \tau_{kill}$, the heterogeneity of the population favors survival.</span></span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>survival_probability <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>antitoxin_experiment <span class="sc">%&gt;%</span> </span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> value <span class="sc">/</span> <span class="fu">max</span>(value)</span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(variable <span class="sc">==</span> <span class="st">"Dead"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="dv">1</span> <span class="sc">-</span> value) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>  <span class="fu">identity</span>()</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>population_t_kill <span class="ot">=</span> survival_probability <span class="sc">%&gt;%</span> </span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sigma <span class="sc">==</span> <span class="dv">0</span>, value <span class="sc">==</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(time) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>  <span class="fu">first</span>()</span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>p_survival_probability <span class="ot">&lt;-</span> survival_probability <span class="sc">%&gt;%</span> </span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> sigma, <span class="at">fill =</span> value)) <span class="sc">+</span></span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_raster</span>() <span class="sc">+</span></span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> population_t_kill, <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"inferno"</span>, <span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Exposure time"</span>,</span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Population variability"</span>,</span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Survival probability"</span></span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>p_survival_probability</span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="fu">## Benefits and limitations of the model</span></span>
-<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>Today, there have been advancements in the number of techniques that</span>
-<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>have allowed it to extend quantitative analyses to individual cells'</span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>dynamic observations [@camposConstantSizeExtension2014;</span>
-<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>@meldrumFacultyOpinionsRecommendation2005;</span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>@sliusarenkoHighthroughputSubpixelPrecision2011;</span>
-<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>@taheri-araghiCellSizeControlHomeostasis2017;</span>
-<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>@ursellRapidPreciseQuantification2017]. Therefore, studying their</span>
-<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>cellular behavior every day from medium to medium can be somewhat</span>
-<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>reproducible, facilitating the association of complex biological</span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>functions in simple mathematical equations</span>
-<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@neidhardtBacterialGrowthConstant1999</span><span class="co">]</span>.</span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>Here, we proposed a mathematical model showing that filamentation could</span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>serve as a population's resilience mechanism to stress conditions.</span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>Finding that filamentation's net effect generates an additional window</span>
-<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>of time for the cell to survive, decreasing the toxin's intracellular</span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>concentration. However, we also found that a side effect of</span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>filamentation is to increase the cell's minimum inhibitory</span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>concentration. On the other hand, when we introduce variability in the</span>
-<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>amount of antitoxin in a cell population, we found that heterogeneity</span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>can be a double-edged sword, sometimes detrimental and sometimes</span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>beneficial, depending on the time of exposure to the toxic agent.</span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>Due to the above, despite being simple, the model could have the ability</span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>to recapitulate the behavior seen in nature from variables that we can</span>
-<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a>calculate easily with single-cell measurements. However, in other</span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>situations, it could be helpful to consider the addition of variables</span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>such as cell wall production and peptidoglycans' accumulation, among</span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>others. Notwithstanding the lack of parameters that are a little closer</span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>to reality, confirming that the model can work under experimental</span>
-<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>conditions would represent an achievement due to its explanatory</span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>simplicity, starting, in this way, the path of the study of</span>
-<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>filamentation oriented to the ecology of stress.</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>p_toxin_exposure_experiment <span class="ot">&lt;-</span> (p_1 <span class="sc">/</span> p_2) <span class="sc">+</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_layout</span>(<span class="at">heights =</span> <span class="fu">c</span>(<span class="dv">8</span>,<span class="dv">4</span>))</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>p_toxin_exposure_experiment</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="fu">### Heterogeneity in the toxin-antitoxin system represents a double-edged sword in survival probability</span></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>One of the SOS response system properties is that it presents</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>synchronous activation times within homogeneous populations</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@friedmanPreciseTemporalModulation2005</span><span class="co">]</span>. It has constant gene</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>expression rates that help it cope with stress; however, it is possible</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>to introduce variability by considering having multicopy resistance</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>plasmids <span class="co">[</span><span class="ot">@million-weaverMechanismsPlasmidSegregation2014</span><span class="co">]</span>. Therefore,</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>the response times would have an asynchronous behavior at the global</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>level but synchronous at the local level.</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>To include this observation in the model, we include a negative term for</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>the internal toxin representing a toxin-antitoxin system. Therefore, the</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>model now has an efficiency rate of the antitoxin and a stable amount</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>per cell. We simulate the effect of the toxin-antitoxin system variation</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>within a $1000$-cell population; we initialize each one with similar</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>initial conditions, except for the amount of internal antitoxin, defined</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>as $T_{anti} \sim N(\mu, \sigma)$. Considering that $T_{anti}$ values</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>$&lt; 0$ are equal to $0$. For each experiment, $\mu = 25$, while it was</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>evaluated in the range $<span class="co">[</span><span class="ot">0-20</span><span class="co">]</span>$. For the generation of pseudo-random</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>numbers and to ensure the results' reproducibility, the number $42$ was</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>considered seed.</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>As shown in @fig-antitoxin-experiment), when we compare heterogeneous</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>populations in their toxin-antitoxin system, we can achieve different</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>population dynamics, that is, changes in the final proportions of cell</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>states; normal, stressed, and dead. This difference is because the cell</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>sometimes has more or less antitoxin to handle the incoming stress.</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-antitoxin-experiment</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Variability in the toxin-antitoxin system produces different proportions of cell states.</span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Variability in the toxin-antitoxin system produces different proportions of cell states.** </span></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Histograms represent the distribution of antitoxin quantity, while the</span></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="co">#|   curves represent the population's fraction over time. The cell will start</span></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="co">#|   to filament after reaching a certain internal toxin threshold, $T_{sos}$.</span></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Therefore, the expected global effect on the population's response times</span></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="co">#|   based on the amount of antitoxin is asynchronous, while at the local</span></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="co">#|   level, it is synchronous. Consequently, different proportions are</span></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="co">#|   presented in the cellular states since some cells will activate the</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="co">#|   filamentation system before and others later.</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>antitoxin_dist_p <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>antitoxins_distributions <span class="sc">%&gt;%</span> </span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> antitoxin, <span class="at">fill =</span> ..x..)) <span class="sc">+</span></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">70</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> sigma) <span class="sc">+</span></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"inferno"</span>, <span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Amount of antitoxin"</span>,</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of cells"</span></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.spacing.x =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"lines"</span>),</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.tag.position =</span> <span class="st">"topright"</span>,</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>antitoxin_lines_p <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>df_antitoxin_experiment <span class="sc">%&gt;%</span> </span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>    <span class="at">variable =</span> <span class="fu">factor</span>(variable, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Normal"</span>, <span class="st">"Stressed"</span>, <span class="st">"Dead"</span>)),</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> value, <span class="at">fill =</span> variable)) <span class="sc">+</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>() <span class="sc">+</span></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> sigma) <span class="sc">+</span></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_hue</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">h.start =</span> <span class="dv">90</span>) <span class="sc">+</span></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Exposure time"</span>,</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Fraction population"</span>,</span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Cell status"</span></span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>      <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#43b284"</span>, <span class="st">"#fab255"</span>, <span class="st">"#dd5129"</span>)</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.spacing.x =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"lines"</span>),</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.tag.position =</span> <span class="st">"topright"</span></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>p_variability_toxin_antitoxin <span class="ot">&lt;-</span> (antitoxin_dist_p <span class="sc">/</span> antitoxin_lines_p) <span class="sc">+</span></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_layout</span>(<span class="at">guides =</span> <span class="st">"collect"</span>)</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>p_variability_toxin_antitoxin</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>Considering that the toxin-antitoxin system's variability can modify the</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>proportions of final cell states, a question arose about heterogeneity</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>levels' global behavior. To answer this question, we evaluate the</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>probability of survival for each population, defined by its distribution</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>of antitoxin levels. In this way, we characterized the population</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>survival probability function into three essential points according to</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>its effect: negative, invariant, and positive (see</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>@fig-survival-probability). Furthermore, these points are relative to</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>the homogeneous population's death time in question ($\tau_{kill}$):</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>when $t &lt; \tau_{kill}$ will represent a detrimental effect on survival,</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>$t = \tau_{kill}$ will be independent of variability, and</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>$t &gt; \tau_{kill}$ will be a beneficial point for survival. Therefore, we</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>concluded that the effect of heterogeneity in a toxin-antitoxin system</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>represents a double-edged sword.</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-survival-probability</span></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-scap: Effect of variability on the toxin-antitoxin system.</span></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: &gt;</span></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="co">#|   **Effect of variability on the toxin-antitoxin system.**</span></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="co">#|   The color of the heatmap is representative of the fraction of living cells</span></span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a><span class="co">#|   at exposure time. The white vertical line represents the death time of</span></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="co">#|   the homogeneous population ($\tau_{kill}$). At $t &lt; \tau_{kill}$, it is</span></span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="co">#|   shown that the fraction of survivors decreases as the variability in the</span></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a><span class="co">#|   population increases. When $t = \tau_{kill}$, the variability does not</span></span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a><span class="co">#|   affect the fraction of survivors, but it represents a percentage</span></span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="co">#|   improvement for the homogeneous population. Finally, when</span></span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="co">#|   $t &gt; \tau_{kill}$, the heterogeneity of the population favors survival.</span></span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>survival_probability <span class="ot">&lt;-</span> model_datasets<span class="sc">$</span>antitoxin_experiment <span class="sc">%&gt;%</span> </span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> value <span class="sc">/</span> <span class="fu">max</span>(value)</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(variable <span class="sc">==</span> <span class="st">"Dead"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">value =</span> <span class="dv">1</span> <span class="sc">-</span> value) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>  <span class="fu">identity</span>()</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>population_t_kill <span class="ot">=</span> survival_probability <span class="sc">%&gt;%</span> </span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sigma <span class="sc">==</span> <span class="dv">0</span>, value <span class="sc">==</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(time) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>  <span class="fu">first</span>()</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>p_survival_probability <span class="ot">&lt;-</span> survival_probability <span class="sc">%&gt;%</span> </span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> sigma, <span class="at">fill =</span> value)) <span class="sc">+</span></span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_raster</span>() <span class="sc">+</span></span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> population_t_kill, <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"inferno"</span>, <span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Exposure time"</span>,</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Population variability"</span>,</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Survival probability"</span></span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NULL</span></span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>p_survival_probability</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a><span class="fu">## Benefits and limitations of the model</span></span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>Today, there have been advancements in the number of techniques that</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>have allowed it to extend quantitative analyses to individual cells'</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>dynamic observations [@camposConstantSizeExtension2014;</span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a>@meldrumFacultyOpinionsRecommendation2005;</span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>@sliusarenkoHighthroughputSubpixelPrecision2011;</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>@taheri-araghiCellSizeControlHomeostasis2017;</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>@ursellRapidPreciseQuantification2017]. Therefore, studying their</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>cellular behavior daily from medium to medium can be somewhat</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>reproducible, facilitating the association of complex biological</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>functions in simple mathematical equations</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@neidhardtBacterialGrowthConstant1999</span><span class="co">]</span>.</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>Here, we proposed a mathematical model showing that filamentation could</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>be a population's resilience mechanism to stress conditions. Finding</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>that filamentation's net effect generates an additional window of time</span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>for the cell to survive, decreasing the toxin's intracellular</span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>concentration. However, we also found that filamentation's side effect</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>increases the cell's minimum inhibitory concentration. On the other</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a>hand, when we introduce variability in the amount of antitoxin in a cell</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>population, we found that heterogeneity can be a double-edged sword,</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>sometimes detrimental and sometimes beneficial, depending on the time of</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>exposure to the toxic agent.</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>Notwithstanding the lack of parameters that are a little closer to</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>reality, confirming that the model can work under experimental</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>conditions would represent an achievement due to its explanatory</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>simplicity. Due to the above, despite being simple, the model could be</span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>able to recapitulate the behavior seen in nature from variables that we</span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>can easily calculate with single-cell measurements. However, in other</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>situations, it could be helpful to consider adding variables such as</span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>cell wall production and peptidoglycans' accumulation, among others.</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>Starting in this way, the study of filamentation as a mechanism oriented</span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>to the ecology of stress.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
