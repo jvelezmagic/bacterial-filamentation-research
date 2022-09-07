@@ -93,8 +93,8 @@ variables. $T_{sa}$ and $T_{vol}$ represent the surface area and volume
 of the toxin in the cell, respectively. $T_{ext}(t)$ is a function that
 returns the amount of toxin in the cell medium. $T_{anti}$ and $\alpha$
 symbolize the amount of antitoxin and its efficiency rate, respectively.
-$\beta$ as the rate of filamentation. $L_{max}$ is the maximum size that
-the cell can reach when filamentation is on. $T_{sos}$ and $T_{kill}$
+$\beta$ as the rate of filamentation. $L_{max}$ is the maximum size
+\$the cell can reach when filamentation is on. $T_{sos}$ and $T_{kill}$
 are thresholds for filamentation and death, respectively. Finally,
 $\tau_{delay}$ is the amount of time required to activate filamentation
 after reaching the $T_{sos}$ threshold.
