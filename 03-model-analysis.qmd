@@ -32,10 +32,10 @@ By integrating information from the environment, cells can alter their
 cell cycle. For instance, some cells arrest the cell division in the
 presence of toxic agents but continue to grow. Previous studies have
 shown that this filamentation phenomenon provides a mechanism that
-enables cells to cope with stress, which leads to an increase in the
-probability of survival [@justiceMorphologicalPlasticityBacterial2008].
-For example, filamentation can be a process capable of subverting innate
-defenses during urinary tract infection, facilitating the transition of
+enables cells to cope with stress, which increases the probability of
+survival [@justiceMorphologicalPlasticityBacterial2008]. For example,
+filamentation can be a process capable of subverting innate defenses
+during urinary tract infection, facilitating the transition of
 additional rounds of intracellular bacterial community formation
 [@justiceFilamentationEscherichiaColi2006].
 
