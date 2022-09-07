@@ -105,16 +105,17 @@ after reaching the $T_{sos}$ threshold.
 
 When growing rod-shaped bacterial cells under constant conditions, the
 distribution of lengths and radii is narrow
-[@schaechterGrowthCellNuclear1962]. However, when growing under stress
-conditions, some cells produce filaments
-[@schaechterDependencyMediumTemperature1958]. This phenomenon may depend
-on the SOS response system [@bosEmergenceAntibioticResistance2015],
-which can repair DNA damage, giving the cell greater chances of
-recovering and surviving under stress conditions. Besides, the SOS
-response has been reported to have precise temporal coordination in
-individual bacteria [@friedmanPreciseTemporalModulation2005]. Among the
-stress conditions that can trigger the SOS response is exposure to
-beta-lactam antibiotics [@millerSOSResponseInduction2004].
+[@schaechterGrowthCellNuclear1962]. However, some cells produce
+filaments when growing under stress conditions
+[@schaechterDependencyMediumTemperature1958]. Among the stress
+conditions that can trigger the SOS response is exposure to beta-lactam
+antibiotics [@millerSOSResponseInduction2004]. This phenomenon may
+depend on the SOS response system
+[@bosEmergenceAntibioticResistance2015], which can repair DNA damage,
+giving the cell greater chances of recovering and surviving under stress
+conditions. Besides, the SOS response has been reported to have precise
+temporal coordination in individual bacteria
+[@friedmanPreciseTemporalModulation2005].
 
 In general, filamentation has been studied as an unavoidable consequence
 of stress. However, we considered filamentation an active process that
@@ -126,20 +127,20 @@ area and the capsule volume since it is vital in determining cell size
 [@harrisRelativeRatesSurface2016].
 
 In @fig-filamentation-model-ramp-signal, cells grow in a ramp-shaped
-external toxin signal without considering a toxin-antitoxin system.As
+external toxin signal without considering a toxin-antitoxin system. As
 time progresses, the toxin in the external environment increases, so the
 cell raises its internal toxin levels. At approximately time $22$, any
 cell reaches $T_{sos}$. The control cell (unable to filament) and the
 average cell (capable of filamenting) reach the death threshold,
 $T_{kill}$, at times $31$ and $93$ (hatched and solid black lines),
 respectively. Therefore, under this example, the cell has increased its
-life span three times more than in control by growing as a filament
+life span three times more than the control by growing as a filament
 (green shaded area versus orange shaded area). In turn,
 @fig-filamentation-model-ramp-signal also shows stochastic simulations
-of the system in the intake of internal toxins. Considering that cell
-growth and death processes are inherently stochastic, stochastic
-simulations would be a better approximation. However, from now on, we
-will continue with the study of the deterministic model.
+of the system in the intake of internal toxins. Since cell growth and
+death processes are inherently stochastic, stochastic simulations would
+be a better approximation. However, from now on, we will continue
+studying the deterministic model.
 
 ```{r}
 #| label: fig-filamentation-model-ramp-signal
@@ -151,12 +152,13 @@ will continue with the study of the deterministic model.
 #|   threshold that triggers filamentation ($T_{sos}$, blue point), increasing 
 #|   cell length ($L$). When filamentation is on, the cell decreases $T_{int}$
 #|   due to the intrinsic relationship between surface area and cell volume.
-#|   When the cell reaches its maximum length, it eventually dies if the
+#|   When the cell reaches its maximum length, it dies if the
 #|   stressful stimulus is not removed ($T_{kill}$, red dot). The hatched line
-#|   represents a cell that can not grow as filament. The orange shaded area
-#|   is the time between stress and the non-filament cell's death, while the
-#|   green shaded area represents the temporal gain for doing so. The blue
-#|   background lines represent stochastic simulations of the same system.
+#|   represents a cell that can not grow as a filament.
+#|   The orange shaded area represents the time between stress and the
+#|   non-filament cell’s death, while the green shaded area represents the
+#|   temporal gain. The blue background lines represent stochastic simulations
+#|   of the same system.
 #|
 if(knitr::is_html_output()){
   knitr::include_graphics("https://raw.githubusercontent.com/jvelezmagic/CellFilamentation/main/plots/filamentation_model_ramp_signal.svg")
