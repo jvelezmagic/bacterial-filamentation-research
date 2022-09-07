@@ -437,29 +437,29 @@ dynamic observations [@camposConstantSizeExtension2014;
 @sliusarenkoHighthroughputSubpixelPrecision2011;
 @taheri-araghiCellSizeControlHomeostasis2017;
 @ursellRapidPreciseQuantification2017]. Therefore, studying their
-cellular behavior every day from medium to medium can be somewhat
+cellular behavior daily from medium to medium can be somewhat
 reproducible, facilitating the association of complex biological
 functions in simple mathematical equations
 [@neidhardtBacterialGrowthConstant1999].
 
 Here, we proposed a mathematical model showing that filamentation could
-serve as a population's resilience mechanism to stress conditions.
-Finding that filamentation's net effect generates an additional window
-of time for the cell to survive, decreasing the toxin's intracellular
-concentration. However, we also found that a side effect of
-filamentation is to increase the cell's minimum inhibitory
-concentration. On the other hand, when we introduce variability in the
-amount of antitoxin in a cell population, we found that heterogeneity
-can be a double-edged sword, sometimes detrimental and sometimes
-beneficial, depending on the time of exposure to the toxic agent.
+be a population's resilience mechanism to stress conditions. Finding
+that filamentation's net effect generates an additional window of time
+for the cell to survive, decreasing the toxin's intracellular
+concentration. However, we also found that filamentation's side effect
+increases the cell's minimum inhibitory concentration. On the other
+hand, when we introduce variability in the amount of antitoxin in a cell
+population, we found that heterogeneity can be a double-edged sword,
+sometimes detrimental and sometimes beneficial, depending on the time of
+exposure to the toxic agent.
 
-Due to the above, despite being simple, the model could have the ability
-to recapitulate the behavior seen in nature from variables that we can
-calculate easily with single-cell measurements. However, in other
-situations, it could be helpful to consider the addition of variables
-such as cell wall production and peptidoglycans' accumulation, among
-others. Notwithstanding the lack of parameters that are a little closer
-to reality, confirming that the model can work under experimental
+Notwithstanding the lack of parameters that are a little closer to
+reality, confirming that the model can work under experimental
 conditions would represent an achievement due to its explanatory
-simplicity, starting, in this way, the path of the study of
-filamentation oriented to the ecology of stress.
+simplicity. Due to the above, despite being simple, the model could be
+able to recapitulate the behavior seen in nature from variables that we
+can easily calculate with single-cell measurements. However, in other
+situations, it could be helpful to consider adding variables such as
+cell wall production and peptidoglycans' accumulation, among others.
+Starting in this way, the study of filamentation as a mechanism oriented
+to the ecology of stress.
