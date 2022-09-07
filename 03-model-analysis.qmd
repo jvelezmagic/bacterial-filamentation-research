@@ -286,24 +286,23 @@ plasmids [@million-weaverMechanismsPlasmidSegregation2014]. Therefore,
 the response times would have an asynchronous behavior at the global
 level but synchronous at the local level.
 
-To include this observation into the model, we include a negative term
-to the internal toxin representing a toxin-antitoxin system. Therefore,
-the model now has an efficiency rate of the antitoxin and a stable
-amount per cell. We simulate the effect of the toxin-antitoxin system
-variation within a $1000$-cell population; we initialize each one with
-similar initial conditions, except for the amount of internal antitoxin,
-defined as $T_{anti} \sim N(\mu, \sigma)$. Considering that $T_{anti}$
-values $< 0$ are equal to $0$. For each experiment, $\mu = 25$, while it
-was evaluated in the range $[0-20]$. For the generation of pseudo-random
+To include this observation in the model, we include a negative term for
+the internal toxin representing a toxin-antitoxin system. Therefore, the
+model now has an efficiency rate of the antitoxin and a stable amount
+per cell. We simulate the effect of the toxin-antitoxin system variation
+within a $1000$-cell population; we initialize each one with similar
+initial conditions, except for the amount of internal antitoxin, defined
+as $T_{anti} \sim N(\mu, \sigma)$. Considering that $T_{anti}$ values
+$< 0$ are equal to $0$. For each experiment, $\mu = 25$, while it was
+evaluated in the range $[0-20]$. For the generation of pseudo-random
 numbers and to ensure the results' reproducibility, the number $42$ was
 considered seed.
 
-As shown in Figure @fig-antitoxin-experiment), when we compare
-heterogeneous populations in their toxin-antitoxin system, we can
-achieve different population dynamics, that is, changes in the final
-proportions of cell states; normal, stressed, and dead. This difference
-is because the cell sometimes has more or less antitoxin to handle the
-incoming stress situation.
+As shown in @fig-antitoxin-experiment), when we compare heterogeneous
+populations in their toxin-antitoxin system, we can achieve different
+population dynamics, that is, changes in the final proportions of cell
+states; normal, stressed, and dead. This difference is because the cell
+sometimes has more or less antitoxin to handle the incoming stress.
 
 ```{r}
 #| label: fig-antitoxin-experiment
