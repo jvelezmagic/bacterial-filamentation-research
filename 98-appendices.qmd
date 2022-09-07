@@ -8,9 +8,8 @@ lightbox: auto
 
 ## Code availability {.appendix}
 
-All code that we used in each phase of the project can be located on
-Github. Below we listed the repositories used as well as a brief
-description of their content.
+All code used in each project phase can be located on GitHub. Below we
+listed the repositories used and a brief description of their content.\`
 
 ```{r}
 #| label: tbl-github-repositories-used
@@ -49,8 +48,8 @@ Below is the main list of packages used for @sec-image-processing
 
 ### R
 
-Below is the main list of packages used for @sec-experiment-analysis as
-well for the reproducibility of this undergraduate research project.
+Below is the main list of packages used for @sec-experiment-analysis and
+the reproducibility of this undergraduate research project.
 
 ```{r}
 #| label: used-packages
@@ -134,8 +133,8 @@ Below is the main list of packages used for @sec-model-analysis.
 
 ### Undergraduate research project
 
-This code base is using the `R Language` , `Quarto`, and `renv` to make
-a reproducible scientific project named
+This code base uses the `R Language` , `Quarto`, and `renv` to do a
+reproducible scientific project named
 `bacterial-filamentation-research`.
 
 1.  Clone the repository with:
@@ -162,7 +161,7 @@ This code base is using the `Python Language`.
 
 ### Filamentation model
 
-This code base is using the `Julia Language` and `DrWatson` to make a
+This code base is using the `Julia Language` and `DrWatson` to do a
 reproducible scientific project named `CellFilamentation`.
 
 1.  Clone the repository with:
@@ -187,8 +186,8 @@ This undergraduate research project was written in
 [RStudio](https://www.rstudio.com/products/rstudio/) using
 [Quarto](https://quarto.org). The
 [website](https://jvelezmagic.github.io/undergraduate_research_project/)
-is hosted via Github Pages, and the complete source is available via
-Github.
+is hosted via GitHub Pages, and the complete source is available via
+GitHub.
 
 This version of the project was built with `r R.version.string` and the
 following packages:
