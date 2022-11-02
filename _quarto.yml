@@ -55,7 +55,7 @@ format:
     toc-depth: 4
     knitr:
       opts_chunk:
-        dev: "svg"
+        dev: "svglite"
   pdf:
     documentclass: scrreprt
     toc: true
