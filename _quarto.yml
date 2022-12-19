@@ -23,6 +23,7 @@ book:
   chapters:
     - index.qmd
     - 00-introduction.qmd
+    - 00-introduction-hypothesis.qmd
     - 01-image-processing.qmd
     - 02-experiment-analysis.qmd
     - 03-model-analysis.qmd

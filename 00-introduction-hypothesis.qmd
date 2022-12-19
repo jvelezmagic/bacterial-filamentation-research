@@ -1,0 +1,17 @@
+# Hypothesis and objectives {#sec-hypothesis .unnumbered}
+
+## Hypothesis
+
+Bacterial exposure to a stressful environment, such as openness to antibiotics, can trigger filamentous-like growth in the bacteria, which can increase their probabilities of survival compared to those bacteria that are unable to the filament.
+
+## General objective
+
+To characterize bacterial survival due to filamentation upon antibiotics exposure, mathematically and experimentally in strains with chromosomal resistance genes or a non-conjugative multicopy plasmid.
+
+## Particular objectives
+
+-   Obtain time series with the state of each bacteria before exposure to antibiotics (*i.e*., normal, stressed, or dead).
+
+-   Quantify cell growth and division rates and correlate them with cell status.
+
+-   Mathematical modeling of bacterial filamentation based on cell length and internal concentration of antibiotics over time.
